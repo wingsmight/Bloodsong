@@ -19,6 +19,8 @@ public class StoryTelling : MonoBehaviour
 
     private int phraseIndex = 0;
     private Story story;
+    
+    public static int phraseIndexReal = 0;
 
 
     private void Awake()
@@ -56,7 +58,7 @@ public class StoryTelling : MonoBehaviour
     }
     public void Stop()
     {
-
+        phraseIndexReal++;
     }
 
     private IEnumerator ShowMonologueWihtDelay(float delay)
@@ -104,4 +106,6 @@ public class StoryTelling : MonoBehaviour
     }
 
     private Phrase currentPhrase => story.phrases[phraseIndex];
+
+    public int PhraseIndex => phraseIndex; // remove it
 }

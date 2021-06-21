@@ -22,7 +22,7 @@ public class FadeAnimation : MonoBehaviour
         SetVisible(isShowOnAwake);
     }
 
-    public virtual void Appear()
+    public virtual void Appear(float border = 1.0f)
     {
         if (canvasGroup == null)
         {
@@ -32,7 +32,7 @@ public class FadeAnimation : MonoBehaviour
         StopAllCoroutines();
         if (gameObject.activeInHierarchy)
         {
-            StartCoroutine(FadeIn());
+            StartCoroutine(FadeIn(border));
         }
         else
         {
@@ -84,11 +84,11 @@ public class FadeAnimation : MonoBehaviour
 
         OnActiveChanged?.Invoke(false);
     }
-    private IEnumerator FadeIn()
+    private IEnumerator FadeIn(float border = 1.0f)
     {
         canvasGroup.blocksRaycasts = true;
 
-        while (canvasGroup.alpha < 1)
+        while (canvasGroup.alpha < border)
         {
             canvasGroup.alpha += Time.deltaTime * speed;
             yield return null;

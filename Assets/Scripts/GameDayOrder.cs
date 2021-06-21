@@ -8,7 +8,7 @@ public class GameDayOrder : MonoBehaviour
     [SerializeField] private Story story;
 
 
-    private void Start()
+    public void StartDay()
     {
         storyTelling.StartStory(story);
     }
