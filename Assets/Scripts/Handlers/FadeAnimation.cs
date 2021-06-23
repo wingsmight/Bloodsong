@@ -10,6 +10,8 @@ public class FadeAnimation : MonoBehaviour
     [SerializeField] protected bool isShowOnAwake = true;
 
     protected CanvasGroup canvasGroup;
+    private bool isBlockRaycasts;
+    private bool isInteractable;
 
     public delegate void ChangedEventHandler(bool state);
     public event ChangedEventHandler OnActiveChanged;
@@ -18,6 +20,8 @@ public class FadeAnimation : MonoBehaviour
     private void Awake()
     {
         canvasGroup = GetComponent<CanvasGroup>();
+        isBlockRaycasts = canvasGroup.blocksRaycasts;
+        isInteractable = canvasGroup.interactable;
 
         SetVisible(isShowOnAwake);
     }
@@ -67,8 +71,8 @@ public class FadeAnimation : MonoBehaviour
             canvasGroup = GetComponent<CanvasGroup>();
         }
 
-        canvasGroup.interactable = state;
-        canvasGroup.blocksRaycasts = state;
+        canvasGroup.interactable = isInteractable && state;
+        canvasGroup.blocksRaycasts = isBlockRaycasts && state;
         canvasGroup.alpha = state ? 1 : 0;
     }
 
@@ -86,7 +90,7 @@ public class FadeAnimation : MonoBehaviour
     }
     private IEnumerator FadeIn(float border = 1.0f)
     {
-        canvasGroup.blocksRaycasts = true;
+        canvasGroup.blocksRaycasts = isBlockRaycasts;
 
         while (canvasGroup.alpha < border)
         {

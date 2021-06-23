@@ -2,26 +2,17 @@
 using UnityEngine;
 using TMPro;
 
-public class TextTyping : MonoBehaviour
+public class TextTyping : TextShowing
 {
-    [SerializeField] private GameObject buttonPrev;
-    [SerializeField] private GameObject buttonNext;
-    [SerializeField] private GameObject buttonStop;
-    [SerializeField] private TextMeshProUGUI textDisplay;
     [SerializeField] private float typingSpeed = 0.01f;
     [SerializeField] private AudioSource audioSource;
     [SerializeField] private AudioClip typingSound;
 
-    private bool isTyping;
+
     private int lastSeenPageIndex;
 
-    public delegate void eventDelegate();
-    public event eventDelegate OnStopPageTyping;
-    public event eventDelegate OnStopTyping;
-    public event eventDelegate OnStartTyping;
 
-
-    public void Type(string fullText)
+    public override void Type(string fullText)
     {
         textDisplay.pageToDisplay = 1;
         lastSeenPageIndex = 0;
@@ -30,16 +21,16 @@ public class TextTyping : MonoBehaviour
         textDisplay.text = textDisplay.text.TrimEnd('\n', '\r', ' ');
 
         isTyping = true;
-        SetupButtons();
+        SetupPageControls();
 
         StopAllCoroutines();
         StartCoroutine(TypePageRoutine());
     }
-    public void TypeOnNextPage(string additionalText)
+    public override void TypeOnNextPage(string additionalText)
     {
         textDisplay.text += "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n" + additionalText;
     }
-    public void Stop()
+    public override void Stop()
     {
         textDisplay.text = "";
 
@@ -49,9 +40,9 @@ public class TextTyping : MonoBehaviour
 
         StopAllCoroutines();
 
-        OnStopTyping?.Invoke();
+        InvokeOnStopTyping();
     }
-    public void ShowPreviousPage()
+    public override void ShowPreviousPage()
     {
         textDisplay.pageToDisplay--;
 
@@ -59,9 +50,9 @@ public class TextTyping : MonoBehaviour
 
         StopAllCoroutines();
 
-        SetupButtons();
+        SetupPageControls();
     }
-    public void ShowNextPage()
+    public override void ShowNextPage()
     {
         if (isTyping)
         {
@@ -81,7 +72,7 @@ public class TextTyping : MonoBehaviour
             }
         }
 
-        SetupButtons();
+        SetupPageControls();
     }
 
     private void ShowPage(int index)
@@ -103,15 +94,15 @@ public class TextTyping : MonoBehaviour
 
         isTyping = false;
 
-        OnStopPageTyping?.Invoke();
+        InvokeOnStopPageTyping();
         if (index == textDisplay.pageToDisplay - 1)
         {
-            OnStopTyping?.Invoke();
+            InvokeOnStopTyping();
         }
     }
     private IEnumerator TypePageRoutine()
     {
-        OnStartTyping?.Invoke();
+        InvokeOnStartTyping();
 
         isTyping = true;
 
@@ -140,36 +131,8 @@ public class TextTyping : MonoBehaviour
 
         isTyping = false;
 
-        SetupButtons();
+        SetupPageControls();
 
-        OnStopPageTyping?.Invoke();
+        InvokeOnStopPageTyping();
     }
-    private void SetupButtons()
-    {
-        textDisplay.ForceMeshUpdate();
-        if (textDisplay.pageToDisplay == textDisplay.textInfo.pageCount && !isTyping)
-        {
-            buttonNext.SetActive(false);
-            buttonStop.SetActive(true);
-
-            OnStopTyping?.Invoke();
-        }
-        else
-        {
-            buttonNext.SetActive(true);
-            buttonStop.SetActive(false);
-        }
-
-        if (textDisplay.pageToDisplay == 1)
-        {
-            buttonPrev.SetActive(false);
-        }
-        else
-        {
-            buttonPrev.SetActive(true);
-        }
-    }
-
-
-    public bool IsTyping => isTyping;
 }

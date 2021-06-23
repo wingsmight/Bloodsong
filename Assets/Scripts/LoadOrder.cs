@@ -5,8 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class LoadOrder : MonoBehaviour
 {
-    [SerializeField] private StoryTelling storyTelling;
-    [SerializeField] private Story story;
+    [SerializeField] private MessageTelling messageTelling;
+    [SerializeField] private Message message;
     [SerializeField] private FadeAnimation gameLogoAnimation;
 
     private Coroutine showGameLogoCoroutine;
@@ -14,19 +14,17 @@ public class LoadOrder : MonoBehaviour
 
     private void Start()
     {
-        Load();    
+        Load();
+        messageTelling.OnStop += () => StartDay();
     }
 
     public void Load()
     {
-        storyTelling.StartStory(story);
+        messageTelling.Tell(message);
     }
     public void StartDay()
     {
-        if (StoryTelling.phraseIndexReal >= story.phrases.Count - 1 && showGameLogoCoroutine == null)
-        {
-            showGameLogoCoroutine = StartCoroutine(ShowGameLogoRoutine(3.0f));
-        }
+        showGameLogoCoroutine = StartCoroutine(ShowGameLogoRoutine(3.0f));
     }
 
     private IEnumerator ShowGameLogoRoutine(float duration)

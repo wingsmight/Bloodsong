@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class MonologuePanel : CommunicationPanel
 {
-    [SerializeField] private TextTyping textTyping;
+    [SerializeField] private TextShowing textShowing;
     [SerializeField] private TextMeshProUGUI stopMonologueText;
     [SerializeField] private GameObject speakerNameGameobject;
     [SerializeField] private TextMeshProUGUI speakerName;
@@ -14,7 +14,7 @@ public class MonologuePanel : CommunicationPanel
     public void StartConversation(string text)
     {
         fadeAnimation.Appear();
-        textTyping.Type(text);
+        textShowing.Type(text);
     }
     public void StartConversationWithDelay(string text)
     {
