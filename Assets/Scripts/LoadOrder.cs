@@ -8,30 +8,42 @@ public class LoadOrder : MonoBehaviour
     [SerializeField] private MessageTelling messageTelling;
     [SerializeField] private Message message;
     [SerializeField] private FadeAnimation gameLogoAnimation;
+    [SerializeField] private CompanySplashScreen companySplashScreen;
 
-    private Coroutine showGameLogoCoroutine;
+
+    private bool isMessageTold;
+    private float gameLogoShowDuration = 3.0f;
 
 
     private void Start()
     {
         Load();
-        messageTelling.OnStop += () => StartDay();
     }
+
 
     public void Load()
     {
-        messageTelling.Tell(message);
-    }
-    public void StartDay()
-    {
-        showGameLogoCoroutine = StartCoroutine(ShowGameLogoRoutine(3.0f));
+        StartCoroutine(LoadRoutine());
     }
 
-    private IEnumerator ShowGameLogoRoutine(float duration)
+    private IEnumerator LoadRoutine()
     {
+        companySplashScreen.Show();
+
+        yield return new WaitWhile(() => companySplashScreen.IsShowing);
+
+        messageTelling.Tell(message);
+        messageTelling.OnStop += () => isMessageTold = true;
+
+        yield return new WaitWhile(() => !isMessageTold);
+
         gameLogoAnimation.Appear();
 
-        yield return new WaitForSeconds(duration);
+        yield return new WaitForSeconds(gameLogoShowDuration);
+
+        gameLogoAnimation.Disappear();
+
+        yield return new WaitWhile(() => gameLogoAnimation.IsShowing);
 
         SceneManager.LoadScene("Story");
     }
