@@ -20,6 +20,12 @@ public class GlintEffect : MonoBehaviour
     private bool isShowing;
 
 
+    private void OnDestroy()
+    {
+        material.SetFloat("_ShineLocation", LEFT_FINISH_SHINE_LOCATION);
+    }
+
+
     public void Show()
     {
         isShowing = true;
@@ -38,7 +44,7 @@ public class GlintEffect : MonoBehaviour
     }
     private IEnumerator GlintRoutine()
     {
-        float shineLocation = direction == Direction.Right ? 0.0f : 1.0f;
+        float shineLocation = direction == Direction.Right ? LEFT_FINISH_SHINE_LOCATION : RIGHT_FINISH_SHINE_LOCATION;
         float startSpeed = speed;
 
         while (shineLocation >= LEFT_FINISH_SHINE_LOCATION && shineLocation <= RIGHT_FINISH_SHINE_LOCATION)
