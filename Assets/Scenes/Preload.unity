@@ -529,8 +529,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 5, y: -100}
-  m_SizeDelta: {x: -250, y: -240}
+  m_AnchoredPosition: {x: 5, y: -105}
+  m_SizeDelta: {x: -250, y: -250}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &452310738
 CanvasRenderer:
@@ -602,8 +602,8 @@ MonoBehaviour:
     \u043F\u0440\u0435\u043A\u0440\u0430\u0442\u0438\u0442\u0435 \u0438\u0433\u0440\u0443
     \u0438 \u043E\u0431\u0440\u0430\u0442\u0438\u0442\u0435\u0441\u044C \u043A \u0432\u0440\u0430\u0447\u0443\xBB."
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 519b55a92e0e1457ea7f9b373b3e7e68, type: 2}
-  m_sharedMaterial: {fileID: 6487045273014829969, guid: 519b55a92e0e1457ea7f9b373b3e7e68, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 9acd17d7bce0b4faa8138b2cf5b83f18, type: 2}
+  m_sharedMaterial: {fileID: -6565248861197810140, guid: 9acd17d7bce0b4faa8138b2cf5b83f18, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -639,7 +639,7 @@ MonoBehaviour:
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
-  m_lineSpacing: 11
+  m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
