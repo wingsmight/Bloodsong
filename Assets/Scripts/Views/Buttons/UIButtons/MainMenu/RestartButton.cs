@@ -2,17 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RestartButton : MonoBehaviour
+namespace StoryMenu
 {
-    // Start is called before the first frame update
-    void Start()
+    public class RestartButton : StoryMenuButton
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        protected override void OnClick()
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

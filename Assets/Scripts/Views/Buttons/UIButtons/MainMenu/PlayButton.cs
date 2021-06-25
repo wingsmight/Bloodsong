@@ -2,26 +2,29 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayButton : UIButton
+namespace StoryMenu
 {
-    [SerializeField] private GameDayOrder gameDayOrder;
-    [SerializeField] private FadeAnimation backgroundFadeAnimation;
-    [SerializeField] private PauseButton pauseButton;
-
-
-    private bool isPlaying;
-
-
-    protected override void OnClick()
+    public class PlayButton : StoryMenuButton
     {
-        if (!isPlaying)
+        [SerializeField] private GameDayOrder gameDayOrder;
+        [SerializeField] private FadeAnimation backgroundFadeAnimation;
+        [SerializeField] private PauseButton pauseButton;
+
+
+        private bool isPlaying;
+
+
+        protected override void OnClick()
         {
-            isPlaying = true;
+            if (!isPlaying)
+            {
+                isPlaying = true;
 
-            gameDayOrder.StartDay();
+                gameDayOrder.StartDay();
 
-            pauseButton.FadeAnimation.Appear();
+                pauseButton.FadeAnimation.Appear();
+            }
+            backgroundFadeAnimation.Disappear();
         }
-        backgroundFadeAnimation.Disappear();
     }
 }
