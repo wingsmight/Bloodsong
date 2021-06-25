@@ -9,6 +9,7 @@ namespace StoryMenu
         [SerializeField] private GameDayOrder gameDayOrder;
         [SerializeField] private FadeAnimation backgroundFadeAnimation;
         [SerializeField] private PauseButton pauseButton;
+        [SerializeField] private SaveSlotsView saveSlotsView;
 
 
         private bool isPlaying;
@@ -16,15 +17,12 @@ namespace StoryMenu
 
         protected override void OnClick()
         {
-            if (!isPlaying)
-            {
-                isPlaying = true;
+            ShowSaveSlots();
+        }
 
-                gameDayOrder.StartDay();
-
-                pauseButton.FadeAnimation.Appear();
-            }
-            backgroundFadeAnimation.Disappear();
+        private void ShowSaveSlots()
+        {
+            saveSlotsView.Show(new List<SaveSlot>(new SaveSlot[] { new SaveSlot(new System.DateTime(2021, 06, 25), null) }));
         }
     }
 }
