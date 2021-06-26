@@ -13,7 +13,7 @@ namespace StoryMenu
     }
 
 
-    internal static class StoryMenu
+    public static class StoryMenu
     {
         private static readonly Color idleColor = new Color(0.05f, 0.05f, 0.05f);
         private static readonly Color hoverColor = new Color(0.6862745f, 0.227451f, 0.1921569f);
@@ -21,7 +21,7 @@ namespace StoryMenu
         private static readonly Color clickDownColor = new Color(0.5849056f, 0.1929321f, 0.1627803f);
 
 
-        internal static Color GetColor(ElementState state)
+        public static Color GetColor(ElementState state)
         {
             switch (state)
             {

@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 namespace StoryMenu
 {
-    internal class StoryMenuImage : StoryMenuElement, IPointerEnterHandler, IPointerExitHandler
+    public class StoryMenuImage : StoryMenuElement, IPointerEnterHandler, IPointerExitHandler
     {
         [SerializeField] private Image image;
 
