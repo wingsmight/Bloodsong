@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class ResolutionDropdown : MonoBehaviour
+public class ResolutionDropdown : MonoBehaviour, IDataSaving
 {
     [SerializeField] TMP_Dropdown dropdown;
 
@@ -18,6 +18,11 @@ public class ResolutionDropdown : MonoBehaviour
         dropdown.onValueChanged.RemoveListener(SetResolutionByIndex);
     }
 
+
+    public void SaveData()
+    {
+        Storage.GeneralSettings.resolution = new int[] { Screen.width, Screen.height };
+    }
 
     private void SetResolutionByIndex(int index)
     {

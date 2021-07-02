@@ -60,6 +60,9 @@ public static class Storage
     }
     public static void SaveDatas(int slotIndex)
     {
+        if (slotIndex < MIN_SAVE_SLOT_INDEX || slotIndex >= SAVE_SLOTS_COUNT)
+            return;
+
         if (datas[slotIndex] != null)
         {
             SaveSystem.SaveStoredDatas<IStoredData>(datas[slotIndex], slotIndex);
