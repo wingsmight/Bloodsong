@@ -80,6 +80,9 @@ public static class Storage
     }
     public static T GetData<T>(int slotIndex) where T : IStoredData
     {
+        if (slotIndex < MIN_SAVE_SLOT_INDEX || slotIndex >= SAVE_SLOTS_COUNT)
+            throw new Exception("Slot index is out of range");
+
         if (datas[slotIndex] == null)
             LoadDatas(slotIndex);
 

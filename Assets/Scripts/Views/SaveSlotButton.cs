@@ -32,6 +32,7 @@ public class SaveSlotButton : UIButton
         if (gameSlot.IsUsed)
         {
             locationImage.sprite = saveSlot.locationSprite;
+            locationImage.AdjustSize();
             locationImage.color = backgroundImageColor;
             lastOpenDateTextView.text = saveSlot.lastExitDate.ToShortDateString();
             slotNumberTextView.text = "";

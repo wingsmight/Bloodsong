@@ -43,7 +43,11 @@ public class SaveLoadLauncher : MonoBehaviourSingleton<SaveLoadLauncher>
     public void SaveDatas()
     {
         Storage.SaveGeneralSettings();
-        Storage.GetData<PlayerPreferences>().lastExitDate = new DateTimeData(DateTime.Now);
+        try
+        {
+            Storage.GetData<PlayerPreferences>().lastExitDate = new DateTimeData(DateTime.Now);
+        }
+        catch { }
 
         foreach (var item in dataSavings)
         {

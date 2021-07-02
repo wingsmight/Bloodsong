@@ -6,9 +6,12 @@ namespace StoryMenu
 {
     public class SettingsButton : StoryMenuButton
     {
+        [SerializeField] private SettingsView settingsView;
+
+
         protected override void OnClick()
         {
-            throw new System.NotImplementedException();
+            settingsView.Show();
         }
     }
 }

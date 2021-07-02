@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Text.RegularExpressions;
 using UnityEngine;
 
 public static class StringExt
@@ -32,5 +33,20 @@ public static class StringExt
         string colorHex = ColorUtility.ToHtmlStringRGB(color);
 
         return "<color=#" + colorHex + ">" + text + "</color>";
+    }
+    public static List<int> ExtractNumbers(this string text)
+    {
+        List<int> numbers = new List<int>();
+
+        string[] numbersAsString = Regex.Split(text, @"\D+");
+        foreach (string numberAsString in numbersAsString)
+        {
+            if (!string.IsNullOrEmpty(numberAsString))
+            {
+                numbers.Add(int.Parse(numberAsString));
+            }
+        }
+
+        return numbers;
     }
 }

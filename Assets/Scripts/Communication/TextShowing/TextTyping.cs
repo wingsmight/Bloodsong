@@ -4,6 +4,9 @@ using TMPro;
 
 public class TextTyping : TextShowing
 {
+    private const float MIN_ACCEPTABLE_SPEED = 0.0f;
+
+
     [SerializeField] private float typingSpeed = 0.01f;
     [SerializeField] private AudioSource audioSource;
     [SerializeField] private AudioClip typingSound;
@@ -116,6 +119,11 @@ public class TextTyping : TextShowing
         int firstCharacterIndex = textDisplay.textInfo.pageInfo[textDisplay.pageToDisplay - 1].firstCharacterIndex;
         int lastCharacterIndex = textDisplay.textInfo.pageInfo[textDisplay.pageToDisplay - 1].lastCharacterIndex;
 
+        if (typingSpeed - MIN_ACCEPTABLE_SPEED < float.Epsilon)
+        {
+            firstCharacterIndex = lastCharacterIndex;
+        }
+
         for (int i = firstCharacterIndex; i <= lastCharacterIndex; i++)
         {
             textDisplay.maxVisibleCharacters = i + 1;
@@ -135,4 +143,7 @@ public class TextTyping : TextShowing
 
         InvokeOnStopPageTyping();
     }
+
+
+    public float Speed { get => typingSpeed; set => typingSpeed = value; }
 }
