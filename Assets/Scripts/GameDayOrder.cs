@@ -8,8 +8,8 @@ public class GameDayOrder : MonoBehaviour
     [SerializeField] private Story story;
 
 
-    public void StartDay()
+    public void StartDay(int phraseIndex = 0)
     {
-        storyTelling.StartStory(story);
+        storyTelling.StartStory(story, phraseIndex);
     }
 }

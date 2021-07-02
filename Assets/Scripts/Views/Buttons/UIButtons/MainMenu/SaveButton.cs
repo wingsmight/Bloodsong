@@ -8,7 +8,7 @@ namespace StoryMenu
     {
         protected override void OnClick()
         {
-            throw new System.NotImplementedException();
+            Storage.SaveDatas();
         }
     }
 }

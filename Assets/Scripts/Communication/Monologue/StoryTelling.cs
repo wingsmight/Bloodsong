@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class StoryTelling : MonoBehaviour
+public class StoryTelling : MonoBehaviour, IDataSaving
 {
     private const int BACKGROUND_APPEAR_INDEX = 4;
     private const int JAMES_APPEAR_INDEX = 5;
@@ -17,9 +17,10 @@ public class StoryTelling : MonoBehaviour
     [SerializeField] private BackgroundView backgroundView;
     [SerializeField] private List<CharacterView> characterViews;
 
+
     private int phraseIndex = 0;
     private Story story;
-    
+
     public static int phraseIndexReal = 0;
 
 
@@ -30,22 +31,23 @@ public class StoryTelling : MonoBehaviour
 #if UNITY_EDITOR
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.S))
+        if (Input.GetKeyDown(KeyCode.S))
         {
             Stop();
         }
     }
 #endif
 
-    public void StartStory(Story story)
+    public void StartStory(Story story, int phraseIndex = 0)
     {
         this.story = story;
+        this.phraseIndex = phraseIndex;
 
         ReadPhrase();
     }
     public void NextFrame()
     {
-        if(phraseIndex < story.phrases.Count - 1)
+        if (phraseIndex < story.phrases.Count - 1)
         {
             phraseIndex++;
 
@@ -60,13 +62,17 @@ public class StoryTelling : MonoBehaviour
     {
         phraseIndexReal++;
     }
+    public void SaveData()
+    {
+        Storage.GetData<GameDayData>().phraseIndex = phraseIndex;
+    }
 
     private IEnumerator ShowMonologueWihtDelay(float delay)
     {
         yield return new WaitForSeconds(delay);
 
-        monologuePanel.StartConversation(currentPhrase.text);
-        monologuePanel.SetSpeaker(currentPhrase.speaker);
+        monologuePanel.StartConversation(CurrentPhrase.text);
+        monologuePanel.SetSpeaker(CurrentPhrase.speaker);
     }
     private void ReadPhrase()
     {
@@ -79,33 +85,32 @@ public class StoryTelling : MonoBehaviour
         switch (phraseIndex)
         {
             case BACKGROUND_APPEAR_INDEX:
-            {
-                backgroundView.Show();
+                {
+                    backgroundView.Show();
 
-                break;
-            }
+                    break;
+                }
             case JAMES_APPEAR_INDEX:
-            {
-                characterViews[2].Show();
+                {
+                    characterViews[2].Show();
 
-                break;
-            }
+                    break;
+                }
             case ARTEN_APPEAR_INDEX:
-            {
-                characterViews[0].Show();
+                {
+                    characterViews[0].Show();
 
-                break;
-            }
+                    break;
+                }
             case ZARI_APPEAR_INDEX:
-            {
-                characterViews[1].Show();
+                {
+                    characterViews[1].Show();
 
-                break;
-            }
+                    break;
+                }
         }
     }
 
-    private Phrase currentPhrase => story.phrases[phraseIndex];
 
-    public int PhraseIndex => phraseIndex; // remove it
+    private Phrase CurrentPhrase => story.phrases[phraseIndex];
 }

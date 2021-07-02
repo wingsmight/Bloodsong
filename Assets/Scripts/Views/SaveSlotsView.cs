@@ -2,12 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SaveSlotsView : MonoBehaviour, IHidable
+public class SaveSlotsView : MonoBehaviour, IShowable, IHidable
 {
-    [SerializeField] private List<SaveSlotView> slotViews;
+    [SerializeField] private List<SaveSlotButton> slotViews;
     [SerializeField] private FadeAnimation fadeAnimation;
 
 
+    public void Show()
+    {
+        List<SaveSlot> slots = new List<SaveSlot>();
+        for (int i = 0; i < slotViews.Count; i++)
+        {
+            slots.Add(new SaveSlot(slotViews[i].GameSlot));
+        }
+
+        Show(slots);
+    }
     public void Show(List<SaveSlot> slots)
     {
         for (int i = 0; i < slotViews.Count && i < slots.Count; i++)

@@ -8,12 +8,17 @@ public class PauseButton : UIButton
 
 
     [SerializeField] private FadeAnimation fadeAnimation;
-    [SerializeField] private FadeAnimation menuFadeAnimation;
+    [SerializeField] private MenuView menuView;
 
+
+    public void Show()
+    {
+        fadeAnimation.Appear();
+    }
 
     protected override void OnClick()
     {
-        menuFadeAnimation.Appear(backgroundAlpha);
+        menuView.Show();
     }
 
 
