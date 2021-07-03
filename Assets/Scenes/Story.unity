@@ -12923,7 +12923,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
-  isShowOnAwake: 1
+  isShowOnAwake: 0
 --- !u!225 &1534370484
 CanvasGroup:
   m_ObjectHideFlags: 0

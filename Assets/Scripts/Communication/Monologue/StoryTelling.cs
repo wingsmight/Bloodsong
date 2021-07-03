@@ -21,7 +21,6 @@ public class StoryTelling : MonoBehaviour, IDataSaving
     private int phraseIndex = 0;
     private Story story;
 
-    public static int phraseIndexReal = 0;
 
 
     private void Awake()
@@ -43,6 +42,11 @@ public class StoryTelling : MonoBehaviour, IDataSaving
         this.story = story;
         this.phraseIndex = phraseIndex;
 
+        if (phraseIndex > 0)
+        {
+            PollPrevEvents();
+        }
+
         ReadPhrase();
     }
     public void NextFrame()
@@ -60,7 +64,7 @@ public class StoryTelling : MonoBehaviour, IDataSaving
     }
     public void Stop()
     {
-        phraseIndexReal++;
+
     }
     public void SaveData()
     {
@@ -109,6 +113,18 @@ public class StoryTelling : MonoBehaviour, IDataSaving
                     break;
                 }
         }
+    }
+    private void PollPrevEvents()
+    {
+        int lastPhraseIndex = phraseIndex;
+
+        for (int i = 0; i < lastPhraseIndex; i++)
+        {
+            phraseIndex = i;
+            PollEvents();
+        }
+
+        phraseIndex = lastPhraseIndex;
     }
 
 
