@@ -2,6 +2,15 @@
 
 Shader "UI/Blur" {
     Properties {
+        // required properties for UI shader
+        _StencilComp ("Stencil Comparison", Float) = 8
+        _Stencil ("Stencil ID", Float) = 0
+        _StencilOp ("Stencil Operation", Float) = 0
+        _StencilWriteMask ("Stencil Write Mask", Float) = 255
+        _StencilReadMask ("Stencil Read Mask", Float) = 255
+        _ColorMask ("Color Mask", Float) = 15
+
+        // custom properties
         _Color ("Main Color", Color) = (1,1,1,1)
         _BumpAmt  ("Distortion", Range (0,128)) = 10
         _MainTex ("Tint Color (RGB)", 2D) = "white" {}

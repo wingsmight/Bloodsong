@@ -21,6 +21,7 @@ public class SaveSlotButton : UIButton
     [SerializeField] private GameDayOrder gameDayOrder;
     [SerializeField] private SaveSlotsView saveSlotsView;
     [SerializeField] private MenuView menuView;
+    [SerializeField] private GameObject emptyOverlay;
 
 
     protected override void Awake()
@@ -36,6 +37,7 @@ public class SaveSlotButton : UIButton
             locationImage.color = backgroundImageColor;
             lastOpenDateTextView.text = saveSlot.lastExitDate.ToShortDateString();
             slotNumberTextView.text = "";
+            emptyOverlay.SetActive(false);
         }
         else
         {
@@ -43,6 +45,7 @@ public class SaveSlotButton : UIButton
             locationImage.color = emptyBackgroundImageColor;
             lastOpenDateTextView.text = "";
             slotNumberTextView.text = SLOT_NAME + " " + (gameSlot.Index + 1).ToString();
+            emptyOverlay.SetActive(true);
         }
     }
 
