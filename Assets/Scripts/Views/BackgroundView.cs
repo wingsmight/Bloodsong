@@ -15,4 +15,8 @@ public class BackgroundView : MonoBehaviour
     {
         fadeAnimation.Disappear();
     }
+    public void HideImmediately()
+    {
+        fadeAnimation.SetVisible(false);
+    }
 }

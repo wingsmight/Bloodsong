@@ -42,6 +42,7 @@ public class StoryTelling : MonoBehaviour, IDataSaving
         this.story = story;
         this.phraseIndex = phraseIndex;
 
+        ClearScene();
         if (phraseIndex > 0)
         {
             PollPrevEvents();
@@ -96,19 +97,19 @@ public class StoryTelling : MonoBehaviour, IDataSaving
                 }
             case JAMES_APPEAR_INDEX:
                 {
-                    characterViews[2].Show();
+                    characterViews[2].Show(CharacterView.Direction.FromRight);
 
                     break;
                 }
             case ARTEN_APPEAR_INDEX:
                 {
-                    characterViews[0].Show();
+                    characterViews[0].Show(CharacterView.Direction.FromLeft);
 
                     break;
                 }
             case ZARI_APPEAR_INDEX:
                 {
-                    characterViews[1].Show();
+                    characterViews[1].Show(CharacterView.Direction.FromButtom);
 
                     break;
                 }
@@ -125,6 +126,11 @@ public class StoryTelling : MonoBehaviour, IDataSaving
         }
 
         phraseIndex = lastPhraseIndex;
+    }
+    private void ClearScene()
+    {
+        backgroundView.HideImmediately();
+        characterViews.ForEach(x => x.HideImmediately());
     }
 
 
