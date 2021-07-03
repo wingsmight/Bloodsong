@@ -28,7 +28,7 @@ public class CharacterView : MonoBehaviour
     private IEnumerator AppearRoutine(Direction direction)
     {
         Vector2 startPosition;
-        Vector2 finishPosition = Vector2.zero;
+        Vector2 finishPosition = image.rectTransform.anchoredPosition;
 
         switch (direction)
         {
