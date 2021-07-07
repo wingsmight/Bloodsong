@@ -7,6 +7,9 @@ public abstract class UIButton : MonoBehaviour
     private const string CLICK_SOUND_PATH = "Sounds/ButtonClickSound";
 
 
+    [SerializeField] private bool hasSound;
+
+
     protected Button button;
     protected AudioClip clickSound;
 
@@ -27,7 +30,7 @@ public abstract class UIButton : MonoBehaviour
 
     private void ActButton()
     {
-        if (clickSound != null)
+        if (clickSound != null && hasSound)
         {
             AudioSource.PlayClipAtPoint(clickSound, new Vector3(0, 0, 0));
         }

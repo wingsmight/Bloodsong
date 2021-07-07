@@ -4,6 +4,19 @@ using UnityEngine;
 
 public static class MathfExt
 {
+    public static int Clamp(int value, int min, int max)
+    {
+        if (value < min)
+        {
+            value = min;
+        }
+        else if (value > max)
+        {
+            value = max;
+        }
+
+        return value;
+    }
     public static float EaseOut(float value)
     {
         return Mathf.Sin(value * Mathf.PI * 0.5f);
