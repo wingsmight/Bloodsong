@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: James
   m_EditorClassIdentifier: 
   name: James
-  sprite: {fileID: 0}
+  sprite: {fileID: 21300000, guid: 47762af77bb884f6d98a8d18d8e32dba, type: 3}

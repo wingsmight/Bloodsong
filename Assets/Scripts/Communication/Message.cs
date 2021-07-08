@@ -14,8 +14,7 @@ public class Message : ScriptableObject
     [Serializable]
     public class Phrase
     {
-        [TextArea(8, 20)]
-        public string text;
+        [TextArea(8, 20)] public string text;
     }
 
 

@@ -45,6 +45,10 @@
       "value": "Text typing speed:"
     },
     {
+      "key": "Language:",
+      "value": "Language:"
+    },
+    {
       "key": "slow",
       "value": "slow"
     },

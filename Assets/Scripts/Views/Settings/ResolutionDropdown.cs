@@ -5,17 +5,17 @@ using TMPro;
 
 public class ResolutionDropdown : MonoBehaviour, IDataSaving
 {
-    [SerializeField] TMP_Dropdown dropdown;
+    [SerializeField] private TMP_Dropdown dropdown;
 
 
     private void Awake()
     {
-        dropdown.SetValueWithoutNotify(GetResolutionIndex());
-        dropdown.onValueChanged.AddListener(SetResolutionByIndex);
+        dropdown.SetValueWithoutNotify(GetValueIndex());
+        dropdown.onValueChanged.AddListener(SetValueByIndex);
     }
     private void OnDestroy()
     {
-        dropdown.onValueChanged.RemoveListener(SetResolutionByIndex);
+        dropdown.onValueChanged.RemoveListener(SetValueByIndex);
     }
 
 
@@ -24,13 +24,13 @@ public class ResolutionDropdown : MonoBehaviour, IDataSaving
         Storage.GeneralSettings.resolution = new int[] { Screen.width, Screen.height };
     }
 
-    private void SetResolutionByIndex(int index)
+    private void SetValueByIndex(int index)
     {
         var option = dropdown.options[index];
         var sizeRect = option.text.ExtractNumbers();
         Screen.SetResolution(sizeRect[0], sizeRect[1], Screen.fullScreen);
     }
-    private int GetResolutionIndex()
+    private int GetValueIndex()
     {
         for (int i = 0; i < dropdown.options.Count; i++)
         {

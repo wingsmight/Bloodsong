@@ -125,6 +125,6 @@ public static class Localization
 
 public enum Language
 {
-    ru_RU,
     en_US,
+    ru_RU,
 }
