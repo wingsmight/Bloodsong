@@ -7,7 +7,7 @@ using UnityEngine.EventSystems;
 
 public class SaveSlotButton : UIButton
 {
-    private const string SLOT_NAME = "Слот";
+    private const string SLOT_NAME = "Slot";
 
     private readonly Color emptyBackgroundImageColor = new Color(0.45f, 0.45f, 0.45f);
     private readonly Color backgroundImageColor = Color.white;
@@ -44,7 +44,7 @@ public class SaveSlotButton : UIButton
             locationImage.sprite = null;
             locationImage.color = emptyBackgroundImageColor;
             lastOpenDateTextView.text = "";
-            slotNumberTextView.text = SLOT_NAME + " " + (gameSlot.Index + 1).ToString();
+            slotNumberTextView.text = Localization.GetValue(SLOT_NAME) + " " + (gameSlot.Index + 1).ToString();
             emptyOverlay.SetActive(true);
         }
     }

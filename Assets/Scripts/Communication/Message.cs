@@ -8,8 +8,7 @@ using UnityEngine;
 [Serializable]
 public class Message : ScriptableObject
 {
-
-    public List<Message.Phrase> phrases;
+    [SerializeField] private LanguageMessagePrasesDictionary phrasesDict;
 
 
     [Serializable]
@@ -18,4 +17,7 @@ public class Message : ScriptableObject
         [TextArea(8, 20)]
         public string text;
     }
+
+
+    public List<Message.Phrase> Phrases => phrasesDict[Localization.CurrentLanguage].phrases;
 }

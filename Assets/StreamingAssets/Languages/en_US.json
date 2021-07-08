@@ -1,0 +1,70 @@
+{
+  "items": [
+    {
+      "key": "Play",
+      "value": "Play"
+    },
+    {
+      "key": "Save",
+      "value": "Save"
+    },
+    {
+      "key": "Settings",
+      "value": "Settings"
+    },
+    {
+      "key": "Extra",
+      "value": "Extra"
+    },
+    {
+      "key": "Exit",
+      "value": "Exit"
+    },
+    {
+      "key": "Save slots",
+      "value": "Save slots"
+    },
+    {
+      "key": "Slot",
+      "value": "Slot"
+    },
+    {
+      "key": "Resolution:",
+      "value": "Resolution:"
+    },
+    {
+      "key": "Fullscreen:",
+      "value": "Fullscreen:"
+    },
+    {
+      "key": "Volume:",
+      "value": "Volume:"
+    },
+    {
+      "key": "Text typing speed:",
+      "value": "Text typing speed:"
+    },
+    {
+      "key": "slow",
+      "value": "slow"
+    },
+    {
+      "key": "without delay",
+      "value": "without delay"
+    },
+    {
+      "key": "Gallery",
+      "value": "Gallery"
+    },
+    {
+      "key": "Patreon",
+      "value": "Patreon"
+    },
+
+    {
+      "key": "Test",
+      "value": "Test"
+    }
+
+  ]
+}

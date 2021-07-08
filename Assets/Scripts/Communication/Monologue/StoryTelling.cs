@@ -52,7 +52,7 @@ public class StoryTelling : MonoBehaviour, IDataSaving
     }
     public void NextFrame()
     {
-        if (phraseIndex < story.phrases.Count - 1)
+        if (phraseIndex < story.Phrases.Count - 1)
         {
             phraseIndex++;
 
@@ -134,5 +134,5 @@ public class StoryTelling : MonoBehaviour, IDataSaving
     }
 
 
-    private Phrase CurrentPhrase => story.phrases[phraseIndex];
+    private Phrase CurrentPhrase => story.Phrases[phraseIndex];
 }

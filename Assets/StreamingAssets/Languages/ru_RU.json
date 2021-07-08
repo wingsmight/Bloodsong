@@ -1,0 +1,70 @@
+{
+  "items": [
+    {
+      "key": "Play",
+      "value": "Играть"
+    },
+    {
+      "key": "Save",
+      "value": "Сохранить"
+    },
+    {
+      "key": "Settings",
+      "value": "Настройки"
+    },
+    {
+      "key": "Extra",
+      "value": "Дополнительно"
+    },
+    {
+      "key": "Exit",
+      "value": "Выйти"
+    },
+    {
+      "key": "Save slots",
+      "value": "Сохранения"
+    },
+    {
+      "key": "Slot",
+      "value": "Слот"
+    },
+    {
+      "key": "Resolution:",
+      "value": "Разрешение:"
+    },
+    {
+      "key": "Fullscreen:",
+      "value": "Полноэкранный режим:"
+    },
+    {
+      "key": "Volume:",
+      "value": "Громкость:"
+    },
+    {
+      "key": "Text typing speed:",
+      "value": "Скорость появления текста:"
+    },
+    {
+      "key": "slow",
+      "value": "медленно"
+    },
+    {
+      "key": "without delay",
+      "value": "без задержки"
+    },
+    {
+      "key": "Gallery",
+      "value": "Галерея"
+    },
+    {
+      "key": "Patreon",
+      "value": "Patreon"
+    },
+
+    {
+      "key": "Test",
+      "value": "Тест"
+    }
+
+  ]
+}

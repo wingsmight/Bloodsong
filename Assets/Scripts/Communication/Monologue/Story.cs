@@ -8,5 +8,8 @@ using UnityEngine;
 [Serializable]
 public class Story : ScriptableObject
 {
-    public List<Phrase> phrases;
+    [SerializeField] private LanguagePrasesDictionary phrasesDict;
+
+
+    public List<Phrase> Phrases => phrasesDict[Localization.CurrentLanguage].phrases;
 }

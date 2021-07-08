@@ -2119,7 +2119,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   messageTelling: {fileID: 667008679}
-  message: {fileID: 11400000, guid: a225c7c8522ef4542afb2babe32703d9, type: 2}
+  message: {fileID: 11400000, guid: 34ea655d640db40a48cd21bbaf916a96, type: 2}
   gameLogoScreenAnimation: {fileID: 210709126}
   companySplashScreen: {fileID: 998585172}
   textGameLogoAnimation: {fileID: 1429634726}

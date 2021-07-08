@@ -29,7 +29,7 @@ public class MessageTelling : MonoBehaviour
     }
     public void NextFrame()
     {
-        if (phraseIndex < message.phrases.Count - 1)
+        if (phraseIndex < message.Phrases.Count - 1)
         {
             phraseIndex++;
 
@@ -57,5 +57,5 @@ public class MessageTelling : MonoBehaviour
         StartCoroutine(ShowMonologueWihtDelay(delayBeforeMonologue));
     }
 
-    private Message.Phrase currentPhrase => message.phrases[phraseIndex];
+    private Message.Phrase currentPhrase => message.Phrases[phraseIndex];
 }

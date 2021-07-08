@@ -24,10 +24,17 @@ public class MonologuePanel : CommunicationPanel
     {
         stopMonologueText.text = newText;
     }
-    public void SetSpeaker(Speaker speaker)
+    public void SetSpeaker(Character speaker)
     {
-        speakerNameGameobject.SetActive(!string.IsNullOrEmpty(speaker.name));
-        speakerName.text = speaker.name;
+        if (speaker == null)
+        {
+            speakerNameGameobject.SetActive(false);
+        }
+        else
+        {
+            speakerNameGameobject.SetActive(!string.IsNullOrEmpty(speaker.Name));
+            speakerName.text = speaker.Name;
+        }
     }
 
     private IEnumerator StartConversationWithDelayRoutine(string text)
