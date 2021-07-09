@@ -9,6 +9,8 @@ public class GameSlot : MonoBehaviour
     [SerializeField] private int index;
 
 
+    public event Action OnDeleted;
+
     public void Delete()
     {
         IsUsed = false;
@@ -43,11 +45,16 @@ public class GameSlot : MonoBehaviour
             Directory.Delete(directoryPath, true);
         }
 
+        IsUsed = false;
+        Storage.DeleteData(index);
+
         SetPrevLastGameSlot();
 
         yield return new WaitWhile(() => Directory.Exists(directoryPath));
 
         Time.timeScale = 1;
+
+        OnDeleted?.Invoke();
     }
 
 

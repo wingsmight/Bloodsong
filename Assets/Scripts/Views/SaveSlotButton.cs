@@ -22,11 +22,14 @@ public class SaveSlotButton : UIButton
     [SerializeField] private SaveSlotsView saveSlotsView;
     [SerializeField] private MenuView menuView;
     [SerializeField] private GameObject emptyOverlay;
+    [SerializeField] private Button deleteButton;
 
 
     protected override void Awake()
     {
         base.Awake();
+
+        gameSlot.OnDeleted += ShowEmpty;
     }
     public void Show(SaveSlot saveSlot)
     {
@@ -38,14 +41,11 @@ public class SaveSlotButton : UIButton
             lastOpenDateTextView.text = saveSlot.lastExitDate.ToShortDateString();
             slotNumberTextView.text = "";
             emptyOverlay.SetActive(false);
+            deleteButton.gameObject.SetActive(true);
         }
         else
         {
-            locationImage.sprite = null;
-            locationImage.color = emptyBackgroundImageColor;
-            lastOpenDateTextView.text = "";
-            slotNumberTextView.text = Localization.GetValue(SLOT_NAME) + " " + (gameSlot.Index + 1).ToString();
-            emptyOverlay.SetActive(true);
+            ShowEmpty();
         }
     }
 
@@ -71,6 +71,15 @@ public class SaveSlotButton : UIButton
 
         int phraseIndex = Storage.GetData<GameDayData>().phraseIndex;
         gameDayOrder.StartDay(phraseIndex);
+    }
+    private void ShowEmpty()
+    {
+        locationImage.sprite = null;
+        locationImage.color = emptyBackgroundImageColor;
+        lastOpenDateTextView.text = "";
+        slotNumberTextView.text = Localization.GetValue(SLOT_NAME) + " " + (gameSlot.Index + 1).ToString();
+        emptyOverlay.SetActive(true);
+        deleteButton.gameObject.SetActive(false);
     }
 
 

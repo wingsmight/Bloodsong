@@ -8,7 +8,6 @@ namespace StoryMenu
     {
         [SerializeField] private GameDayOrder gameDayOrder;
         [SerializeField] private FadeAnimation backgroundFadeAnimation;
-        [SerializeField] private PauseButton pauseButton;
         [SerializeField] private SaveSlotsView saveSlotsView;
 
 

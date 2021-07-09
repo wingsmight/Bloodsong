@@ -8,6 +8,6 @@ namespace StoryMenu
 {
     public abstract class StoryMenuButton : UIButton
     {
-        [SerializeField] private StoryMenuEntity storyMenuEntity;
+
     }
 }

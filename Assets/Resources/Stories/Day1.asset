@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Day1
   m_EditorClassIdentifier: 
   phrasesDict:
-    m_keys: 0000000001000000
+    m_keys: 0100000000000000
     m_values:
     - phrases:
       - speaker: {fileID: 0}

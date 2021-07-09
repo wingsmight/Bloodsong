@@ -109,7 +109,7 @@ public class StoryTelling : MonoBehaviour, IDataSaving
                 }
             case ZARI_APPEAR_INDEX:
                 {
-                    characterViews[1].Show(CharacterView.Direction.FromButtom);
+                    characterViews[1].Show(CharacterView.Direction.FromLeft);
 
                     break;
                 }

@@ -46,6 +46,7 @@ public static class Storage
             }
         }
     }
+
     public static void LoadGeneralSettings()
     {
         generalSettings = SaveSystem.LoadGeneralSettings();
@@ -90,6 +91,11 @@ public static class Storage
             LoadDatas(slotIndex);
 
         return (T)datas[slotIndex].First(x => x.GetType() == typeof(T));
+    }
+
+    public static void DeleteData(int slotIndex)
+    {
+        datas[slotIndex] = null;
     }
 
 

@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace StoryMenu
 {
-    public class ExitButton : StoryMenuButton
+    public class ExitFromGameButton : StoryMenuButton
     {
         protected override void OnClick()
         {
