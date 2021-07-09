@@ -14,9 +14,9 @@ public class ChoiceButton : UIButton, IPointerEnterHandler, IPointerExitHandler
     [SerializeField] private GameObject pointer;
 
 
-    public void Show(string text)
+    public void Show(Choice choice)
     {
-        textView.text = text;
+        textView.text = choice.text;
     }
     public void OnPointerEnter(PointerEventData eventData)
     {
