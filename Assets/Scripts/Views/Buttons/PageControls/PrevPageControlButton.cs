@@ -6,6 +6,6 @@ public class PrevPageControlButton : PageControlButton
 {
     protected override void OnClick()
     {
-        textShowing.ShowPreviousPage();
+        TextShowing.ShowPreviousPage();
     }
 }

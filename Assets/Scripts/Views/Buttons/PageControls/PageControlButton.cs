@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public abstract class PageControlButton : MonoBehaviour
 {
     [SerializeField] private Button button;
-    [SerializeField] protected TextShowing textShowing;
+    [SerializeField] [RequireInterface(typeof(IShowPaging))] private Object textShowing;
 
 
     protected bool isActive;
@@ -30,4 +30,6 @@ public abstract class PageControlButton : MonoBehaviour
     }
 
     protected abstract void OnClick();
+
+    protected IShowPaging TextShowing => textShowing as IShowPaging;
 }

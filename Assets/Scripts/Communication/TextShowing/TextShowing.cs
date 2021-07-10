@@ -4,7 +4,7 @@ using System.Linq;
 using UnityEngine;
 using TMPro;
 
-public abstract class TextShowing : MonoBehaviour
+public abstract class TextShowing : MonoBehaviour, IShowPaging
 {
     [SerializeField] private List<PrevPageControlButton> prevPageControls;
     [SerializeField] private List<NextPageControlButton> nextPageControls;

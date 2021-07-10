@@ -9,8 +9,8 @@ public class StopPageControlButton : PageControlButton
 
     protected override void OnClick()
     {
-        textShowing.Stop();
+        TextShowing.Stop();
 
-        monologuePanel.StopConversation();
+        //monologuePanel.StopConversation();
     }
 }

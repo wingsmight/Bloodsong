@@ -6,6 +6,6 @@ public class NextPageControlButton : PageControlButton
 {
     protected override void OnClick()
     {
-        textShowing.ShowNextPage();
+        TextShowing.ShowNextPage();
     }
 }
