@@ -10,6 +10,10 @@ public class CharacterView : MonoBehaviour
     [SerializeField] private float appearDuration;
 
 
+    public void Show(Character character)
+    {
+
+    }
     public void Show(Direction direction)
     {
         fadeAnimation.Appear();

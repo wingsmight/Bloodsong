@@ -12,36 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 771344e5527db45d0a34f8444116e71f, type: 3}
   m_Name: Day1
   m_EditorClassIdentifier: 
-  phrasesDict:
-    m_keys: 0100000000000000
-    m_values:
-    - phrases:
-      - speaker: {fileID: 11400000, guid: ae41388aabade426987117c27c416b76, type: 2}
-        text: "\u042D\u043F\u043E\u0445\u0430 \u0417\u043E\u043B\u043E\u0442\u044B\u0445
-          \u041A\u043E\u0440\u043E\u043B\u0435\u0439 \u2013 \u0432\u0440\u0435\u043C\u0435\u043D\u0430,
-          \u043A\u043E\u0433\u0434\u0430 \u043F\u043E \u0432\u0441\u0435\u043C\u0443
-          \u043C\u0438\u0440\u0443 \u0441\u043C\u0435\u0440\u0442\u043D\u044B\u0435
-          \u0432\u043E\u0441\u0441\u0442\u0430\u044E\u0442 \u043F\u0440\u043E\u0442\u0438\u0432
-          \u0437\u043B\u043E\u0431\u043D\u044B\u0445, \u043A\u0440\u043E\u0432\u043E\u0436\u0430\u0434\u043D\u044B\u0445
-          \u0411\u043E\u0433\u043E\u0432."
-      - speaker: {fileID: 11400000, guid: ae41388aabade426987117c27c416b76, type: 2}
-        text: "\u041D\u043E \u043A\u0443\u043B\u044C\u0442 \u0431\u0435\u0441\u0441\u043C\u0435\u0440\u0442\u043D\u044B\u0445
-          \u043D\u0438\u043A\u043E\u0433\u0434\u0430 \u043D\u0435 \u0441\u0443\u0449\u0435\u0441\u0442\u0432\u043E\u0432\u0430\u043B
-          \u043D\u0430 \u0424\u0435\u043B\u0435\u0441\u0442\u0438\u043D\u0435. \u041D\u0430
-          \u043C\u0430\u0442\u0435\u0440\u0438\u043A\u0435, \u0440\u0430\u0441\u0442\u044F\u043D\u0443\u0432\u0448\u0435\u043C\u0441\u044F
-          \u0441 \u0441\u0435\u0432\u0435\u0440\u0430 \u043D\u0430 \u044E\u0433.
-          \u0412 \u0441\u0442\u0440\u0430\u043D\u0435 \u0441\u0432\u043E\u0431\u043E\u0434\u043D\u044B\u0445
-          \u043D\u0440\u0430\u0432\u043E\u0432."
-      - speaker: {fileID: 11400000, guid: ae41388aabade426987117c27c416b76, type: 2}
-        text: "Ага, проверка"
-      - speaker: {fileID: 0}
-        text: ...
-    - phrases:
-      - speaker: {fileID: 0}
-        text: The Age of the Golden Kings is a time when all over the world, mortals
-          rise up against evil, bloodthirsty Gods.
-      - speaker: {fileID: 0}
-        text: But the cult of immortals never existed on Felestin. On the mainland,
-          stretching from north to south. In the land of free morals.
-      - speaker: {fileID: 0}
-        text: ...
+  graphDict:
+    m_keys: 
+    m_values: []
+  graph: {fileID: 11400000, guid: c87145726b979481db23e02b3e01a93e, type: 2}

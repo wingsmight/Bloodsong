@@ -52,16 +52,16 @@ public class StoryTelling : MonoBehaviour, IDataSaving
     }
     public void NextFrame()
     {
-        if (phraseIndex < story.Phrases.Count - 1)
-        {
-            phraseIndex++;
+        // if (phraseIndex < story.Phrases.Count - 1)
+        // {
+        //     phraseIndex++;
 
-            ReadPhrase();
-        }
-        else
-        {
-            Stop();
-        }
+        //     ReadPhrase();
+        // }
+        // else
+        // {
+        //     Stop();
+        // }
     }
     public void Stop()
     {
@@ -76,8 +76,8 @@ public class StoryTelling : MonoBehaviour, IDataSaving
     {
         yield return new WaitForSeconds(delay);
 
-        monologuePanel.StartConversation(CurrentPhrase.text);
-        monologuePanel.SetSpeaker(CurrentPhrase.speaker);
+        // monologuePanel.StartConversation(CurrentPhrase.text);
+        // monologuePanel.SetSpeaker(CurrentPhrase.speaker);
     }
     private void ReadPhrase()
     {
@@ -134,5 +134,5 @@ public class StoryTelling : MonoBehaviour, IDataSaving
     }
 
 
-    private Phrase CurrentPhrase => story.Phrases[phraseIndex];
+    //private Phrase CurrentPhrase => story.Phrases[phraseIndex];
 }

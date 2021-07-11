@@ -17,11 +17,11 @@ public class TextTypingSpeedSlider : MonoBehaviour, IDataSaving
         maxValue = slider.maxValue;
 
         slider.value = maxValue - Storage.GeneralSettings.testTypingSpeed;
-        slider.onValueChanged.AddListener(SetVolume);
+        slider.onValueChanged.AddListener(SetValue);
     }
     private void OnDestroy()
     {
-        slider.onValueChanged.RemoveListener(SetVolume);
+        slider.onValueChanged.RemoveListener(SetValue);
     }
 
 
@@ -30,7 +30,7 @@ public class TextTypingSpeedSlider : MonoBehaviour, IDataSaving
         Storage.GeneralSettings.testTypingSpeed = textTyping.Speed;
     }
 
-    private void SetVolume(float value)
+    private void SetValue(float value)
     {
         textTyping.Speed = maxValue - value;
     }

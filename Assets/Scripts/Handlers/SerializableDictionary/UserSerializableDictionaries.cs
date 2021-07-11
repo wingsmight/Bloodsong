@@ -42,3 +42,7 @@ public class MessagePhrases
 
 [Serializable]
 public class LanguageMessagePrasesDictionary : SerializableDictionary<Language, MessagePhrases> { }
+
+
+[Serializable]
+public class LanguageGraphDictionary : SerializableDictionary<Language, DialogueGraphData> { }

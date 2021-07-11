@@ -18,7 +18,7 @@ public class SaveSlotButton : UIButton
     [SerializeField] private Image locationImage;
     [SerializeField] private TextMeshProUGUI lastOpenDateTextView;
     [SerializeField] private TextMeshProUGUI slotNumberTextView;
-    [SerializeField] private GameDayOrder gameDayOrder;
+    [SerializeField] private GameDayControl gameDay;
     [SerializeField] private SaveSlotsView saveSlotsView;
     [SerializeField] private MenuView menuView;
     [SerializeField] private GameObject emptyOverlay;
@@ -69,8 +69,8 @@ public class SaveSlotButton : UIButton
         saveSlotsView.Hide();
         menuView.Hide();
 
-        int phraseIndex = Storage.GetData<GameDayData>().phraseIndex;
-        gameDayOrder.StartDay(phraseIndex);
+        //int phraseIndex = Storage.GetData<GameDayData>().phraseIndex;
+        gameDay.StartDay();
     }
     private void ShowEmpty()
     {

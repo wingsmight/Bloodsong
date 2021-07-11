@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class HideStoryMenuButton : HideButton
 {
-    [SerializeField] private GameDayOrder gameDayOrder;
+    [SerializeField] private GameDayControl gameDay;
 
 
     protected override void OnClick()
     {
-        if (gameDayOrder.IsRunning)
+        if (gameDay.IsRunning)
         {
             base.OnClick();
         }

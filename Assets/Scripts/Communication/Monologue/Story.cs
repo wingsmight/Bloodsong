@@ -8,8 +8,8 @@ using UnityEngine;
 [Serializable]
 public class Story : ScriptableObject
 {
-    [SerializeField] private LanguagePrasesDictionary phrasesDict;
+    [SerializeField] private LanguageGraphDictionary graphDict;
 
 
-    public List<Phrase> Phrases => phrasesDict[Localization.CurrentLanguage].phrases;
+    public DialogueGraphData Graph => graphDict[Localization.CurrentLanguage];
 }
