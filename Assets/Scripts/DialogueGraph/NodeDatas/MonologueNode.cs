@@ -16,10 +16,9 @@ public class MonologueNode : NodeData
         this.speakerName = speakerName;
     }
     public MonologueNode(string guid, Vector2 position, List<string> texts, Character character)
-        : this(guid, position, texts, character.Name)
+        : this(guid, position, texts, character.name)
     {
-        this.texts = texts;
-        this.speakerName = character.Name;
+
     }
     public MonologueNode(MonologueNode monologueNode)
         : this(monologueNode.guid, monologueNode.position, monologueNode.texts, monologueNode.speakerName)

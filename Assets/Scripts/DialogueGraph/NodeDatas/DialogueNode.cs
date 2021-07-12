@@ -16,6 +16,6 @@ public class DialogueNode : NodeData
     {
         this.dialogueText = dialogueText;
         this.responses = responses;
-        this.speakerName = character.Name;
+        this.speakerName = character.name;
     }
 }
