@@ -12,11 +12,9 @@ public class StartSplitMessageNodeView : NodeView<SplitMessageNode>
     public override void Act(DialogueGraphData dialogue, SplitMessageNode nodeData)
     {
         splitTextAppearing.Type(nodeData.text);
-        splitTextAppearing.OnStopTyping += () =>
+        splitTextAppearing.AddActionAfterStop(() =>
         {
-            Debug.Log("AAAAA");
-
             ProcessNextWithDelay(dialogue, nodeData, DELAY_AFTER_STOP);
-        };
+        });
     }
 }

@@ -15,7 +15,7 @@ public class MonologuePanel : CommunicationPanel
 
     public void StartConversation(string text, Character speaker)
     {
-        StartConversation(text, speaker.Name);
+        StartConversation(text, speaker?.Name);
     }
     public void StartConversation(string text, string speakerName)
     {

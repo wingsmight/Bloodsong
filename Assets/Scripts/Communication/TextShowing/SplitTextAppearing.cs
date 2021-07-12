@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using static TextShowing;
 
 public class SplitTextAppearing : MonoBehaviour
@@ -13,6 +14,8 @@ public class SplitTextAppearing : MonoBehaviour
     public event eventDelegate OnStopTyping;
     public event eventDelegate OnStartTyping;
 
+    private UnityAction actionAfterStop;
+
 
     private void Awake()
     {
@@ -21,8 +24,6 @@ public class SplitTextAppearing : MonoBehaviour
             sets[i].OnStopPageTyping += () => OnStopPageTyping?.Invoke();
             sets[i].OnStopTyping += () => OnStopTyping?.Invoke();
             sets[i].OnStartTyping += () => OnStartTyping?.Invoke();
-
-            //sets[i].OnStopTyping += fadeAnimation.Disappear;
 
             sets[i].gameObject.SetActive(false);
         }
@@ -36,5 +37,16 @@ public class SplitTextAppearing : MonoBehaviour
         sets[fullTexts.Count - 1].Type(fullTexts);
 
         fadeAnimation.Appear();
+    }
+    public void Stop()
+    {
+        fadeAnimation.Disappear();
+
+        actionAfterStop?.Invoke();
+        actionAfterStop = null;
+    }
+    public void AddActionAfterStop(UnityAction action)
+    {
+        actionAfterStop += action;
     }
 }

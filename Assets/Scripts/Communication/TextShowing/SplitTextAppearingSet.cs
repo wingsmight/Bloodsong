@@ -34,7 +34,6 @@ public class SplitTextAppearingSet : MonoBehaviour, IShowPaging
         }
         textAppearings[textAppearings.Count - 1].OnStopTyping += () =>
         {
-            Debug.Log("textAppearings[textAppearings.Count - 1].OnStopTyping");
             OnStopTyping?.Invoke();
         };
     }
