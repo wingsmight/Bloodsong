@@ -5,7 +5,9 @@ using static TextShowing;
 
 public class SplitTextAppearingSet : MonoBehaviour, IShowPaging
 {
-    [SerializeField] List<TextAppearing> textAppearings;
+    [SerializeField] private List<TextAppearing> textAppearings;
+    //[SerializeField] private PrevPageButton prevPageControlButton;
+    //[SerializeField] private NextPageButton nextPageControlButton;
 
 
     public event eventDelegate OnStopPageTyping;
@@ -20,13 +22,21 @@ public class SplitTextAppearingSet : MonoBehaviour, IShowPaging
     {
         for (int i = 0; i < textAppearings.Count; i++)
         {
-            textAppearings[i].OnStartTyping += OnStartTyping;
+            textAppearings[i].OnStartTyping += () => OnStartTyping?.Invoke();
+        }
+        for (int i = 0; i < textAppearings.Count; i++)
+        {
+            textAppearings[i].OnStopPageTyping += () => OnStopPageTyping?.Invoke();
         }
         for (int i = 0; i < textAppearings.Count - 1; i++)
         {
-            textAppearings[i].OnStopTyping += OnStopPageTyping;
+            textAppearings[i].OnStopTyping += () => OnStopPageTyping?.Invoke();
         }
-        textAppearings[textAppearings.Count - 1].OnStopTyping += OnStopTyping;
+        textAppearings[textAppearings.Count - 1].OnStopTyping += () =>
+        {
+            Debug.Log("textAppearings[textAppearings.Count - 1].OnStopTyping");
+            OnStopTyping?.Invoke();
+        };
     }
 
 

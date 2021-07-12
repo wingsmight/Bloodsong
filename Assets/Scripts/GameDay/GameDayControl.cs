@@ -8,6 +8,7 @@ public class GameDayControl : MonoBehaviour, IDataLoading, IDataSaving
 {
     [SerializeField] private GameDayOrder gameDayOrder;
     [SerializeField] private DialogueGraphParser dialogueGraphParser;
+    [SerializeField] private FadeAnimation inGameMenuAnimation;
 
 
     private int currentStoryIndex = 0;
@@ -31,6 +32,8 @@ public class GameDayControl : MonoBehaviour, IDataLoading, IDataSaving
         currectStory = gameDayOrder.Stories[currentDayIndex];
 
         dialogueGraphParser.Parse(currectStory.Graph);
+
+        inGameMenuAnimation.Appear();
     }
     public void StartNewDay()
     {

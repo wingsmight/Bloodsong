@@ -6,9 +6,9 @@ using TMPro;
 
 public abstract class TextShowing : MonoBehaviour, IShowPaging
 {
-    [SerializeField] private List<PrevPageControlButton> prevPageControls;
-    [SerializeField] private List<NextPageControlButton> nextPageControls;
-    [SerializeField] private List<StopPageControlButton> stopPageControls;
+    [SerializeField] private List<PrevPageButton> prevPageControls;
+    [SerializeField] private List<NextPageButton> nextPageControls;
+    [SerializeField] private List<StopPageButton> stopPageControls;
     [SerializeField] protected TextMeshProUGUI textDisplay;
 
 

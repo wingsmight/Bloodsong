@@ -18,11 +18,11 @@ public class SplitTextAppearing : MonoBehaviour
     {
         for (int i = 0; i < sets.Count; i++)
         {
-            sets[i].OnStopPageTyping += OnStopPageTyping;
-            sets[i].OnStopTyping += OnStopTyping;
-            sets[i].OnStartTyping += OnStartTyping;
+            sets[i].OnStopPageTyping += () => OnStopPageTyping?.Invoke();
+            sets[i].OnStopTyping += () => OnStopTyping?.Invoke();
+            sets[i].OnStartTyping += () => OnStartTyping?.Invoke();
 
-            sets[i].OnStopTyping += fadeAnimation.Disappear;
+            //sets[i].OnStopTyping += fadeAnimation.Disappear;
 
             sets[i].gameObject.SetActive(false);
         }

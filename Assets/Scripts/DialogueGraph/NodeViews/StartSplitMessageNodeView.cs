@@ -14,6 +14,8 @@ public class StartSplitMessageNodeView : NodeView<SplitMessageNode>
         splitTextAppearing.Type(nodeData.text);
         splitTextAppearing.OnStopTyping += () =>
         {
+            Debug.Log("AAAAA");
+
             ProcessNextWithDelay(dialogue, nodeData, DELAY_AFTER_STOP);
         };
     }

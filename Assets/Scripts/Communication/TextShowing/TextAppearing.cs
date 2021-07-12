@@ -114,8 +114,8 @@ public class TextAppearing : TextShowing
 
         isTyping = false;
 
-        SetupPageControls();
-
         InvokeOnStopPageTyping();
+
+        SetupPageControls();
     }
 }
