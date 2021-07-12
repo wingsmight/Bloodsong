@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using UnityEditor;
 using UnityEditor.Experimental.GraphView;
 using UnityEditor.UIElements;
 using UnityEngine;
@@ -7,11 +8,11 @@ using UnityEngine.UIElements;
 
 public class DialogueNodeEditorView : NodeEditorView
 {
-    private const int DIALOGUE_TEXT_FIELD_LENGTH = 75;
+    private const int TEXT_FIELD_LENGTH = 75;
 
+
+    private SerializedProperty characterProperty;
     private TextField dialogueTextField;
-
-    private string dialogueText;
     private List<DialogueResponseData> responses = new List<DialogueResponseData>();
 
 
@@ -21,16 +22,22 @@ public class DialogueNodeEditorView : NodeEditorView
 
         AddPort(Direction.Input, Port.Capacity.Multi);
 
+        #region speakerField
+        CharacterSO characterSO = ScriptableObject.CreateInstance<CharacterSO>();
+        SerializedObject serializedObject = new SerializedObject(characterSO);
+        characterProperty = serializedObject.FindProperty("character");
+        PropertyField characterField = new PropertyField(characterProperty, "Character:");
+        characterField.BindProperty(characterProperty);
+        mainContainer.Add(characterField);
+
+        serializedObject.ApplyModifiedProperties();
+        #endregion
+
         #region dialogueTextField
         dialogueTextField = new TextField("");
         dialogueTextField.RegisterValueChangedCallback(evt =>
         {
-            string wrappedText = TextFieldWrapper.Wrap(evt.newValue, DIALOGUE_TEXT_FIELD_LENGTH);
-            string unwrappedText = TextFieldWrapper.Unwrap(wrappedText);
-
-            dialogueText = unwrappedText;
-
-            dialogueTextField.SetValueWithoutNotify(wrappedText);
+            SetText(evt.newValue);
         });
         dialogueTextField.multiline = true;
 
@@ -57,9 +64,8 @@ public class DialogueNodeEditorView : NodeEditorView
         guid = data.GUID;
         Position = data.Position;
 
-        dialogueText = data.dialogueText;
-        dialogueTextField.SetValueWithoutNotify(TextFieldWrapper.Wrap(dialogueText, DIALOGUE_TEXT_FIELD_LENGTH));
-
+        SetSpeaker(data.speakerName);
+        SetText(data.dialogueText);
         for (int i = 0; i < data.responses.Count; i++)
         {
             AddResponsePort(data.responses[i]);
@@ -104,6 +110,19 @@ public class DialogueNodeEditorView : NodeEditorView
         RefreshPorts();
         RefreshExpandedState();
     }
+    private void SetText(string text)
+    {
+        string wrappedText = TextFieldWrapper.Wrap(text, TEXT_FIELD_LENGTH);
+
+        dialogueTextField.SetValueWithoutNotify(wrappedText);
+    }
+    private void SetSpeaker(string speakerName)
+    {
+        if (!string.IsNullOrEmpty(speakerName))
+        {
+            characterProperty.SetValue<Character>(ScriptableObjectFinder.Get(speakerName, typeof(Character)) as Character);
+        }
+    }
 
 
     public override NodeData Data
@@ -124,10 +143,10 @@ public class DialogueNodeEditorView : NodeEditorView
                 }
             }
 
-            return new DialogueNode(guid, Position, dialogueText, responses);
+            return new DialogueNode(guid, Position, TextFieldWrapper.Unwrap(dialogueTextField.value), responses,
+            characterProperty.GetValue<Character>());
         }
     }
 
-    public string DialogueText => dialogueText;
     public List<DialogueResponseData> Responses => responses;
 }

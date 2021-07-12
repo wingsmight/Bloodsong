@@ -18,10 +18,35 @@ public abstract class NodeView<T> : MonoBehaviour
             dialogueParser.ActNode(node);
         }
 
-        if(nodes.Count <= 0)
+        if (nodes.Count <= 0)
         {
             dialogueParser.Stop(dialogue);
         }
+    }
+    protected void Process(NodeData nodeData)
+    {
+        dialogueParser.ActNode(nodeData);
+    }
+    protected void ProcessNextWithDelay(DialogueGraphData dialogue, NodeData nodeData, float secondsDelay)
+    {
+        StartCoroutine(ProcessNextWithDelayRoutine(dialogue, nodeData, secondsDelay));
+    }
+    protected void ProcessWithDelay(NodeData nodeData, float secondsDelay)
+    {
+        StartCoroutine(ProcessWithDelayRoutine(nodeData, secondsDelay));
+    }
+
+    private IEnumerator ProcessNextWithDelayRoutine(DialogueGraphData dialogue, NodeData nodeData, float secondsDelay)
+    {
+        yield return new WaitForSeconds(secondsDelay);
+
+        ProcessNext(dialogue, nodeData);
+    }
+    private IEnumerator ProcessWithDelayRoutine(NodeData nodeData, float secondsDelay)
+    {
+        yield return new WaitForSeconds(secondsDelay);
+
+        Process(nodeData);
     }
 
 

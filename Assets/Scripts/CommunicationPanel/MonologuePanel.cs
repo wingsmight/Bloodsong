@@ -11,36 +11,41 @@ public class MonologuePanel : CommunicationPanel
     [SerializeField] private TextMeshProUGUI speakerName;
 
 
-    public void StartConversation(string text)
+    public void StartConversation(string text, Character speaker)
+    {
+        StartConversation(text, speaker.Name);
+    }
+    public void StartConversation(string text, string speakerName)
     {
         fadeAnimation.Appear();
         textShowing.Type(text);
+        SetSpeaker(speakerName);
     }
-    public void StartConversationWithDelay(string text)
+    public void StartConversationWithDelay(string text, string speakerName)
     {
-        StartCoroutine(StartConversationWithDelayRoutine(text));
+        StartCoroutine(StartConversationWithDelayRoutine(text, speakerName));
     }
     public void OverrideStopText(string newText)
     {
         stopMonologueText.text = newText;
     }
-    public void SetSpeaker(Character speaker)
+    public void SetSpeaker(string name)
     {
-        if (speaker == null)
+        if (string.IsNullOrEmpty(name))
         {
             speakerNameGameobject.SetActive(false);
         }
         else
         {
-            speakerNameGameobject.SetActive(!string.IsNullOrEmpty(speaker.Name));
-            speakerName.text = speaker.Name;
+            speakerNameGameobject.SetActive(!string.IsNullOrEmpty(name));
+            speakerName.text = name;
         }
     }
 
-    private IEnumerator StartConversationWithDelayRoutine(string text)
+    private IEnumerator StartConversationWithDelayRoutine(string text, string speakerName)
     {
         yield return new WaitForSeconds(appearingDelay);
 
-        StartConversation(text);
+        StartConversation(text, speakerName);
     }
 }

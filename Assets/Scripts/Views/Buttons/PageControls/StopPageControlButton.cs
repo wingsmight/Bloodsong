@@ -11,6 +11,6 @@ public class StopPageControlButton : PageControlButton
     {
         TextShowing.Stop();
 
-        //monologuePanel.StopConversation();
+        monologuePanel.StopConversation();
     }
 }

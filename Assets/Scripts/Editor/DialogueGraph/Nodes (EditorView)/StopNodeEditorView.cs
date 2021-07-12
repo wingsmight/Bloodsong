@@ -6,7 +6,7 @@ public class StopNodeEditorView : NodeEditorView
 {
     public StopNodeEditorView() : base()
     {
-        title = "Stop dialogue";
+        title = "Stop";
 
         AddPort(Direction.Input, Port.Capacity.Multi);
     }

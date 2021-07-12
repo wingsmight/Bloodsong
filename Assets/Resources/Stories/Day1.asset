@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Day1
   m_EditorClassIdentifier: 
   graphDict:
-    m_keys: 
-    m_values: []
-  graph: {fileID: 11400000, guid: c87145726b979481db23e02b3e01a93e, type: 2}
+    m_keys: 0000000001000000
+    m_values:
+    - {fileID: 11400000, guid: 52c697e0539f742ee99fa9239870a1bd, type: 2}
+    - {fileID: 11400000, guid: 52c697e0539f742ee99fa9239870a1bd, type: 2}

@@ -16,12 +16,12 @@ public abstract class CommunicationPanel : MonoBehaviour
 
     public virtual void StopConversation()
     {
+        fadeAnimation.Disappear();
+
         OnConversationStoped?.Invoke();
 
         actionAfterStop?.Invoke();
         actionAfterStop = null;
-
-        fadeAnimation.Disappear();
     }
     public void AddActionAfterStop(UnityAction unityAction)
     {

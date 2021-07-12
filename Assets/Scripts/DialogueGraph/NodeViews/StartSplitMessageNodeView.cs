@@ -17,16 +17,4 @@ public class StartSplitMessageNodeView : NodeView<SplitMessageNode>
             ProcessNextWithDelay(dialogue, nodeData, DELAY_AFTER_STOP);
         };
     }
-
-    protected void ProcessNextWithDelay(DialogueGraphData dialogue, NodeData nodeData, float secondsDelay)
-    {
-        StartCoroutine(ProcessNextWithDelayRoutine(dialogue, nodeData, secondsDelay));
-    }
-
-    private IEnumerator ProcessNextWithDelayRoutine(DialogueGraphData dialogue, NodeData nodeData, float secondsDelay)
-    {
-        yield return new WaitForSeconds(secondsDelay);
-
-        ProcessNext(dialogue, nodeData);
-    }
 }

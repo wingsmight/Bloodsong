@@ -21,6 +21,8 @@ public class SplitTextAppearing : MonoBehaviour
             sets[i].OnStopTyping += OnStopTyping;
             sets[i].OnStartTyping += OnStartTyping;
         }
+
+        sets.ForEach(x => x.gameObject.SetActive(false));
     }
 
 
