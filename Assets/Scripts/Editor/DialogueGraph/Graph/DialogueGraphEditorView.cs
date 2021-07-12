@@ -231,7 +231,10 @@ public class DialogueGraphEditorView : GraphView
 
             foreach (var node in Nodes)
             {
-                nodeDatas.Add(node.Data);
+                if (node != null)
+                {
+                    nodeDatas.Add(node.Data);
+                }
             }
 
             return nodeDatas;

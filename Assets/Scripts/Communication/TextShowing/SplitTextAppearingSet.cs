@@ -42,6 +42,7 @@ public class SplitTextAppearingSet : MonoBehaviour, IShowPaging
     {
         textIndex--;
         textAppearings[textIndex].Stop();
+        textIndex++;
     }
     public void ShowNextPage()
     {
