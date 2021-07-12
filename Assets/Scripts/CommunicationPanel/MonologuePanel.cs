@@ -13,19 +13,19 @@ public class MonologuePanel : CommunicationPanel
     [SerializeField] private TextMeshProUGUI speakerName;
 
 
-    public void StartConversation(string text, Character speaker)
+    public void Show(string text, Character speaker)
     {
-        StartConversation(text, speaker?.Name);
+        Show(text, speaker?.Name);
     }
-    public void StartConversation(string text, string speakerName)
+    public void Show(string text, string speakerName)
     {
         fadeAnimation.Appear();
         textShowing.Type(text);
         SetSpeaker(speakerName);
     }
-    public void StartConversationWithDelay(string text, string speakerName)
+    public void ShowWithDelay(string text, string speakerName)
     {
-        StartCoroutine(StartConversationWithDelayRoutine(text, speakerName));
+        StartCoroutine(ShowWithDelayRoutine(text, speakerName));
     }
     public void SetSpeaker(string name)
     {
@@ -40,10 +40,10 @@ public class MonologuePanel : CommunicationPanel
         }
     }
 
-    private IEnumerator StartConversationWithDelayRoutine(string text, string speakerName)
+    private IEnumerator ShowWithDelayRoutine(string text, string speakerName)
     {
         yield return new WaitForSeconds(appearingDelay);
 
-        StartConversation(text, speakerName);
+        Show(text, speakerName);
     }
 }

@@ -10,8 +10,8 @@ public class StopNodeView : NodeView<NodeData>
 
     public void Act()
     {
-        monologuePanel.StopConversation();
-        dialoguePanel.StopConversation();
+        monologuePanel.Hide();
+        dialoguePanel.Hide();
     }
 
     public override void Act(DialogueGraphData dialogue, NodeData nodeData)

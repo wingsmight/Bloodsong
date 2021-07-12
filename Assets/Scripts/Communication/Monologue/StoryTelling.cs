@@ -25,7 +25,7 @@ public class StoryTelling : MonoBehaviour, IDataSaving
 
     private void Awake()
     {
-        monologuePanel.OnConversationStoped += NextFrame;
+        monologuePanel.OnConversationHidden += NextFrame;
     }
 #if UNITY_EDITOR
     private void Update()

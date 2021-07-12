@@ -6343,8 +6343,7 @@ MonoBehaviour:
   prevPageControls: []
   nextPageControls:
   - {fileID: 1625500416}
-  stopPageControls:
-  - {fileID: 1075219856}
+  stopPageControls: []
   textDisplay: {fileID: 476579812}
   fadeAnimation: {fileID: 476579814}
 --- !u!1 &489802058
@@ -8297,16 +8296,16 @@ GameObject:
   m_Component:
   - component: {fileID: 629412025}
   - component: {fileID: 629412022}
-  - component: {fileID: 629412021}
   - component: {fileID: 629412024}
   - component: {fileID: 629412023}
+  - component: {fileID: 629412021}
   m_Layer: 5
   m_Name: StopPage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &629412021
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8316,11 +8315,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 629412020}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d858f10a47b154a82943faa7570efb09, type: 3}
+  m_Script: {fileID: 11500000, guid: 86b1fdac1e2e341abaf557d14aa7293a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   hasSound: 0
-  textShowing: {fileID: 405957328}
+  splitTextAppearing: {fileID: 1137947147}
 --- !u!114 &629412022
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8415,7 +8414,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1559215342}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -10997,7 +10996,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1559215342}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -11321,8 +11320,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1025969902}
   - {fileID: 1039402511}
+  - {fileID: 1025969902}
   m_Father: {fileID: 1768069675}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -14008,7 +14007,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 797808900}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -14025,9 +14024,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1039402511}
   - component: {fileID: 1039402508}
-  - component: {fileID: 1039402507}
   - component: {fileID: 1039402510}
   - component: {fileID: 1039402509}
+  - component: {fileID: 1039402507}
   m_Layer: 5
   m_Name: StopPage
   m_TagString: Untagged
@@ -14044,11 +14043,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1039402506}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d858f10a47b154a82943faa7570efb09, type: 3}
+  m_Script: {fileID: 11500000, guid: 86b1fdac1e2e341abaf557d14aa7293a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   hasSound: 0
-  textShowing: {fileID: 1768069676}
+  splitTextAppearing: {fileID: 1137947147}
 --- !u!114 &1039402508
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14143,7 +14142,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 797808900}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -14709,9 +14708,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1075219860}
   - component: {fileID: 1075219857}
-  - component: {fileID: 1075219856}
   - component: {fileID: 1075219859}
   - component: {fileID: 1075219858}
+  - component: {fileID: 1075219856}
   m_Layer: 5
   m_Name: StopPage
   m_TagString: Untagged
@@ -14728,11 +14727,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1075219855}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d858f10a47b154a82943faa7570efb09, type: 3}
+  m_Script: {fileID: 11500000, guid: 86b1fdac1e2e341abaf557d14aa7293a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   hasSound: 0
-  textShowing: {fileID: 861240974}
+  splitTextAppearing: {fileID: 1137947147}
 --- !u!114 &1075219857
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15703,11 +15702,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 376ddac48b4be4f11bfe3cf9acb7af31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fadeAnimation: {fileID: 1137947148}
+  appearingDelay: 1
   sets:
   - {fileID: 1768069676}
   - {fileID: 861240974}
   - {fileID: 405957328}
-  fadeAnimation: {fileID: 1137947148}
 --- !u!114 &1137947148
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17577,8 +17577,7 @@ MonoBehaviour:
   prevPageControls: []
   nextPageControls:
   - {fileID: 784609689}
-  stopPageControls:
-  - {fileID: 629412021}
+  stopPageControls: []
   textDisplay: {fileID: 1269043803}
   fadeAnimation: {fileID: 1269043805}
 --- !u!1 &1275128074
@@ -20234,8 +20233,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 784609693}
   - {fileID: 629412025}
+  - {fileID: 784609693}
   m_Father: {fileID: 405957327}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -25191,8 +25190,7 @@ MonoBehaviour:
   prevPageControls: []
   nextPageControls:
   - {fileID: 1025969898}
-  stopPageControls:
-  - {fileID: 1039402507}
+  stopPageControls: []
   textDisplay: {fileID: 2057024674}
   fadeAnimation: {fileID: 2057024672}
 --- !u!222 &2057024676

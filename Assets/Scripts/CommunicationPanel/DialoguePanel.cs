@@ -16,7 +16,7 @@ public class DialoguePanel : CommunicationPanel
     [SerializeField] private ChoiceView choiceView;
 
 
-    public void StartConversation(string text, string speakerName, ChoiceData choiceData, List<UnityAction> actions)
+    public void Show(string text, string speakerName, ChoiceData choiceData, List<UnityAction> actions)
     {
         fadeAnimation.Appear();
 

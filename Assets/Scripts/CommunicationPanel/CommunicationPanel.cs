@@ -3,29 +3,29 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public abstract class CommunicationPanel : MonoBehaviour
+public abstract class CommunicationPanel : MonoBehaviour, IHidable
 {
     [SerializeField] protected FadeAnimation fadeAnimation;
     [SerializeField] protected float appearingDelay = 1.0f;
 
-    public delegate void ChangedEventHandler();
-    public event ChangedEventHandler OnConversationStoped;
 
-    private UnityAction actionAfterStop;
+    public event UnityAction OnConversationHidden;
+
+    private UnityAction actionAfterHide;
 
 
-    public virtual void StopConversation()
+    public virtual void Hide()
     {
         fadeAnimation.Disappear();
 
-        OnConversationStoped?.Invoke();
+        OnConversationHidden?.Invoke();
 
-        actionAfterStop?.Invoke();
-        actionAfterStop = null;
+        actionAfterHide?.Invoke();
+        actionAfterHide = null;
     }
-    public void AddActionAfterStop(UnityAction unityAction)
+    public void AddActionAfterHide(UnityAction unityAction)
     {
-        actionAfterStop += unityAction;
+        actionAfterHide += unityAction;
     }
 
 

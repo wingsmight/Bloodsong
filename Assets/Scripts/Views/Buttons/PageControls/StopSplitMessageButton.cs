@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class StopSplitMessageButton : UIButton
 {
-    [SerializeField] private SplitTextAppearing splitTextAppearing;
+    [SerializeField] private SplitMessagePanel splitTextAppearing;
 
 
     protected override void OnClick()
     {
-        splitTextAppearing.Stop();
+        splitTextAppearing.Hide();
     }
 }

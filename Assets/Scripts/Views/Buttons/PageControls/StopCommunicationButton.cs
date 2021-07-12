@@ -11,7 +11,7 @@ public class StopCommunicationButton : UIButton
     {
         if (communicationPanel.IsShowing)
         {
-            communicationPanel.StopConversation();
+            communicationPanel.Hide();
         }
     }
 }

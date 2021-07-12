@@ -14,8 +14,8 @@ public class StartMonologueNodeView : NodeView<MonologueNode>
     public override void Act(DialogueGraphData dialogue, MonologueNode nodeData)
     {
         Character speaker = ScriptableObjectFinder.Get(nodeData.speakerName, typeof(Character)) as Character;
-        monologuePanel.StartConversation(nodeData.texts[0], speaker);
-        monologuePanel.AddActionAfterStop(() =>
+        monologuePanel.Show(nodeData.texts[0], speaker);
+        monologuePanel.AddActionAfterHide(() =>
         {
             if (nodeData.texts.Count > 1)
             {

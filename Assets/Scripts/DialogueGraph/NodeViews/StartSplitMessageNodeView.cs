@@ -6,13 +6,13 @@ public class StartSplitMessageNodeView : NodeView<SplitMessageNode>
 {
     private const float DELAY_AFTER_STOP = 0.5f;
 
-    [SerializeField] private SplitTextAppearing splitTextAppearing;
+    [SerializeField] private SplitMessagePanel splitTextAppearing;
 
 
     public override void Act(DialogueGraphData dialogue, SplitMessageNode nodeData)
     {
-        splitTextAppearing.Type(nodeData.text);
-        splitTextAppearing.AddActionAfterStop(() =>
+        splitTextAppearing.Show(nodeData.text);
+        splitTextAppearing.AddActionAfterHide(() =>
         {
             ProcessNextWithDelay(dialogue, nodeData, DELAY_AFTER_STOP);
         });

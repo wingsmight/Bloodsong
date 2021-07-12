@@ -10,7 +10,7 @@ public class EnterCharacterNodeView : NodeView<EnterCharacterNode>
 
     public override void Act(DialogueGraphData dialogue, EnterCharacterNode nodeData)
     {
-        dialoguePanel.AddActionAfterStop(() => visiterView.Show(ScriptableObjectFinder.Get<Character>(nodeData.visiterName)));
+        dialoguePanel.AddActionAfterHide(() => visiterView.Show(ScriptableObjectFinder.Get<Character>(nodeData.visiterName)));
 
         ProcessNext(dialogue, nodeData);
     }

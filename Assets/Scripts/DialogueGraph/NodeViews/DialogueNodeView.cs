@@ -38,15 +38,15 @@ public class DialogueNodeView : NodeView<DialogueNode>
 
             actions.Add(() =>
             {
-                communicationPanel.StopConversation();
+                communicationPanel.Hide();
                 dialogueParser.ActNode(responseDestNode);
             });
         }
 
-        communicationPanel.StartConversation(nodeData.dialogueText, nodeData.speakerName, new ChoiceData(choices), actions);
+        communicationPanel.Show(nodeData.dialogueText, nodeData.speakerName, new ChoiceData(choices), actions);
     }
     public void Stop()
     {
-        communicationPanel.StopConversation();
+        communicationPanel.Hide();
     }
 }

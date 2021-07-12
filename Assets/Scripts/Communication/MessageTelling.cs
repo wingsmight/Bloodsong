@@ -18,7 +18,7 @@ public class MessageTelling : MonoBehaviour
 
     private void Awake()
     {
-        monologuePanel.OnConversationStoped += NextFrame;
+        monologuePanel.OnConversationHidden += NextFrame;
     }
 
     public void Tell(Message message)
@@ -49,7 +49,7 @@ public class MessageTelling : MonoBehaviour
     {
         yield return new WaitForSeconds(delay);
 
-        monologuePanel.StartConversation(currentPhrase.text, new Character()); // TODO make character
+        monologuePanel.Show(currentPhrase.text, new Character()); // TODO make character
     }
     private void ReadPhrase()
     {
