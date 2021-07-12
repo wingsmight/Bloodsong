@@ -14,9 +14,15 @@ public class ChoiceButton : UIButton, IPointerEnterHandler, IPointerExitHandler
     [SerializeField] private GameObject pointer;
 
 
-    public void Show(Choice choice)
+    private UnityAction action;
+
+
+    public void Show(Choice choice, UnityAction action)
     {
         textView.text = choice.text;
+        this.action = action;
+
+        OnPointerExit(null);
     }
     public void OnPointerEnter(PointerEventData eventData)
     {
@@ -32,6 +38,7 @@ public class ChoiceButton : UIButton, IPointerEnterHandler, IPointerExitHandler
 
     protected override void OnClick()
     {
-
+        action?.Invoke();
+        action = null;
     }
 }

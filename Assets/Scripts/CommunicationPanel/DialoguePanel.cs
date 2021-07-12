@@ -1,42 +1,39 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class DialoguePanel : CommunicationPanel
 {
-    [SerializeField] private DialogueGraphParser dialogueParser;
+    private const string EMPTY_SPEAKER_NAME = "Author";
 
 
-    public void StartConversationWithDelay(DialogueGraphData dialogue)
-    {
-        StartCoroutine(StartConversationWithDelayRoutine(dialogue));
-    }
-    public void StartConversationWithDelay(DialogueGraphData dialogue, float delay)
-    {
-        StartCoroutine(StartConversationWithDelayRoutine(dialogue, delay));
-    }
-    public void StartConversation(DialogueGraphData dialogue)
-    {
-        dialogueParser.Parse(dialogue);
+    [SerializeField] private GameObject speakerNameGameobject;
+    [SerializeField] private TextMeshProUGUI speakerName;
+    [SerializeField] private TextTyping textTyping;
+    [SerializeField] private ChoiceView choiceView;
 
+
+    public void StartConversation(string text, string speakerName, ChoiceData choiceData, List<UnityAction> actions)
+    {
         fadeAnimation.Appear();
+
+        textTyping.Type(text);
+        choiceView.Show(choiceData, actions);
+        SetSpeaker(speakerName);
     }
-
-    private IEnumerator StartConversationWithDelayRoutine(DialogueGraphData dialogue)
+    public void SetSpeaker(string name)
     {
-        yield return new WaitForSeconds(appearingDelay);
-
-        dialogueParser.Parse(dialogue);
-
-        fadeAnimation.Appear();
-    }
-    private IEnumerator StartConversationWithDelayRoutine(DialogueGraphData dialogue, float delay)
-    {
-        yield return new WaitForSeconds(delay);
-
-        dialogueParser.Parse(dialogue);
-
-        fadeAnimation.Appear();
+        if (string.IsNullOrEmpty(name) || name == EMPTY_SPEAKER_NAME)
+        {
+            speakerNameGameobject.SetActive(false);
+        }
+        else
+        {
+            speakerNameGameobject.SetActive(!string.IsNullOrEmpty(name));
+            speakerName.text = name;
+        }
     }
 }

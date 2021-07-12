@@ -6,6 +6,7 @@ using static TextShowing;
 public class SplitTextAppearing : MonoBehaviour
 {
     [SerializeField] private List<SplitTextAppearingSet> sets;
+    [SerializeField] private FadeAnimation fadeAnimation;
 
 
     public event eventDelegate OnStopPageTyping;
@@ -20,9 +21,11 @@ public class SplitTextAppearing : MonoBehaviour
             sets[i].OnStopPageTyping += OnStopPageTyping;
             sets[i].OnStopTyping += OnStopTyping;
             sets[i].OnStartTyping += OnStartTyping;
-        }
 
-        sets.ForEach(x => x.gameObject.SetActive(false));
+            sets[i].OnStopTyping += fadeAnimation.Disappear;
+
+            sets[i].gameObject.SetActive(false);
+        }
     }
 
 
@@ -31,5 +34,7 @@ public class SplitTextAppearing : MonoBehaviour
         sets.ForEach(x => x.gameObject.SetActive(false));
         sets[fullTexts.Count - 1].gameObject.SetActive(true);
         sets[fullTexts.Count - 1].Type(fullTexts);
+
+        fadeAnimation.Appear();
     }
 }

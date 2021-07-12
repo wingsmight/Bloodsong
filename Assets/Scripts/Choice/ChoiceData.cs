@@ -4,11 +4,22 @@ using UnityEngine;
 
 public struct ChoiceData
 {
-    public string questionText;
     public List<Choice> choiceTexts;
+
+
+    public ChoiceData(List<Choice> choiceTexts)
+    {
+        this.choiceTexts = choiceTexts;
+    }
 }
 
 public struct Choice
 {
     public string text;
+
+
+    public Choice(string text)
+    {
+        this.text = text;
+    }
 }

@@ -1,71 +1,52 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class DialogueNodeView : NodeView<DialogueNode>
 {
-    [SerializeField] private TextTyping dialogueTyping;
     [SerializeField] private DialoguePanel communicationPanel;
-    [SerializeField] private ResponsesPanel responsesPanel;
+    [SerializeField] private ChoiceView choiceView;
 
 
     public override void Act(DialogueGraphData dialogue, DialogueNode nodeData)
     {
-        string text = ReplaceExposeds(dialogue, nodeData.dialogueText);
+        var choices = new List<Choice>();
+        var actions = new List<UnityAction>();
 
-        dialogueTyping.Type(text);
-
-        responsesPanel.Clear();
-        responsesPanel.Enable();
         for (int i = 0; i < nodeData.responses.Count; i++)
         {
             var response = nodeData.responses[i];
-            NodeData responseDestNode = dialogue.GetNextPortNodes(nodeData, response.text)[0];
-            string responseText = ReplaceExposeds(dialogue, response.text);
 
+            choices.Add(new Choice(response.text));
+
+            NodeData responseDestNode = dialogue.GetNextPortNodes(nodeData, response.text)[0];
             if (response is DialogueStatResponseData)
             {
                 StatAdditive statAdditive = (response as DialogueStatResponseData).statAdditive;
-                var dialogueResponse = new DialogueStatResponseData(responseText, statAdditive);
-
-                responsesPanel.AddResponse(dialogueResponse, () =>
-                {
-                    dialogueParser.ActNode(responseDestNode);
-                });
+                var dialogueResponse = new DialogueStatResponseData(response.text, statAdditive);
             }
             else if (response is DialogueStatsResponseData)
             {
                 List<StatAdditive> statAdditives = (response as DialogueStatsResponseData).statAdditives;
-                var dialogueResponse = new DialogueStatsResponseData(responseText, statAdditives);
-
-                responsesPanel.AddResponse(dialogueResponse, () =>
-                {
-                    dialogueParser.ActNode(responseDestNode);
-                });
+                var dialogueResponse = new DialogueStatsResponseData(response.text, statAdditives);
             }
             else
             {
-                var dialogueResponse = new DialogueResponseData(responseText);
-
-                responsesPanel.AddResponse(dialogueResponse, () =>
-                {
-                    dialogueParser.ActNode(responseDestNode);
-                });
+                var dialogueResponse = new DialogueResponseData(response.text);
             }
+
+            actions.Add(() =>
+            {
+                communicationPanel.StopConversation();
+                dialogueParser.ActNode(responseDestNode);
+            });
         }
+
+        communicationPanel.StartConversation(nodeData.dialogueText, nodeData.speakerName, new ChoiceData(choices), actions);
     }
     public void Stop()
     {
-        dialogueTyping.Stop();
         communicationPanel.StopConversation();
-    }
-
-    private string ReplaceExposeds(DialogueGraphData dialogue, string text)
-    {
-        foreach (var exposedProperty in dialogue.ExposedVariables)
-        {
-            text = text.Replace($"[{exposedProperty.Name}]", exposedProperty.Value);
-        }
-        return text;
     }
 }

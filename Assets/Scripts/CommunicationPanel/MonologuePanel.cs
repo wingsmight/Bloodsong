@@ -5,8 +5,10 @@ using UnityEngine;
 
 public class MonologuePanel : CommunicationPanel
 {
+    private const string EMPTY_SPEAKER_NAME = "Author";
+
+
     [SerializeField] private TextShowing textShowing;
-    [SerializeField] private TextMeshProUGUI stopMonologueText;
     [SerializeField] private GameObject speakerNameGameobject;
     [SerializeField] private TextMeshProUGUI speakerName;
 
@@ -25,13 +27,9 @@ public class MonologuePanel : CommunicationPanel
     {
         StartCoroutine(StartConversationWithDelayRoutine(text, speakerName));
     }
-    public void OverrideStopText(string newText)
-    {
-        stopMonologueText.text = newText;
-    }
     public void SetSpeaker(string name)
     {
-        if (string.IsNullOrEmpty(name))
+        if (string.IsNullOrEmpty(name) || name == EMPTY_SPEAKER_NAME)
         {
             speakerNameGameobject.SetActive(false);
         }

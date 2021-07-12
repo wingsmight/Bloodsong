@@ -5,12 +5,20 @@ using UnityEngine;
 public class StopPageControlButton : PageControlButton
 {
     [SerializeField] private MonologuePanel monologuePanel;
+    [SerializeField] private DialoguePanel dialoguePanel;
 
 
     protected override void OnClick()
     {
         TextShowing.Stop();
 
-        monologuePanel.StopConversation();
+        if (monologuePanel != null && monologuePanel.IsShowing)
+        {
+            monologuePanel.StopConversation();
+        }
+        if (dialoguePanel != null && dialoguePanel.IsShowing)
+        {
+            dialoguePanel.StopConversation();
+        }
     }
 }
