@@ -13,11 +13,15 @@ public class CharacterView : MonoBehaviour
 
     public void Show(Character character, Direction direction)
     {
+        Show(character);
+
+        StartCoroutine(AppearRoutine(direction));
+    }
+    public void Show(Character character)
+    {
         image.sprite = character.GetSprite(position);
 
         fadeAnimation.Appear();
-
-        StartCoroutine(AppearRoutine(direction));
     }
     public void Hide()
     {
@@ -84,7 +88,7 @@ public class CharacterView : MonoBehaviour
 
         image.rectTransform.anchoredPosition = finishPosition;
     }
-
+    public Sprite Sprite => image.sprite;
 
 
     public enum Position

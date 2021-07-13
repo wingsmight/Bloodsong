@@ -7,9 +7,6 @@ using UnityEngine;
 [Serializable]
 public class SaveSlot
 {
-    private const string LOCATION_TEXTURES_PATH = "Backgrounds";
-
-
     public DateTime lastExitDate = DateTime.MinValue;
     public Sprite locationSprite = null;
 
@@ -23,6 +20,7 @@ public class SaveSlot
         if (gameSlot.IsUsed)
         {
             lastExitDate = Storage.GetData<PlayerPreferences>(gameSlot.Index).lastExitDate.Date;
+            locationSprite = new Location(Storage.GetData<GameDayData>(gameSlot.Index).locationName).Sprite;
         }
     }
     public SaveSlot(DateTime lastOpenDate, Sprite locationSprite) : this()

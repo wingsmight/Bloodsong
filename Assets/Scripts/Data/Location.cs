@@ -18,9 +18,13 @@ public class Location
     {
         this.name = name;
 
+        if (string.IsNullOrEmpty(name))
+            return;
+
         string locationPath = TEXTURES_PATH + "/" + name;
         var texture = Resources.Load<Texture2D>(locationPath);
-        this.sprite = Sprite.Create(texture, new Rect(0, 0, texture.width, texture.height), new Vector2(0.5f, 0.5f), 100);
+        sprite = Sprite.Create(texture, new Rect(0, 0, texture.width, texture.height), new Vector2(0.5f, 0.5f), 100);
+        sprite.name = name;
     }
 
 

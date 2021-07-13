@@ -54,3 +54,5 @@ public class PositionSpriteDictionary : SerializableDictionary<CharacterView.Pos
 
 [Serializable]
 public class PositionCharacterViewDictionary : SerializableDictionary<CharacterView.Position, CharacterView> { }
+[Serializable]
+public class PositionCharacterNameDictionary : SerializableDictionary<CharacterView.Position, string> { }

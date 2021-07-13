@@ -7127,6 +7127,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fadeAnimation: {fileID: 547023179}
   image: {fileID: 547023177}
+  emptryColor: {r: 0.1607, g: 0.1607, b: 0.1607, a: 1}
 --- !u!1 &554306580
 GameObject:
   m_ObjectHideFlags: 0

@@ -7,18 +7,18 @@ public static class ImageExt
 {
     public static void AdjustSize(this Image image)
     {
-        if (image.sprite == null)
-        {
-            image.color = Color.gray; // TODO The Kostyl'
+        // if (image.sprite == null)
+        // {
+        //     image.color = Color.gray; // TODO The Kostyl'
 
-            return;
-        }
+        //     return;
+        // }
 
-        var spriteRect = image.sprite.rect;
+        // var spriteRect = image.sprite.rect;
 
-        if (spriteRect.width > spriteRect.height)
-        {
+        // if (spriteRect.width > spriteRect.height)
+        // {
 
-        }
+        // }
     }
 }

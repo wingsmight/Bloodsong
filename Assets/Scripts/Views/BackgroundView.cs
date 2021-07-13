@@ -7,6 +7,7 @@ public class BackgroundView : MonoBehaviour, IDataLoading, IDataSaving
 {
     [SerializeField] private FadeAnimation fadeAnimation;
     [SerializeField] private Image image;
+    [SerializeField] private Color emptryColor;
 
 
     public void Show()
@@ -17,8 +18,8 @@ public class BackgroundView : MonoBehaviour, IDataLoading, IDataSaving
     {
         Show();
 
-        Storage.GetData<GameDayData>().lastLocation = location;
         image.sprite = location.Sprite;
+        image.color = image.sprite == null ? emptryColor : Color.white;
     }
     public void Hide()
     {
@@ -31,10 +32,13 @@ public class BackgroundView : MonoBehaviour, IDataLoading, IDataSaving
 
     public void LoadData()
     {
-        Storage.GetData<GameDayData>().lastLocation = new Location(image.sprite.name);
+        Show(new Location(Storage.GetData<GameDayData>().locationName));
     }
     public void SaveData()
     {
-        image.sprite = Storage.GetData<GameDayData>().lastLocation.Sprite;
+        if (image.sprite != null)
+        {
+            Storage.GetData<GameDayData>().locationName = image.sprite.name; // TODO may produce error if something is wrong with path/name
+        }
     }
 }

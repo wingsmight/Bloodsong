@@ -31,13 +31,15 @@ public class SaveSlotButton : UIButton
 
         gameSlot.OnDeleted += ShowEmpty;
     }
+
+
     public void Show(SaveSlot saveSlot)
     {
         if (gameSlot.IsUsed)
         {
             locationImage.sprite = saveSlot.locationSprite;
-            locationImage.AdjustSize();
-            locationImage.color = backgroundImageColor;
+            locationImage.color = locationImage.sprite == null ? emptyBackgroundImageColor : Color.white;
+            locationImage.AdjustSize(); // just add Aspect ratio filter
             lastOpenDateTextView.text = saveSlot.lastExitDate.ToShortDateString();
             slotNumberTextView.text = "";
             emptyOverlay.SetActive(false);

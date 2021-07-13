@@ -5,7 +5,8 @@ using UnityEngine;
 [Serializable]
 public class GameDayData : IStoredData
 {
-    public Location lastLocation = new Location("VillageFarView");
+    public string locationName;
+    public PositionCharacterNameDictionary characters = new PositionCharacterNameDictionary();
     public int currentStoryIndex;
     public string currentNodeGuid;
 }
