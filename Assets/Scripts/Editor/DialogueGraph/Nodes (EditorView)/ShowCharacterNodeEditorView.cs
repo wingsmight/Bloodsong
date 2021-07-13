@@ -7,10 +7,6 @@ using UnityEngine.UIElements;
 
 public class ShowCharacterNodeEditorView : NodeEditorView
 {
-    private const int POSITION_FIELD_WIDTH = 100;
-    private const int DIRECTION_FIELD_WIDTH = 100;
-
-
     private SerializedProperty characterProperty;
     private EnumField positionEnumField;
     private EnumField directionEnumField;
@@ -38,7 +34,7 @@ public class ShowCharacterNodeEditorView : NodeEditorView
         CharacterView.Position initPosition = (CharacterView.Position)0;
         positionEnumField = new EnumField(initPosition);
         positionEnumField.value = initPosition;
-        positionEnumField.style.width = POSITION_FIELD_WIDTH;
+        positionEnumField.label = "Position:";
 
         mainContainer.Add(positionEnumField);
         #endregion
@@ -47,7 +43,7 @@ public class ShowCharacterNodeEditorView : NodeEditorView
         CharacterView.Direction initDirection = (CharacterView.Direction)0;
         directionEnumField = new EnumField(initDirection);
         directionEnumField.value = initDirection;
-        directionEnumField.style.width = DIRECTION_FIELD_WIDTH;
+        directionEnumField.label = "Direction:";
 
         mainContainer.Add(directionEnumField);
         #endregion
