@@ -14,7 +14,7 @@ public class GameDayControl : MonoBehaviour, IDataLoading, IDataSaving
     private int currentStoryIndex = 0;
     private Story currectStory;
     private bool isRunning;
-    private NodeData currentNode;
+    private string currentNodeGuid;
 
 
     public void StartDay()
@@ -22,23 +22,19 @@ public class GameDayControl : MonoBehaviour, IDataLoading, IDataSaving
         isRunning = true;
 
         currectStory = gameDayOrder.Stories[currentStoryIndex];
-        dialogueGraphParser.Parse(currectStory.Graph, currentNode);
+        dialogueGraphParser.Parse(currectStory.Graph, currentNodeGuid);
 
         inGameMenuAnimation.Appear();
     }
     public void LoadData()
     {
         currentStoryIndex = Storage.GetData<GameDayData>().currentStoryIndex;
-        currentNode = Storage.GetData<GameDayData>().currentNode;
-        if (currentNode == null || string.IsNullOrEmpty(currentNode.GUID))
-        {
-            currentNode = null;
-        }
+        currentNodeGuid = Storage.GetData<GameDayData>().currentNodeGuid;
     }
     public void SaveData()
     {
         Storage.GetData<GameDayData>().currentStoryIndex = currentStoryIndex;
-        Storage.GetData<GameDayData>().currentNode = dialogueGraphParser.CurrentNode;
+        Storage.GetData<GameDayData>().currentNodeGuid = dialogueGraphParser.CurrentNode.guid;
     }
 
 

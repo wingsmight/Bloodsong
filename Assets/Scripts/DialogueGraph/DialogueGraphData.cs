@@ -53,6 +53,10 @@ public class DialogueGraphData : ScriptableObject
 
         return outputNodeDatas;
     }
+    public NodeData GetNodeByGUID(string guid)
+    {
+        return nodeDatas.FirstOrDefault(x => x.GUID == guid);
+    }
 
 
     public NodeData FirstNode

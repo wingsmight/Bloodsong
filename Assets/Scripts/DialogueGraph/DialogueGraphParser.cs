@@ -34,6 +34,10 @@ public class DialogueGraphParser : MonoBehaviour
     {
         Parse(dialogue, currentDialogue.FirstNode);
     }
+    public void Parse(DialogueGraphData dialogue, string startNodeGUID)
+    {
+        Parse(dialogue, dialogue.GetNodeByGUID(startNodeGUID));
+    }
     public void Parse(DialogueGraphData dialogue, NodeData startNode)
     {
         currentDialogue = dialogue;
