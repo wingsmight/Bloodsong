@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class BackgroundView : MonoBehaviour
+public class BackgroundView : MonoBehaviour, IDataLoading, IDataSaving
 {
     [SerializeField] private FadeAnimation fadeAnimation;
     [SerializeField] private Image image;
@@ -27,5 +27,14 @@ public class BackgroundView : MonoBehaviour
     public void HideImmediately()
     {
         fadeAnimation.SetVisible(false);
+    }
+
+    public void LoadData()
+    {
+        Storage.GetData<GameDayData>().lastLocation = new Location(image.sprite.name);
+    }
+    public void SaveData()
+    {
+        image.sprite = Storage.GetData<GameDayData>().lastLocation.Sprite;
     }
 }

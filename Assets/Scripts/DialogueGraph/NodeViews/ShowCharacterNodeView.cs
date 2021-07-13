@@ -10,7 +10,7 @@ public class ShowCharacterNodeView : NodeView<CharacterNode>
 
     public override void Act(DialogueGraphData dialogue, CharacterNode nodeData)
     {
-        dialoguePanel.AddActionAfterHide(() => visiterView.Show(nodeData.character, nodeData.characterPosition, nodeData.characterDirection));
+        visiterView.Show(nodeData.character, nodeData.characterPosition, nodeData.characterDirection);
 
         ProcessNext(dialogue, nodeData);
     }
