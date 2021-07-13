@@ -13,4 +13,7 @@ MonoBehaviour:
   m_Name: Zari
   m_EditorClassIdentifier: 
   name: Zari
-  sprite: {fileID: 21300000, guid: a5ee038a3ac6a4fae9b8985c7cec85ce, type: 3}
+  sprites:
+    m_keys: 01000000
+    m_values:
+    - {fileID: 21300000, guid: a5ee038a3ac6a4fae9b8985c7cec85ce, type: 3}

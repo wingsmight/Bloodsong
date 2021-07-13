@@ -8,11 +8,12 @@ public class DialogueGraphParser : MonoBehaviour
 {
     [SerializeField] private EntryNodeView entryNodeView;
     [SerializeField] private DialogueNodeView dialogueView;
-    [SerializeField] private EnterCharacterNodeView enterCharacterView;
+    [SerializeField] private ShowCharacterNodeView showCharacterView;
     [SerializeField] private StartMonologueNodeView startMonologueView;
     [SerializeField] private StopNodeView stopNodeView;
     [SerializeField] private RandomOutputNodeView randomOutputNodeView;
     [SerializeField] private StartSplitMessageNodeView startSplitMessageNodeView;
+    [SerializeField] private LocationNodeView locationNodeView;
 
 
     private DialogueGraphData currentDialogue;
@@ -60,9 +61,9 @@ public class DialogueGraphParser : MonoBehaviour
         {
             entryNodeView.Act(currentDialogue, nodeData as EntryNode);
         }
-        else if (nodeData is EnterCharacterNode)
+        else if (nodeData is CharacterNode)
         {
-            enterCharacterView.Act(currentDialogue, nodeData as EnterCharacterNode);
+            showCharacterView.Act(currentDialogue, nodeData as CharacterNode);
         }
         else if (nodeData is MonologueNode)
         {
@@ -79,6 +80,10 @@ public class DialogueGraphParser : MonoBehaviour
         else if (nodeData is SplitMessageNode)
         {
             startSplitMessageNodeView.Act(currentDialogue, nodeData as SplitMessageNode);
+        }
+        else if (nodeData is LocationNode)
+        {
+            locationNodeView.Act(currentDialogue, nodeData as LocationNode);
         }
         else
         {

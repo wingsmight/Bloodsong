@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System;
 using UnityEngine;
+using UnityEngine.UI;
 
 [Serializable]
 public class StringStringDictionary : SerializableDictionary<string, string> { }
@@ -46,3 +47,10 @@ public class LanguageMessagePrasesDictionary : SerializableDictionary<Language, 
 
 [Serializable]
 public class LanguageGraphDictionary : SerializableDictionary<Language, DialogueGraphData> { }
+
+
+[Serializable]
+public class PositionSpriteDictionary : SerializableDictionary<CharacterView.Position, Sprite> { }
+
+[Serializable]
+public class PositionCharacterViewDictionary : SerializableDictionary<CharacterView.Position, CharacterView> { }

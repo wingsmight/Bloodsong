@@ -194,9 +194,9 @@ public class DialogueGraphEditorView : GraphView
         {
             return new DialogueNodeEditorView(nodeData as DialogueNode);
         }
-        else if (nodeData is EnterCharacterNode)
+        else if (nodeData is CharacterNode)
         {
-            return new EnterCharacterNodeEditorView(nodeData as EnterCharacterNode);
+            return new ShowCharacterNodeEditorView(nodeData as CharacterNode);
         }
         else if (nodeData is MonologueNode)
         {

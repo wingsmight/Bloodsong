@@ -5,17 +5,16 @@ using UnityEngine.UI;
 
 public class CharacterView : MonoBehaviour
 {
+    [SerializeField] private Position position;
     [SerializeField] private FadeAnimation fadeAnimation;
     [SerializeField] private Image image;
     [SerializeField] private float appearDuration;
 
 
-    public void Show(Character character)
+    public void Show(Character character, Direction direction)
     {
+        image.sprite = character.GetSprite(position);
 
-    }
-    public void Show(Direction direction)
-    {
         fadeAnimation.Appear();
 
         StartCoroutine(AppearRoutine(direction));
@@ -87,6 +86,13 @@ public class CharacterView : MonoBehaviour
     }
 
 
+
+    public enum Position
+    {
+        Left,
+        Middle,
+        Right,
+    }
     public enum Direction
     {
         FromLeft,

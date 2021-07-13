@@ -7,7 +7,7 @@ using UnityEngine;
 [Serializable]
 public class Location
 {
-    private const string TEXTURES_PATH = "Backgrounds";
+    public const string TEXTURES_PATH = "Backgrounds";
 
 
     public string name;

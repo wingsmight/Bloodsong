@@ -9,9 +9,14 @@ using UnityEngine;
 public class Character : ScriptableObject
 {
     [SerializeField] private new string name;
-    [SerializeField] private Sprite sprite;
+    [SerializeField] private PositionSpriteDictionary sprites;
+
+
+    public Sprite GetSprite(CharacterView.Position position)
+    {
+        return sprites[position];
+    }
 
 
     public string Name => name;
-    public Sprite Sprite => sprite;
 }

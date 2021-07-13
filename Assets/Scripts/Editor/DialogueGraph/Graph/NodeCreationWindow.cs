@@ -52,12 +52,17 @@ public class NodeCreationWindow : ScriptableObject, ISearchWindowProvider
                     level = 2,
                     userData = new StartSplitMessageEditorNodeView()
                 },
+                new SearchTreeEntry(new GUIContent("Show location", indentationIcon))
+                {
+                    level = 2,
+                    userData = new LocationNodeEditorView()
+                },
 
-                new SearchTreeGroupEntry(new GUIContent("Enter visiter"), 2),
-                new SearchTreeEntry(new GUIContent("Usual visiter", indentationIcon))
+                new SearchTreeGroupEntry(new GUIContent("Show character"), 2),
+                new SearchTreeEntry(new GUIContent("Usual character", indentationIcon))
                 {
                     level = 3,
-                    userData = new EnterCharacterNodeEditorView()
+                    userData = new ShowCharacterNodeEditorView()
                 },
 
 
