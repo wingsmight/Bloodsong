@@ -13,7 +13,7 @@ public class PlayerStats : IStoredData
 
     public UserStat GetStatByAdditiveType(AdditiveType additiveType)
     {
-        switch(additiveType)
+        switch (additiveType)
         {
             case AdditiveType.Money: return money;
             case AdditiveType.Reputation: return reputation;

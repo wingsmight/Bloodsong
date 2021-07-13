@@ -15,8 +15,14 @@ public class SaveLoadLauncher : MonoBehaviourSingleton<SaveLoadLauncher>
         dataLinkings = UnityEngineObjectExt.FindObjectsOfInterface<IDataLinking>();
         dataSavings = UnityEngineObjectExt.FindObjectsOfInterface<IDataSaving>();
 
-        LoadDatas();
-        LinkDatas();
+        Storage.LoadGeneralSettings();
+        Storage.LoadDatas();
+
+        if (Storage.GeneralSettings.currentGameSlotIndex != -1)
+        {
+            LoadDatas();
+            LinkDatas();
+        }
     }
     private void OnDisable()
     {
@@ -25,9 +31,6 @@ public class SaveLoadLauncher : MonoBehaviourSingleton<SaveLoadLauncher>
 
     public void LoadDatas()
     {
-        Storage.LoadGeneralSettings();
-        Storage.LoadDatas();
-
         foreach (var item in dataLoadings)
         {
             item?.LoadData();

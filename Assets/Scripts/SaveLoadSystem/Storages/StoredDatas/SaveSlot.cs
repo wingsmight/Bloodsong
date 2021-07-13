@@ -23,9 +23,6 @@ public class SaveSlot
         if (gameSlot.IsUsed)
         {
             lastExitDate = Storage.GetData<PlayerPreferences>(gameSlot.Index).lastExitDate.Date;
-
-            var location = Storage.GetData<GameDayData>(gameSlot.Index).lastLocation;
-            locationSprite = location.Sprite;
         }
     }
     public SaveSlot(DateTime lastOpenDate, Sprite locationSprite) : this()

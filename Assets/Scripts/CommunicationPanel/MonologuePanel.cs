@@ -13,6 +13,10 @@ public class MonologuePanel : CommunicationPanel
     [SerializeField] private TextMeshProUGUI speakerName;
 
 
+    public void Show(string text)
+    {
+        Show(text, "");
+    }
     public void Show(string text, Character speaker)
     {
         Show(text, speaker?.Name);
@@ -29,6 +33,9 @@ public class MonologuePanel : CommunicationPanel
     }
     public void SetSpeaker(string name)
     {
+        if (speakerNameGameobject == null && speakerName == null)
+            return;
+
         if (string.IsNullOrEmpty(name) || name == EMPTY_SPEAKER_NAME)
         {
             speakerNameGameobject.SetActive(false);

@@ -66,6 +66,9 @@ public class SaveSlotButton : UIButton
         Storage.GeneralSettings.currentGameSlotIndex = gameSlot.Index;
         Storage.GeneralSettings.lastGameSlot = gameSlot.Index;
 
+        SaveLoadLauncher.Instance.LoadDatas();
+        SaveLoadLauncher.Instance.LinkDatas();
+
         saveSlotsView.Hide();
         menuView.Hide();
 

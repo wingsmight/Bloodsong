@@ -6,6 +6,7 @@ using UnityEngine;
 
 public class DialogueGraphParser : MonoBehaviour
 {
+    [SerializeField] private EntryNodeView entryNodeView;
     [SerializeField] private DialogueNodeView dialogueView;
     [SerializeField] private EnterCharacterNodeView enterCharacterView;
     [SerializeField] private StartMonologueNodeView startMonologueView;
@@ -15,6 +16,7 @@ public class DialogueGraphParser : MonoBehaviour
 
 
     private DialogueGraphData currentDialogue;
+    private NodeData currentNode;
 
 
 #if UNITY_EDITOR
@@ -30,19 +32,29 @@ public class DialogueGraphParser : MonoBehaviour
 
     public void Parse(DialogueGraphData dialogue)
     {
-        if (dialogue == null)
-            return;
-
+        Parse(dialogue, currentDialogue.FirstNode);
+    }
+    public void Parse(DialogueGraphData dialogue, NodeData startNode)
+    {
         currentDialogue = dialogue;
-        var firstNode = currentDialogue.FirstNode;
-        var secondNodes = currentDialogue.GetNextNodes(firstNode);
-        secondNodes.ForEach(x => ActNode(x));
+
+        if (startNode == null)
+        {
+            startNode = dialogue.FirstNode;
+        }
+        ActNode(startNode);
     }
     public void ActNode(NodeData nodeData)
     {
+        currentNode = nodeData;
+
         if (nodeData is DialogueNode)
         {
             dialogueView.Act(currentDialogue, nodeData as DialogueNode);
+        }
+        else if (nodeData is EntryNode)
+        {
+            entryNodeView.Act(currentDialogue, nodeData as EntryNode);
         }
         else if (nodeData is EnterCharacterNode)
         {
@@ -89,4 +101,7 @@ public class DialogueGraphParser : MonoBehaviour
             nextnodes = dialogue.GetNextNodes(node);
         }
     }
+
+
+    public NodeData CurrentNode => currentNode;
 }

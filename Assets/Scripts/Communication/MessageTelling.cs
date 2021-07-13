@@ -49,7 +49,7 @@ public class MessageTelling : MonoBehaviour
     {
         yield return new WaitForSeconds(delay);
 
-        monologuePanel.Show(currentPhrase.text, new Character()); // TODO make character
+        monologuePanel.Show(currentPhrase.text);
     }
     private void ReadPhrase()
     {

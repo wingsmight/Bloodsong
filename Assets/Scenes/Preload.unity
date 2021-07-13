@@ -171,12 +171,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 5611596}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d858f10a47b154a82943faa7570efb09, type: 3}
+  m_Script: {fileID: 11500000, guid: 43835d17a79184e628c31bf86e92c4de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  button: {fileID: 5611599}
-  textShowing: {fileID: 452310742}
-  monologuePanel: {fileID: 2014460173}
+  hasSound: 0
+  communicationPanel: {fileID: 2014460173}
 --- !u!114 &5611599
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -710,8 +709,7 @@ MonoBehaviour:
   prevPageControls: []
   nextPageControls:
   - {fileID: 1171027166}
-  stopPageControls:
-  - {fileID: 5611598}
+  stopPageControls: []
   textDisplay: {fileID: 452310739}
   fadeAnimation: {fileID: 452310740}
 --- !u!1 &667008678
@@ -1106,7 +1104,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 426eef59c09b54d9bb6752f3714a0bad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  button: {fileID: 1171027167}
+  hasSound: 0
   textShowing: {fileID: 452310742}
 --- !u!114 &1171027167
 MonoBehaviour:
@@ -1300,6 +1298,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fadeAnimation: {fileID: 1289458050}
+  image: {fileID: 0}
 --- !u!222 &1289458054
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2011,7 +2010,6 @@ MonoBehaviour:
   fadeAnimation: {fileID: 2014460171}
   appearingDelay: 1
   textShowing: {fileID: 452310742}
-  stopMonologueText: {fileID: 0}
   speakerNameGameobject: {fileID: 0}
   speakerName: {fileID: 0}
 --- !u!1 &2077718579
@@ -2115,7 +2113,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2099717514}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 005a78ef05cbd479a9d5d9a1bd855b09, type: 3}
+  m_Script: {fileID: 11500000, guid: a88e4e131a92b45729449be9901cbcf4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   messageTelling: {fileID: 667008679}

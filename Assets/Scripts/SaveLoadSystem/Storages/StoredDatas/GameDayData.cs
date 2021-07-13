@@ -6,5 +6,6 @@ using UnityEngine;
 public class GameDayData : IStoredData
 {
     public Location lastLocation = new Location("VillageFarView");
-    public int phraseIndex = 0;
+    public int currentStoryIndex;
+    [SerializeReference] public NodeData currentNode;
 }

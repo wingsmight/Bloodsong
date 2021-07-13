@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class StoryTelling : MonoBehaviour, IDataSaving
+public class StoryTelling : MonoBehaviour
 {
     private const int BACKGROUND_APPEAR_INDEX = 4;
     private const int JAMES_APPEAR_INDEX = 5;
@@ -66,10 +66,6 @@ public class StoryTelling : MonoBehaviour, IDataSaving
     public void Stop()
     {
 
-    }
-    public void SaveData()
-    {
-        Storage.GetData<GameDayData>().phraseIndex = phraseIndex;
     }
 
     private IEnumerator ShowMonologueWihtDelay(float delay)
