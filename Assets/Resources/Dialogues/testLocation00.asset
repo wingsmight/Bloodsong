@@ -1,0 +1,70 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78b3fd9154634ebdb8c8a48960b9a16a, type: 3}
+  m_Name: testLocation00
+  m_EditorClassIdentifier: 
+  entryGUID: a13d8702-b452-4113-84b4-450f8b8cb094
+  nodeDatas:
+  - id: 0
+  - id: 1
+  - id: 2
+  - id: 3
+  nodeLinks:
+  - id: 4
+  - id: 5
+  - id: 6
+  exposedVariables: []
+  commentBlockDatas: []
+  references:
+    version: 1
+    00000000:
+      type: {class: EntryNode, ns: , asm: Assembly-CSharp}
+      data:
+        guid: a13d8702-b452-4113-84b4-450f8b8cb094
+        position: {x: 100, y: 200}
+    00000001:
+      type: {class: MonologueNode, ns: , asm: Assembly-CSharp}
+      data:
+        guid: 1a1dcce1-dba4-4b5c-82b0-6a37f5e43d44
+        position: {x: 251, y: 176}
+        texts:
+        - Close village
+        speakerName: 
+    00000002:
+      type: {class: StopNode, ns: , asm: Assembly-CSharp}
+      data:
+        guid: 01744b8f-0a41-4795-bd08-f8b6e7e9b8ff
+        position: {x: 1005, y: 292}
+    00000003:
+      type: {class: LocationNode, ns: , asm: Assembly-CSharp}
+      data:
+        guid: da2f7068-b380-48f7-b122-f0a7ad41a575
+        position: {x: 594, y: 275}
+        name: VillageCloseViewNight
+    00000004:
+      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
+      data:
+        sourceNodeGUID: a13d8702-b452-4113-84b4-450f8b8cb094
+        sourcePortName: Output
+        destinationNodeGUID: 1a1dcce1-dba4-4b5c-82b0-6a37f5e43d44
+    00000005:
+      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
+      data:
+        sourceNodeGUID: 1a1dcce1-dba4-4b5c-82b0-6a37f5e43d44
+        sourcePortName: Output
+        destinationNodeGUID: da2f7068-b380-48f7-b122-f0a7ad41a575
+    00000006:
+      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
+      data:
+        sourceNodeGUID: da2f7068-b380-48f7-b122-f0a7ad41a575
+        sourcePortName: Output
+        destinationNodeGUID: 01744b8f-0a41-4795-bd08-f8b6e7e9b8ff

@@ -214,6 +214,10 @@ public class DialogueGraphEditorView : GraphView
         {
             return new RandomOutputNodeEditorView(nodeData as RandomOutputNode);
         }
+        else if (nodeData is LocationNode)
+        {
+            return new LocationNodeEditorView(nodeData as LocationNode);
+        }
         else
         {
             throw new Exception("There is no Node Editor View type you want to load!");

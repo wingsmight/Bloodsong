@@ -8,7 +8,6 @@ using UnityEngine.UIElements;
 public class LocationNodeEditorView : NodeEditorView
 {
     private SerializedProperty spriteProperty;
-    private SerializedProperty texture2DProperty;
 
 
     public LocationNodeEditorView() : base()
@@ -28,17 +27,6 @@ public class LocationNodeEditorView : NodeEditorView
 
         serializedObject.ApplyModifiedProperties();
         #endregion
-
-        #region texture2DField
-        Texture2DSO texture2DSO = ScriptableObject.CreateInstance<Texture2DSO>();
-        SerializedObject serializedTexture2D = new SerializedObject(texture2DSO);
-        texture2DProperty = serializedTexture2D.FindProperty("texture2D");
-        PropertyField texture2DField = new PropertyField(texture2DProperty, "Texture 2D:");
-        texture2DField.BindProperty(texture2DProperty);
-        mainContainer.Add(texture2DField);
-
-        serializedTexture2D.ApplyModifiedProperties();
-        #endregion
     }
     public LocationNodeEditorView(LocationNode data) : this()
     {
@@ -46,29 +34,20 @@ public class LocationNodeEditorView : NodeEditorView
         Position = data.Position;
 
         SetSprite(data.name);
-        SetTexture2D(data.name);
     }
 
     private void SetSprite(string name)
     {
         if (!string.IsNullOrEmpty(name))
         {
-            //spriteProperty.SetValue<Sprite>(Resources.Load<Texture2D>(Location.TEXTURES_PATH + "/" + name));
-        }
-    }
-    private void SetTexture2D(string name)
-    {
-        if (!string.IsNullOrEmpty(name))
-        {
-            spriteProperty.SetValue<Texture2D>(Resources.Load<Texture2D>(Location.TEXTURES_PATH + "/" + name));
+            spriteProperty.SetValue<Sprite>(Resources.Load<Sprite>(Location.TEXTURES_PATH + "/" + name));
         }
     }
 
 
     public override NodeData Data =>
         new LocationNode(guid, Position,
-        //texture2DProperty.GetValue<Texture2D>()
-        null);
+        spriteProperty.GetValue<Sprite>().name);
 }
 
 
