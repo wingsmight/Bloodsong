@@ -16831,6 +16831,7 @@ MonoBehaviour:
   - {fileID: 1137947147}
   - {fileID: 547023181}
   - {fileID: 973528088}
+  monologueNodeView: {fileID: 70452147}
 --- !u!114 &1349510755
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19583,6 +19584,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hasSound: 0
   menuView: {fileID: 1534370485}
+  saveButton: {fileID: 0}
 --- !u!114 &1690124800
 MonoBehaviour:
   m_ObjectHideFlags: 0

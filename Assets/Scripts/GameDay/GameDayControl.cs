@@ -11,12 +11,14 @@ public class GameDayControl : MonoBehaviour, IDataLoading, IDataSaving
     [SerializeField] private DialogueGraphParser dialogueGraphParser;
     [SerializeField] private FadeAnimation inGameMenuAnimation;
     [SerializeField] [RequireInterface(typeof(IResetable))] private List<UnityEngine.Object> resetableViews;
+    [SerializeField] private StartMonologueNodeView monologueNodeView;
 
 
-    private int currentStoryIndex = 0;
     private Story currectStory;
-    private bool isRunning;
     private string currentNodeGuid;
+    private int currentStoryIndex = 0;
+    private int currentStoryPhraseIndex = 0;
+    private bool isRunning;
 
 
     public void StartDay()
@@ -28,19 +30,30 @@ public class GameDayControl : MonoBehaviour, IDataLoading, IDataSaving
         isRunning = true;
 
         currectStory = gameDayOrder.Stories[currentStoryIndex];
-        dialogueGraphParser.Parse(currectStory.Graph, currentNodeGuid);
+        var graph = currectStory.Graph;
+        var currentNode = graph.GetNodeByGUID(currentNodeGuid);
+        if (currentNode is MonologueNode)
+        {
+            monologueNodeView.Act(graph, currentNode as MonologueNode, currentStoryPhraseIndex);
+        }
+        else
+        {
+            dialogueGraphParser.Parse(graph, currentNode);
+        }
 
         inGameMenuAnimation.Appear();
     }
     public void LoadData()
     {
-        currentStoryIndex = Storage.GetData<GameDayData>().currentStoryIndex;
         currentNodeGuid = Storage.GetData<GameDayData>().currentNodeGuid;
+        currentStoryIndex = Storage.GetData<GameDayData>().currentStoryIndex;
+        currentStoryPhraseIndex = Storage.GetData<GameDayData>().currentStoryPhraseIndex;
     }
     public void SaveData()
     {
+        Storage.GetData<GameDayData>().currentNodeGuid = dialogueGraphParser.CurrentNode?.guid;
         Storage.GetData<GameDayData>().currentStoryIndex = currentStoryIndex;
-        Storage.GetData<GameDayData>().currentNodeGuid = dialogueGraphParser.CurrentNode.guid;
+        Storage.GetData<GameDayData>().currentStoryPhraseIndex = monologueNodeView.PhraseIndex;
     }
 
 

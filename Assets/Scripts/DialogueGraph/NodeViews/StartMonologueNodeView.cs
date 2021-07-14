@@ -6,22 +6,30 @@ using UnityEngine;
 public class StartMonologueNodeView : NodeView<MonologueNode>
 {
     private const float DELAY_AFTER_STOP = 0.15f;
+    private const int FIRST_PHRASE_INDEX = 0;
 
 
     [SerializeField] private MonologuePanel monologuePanel;
 
 
+    private int phraseIndex = FIRST_PHRASE_INDEX;
+
+
     public override void Act(DialogueGraphData dialogue, MonologueNode nodeData)
     {
+        Act(dialogue, nodeData, FIRST_PHRASE_INDEX);
+    }
+    public void Act(DialogueGraphData dialogue, MonologueNode nodeData, int phraseIndex = FIRST_PHRASE_INDEX)
+    {
+        this.phraseIndex = phraseIndex;
+
         Character speaker = ScriptableObjectFinder.Get(nodeData.speakerName, typeof(Character)) as Character;
-        monologuePanel.Show(nodeData.texts[0], speaker);
+        monologuePanel.Show(nodeData.texts[phraseIndex], speaker);
         monologuePanel.AddActionAfterHide(() =>
         {
-            if (nodeData.texts.Count > 1)
+            if ((phraseIndex + 1) < nodeData.texts.Count)
             {
-                List<string> nextTexts = new List<string>(nodeData.texts);
-                nextTexts.RemoveAt(0);
-                ProcessWithDelay(new MonologueNode(nodeData.guid, nodeData.position, nextTexts, nodeData.speakerName), DELAY_AFTER_STOP);
+                DelayExecutor.Instance.Execute(DELAY_AFTER_STOP, () => Act(dialogue, nodeData, phraseIndex + 1));
             }
             else
             {
@@ -29,4 +37,7 @@ public class StartMonologueNodeView : NodeView<MonologueNode>
             }
         });
     }
+
+
+    public int PhraseIndex => phraseIndex;
 }

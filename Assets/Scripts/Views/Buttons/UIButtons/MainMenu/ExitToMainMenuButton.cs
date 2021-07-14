@@ -8,6 +8,7 @@ namespace StoryMenu
     public class ExitToMainMenuButton : StoryMenuButton
     {
         [SerializeField] private MenuView menuView;
+        [SerializeField] private SaveButton saveButton;
 
 
         protected override void OnClick()

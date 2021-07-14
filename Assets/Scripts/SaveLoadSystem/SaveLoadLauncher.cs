@@ -49,7 +49,10 @@ public class SaveLoadLauncher : MonoBehaviourSingleton<SaveLoadLauncher>
         {
             Storage.GetData<PlayerPreferences>().lastExitDate = new DateTimeData(DateTime.Now);
         }
-        catch { }
+        catch (Exception exception)
+        {
+            Debug.LogWarning($"SaveDatas() has produced {exception}  at the 1st try-catch block");
+        }
 
         foreach (var item in dataSavings)
         {
@@ -57,7 +60,10 @@ public class SaveLoadLauncher : MonoBehaviourSingleton<SaveLoadLauncher>
             {
                 item?.SaveData();
             }
-            catch { }
+            catch (Exception exception)
+            {
+                Debug.LogWarning($"SaveDatas() in {item} has produced {exception} at the 2nd try-catch block");
+            }
         }
 
         Storage.SaveDatas();
