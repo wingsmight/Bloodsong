@@ -6,6 +6,7 @@ using UnityEngine;
 [Serializable]
 public class GeneralSettings : IStoredData
 {
+    // slots
     public int lastGameSlot = -1;
     [NonSerialized] public int currentGameSlotIndex = -1;
     public bool[] isSlotUseds = new bool[Storage.SAVE_SLOTS_COUNT];

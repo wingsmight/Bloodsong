@@ -9,7 +9,7 @@ public class DialogueStatsResponseView : DialogueResponseView
     {
         base.Init(data, action);
 
-        if(data is DialogueStatsResponseData)
+        if (data is DialogueStatsResponseData)
         {
             DialogueStatsResponseData statData = data as DialogueStatsResponseData;
 
@@ -17,7 +17,7 @@ public class DialogueStatsResponseView : DialogueResponseView
             {
                 foreach (var statAdditive in statData.statAdditives)
                 {
-                    Storage.GetData<PlayerStats>().GetStatByAdditiveType(statAdditive.type).Amount += statAdditive.value;
+                    Storage.GetData<PlayerStats>().GetStatByAdditiveType(statAdditive.type).Amount += statAdditive.value; // Save only on SaveData()
                 }
             });
         }

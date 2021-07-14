@@ -12,15 +12,9 @@ namespace StoryMenu
 
         protected override void OnClick()
         {
-            Save();
+            Storage.GetData<PlayerPreferences>().lastExitDate = new DateTimeData(DateTime.Now);
 
             menuView.Show();
-        }
-
-        private void Save()
-        {
-            SaveLoadLauncher.Instance.SaveDatas();
-            Storage.SaveDatas();
         }
     }
 }

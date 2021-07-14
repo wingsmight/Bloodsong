@@ -11,6 +11,9 @@ public class CharacterView : MonoBehaviour
     [SerializeField] private float appearDuration;
 
 
+    private string characterName;
+
+
     public void Show(Character character, Direction direction)
     {
         Show(character);
@@ -19,6 +22,8 @@ public class CharacterView : MonoBehaviour
     }
     public void Show(Character character)
     {
+        Debug.Log("Show char");
+        characterName = character.name;
         image.sprite = character.GetSprite(position);
 
         fadeAnimation.Appear();
@@ -89,6 +94,7 @@ public class CharacterView : MonoBehaviour
         image.rectTransform.anchoredPosition = finishPosition;
     }
     public Sprite Sprite => image.sprite;
+    public string CharacterName => characterName;
 
 
     public enum Position

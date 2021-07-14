@@ -9,20 +9,13 @@ public class CharactersView : MonoBehaviour, IHidable, IResetable, IDataLoading,
     [SerializeField] private PositionCharacterViewDictionary characterViews;
 
 
-    private PositionCharacterNameDictionary characters = new PositionCharacterNameDictionary();// TODO think up something to replace it
-
-
     public void Show(Character character, CharacterView.Position position, CharacterView.Direction direction)
     {
         characterViews[position].Show(character, direction);
-
-        SetCharacter(position, character);
     }
     public void Show(Character character, CharacterView.Position position)
     {
         characterViews[position].Show(character);
-
-        SetCharacter(position, character);
     }
     public void Hide(CharacterView.Position position)
     {
@@ -53,9 +46,7 @@ public class CharactersView : MonoBehaviour, IHidable, IResetable, IDataLoading,
 
     public void LoadData()
     {
-        characters = Storage.GetData<GameDayData>().characters;
-
-        foreach (var postionCharacter in characters.ToList())
+        foreach (var postionCharacter in Storage.GetData<GameDayData>().characters)
         {
             Character character = ScriptableObjectFinder.Get(postionCharacter.Value, typeof(Character)) as Character;
             Show(character, postionCharacter.Key);
@@ -63,19 +54,10 @@ public class CharactersView : MonoBehaviour, IHidable, IResetable, IDataLoading,
     }
     public void SaveData()
     {
-        Storage.GetData<GameDayData>().characters = characters;
-    }
-
-    // it is not a part of VIEW!
-    private void SetCharacter(CharacterView.Position position, Character character)
-    {
-        if (!characters.Contains(position))
+        Storage.GetData<GameDayData>().characters = new Dictionary<CharacterView.Position, string>();
+        foreach (var characterView in characterViews)
         {
-            characters.Add(position, character.name);
-        }
-        else
-        {
-            characters[position] = character.name;
+            Storage.GetData<GameDayData>().characters.Add(characterView.Key, characterView.Value.CharacterName);
         }
     }
 }

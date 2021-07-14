@@ -16,17 +16,23 @@ public class SaveLoadLauncher : MonoBehaviourSingleton<SaveLoadLauncher>
         dataSavings = UnityEngineObjectExt.FindObjectsOfInterface<IDataSaving>();
 
         Storage.LoadGeneralSettings();
-        Storage.LoadDatas();
+        //Storage.LoadDatas(); // no matter: the CurGameSlotIndex = -1 on Awake();
 
-        if (Storage.GeneralSettings.currentGameSlotIndex != -1)
-        {
-            LoadDatas();
-            LinkDatas();
-        }
+        // idkidkidkidkidkidkidkidkidkidkidkidk
+        // if (Storage.GeneralSettings.currentGameSlotIndex != -1)
+        // {
+        //     LoadDatas();
+        //     LinkDatas();
+        // }
     }
+    // auto saving on quiting
+    // private void OnDisable()
+    // {
+    //     SaveDatas();
+    // }
     private void OnDisable()
     {
-        SaveDatas();
+        Storage.GetData<PlayerPreferences>().lastExitDate = new DateTimeData(DateTime.Now); // KOSTIIILYLyil
     }
 
     public void LoadDatas()

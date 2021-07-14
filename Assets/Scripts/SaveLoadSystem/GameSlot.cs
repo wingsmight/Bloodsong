@@ -15,34 +15,33 @@ public class GameSlot : MonoBehaviour
     {
         IsUsed = false;
 
-        StartCoroutine(DeleteDirectoryRoutine());
+        StartCoroutine(DeleteDirectoryRoutine(Path.Combine(Application.persistentDataPath, "GameSlot" + index)));
     }
 
     private void SetPrevLastGameSlot()
     {
-        bool isAnyoneGameSlotAvailable = false;
+        bool isAnyGameSlotAvailable = false;
         for (int i = 0; i < 3; i++)
         {
             if (Storage.GeneralSettings.isSlotUseds[i])
             {
                 Storage.GeneralSettings.lastGameSlot = i;
-                isAnyoneGameSlotAvailable = true;
+                isAnyGameSlotAvailable = true;
                 break;
             }
         }
-        if (!isAnyoneGameSlotAvailable)
+        if (!isAnyGameSlotAvailable)
         {
             Storage.GeneralSettings.lastGameSlot = -1;
         }
     }
-    private IEnumerator DeleteDirectoryRoutine()
+    private IEnumerator DeleteDirectoryRoutine(string path)
     {
         Time.timeScale = 0;
 
-        string directoryPath = Path.Combine(Application.persistentDataPath, "GameSlot" + index);
-        if (Directory.Exists(directoryPath))
+        if (Directory.Exists(path))
         {
-            Directory.Delete(directoryPath, true);
+            Directory.Delete(path, true);
         }
 
         IsUsed = false;
@@ -50,7 +49,7 @@ public class GameSlot : MonoBehaviour
 
         SetPrevLastGameSlot();
 
-        yield return new WaitWhile(() => Directory.Exists(directoryPath));
+        yield return new WaitWhile(() => Directory.Exists(path));
 
         Time.timeScale = 1;
 

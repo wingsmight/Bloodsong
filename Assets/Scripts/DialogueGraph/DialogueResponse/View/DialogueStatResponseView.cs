@@ -9,13 +9,13 @@ public class DialogueStatResponseView : DialogueResponseView
     {
         base.Init(data, action);
 
-        if(data is DialogueStatResponseData)
+        if (data is DialogueStatResponseData)
         {
             DialogueStatResponseData statData = data as DialogueStatResponseData;
 
             Button.onClick.AddListener(() =>
             {
-                Storage.GetData<PlayerStats>().GetStatByAdditiveType(statData.statAdditive.type).Amount += statData.statAdditive.value;
+                Storage.GetData<PlayerStats>().GetStatByAdditiveType(statData.statAdditive.type).Amount += statData.statAdditive.value; // Save only on SaveData()
             });
         }
     }

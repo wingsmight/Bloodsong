@@ -58,11 +58,11 @@ public class SaveSlotButton : UIButton
 
     private void StartGame()
     {
-        if (gameSlot.Index != Storage.GeneralSettings.currentGameSlotIndex
-            && Storage.GeneralSettings.currentGameSlotIndex != -1)
-        {
-            SaveLoadLauncher.Instance.SaveDatas();
-        }
+        // if (gameSlot.Index != Storage.GeneralSettings.currentGameSlotIndex
+        //     && Storage.GeneralSettings.currentGameSlotIndex != -1)
+        // {
+        //     SaveLoadLauncher.Instance.SaveDatas();
+        // }
 
         gameSlot.IsUsed = true;
         Storage.GeneralSettings.currentGameSlotIndex = gameSlot.Index;
