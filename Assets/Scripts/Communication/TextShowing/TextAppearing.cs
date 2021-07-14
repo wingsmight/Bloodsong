@@ -2,7 +2,7 @@ using System.Collections;
 using UnityEngine;
 using TMPro;
 
-public class TextAppearing : TextShowing
+public class TextAppearing : TextShowing, IResetable
 {
     [SerializeField] private FadeAnimation fadeAnimation;
 
@@ -19,7 +19,7 @@ public class TextAppearing : TextShowing
         textDisplay.text = textDisplay.text.TrimEnd('\n', '\r', ' ');
 
         isTyping = true;
-        SetupPageControls();
+        //SetupPageControls();
 
         StopAllCoroutines();
         StartCoroutine(TypePageRoutine());
@@ -77,6 +77,10 @@ public class TextAppearing : TextShowing
 
         SetupPageControls();
     }
+    public void Reset()
+    {
+        fadeAnimation.SetVisible(false);
+    }
 
     private void ShowPage(int index)
     {
@@ -104,10 +108,6 @@ public class TextAppearing : TextShowing
         InvokeOnStartTyping();
 
         isTyping = true;
-
-        textDisplay.overflowMode = TextOverflowModes.Page;
-        textDisplay.ForceMeshUpdate();
-        textDisplay.SetAllDirty();
 
         fadeAnimation.Appear();
         yield return new WaitUntil(() => fadeAnimation.IsShowing);

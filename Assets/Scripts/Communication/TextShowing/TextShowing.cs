@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using TMPro;
+using UnityEngine.Events;
 
 public abstract class TextShowing : MonoBehaviour, IShowPaging
 {
@@ -15,10 +16,9 @@ public abstract class TextShowing : MonoBehaviour, IShowPaging
     protected bool isTyping;
 
 
-    public delegate void eventDelegate();
-    public event eventDelegate OnStopPageTyping;
-    public event eventDelegate OnStopTyping;
-    public event eventDelegate OnStartTyping;
+    public event UnityAction OnStopPageTyping;
+    public event UnityAction OnStopTyping;
+    public event UnityAction OnStartTyping;
 
 
     public abstract void Type(string fullText);

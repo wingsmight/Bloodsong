@@ -1,18 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using static TextShowing;
+using UnityEngine.Events;
 
-public class SplitTextAppearingSet : MonoBehaviour, IShowPaging
+public class SplitTextAppearingSet : MonoBehaviour, IShowPaging, IResetable
 {
     [SerializeField] private List<TextAppearing> textAppearings;
-    //[SerializeField] private PrevPageButton prevPageControlButton;
-    //[SerializeField] private NextPageButton nextPageControlButton;
+    [SerializeField] private List<NextPageButton> nextPageControls;
+    [SerializeField] private List<StopPageButton> stopPageControls;
 
 
-    public event eventDelegate OnStopPageTyping;
-    public event eventDelegate OnStopTyping;
-    public event eventDelegate OnStartTyping;
+    public event UnityAction OnStopPageTyping;
+    public event UnityAction OnStopTyping;
+    public event UnityAction OnStartTyping;
 
     private int textIndex;
     private List<string> fullTexts;
@@ -46,6 +46,8 @@ public class SplitTextAppearingSet : MonoBehaviour, IShowPaging
         textIndex = 0;
         textAppearings[textIndex].Type(fullTexts[textIndex]);
         textIndex++;
+
+        SetupPageControls();
     }
     public void ShowPreviousPage()
     {
@@ -57,9 +59,31 @@ public class SplitTextAppearingSet : MonoBehaviour, IShowPaging
     {
         textAppearings[textIndex].Type(fullTexts[textIndex]);
         textIndex++;
+
+        SetupPageControls();
     }
     public void Stop()
     {
         textAppearings.ForEach(x => x.Stop());
+    }
+    public void Reset()
+    {
+        textAppearings.ForEach(x => x.Reset());
+    }
+
+    protected void SetupPageControls()
+    {
+        if (textIndex == textAppearings.Count && !textAppearings[textAppearings.Count - 1].IsTyping)
+        {
+            nextPageControls?.ForEach(x => x.SetActive(false));
+            stopPageControls?.ForEach(x => x.SetActive(true));
+
+            //InvokeOnStopTyping();
+        }
+        else
+        {
+            nextPageControls?.ForEach(x => x.SetActive(true));
+            stopPageControls?.ForEach(x => x.SetActive(false));
+        }
     }
 }

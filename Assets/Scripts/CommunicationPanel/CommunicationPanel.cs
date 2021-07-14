@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public abstract class CommunicationPanel : MonoBehaviour, IHidable
+public abstract class CommunicationPanel : MonoBehaviour, IHidable, IResetable
 {
     [SerializeField] protected FadeAnimation fadeAnimation;
     [SerializeField] protected float appearingDelay = 1.0f;
@@ -22,6 +22,13 @@ public abstract class CommunicationPanel : MonoBehaviour, IHidable
 
         actionAfterHide?.Invoke();
         actionAfterHide = null;
+    }
+    public virtual void Reset()
+    {
+        actionAfterHide = null;
+        OnConversationHidden = null;
+
+        this.Hide();
     }
     public void AddActionAfterHide(UnityAction unityAction)
     {

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,6 +10,7 @@ public class GameDayControl : MonoBehaviour, IDataLoading, IDataSaving
     [SerializeField] private GameDayOrder gameDayOrder;
     [SerializeField] private DialogueGraphParser dialogueGraphParser;
     [SerializeField] private FadeAnimation inGameMenuAnimation;
+    [SerializeField] [RequireInterface(typeof(IResetable))] private List<UnityEngine.Object> resetableViews;
 
 
     private int currentStoryIndex = 0;
@@ -19,6 +21,10 @@ public class GameDayControl : MonoBehaviour, IDataLoading, IDataSaving
 
     public void StartDay()
     {
+        ResetableViews.ForEach(x => x.Reset());
+
+        SaveLoadLauncher.Instance.LoadDatas();
+
         isRunning = true;
 
         currectStory = gameDayOrder.Stories[currentStoryIndex];
@@ -40,4 +46,6 @@ public class GameDayControl : MonoBehaviour, IDataLoading, IDataSaving
 
     public int CurrentStoryIndex => currentStoryIndex;
     public bool IsRunning => isRunning;
+
+    private List<IResetable> ResetableViews => resetableViews.Cast<IResetable>().ToList();
 }

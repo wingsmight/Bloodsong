@@ -8,6 +8,7 @@ namespace StoryMenu
     {
         protected override void OnClick()
         {
+            SaveLoadLauncher.Instance.SaveDatas();
             Storage.SaveDatas();
         }
     }

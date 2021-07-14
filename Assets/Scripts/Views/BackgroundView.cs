@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class BackgroundView : MonoBehaviour, IDataLoading, IDataSaving
+public class BackgroundView : MonoBehaviour, IHidable, IResetable, IDataLoading, IDataSaving
 {
     [SerializeField] private FadeAnimation fadeAnimation;
     [SerializeField] private Image image;
@@ -28,6 +28,10 @@ public class BackgroundView : MonoBehaviour, IDataLoading, IDataSaving
     public void HideImmediately()
     {
         fadeAnimation.SetVisible(false);
+    }
+    public void Reset()
+    {
+        HideImmediately();
     }
 
     public void LoadData()

@@ -74,7 +74,6 @@ public class SaveSlotButton : UIButton
         saveSlotsView.Hide();
         menuView.Hide();
 
-        //int phraseIndex = Storage.GetData<GameDayData>().phraseIndex;
         gameDay.StartDay();
     }
     private void ShowEmpty()
