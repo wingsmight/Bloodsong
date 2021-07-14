@@ -23096,10 +23096,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Text text text
+  m_text: Chapter 1. TEXT text
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 26caba422d3ba40bb961f29f4ffc85fa, type: 2}
-  m_sharedMaterial: {fileID: 9071138150776544547, guid: 26caba422d3ba40bb961f29f4ffc85fa, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 16121c74aac574919b4c522401cfaf39, type: 2}
+  m_sharedMaterial: {fileID: -5769620550736756269, guid: 16121c74aac574919b4c522401cfaf39, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -23123,8 +23123,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 40
+  m_fontSizeBase: 40
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
