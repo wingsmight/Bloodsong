@@ -4053,8 +4053,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueParser: {fileID: 17934409}
-  monologuePanel: {fileID: 628814471}
-  dialoguePanel: {fileID: 1165345573}
 --- !u!114 &364289737
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16771,6 +16769,7 @@ MonoBehaviour:
   - {fileID: 547023181}
   - {fileID: 973528088}
   monologueNodeView: {fileID: 70452147}
+  stopNodeView: {fileID: 364289736}
 --- !u!114 &1349510755
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16785,7 +16784,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stories:
   - {fileID: 11400000, guid: ea99d031b195848a2b63a2663a0f4e83, type: 2}
-  - {fileID: 11400000, guid: ea99d031b195848a2b63a2663a0f4e83, type: 2}
+  - {fileID: 11400000, guid: 7dd0b2265555e4490a2ca79c50abba9f, type: 2}
 --- !u!1 &1369519605
 GameObject:
   m_ObjectHideFlags: 0
