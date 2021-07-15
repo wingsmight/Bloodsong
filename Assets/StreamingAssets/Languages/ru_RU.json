@@ -66,8 +66,48 @@
     },
 
     {
-      "key": "Test",
-      "value": "Тест"
+      "key": "Arten",
+      "value": "Артэн"
+    },
+    {
+      "key": "Author",
+      "value": "Автор"
+    },
+    {
+      "key": "",
+      "value": ""
+    },
+    {
+      "key": "Dandaro",
+      "value": "Дандаро"
+    },
+    {
+      "key": "Floy",
+      "value": "Флой"
+    },
+    {
+      "key": "Greg",
+      "value": "Грэг"
+    },
+    {
+      "key": "James",
+      "value": "Джеймс"
+    },
+    {
+      "key": "Miam",
+      "value": "Миам"
+    },
+    {
+      "key": "Rion",
+      "value": "Рион"
+    },
+    {
+      "key": "Sira",
+      "value": "Сира"
+    },
+    {
+      "key": "Zari",
+      "value": "Зари"
     }
 
   ]

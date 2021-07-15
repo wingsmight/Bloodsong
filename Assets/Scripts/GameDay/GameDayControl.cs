@@ -35,24 +35,18 @@ public class GameDayControl : MonoBehaviour, IDataLoading, IDataSaving
 
         isRunning = true;
 
-        currectStory = gameDayOrder.Stories[currentStoryIndex];
-        var graph = currectStory.Graph;
-        dialogueGraphParser.CurrentDialogue = graph;
-        var currentNode = graph.GetNodeByGUID(currentNodeGuid);
-        if (currentNode is MonologueNode)
-        {
-            monologueNodeView.Act(graph, currentNode as MonologueNode, currentStoryPhraseIndex);
-        }
-        else
-        {
-            dialogueGraphParser.Parse(graph, currentNode);
-        }
+        StartDay(currentStoryIndex);
 
         inGameMenuAnimation.Appear();
     }
     public void StartDay(int storyIndex)
     {
         currentStoryIndex = storyIndex;
+
+        if (currentStoryIndex >= gameDayOrder.Stories.Count)
+        {
+            return;
+        }
 
         currectStory = gameDayOrder.Stories[currentStoryIndex];
         var graph = currectStory.Graph;

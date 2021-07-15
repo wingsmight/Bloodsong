@@ -116,8 +116,19 @@ public class TextTyping : TextShowing
         textDisplay.ForceMeshUpdate();
         textDisplay.SetAllDirty();
 
-        int firstCharacterIndex = textDisplay.textInfo.pageInfo[textDisplay.pageToDisplay - 1].firstCharacterIndex;
-        int lastCharacterIndex = textDisplay.textInfo.pageInfo[textDisplay.pageToDisplay - 1].lastCharacterIndex;
+        int firstCharacterIndex;
+        int lastCharacterIndex;
+        if (textDisplay.textInfo.pageInfo.Length <= 0)
+        {
+            firstCharacterIndex = 0;
+            lastCharacterIndex = 0;
+        }
+        else
+        {
+            firstCharacterIndex = textDisplay.textInfo.pageInfo[textDisplay.pageToDisplay - 1].firstCharacterIndex;
+            lastCharacterIndex = textDisplay.textInfo.pageInfo[textDisplay.pageToDisplay - 1].lastCharacterIndex;
+        }
+
 
         if (typingSpeed - MIN_ACCEPTABLE_SPEED < float.Epsilon)
         {

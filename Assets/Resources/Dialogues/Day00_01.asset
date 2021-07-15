@@ -312,7 +312,7 @@ MonoBehaviour:
       data:
         guid: e9dd5de6-f55d-4070-84b7-4d4cab327666
         position: {x: 405.5, y: 193.5}
-        dialogueText: ' '
+        dialogueText: 
         speakerName: 
         responses:
         - id: 283
@@ -993,8 +993,8 @@ MonoBehaviour:
         guid: 5d3335b8-e83b-4c1c-aec9-1f78d9eeffb7
         position: {x: 3485, y: 87}
         character: {fileID: 11400000, guid: b33044e455f894c4abb442a9f8c51903, type: 2}
-        characterPosition: 0
-        characterDirection: 0
+        characterPosition: 2
+        characterDirection: 1
     00000023:
       type: {class: MonologueNode, ns: , asm: Assembly-CSharp}
       data:

@@ -18,5 +18,5 @@ public class Character : ScriptableObject
     }
 
 
-    public string Name => name;
+    public string Name => Localization.GetValue(name);
 }

@@ -4,6 +4,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using System;
 
 public class SaveSlotButton : UIButton
 {
@@ -40,7 +41,14 @@ public class SaveSlotButton : UIButton
             locationImage.sprite = saveSlot.locationSprite;
             locationImage.color = locationImage.sprite == null ? emptyBackgroundImageColor : Color.white;
             locationImage.AdjustSize(); // just add Aspect ratio filter
-            lastOpenDateTextView.text = saveSlot.lastExitDate.ToShortDateString();
+            if (saveSlot.lastExitDate == DateTime.MinValue) // TODO kostttt
+            {
+                lastOpenDateTextView.text = DateTime.Now.ToShortDateString();
+            }
+            else
+            {
+                lastOpenDateTextView.text = saveSlot.lastExitDate.ToShortDateString();
+            }
             slotNumberTextView.text = "";
             emptyOverlay.SetActive(false);
             deleteButton.gameObject.SetActive(true);
