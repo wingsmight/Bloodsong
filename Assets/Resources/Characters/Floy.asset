@@ -14,5 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Floy
   sprites:
-    m_keys: 
-    m_values: []
+    m_keys: 0000000002000000
+    m_values:
+    - {fileID: 21300000, guid: ad9c39b6e5774447f8135a8a1a2c46bd, type: 3}
+    - {fileID: 21300000, guid: 1ac0834fc4a36471ea0b869271e00b93, type: 3}

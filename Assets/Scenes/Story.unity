@@ -16785,6 +16785,8 @@ MonoBehaviour:
   stories:
   - {fileID: 11400000, guid: ea99d031b195848a2b63a2663a0f4e83, type: 2}
   - {fileID: 11400000, guid: 7dd0b2265555e4490a2ca79c50abba9f, type: 2}
+  - {fileID: 11400000, guid: c55ef6c90f68841d48ca11fc71cd1725, type: 2}
+  - {fileID: 11400000, guid: 153c83d9e66af43a5b51ae29e4a0e3e2, type: 2}
 --- !u!1 &1369519605
 GameObject:
   m_ObjectHideFlags: 0

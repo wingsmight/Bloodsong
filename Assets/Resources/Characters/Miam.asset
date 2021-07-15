@@ -14,5 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Miam
   sprites:
-    m_keys: 
-    m_values: []
+    m_keys: 0000000002000000
+    m_values:
+    - {fileID: 21300000, guid: b1646b3493a7f49148da2c3568cf5b0d, type: 3}
+    - {fileID: 21300000, guid: 13bbe43e539a045c4a3ff1784244ccd8, type: 3}
