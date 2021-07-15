@@ -11,6 +11,13 @@ public class CharactersView : MonoBehaviour, IHidable, IResetable, IDataLoading,
 
     public void Show(Character character, CharacterView.Position position, CharacterView.Direction direction)
     {
+        if (character == null || string.IsNullOrEmpty(character.name) || string.IsNullOrEmpty(character.Name))
+        {
+            characterViews[position].Hide();
+
+            return;
+        }
+
         characterViews[position].Show(character, direction);
     }
     public void Show(Character character, CharacterView.Position position)
@@ -54,10 +61,13 @@ public class CharactersView : MonoBehaviour, IHidable, IResetable, IDataLoading,
     }
     public void SaveData()
     {
-        Storage.GetData<GameDayData>().characters = new Dictionary<CharacterView.Position, string>();
+        Storage.GetData<GameDayData>().characters = new PositionCharacterNameDictionary();
         foreach (var characterView in characterViews)
         {
-            Storage.GetData<GameDayData>().characters.Add(characterView.Key, characterView.Value.CharacterName);
+            if (characterView.Value.IsShowing)
+            {
+                Storage.GetData<GameDayData>().characters.Add(characterView.Key, characterView.Value.CharacterName);
+            }
         }
     }
 }

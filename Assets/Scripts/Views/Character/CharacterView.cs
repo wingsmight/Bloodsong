@@ -22,7 +22,6 @@ public class CharacterView : MonoBehaviour
     }
     public void Show(Character character)
     {
-        Debug.Log("Show char");
         characterName = character.name;
         image.sprite = character.GetSprite(position);
 
@@ -95,6 +94,7 @@ public class CharacterView : MonoBehaviour
     }
     public Sprite Sprite => image.sprite;
     public string CharacterName => characterName;
+    public bool IsShowing => fadeAnimation.IsShowing;
 
 
     public enum Position

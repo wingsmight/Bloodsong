@@ -1,20 +1,19 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
-public class StopNodeView : NodeView<NodeData>
+public class StopNodeView : NodeView<StopNode>
 {
-    [SerializeField] private MonologuePanel monologuePanel;
-    [SerializeField] private DialoguePanel dialoguePanel;
+    public event UnityAction OnGraphEnded;
 
 
     public void Act()
     {
-        monologuePanel.Hide();
-        dialoguePanel.Hide();
+        OnGraphEnded?.Invoke();
     }
 
-    public override void Act(DialogueGraphData dialogue, NodeData nodeData)
+    public override void Act(DialogueGraphData dialogue, StopNode nodeData)
     {
         Act();
     }

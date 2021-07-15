@@ -6,7 +6,8 @@ using UnityEngine;
 public class GameDayData : IStoredData
 {
     public string locationName;
-    public Dictionary<CharacterView.Position, string> characters = new Dictionary<CharacterView.Position, string>();
+    //public Dictionary<CharacterView.Position, string> characters = new Dictionary<CharacterView.Position, string>();
+    public PositionCharacterNameDictionary characters = new PositionCharacterNameDictionary();
     public string currentNodeGuid;
     public int currentStoryIndex;
     public int currentStoryPhraseIndex;

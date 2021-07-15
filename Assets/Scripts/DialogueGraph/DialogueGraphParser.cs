@@ -112,5 +112,6 @@ public class DialogueGraphParser : MonoBehaviour
     }
 
 
+    public DialogueGraphData CurrentDialogue { get => currentDialogue; set => currentDialogue = value; }
     public NodeData CurrentNode => currentNode;
 }

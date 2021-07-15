@@ -53,7 +53,7 @@ public class ShowCharacterNodeEditorView : NodeEditorView
         guid = data.GUID;
         Position = data.Position;
 
-        SetCharacter(data.character.name);
+        SetCharacter(data.character == null ? "" : data.character.name);
         SetCharacterPosition(data.characterPosition);
         SetDirection(data.characterDirection);
     }
