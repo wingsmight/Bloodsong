@@ -1,0 +1,418 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78b3fd9154634ebdb8c8a48960b9a16a, type: 3}
+  m_Name: Day00_03_en
+  m_EditorClassIdentifier: 
+  entryGUID: 20333333-b837-4a70-9d05-3cbd87fdfb98
+  nodeDatas:
+  - id: 0
+  - id: 1
+  - id: 2
+  - id: 3
+  - id: 4
+  - id: 5
+  - id: 6
+  - id: 7
+  - id: 8
+  - id: 9
+  - id: 10
+  - id: 11
+  - id: 12
+  - id: 13
+  - id: 14
+  - id: 15
+  - id: 16
+  - id: 17
+  - id: 18
+  - id: 19
+  nodeLinks:
+  - id: 20
+  - id: 21
+  - id: 22
+  - id: 23
+  - id: 24
+  - id: 25
+  - id: 26
+  - id: 27
+  - id: 28
+  - id: 29
+  - id: 30
+  - id: 31
+  - id: 32
+  - id: 33
+  - id: 34
+  - id: 35
+  - id: 36
+  - id: 37
+  - id: 38
+  - id: 39
+  exposedVariables: []
+  commentBlockDatas: []
+  references:
+    version: 1
+    00000000:
+      type: {class: EntryNode, ns: , asm: Assembly-CSharp}
+      data:
+        guid: 20333333-b837-4a70-9d05-3cbd87fdfb98
+        position: {x: 100, y: 200}
+    00000001:
+      type: {class: MonologueNode, ns: , asm: Assembly-CSharp}
+      data:
+        guid: 532dc540-bff3-425f-b70f-51c327ecc241
+        position: {x: 708, y: -227}
+        texts:
+        - In the end, you need to live for today. Right now, James had neither the
+          strength, nor the opportunities, nor the sword at his disposal to teach
+          all four gangs of robbers a lesson at once.
+        - First of all. And secondly, James was of the opinion that rest for the
+          body and soul is necessary to be as effective as possible in work. Otherwise,
+          just fatigue will take its toll.
+        - And even at the most inopportune moment. Therefore, James resolutely followed
+          his friends. Straight into the heart of the festivities.
+        - It was amazing how easy it was to get lost in this crowd. The inhabitants
+          of the village of Kondin and the farmers from the nearby lands could not
+          be enough to create human chaos.
+        - But this evening everyone seemed so full of life and energy that the crowd
+          absorbed the young man in one common organism.
+        - Without realizing it, James found himself with a mug of beer in his hand.
+          And after drying it, I took up a new one. People kindly offered and passed
+          drinks and food to each other.
+        - And even wreaths of flowers. The mood of the holiday gradually overcame
+          James, somehow enslaving him. And now, he is already dancing among young
+          and energetic people.
+        - Somewhere in the background, musicians are playing bagpipes and domras.
+          Dancers usually do not fall in time with the music. But, I must admit,
+          they do not need this at all.
+        - There was no place for embarrassment anymore. There was only pleasure left.
+          And, almost oblivion in the rhythm of the body. But when James ran into
+          her, his intoxication passed and rolled over again.
+        speakerName: 
+    00000002:
+      type: {class: CharacterNode, ns: , asm: Assembly-CSharp}
+      data:
+        guid: 48bbfbd0-d3be-481c-be94-98e188a2d07d
+        position: {x: 1335, y: -362}
+        character: {fileID: 11400000, guid: b9accc95fdb7c479a84d6a9c0354d913, type: 2}
+        characterPosition: 0
+        characterDirection: 0
+    00000003:
+      type: {class: MonologueNode, ns: , asm: Assembly-CSharp}
+      data:
+        guid: 1d9c217e-ca9a-4337-b00a-83acd7987731
+        position: {x: 1717, y: -227}
+        texts:
+        - Caused by the charming and stunning beauty of Syra. A resident of the village
+          of Kondin, a young and cheerful dancer. That's what she was called, for
+          her obvious love of dancing.
+        - The love of dancing, which occupies her whole life. She danced so fascinatingly
+          that Sira had never worked in the field and was still a favorite among
+          farmers.
+        - Of course, James had heard a lot about her. And more than once I saw her
+          stealthily. But today the young man was seized not by detachment, but by
+          attraction.
+        - These two collided completely by accident. But just by looking into each
+          other's eyes, they could no longer be separated.
+        speakerName: 
+    00000004:
+      type: {class: CharacterNode, ns: , asm: Assembly-CSharp}
+      data:
+        guid: 07d304b5-1aef-4e1d-b2ba-39c90b14e51f
+        position: {x: 2306, y: -447.5}
+        character: {fileID: 11400000, guid: 82fac4050860b4009ac9a3f12551430a, type: 2}
+        characterPosition: 0
+        characterDirection: 0
+    00000005:
+      type: {class: CharacterNode, ns: , asm: Assembly-CSharp}
+      data:
+        guid: 05480069-d0f7-47f2-9956-0760df55a05a
+        position: {x: 2607.5, y: -312.5}
+        character: {fileID: 11400000, guid: b9accc95fdb7c479a84d6a9c0354d913, type: 2}
+        characterPosition: 1
+        characterDirection: 0
+    00000006:
+      type: {class: MonologueNode, ns: , asm: Assembly-CSharp}
+      data:
+        guid: bd57cdb9-3259-4b19-b8be-956d980aab20
+        position: {x: 2966, y: -227}
+        texts:
+        - And no matter how well James moved, Syra literally wriggled around him.
+        - The girl then pressed her lush breasts against James, mesmerizing with
+          a mischievous smile and a playfully submissive look, then turned her back,
+          throwing her arms behind her back, wrapping them around James ' neck.
+        - Syra sank and rose smoothly, like a cat. She bent her waist in a completely
+          unnatural way, snuggling and rubbing her ass, awakening in James his most
+          firm determination.
+        - And again, Syra was already looking into the guy's eyes. And her hands
+          rested gently on his chest. What can I say, this evening a real passion
+          flared up between these two.
+        - The desire is as it is. They literally burned, burning each other. After
+          all, it is so rare in life that such an attraction happens between a man
+          and a woman, once they see each other.
+        - "Only to come together in a passionate dance. And all these people around\u2026
+          It was as if they didn't exist. They continued to frolic and have fun.
+          Pushing and kicking. But as if in another reality."
+        - James and Syra were only attracted to each other. And the girl, parting
+          the edges of James ' jacket, sank along his torso. Giving warm, wet kisses.
+        speakerName: 
+    00000007:
+      type: {class: CharacterNode, ns: , asm: Assembly-CSharp}
+      data:
+        guid: 183a9337-9c5e-4c5e-bde5-3c7a12b11ff2
+        position: {x: 3616.5, y: -523.5}
+        character: {fileID: 11400000, guid: 82fac4050860b4009ac9a3f12551430a, type: 2}
+        characterPosition: 1
+        characterDirection: 0
+    00000008:
+      type: {class: CharacterNode, ns: , asm: Assembly-CSharp}
+      data:
+        guid: b68aa95e-8ee7-4a61-bb2c-d335d6b81be4
+        position: {x: 4033, y: -320.5}
+        character: {fileID: 11400000, guid: 82fac4050860b4009ac9a3f12551430a, type: 2}
+        characterPosition: 2
+        characterDirection: 1
+    00000009:
+      type: {class: MonologueNode, ns: , asm: Assembly-CSharp}
+      data:
+        guid: df28285b-1e7c-40f7-a0b7-cf840141a205
+        position: {x: 4355, y: -227}
+        texts:
+        - Until all the joy and intoxication from the holiday were broken by a ringing,
+          piercing cry filled with pain and suffering. A request for help that escaped
+          too late.
+        - Here and there huts burst into flames. Until the whole village of Kondin
+          was finally drowned in a fire.
+        speakerName: 
+    0000000A:
+      type: {class: MonologueNode, ns: , asm: Assembly-CSharp}
+      data:
+        guid: b6ac2ede-ca17-48a1-ab9c-230c26e7e171
+        position: {x: 5066, y: 114.5}
+        texts:
+        - ...
+        speakerName: 
+    0000000B:
+      type: {class: StopNode, ns: , asm: Assembly-CSharp}
+      data:
+        guid: 1fb5ab40-ff3b-42c3-b1e5-57a200e753ac
+        position: {x: 5385, y: 222}
+    0000000C:
+      type: {class: DialogueNode, ns: , asm: Assembly-CSharp}
+      data:
+        guid: a1c502bc-682c-4466-967b-5056cae20d9a
+        position: {x: 272, y: 200}
+        dialogueText: ' '
+        speakerName: 
+        responses:
+        - id: 40
+        - id: 41
+    0000000D:
+      type: {class: MonologueNode, ns: , asm: Assembly-CSharp}
+      data:
+        guid: 3d06258f-1a07-4bac-9f82-7c03d25afa9a
+        position: {x: 684, y: 387}
+        texts:
+        - No, no, no, no. I'm not involved in this.
+        speakerName: James
+    0000000E:
+      type: {class: MonologueNode, ns: , asm: Assembly-CSharp}
+      data:
+        guid: d0c428a7-2ddb-455f-8d5b-18301fce3556
+        position: {x: 1052, y: 492.5}
+        texts:
+        - James crossed his arms over his chest. He saw Arten in the crowd. Together
+          with his comrades, the big man drained one mug of beer after another.
+        - Snacking on excellent fried wings, the smell of which even reached James.
+          There was no sign of Zari. Which is not surprising.
+        - She is too small and fragile to be noticed at all. And even more so among,
+          as a rule, large farmers. James continued to stand on the sidelines.
+        - He always thought that rest and fun are necessary for a person. In order
+          not to completely go crazy from a malicious routine.
+        - But this whole situation with the robbers just knocked the young man out
+          of the rut. He watched the boys and girls dancing in the crowd.
+        speakerName: 
+    0000000F:
+      type: {class: CharacterNode, ns: , asm: Assembly-CSharp}
+      data:
+        guid: 4ac88edb-0c49-4401-a741-de04dee4026a
+        position: {x: 1704, y: 409}
+        character: {fileID: 11400000, guid: b9accc95fdb7c479a84d6a9c0354d913, type: 2}
+        characterPosition: 0
+        characterDirection: 0
+    00000010:
+      type: {class: MonologueNode, ns: , asm: Assembly-CSharp}
+      data:
+        guid: b9668ba2-35ff-40ae-a17f-c26ad0b78fdc
+        position: {x: 2056, y: 486.5}
+        texts:
+        - James had heard about Syra more than once and had even met her by chance
+          before. And every time he was convinced that there was no one more beautiful,
+          more flawless and sexier than this girl.
+        - "And this annoyed the guy. After all, in this world where thugs are not
+          used to being punished, even such a miracle as this girl \u2013 dancer
+          Syra could suffer."
+        - But, like a bolt from the blue, James ' thoughts were interrupted by a
+          piercing scream filled with pain and suffering. A request for help that
+          escaped too late.
+        speakerName: 
+    00000011:
+      type: {class: CharacterNode, ns: , asm: Assembly-CSharp}
+      data:
+        guid: f75029ae-d4c1-425e-bfce-f316aa9e065e
+        position: {x: 2685, y: 293.5}
+        character: {fileID: 11400000, guid: 82fac4050860b4009ac9a3f12551430a, type: 2}
+        characterPosition: 0
+        characterDirection: 0
+    00000012:
+      type: {class: CharacterNode, ns: , asm: Assembly-CSharp}
+      data:
+        guid: bf4c57ce-6ea7-4b60-94cb-c3d6eb9d833b
+        position: {x: 2929, y: 440}
+        character: {fileID: 11400000, guid: 82fac4050860b4009ac9a3f12551430a, type: 2}
+        characterPosition: 2
+        characterDirection: 1
+    00000013:
+      type: {class: MonologueNode, ns: , asm: Assembly-CSharp}
+      data:
+        guid: 4752c9d4-afee-44d0-aa22-5b8f6691b6ab
+        position: {x: 3450, y: 527.5}
+        texts:
+        - Here and there huts burst into flames. Until the whole village of Kondin
+          was finally drowned in a fire.
+        speakerName: 
+    00000014:
+      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
+      data:
+        sourceNodeGUID: 20333333-b837-4a70-9d05-3cbd87fdfb98
+        sourcePortName: Output
+        destinationNodeGUID: a1c502bc-682c-4466-967b-5056cae20d9a
+    00000015:
+      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
+      data:
+        sourceNodeGUID: 532dc540-bff3-425f-b70f-51c327ecc241
+        sourcePortName: Output
+        destinationNodeGUID: 48bbfbd0-d3be-481c-be94-98e188a2d07d
+    00000016:
+      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
+      data:
+        sourceNodeGUID: 48bbfbd0-d3be-481c-be94-98e188a2d07d
+        sourcePortName: Output
+        destinationNodeGUID: 1d9c217e-ca9a-4337-b00a-83acd7987731
+    00000017:
+      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
+      data:
+        sourceNodeGUID: 1d9c217e-ca9a-4337-b00a-83acd7987731
+        sourcePortName: Output
+        destinationNodeGUID: 07d304b5-1aef-4e1d-b2ba-39c90b14e51f
+    00000018:
+      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
+      data:
+        sourceNodeGUID: 07d304b5-1aef-4e1d-b2ba-39c90b14e51f
+        sourcePortName: Output
+        destinationNodeGUID: 05480069-d0f7-47f2-9956-0760df55a05a
+    00000019:
+      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
+      data:
+        sourceNodeGUID: 05480069-d0f7-47f2-9956-0760df55a05a
+        sourcePortName: Output
+        destinationNodeGUID: bd57cdb9-3259-4b19-b8be-956d980aab20
+    0000001A:
+      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
+      data:
+        sourceNodeGUID: bd57cdb9-3259-4b19-b8be-956d980aab20
+        sourcePortName: Output
+        destinationNodeGUID: 183a9337-9c5e-4c5e-bde5-3c7a12b11ff2
+    0000001B:
+      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
+      data:
+        sourceNodeGUID: 183a9337-9c5e-4c5e-bde5-3c7a12b11ff2
+        sourcePortName: Output
+        destinationNodeGUID: b68aa95e-8ee7-4a61-bb2c-d335d6b81be4
+    0000001C:
+      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
+      data:
+        sourceNodeGUID: b68aa95e-8ee7-4a61-bb2c-d335d6b81be4
+        sourcePortName: Output
+        destinationNodeGUID: df28285b-1e7c-40f7-a0b7-cf840141a205
+    0000001D:
+      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
+      data:
+        sourceNodeGUID: df28285b-1e7c-40f7-a0b7-cf840141a205
+        sourcePortName: Output
+        destinationNodeGUID: b6ac2ede-ca17-48a1-ab9c-230c26e7e171
+    0000001E:
+      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
+      data:
+        sourceNodeGUID: b6ac2ede-ca17-48a1-ab9c-230c26e7e171
+        sourcePortName: Output
+        destinationNodeGUID: 1fb5ab40-ff3b-42c3-b1e5-57a200e753ac
+    0000001F:
+      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
+      data:
+        sourceNodeGUID: a1c502bc-682c-4466-967b-5056cae20d9a
+        sourcePortName: James decides to relax
+        destinationNodeGUID: 532dc540-bff3-425f-b70f-51c327ecc241
+    00000020:
+      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
+      data:
+        sourceNodeGUID: a1c502bc-682c-4466-967b-5056cae20d9a
+        sourcePortName: James remains serious
+        destinationNodeGUID: 3d06258f-1a07-4bac-9f82-7c03d25afa9a
+    00000021:
+      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
+      data:
+        sourceNodeGUID: 3d06258f-1a07-4bac-9f82-7c03d25afa9a
+        sourcePortName: Output
+        destinationNodeGUID: d0c428a7-2ddb-455f-8d5b-18301fce3556
+    00000022:
+      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
+      data:
+        sourceNodeGUID: d0c428a7-2ddb-455f-8d5b-18301fce3556
+        sourcePortName: Output
+        destinationNodeGUID: 4ac88edb-0c49-4401-a741-de04dee4026a
+    00000023:
+      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
+      data:
+        sourceNodeGUID: 4ac88edb-0c49-4401-a741-de04dee4026a
+        sourcePortName: Output
+        destinationNodeGUID: b9668ba2-35ff-40ae-a17f-c26ad0b78fdc
+    00000024:
+      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
+      data:
+        sourceNodeGUID: b9668ba2-35ff-40ae-a17f-c26ad0b78fdc
+        sourcePortName: Output
+        destinationNodeGUID: f75029ae-d4c1-425e-bfce-f316aa9e065e
+    00000025:
+      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
+      data:
+        sourceNodeGUID: f75029ae-d4c1-425e-bfce-f316aa9e065e
+        sourcePortName: Output
+        destinationNodeGUID: bf4c57ce-6ea7-4b60-94cb-c3d6eb9d833b
+    00000026:
+      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
+      data:
+        sourceNodeGUID: bf4c57ce-6ea7-4b60-94cb-c3d6eb9d833b
+        sourcePortName: Output
+        destinationNodeGUID: 4752c9d4-afee-44d0-aa22-5b8f6691b6ab
+    00000027:
+      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
+      data:
+        sourceNodeGUID: 4752c9d4-afee-44d0-aa22-5b8f6691b6ab
+        sourcePortName: Output
+        destinationNodeGUID: b6ac2ede-ca17-48a1-ab9c-230c26e7e171
+    00000028:
+      type: {class: DialogueResponseData, ns: , asm: Assembly-CSharp}
+      data:
+        text: James decides to relax
+    00000029:
+      type: {class: DialogueResponseData, ns: , asm: Assembly-CSharp}
+      data:
+        text: James remains serious

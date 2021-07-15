@@ -50,6 +50,7 @@ public class GameDayControl : MonoBehaviour, IDataLoading, IDataSaving
 
         currectStory = gameDayOrder.Stories[currentStoryIndex];
         var graph = currectStory.Graph;
+        dialogueGraphParser.CurrentDialogue = graph;
         var currentNode = graph.GetNodeByGUID(currentNodeGuid);
         if (currentNode is MonologueNode)
         {
