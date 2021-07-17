@@ -13,6 +13,7 @@ public class StartMonologueEditorNodeView : NodeEditorView
 
     private SerializedProperty characterProperty;
     private List<TextField> phraseTextFields = new List<TextField>();
+    private Button removeLastPhraseButton;
 
 
     public StartMonologueEditorNodeView() : base()
@@ -41,7 +42,18 @@ public class StartMonologueEditorNodeView : NodeEditorView
         addPhraseButton.text = "Add phrase";
 
         contentContainer.Add(addPhraseButton);
-        #endregion addPhraseButton
+        #endregion
+
+        #region removeLastPhraseButton
+        removeLastPhraseButton = new Button(() =>
+        {
+            RemoveLastPhrase();
+        });
+        removeLastPhraseButton.text = "Remove the last phrase";
+        removeLastPhraseButton.visible = false;
+
+        contentContainer.Add(removeLastPhraseButton);
+        #endregion
     }
     public StartMonologueEditorNodeView(MonologueNode data) : this()
     {
@@ -74,6 +86,19 @@ public class StartMonologueEditorNodeView : NodeEditorView
 
             newTextField.SetValueWithoutNotify(wrappedText);
         }
+
+        removeLastPhraseButton.visible = true;
+    }
+    public void RemoveLastPhrase()
+    {
+        if (phraseTextFields.Count > 0)
+        {
+            var lastPhraseField = phraseTextFields[phraseTextFields.Count - 1];
+            mainContainer.Remove(lastPhraseField);
+            phraseTextFields.Remove(lastPhraseField);
+        }
+
+        removeLastPhraseButton.visible = phraseTextFields.Count > 0;
     }
 
     private void SetSpeaker(string speakerName)
