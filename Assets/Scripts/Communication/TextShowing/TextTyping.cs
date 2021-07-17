@@ -47,7 +47,10 @@ public class TextTyping : TextShowing
     }
     public override void ShowPreviousPage()
     {
-        textDisplay.pageToDisplay--;
+        if (textDisplay.pageToDisplay > 1)
+        {
+            textDisplay.pageToDisplay--;
+        }
 
         isTyping = false;
 
@@ -63,6 +66,16 @@ public class TextTyping : TextShowing
         }
         else
         {
+            if (textDisplay.textInfo.pageCount == 0)
+            {
+                textDisplay.pageToDisplay = 1;
+                return;
+            }
+            else if (textDisplay.pageToDisplay >= textDisplay.textInfo.pageCount)
+            {
+                textDisplay.pageToDisplay = textDisplay.textInfo.pageCount;
+                return;
+            }
             textDisplay.pageToDisplay++;
 
             if (lastSeenPageIndex == textDisplay.pageToDisplay - 1)
@@ -116,14 +129,9 @@ public class TextTyping : TextShowing
         textDisplay.ForceMeshUpdate();
         textDisplay.SetAllDirty();
 
-        int firstCharacterIndex;
-        int lastCharacterIndex;
-        if (textDisplay.textInfo.pageInfo.Length <= 0)
-        {
-            firstCharacterIndex = 0;
-            lastCharacterIndex = 0;
-        }
-        else
+        int firstCharacterIndex = 0;
+        int lastCharacterIndex = 0;
+        if (textDisplay.pageToDisplay <= textDisplay.textInfo.pageCount)
         {
             firstCharacterIndex = textDisplay.textInfo.pageInfo[textDisplay.pageToDisplay - 1].firstCharacterIndex;
             lastCharacterIndex = textDisplay.textInfo.pageInfo[textDisplay.pageToDisplay - 1].lastCharacterIndex;
