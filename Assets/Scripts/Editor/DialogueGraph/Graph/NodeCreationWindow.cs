@@ -58,8 +58,8 @@ public class NodeCreationWindow : ScriptableObject, ISearchWindowProvider
                     userData = new LocationNodeEditorView()
                 },
 
-                new SearchTreeGroupEntry(new GUIContent("Show character"), 2),
-                new SearchTreeEntry(new GUIContent("Usual character", indentationIcon))
+                new SearchTreeGroupEntry(new GUIContent("Characters"), 2),
+                new SearchTreeEntry(new GUIContent("Show character", indentationIcon))
                 {
                     level = 3,
                     userData = new ShowCharacterNodeEditorView()

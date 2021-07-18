@@ -16,6 +16,6 @@ public class NodeData
     }
 
 
-    public string GUID { get => guid; set => value = guid; }
+    public string GUID { get => guid; set => guid = value; }
     public Vector2 Position => position;
 }

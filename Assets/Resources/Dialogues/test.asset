@@ -1,0 +1,86 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78b3fd9154634ebdb8c8a48960b9a16a, type: 3}
+  m_Name: test
+  m_EditorClassIdentifier: 
+  entryGUID: b3adbc08-7cd4-4688-9413-f1cb44c930cd
+  nodeDatas:
+  - id: 0
+  - id: 1
+  - id: 2
+  - id: 3
+  - id: 4
+  nodeLinks:
+  - id: 5
+  - id: 6
+  - id: 7
+  exposedVariables: []
+  commentBlockDatas: []
+  references:
+    version: 1
+    00000000:
+      type: {class: EntryNode, ns: , asm: Assembly-CSharp}
+      data:
+        guid: b3adbc08-7cd4-4688-9413-f1cb44c930cd
+        position: {x: 100, y: 200}
+    00000001:
+      type: {class: MonologueNode, ns: , asm: Assembly-CSharp}
+      data:
+        guid: aa11cabe-4047-45bd-b854-3310fa70dc82
+        position: {x: 237, y: 133}
+        texts:
+        - I'm Arten
+        - 
+        speakerName: Arten
+    00000002:
+      type: {class: MonologueNode, ns: , asm: Assembly-CSharp}
+      data:
+        guid: ac914935-383e-49e9-8d56-c265f655d232
+        position: {x: 597.5, y: 145}
+        texts:
+        - aaaa
+        speakerName: 
+    00000003:
+      type: {class: MonologueNode, ns: , asm: Assembly-CSharp}
+      data:
+        guid: 88a364c4-ca4b-40c6-968e-7d211a946b8f
+        position: {x: 246, y: -18}
+        texts:
+        - I'm Arten
+        - 
+        speakerName: Arten
+    00000004:
+      type: {class: MonologueNode, ns: , asm: Assembly-CSharp}
+      data:
+        guid: 60fde877-ad6e-4781-b8d2-431810a0c3e3
+        position: {x: 630.5, y: -49}
+        texts:
+        - aaaa
+        speakerName: 
+    00000005:
+      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
+      data:
+        sourceNodeGUID: b3adbc08-7cd4-4688-9413-f1cb44c930cd
+        sourcePortName: Output
+        destinationNodeGUID: aa11cabe-4047-45bd-b854-3310fa70dc82
+    00000006:
+      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
+      data:
+        sourceNodeGUID: aa11cabe-4047-45bd-b854-3310fa70dc82
+        sourcePortName: Output
+        destinationNodeGUID: ac914935-383e-49e9-8d56-c265f655d232
+    00000007:
+      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
+      data:
+        sourceNodeGUID: 88a364c4-ca4b-40c6-968e-7d211a946b8f
+        sourcePortName: Output
+        destinationNodeGUID: 60fde877-ad6e-4781-b8d2-431810a0c3e3

@@ -11,17 +11,22 @@ using UnityEngine.UIElements;
 public class DialogueGraphEditorView : GraphView
 {
     public const string GRAPH_STYLE_FOLDER = "GraphStyle";
-
     private const string GRAPH_STYLE_FILE = "DialogueGraph";
+    private const float PASTE_OFFSET_Y = 20.0f;
+    private const string COMPATIBLE_CLIPBOARD_DATA_INDICATOR = "GRAPH_COPY_DATA";
     private readonly Vector2 DEFAULT_COMMENT_BLOCK_SIZE = new Vector2(300, 200);
 
+
     private Blackboard blackboard = new Blackboard();
+    private DialogueGraphWindow editorWindow;
     private NodeCreationWindow nodeCreationWindow;
     private EntryPointNodeEditorView entryNode;
 
 
     public DialogueGraphEditorView(DialogueGraphWindow editorWindow)
     {
+        this.editorWindow = editorWindow;
+
         styleSheets.Add(Resources.Load<StyleSheet>(Path.Combine(GRAPH_STYLE_FOLDER, GRAPH_STYLE_FILE)));
         SetupZoom(ContentZoomer.DefaultMinScale, ContentZoomer.DefaultMaxScale);
 
@@ -36,6 +41,10 @@ public class DialogueGraphEditorView : GraphView
         AddElement(entryNode);
 
         AddNodeCreationWindow(editorWindow);
+
+        this.serializeGraphElements += Copy;
+        this.unserializeAndPaste += PasteOrCut;
+        this.canPasteSerializedData += CanCopyPaste;
     }
 
 
@@ -110,8 +119,12 @@ public class DialogueGraphEditorView : GraphView
     {
         foreach (var nodeData in nodeDatas)
         {
-            AddElement(NodeDataToEditorNode(nodeData));
+            AddNode(nodeData);
         }
+    }
+    public void AddNode(NodeData nodeData)
+    {
+        AddElement(NodeDataToEditorNode(nodeData));
     }
     public void ConnectNodes(List<NodeLinkData> nodeLinks)
     {
@@ -130,13 +143,20 @@ public class DialogueGraphEditorView : GraphView
                 foreach (var nodeLinkData in nodeLinkDatas)
                 {
                     var targetNodeGUID = nodeLinkData.destinationNodeGUID;
-                    var targetNode = Nodes.First(x => x.GUID == targetNodeGUID);
-                    Port inputPort = (Port)targetNode.inputContainer[0];
+                    var targetNode = Nodes.FirstOrDefault(x => x.GUID == targetNodeGUID);
+                    if (targetNode != null)
+                    {
+                        Port inputPort = (Port)targetNode.inputContainer[0];
 
-                    LinkNodesTogether(outputPort, inputPort);
+                        LinkNodesTogether(outputPort, inputPort);
+                    }
                 }
             }
         }
+    }
+    public void ConnectNodes()
+    {
+
     }
     public void AddExposedProperties(List<ExposedVariable> exposedProperties)
     {
@@ -161,12 +181,12 @@ public class DialogueGraphEditorView : GraphView
         }
     }
 
-    private void LinkNodesTogether(Port outputSocket, Port inputSocket)
+    private void LinkNodesTogether(Port outputPort, Port inputPort)
     {
         var tempEdge = new Edge()
         {
-            output = outputSocket,
-            input = inputSocket
+            output = outputPort,
+            input = inputPort
         };
         tempEdge?.input.Connect(tempEdge);
         tempEdge?.output.Connect(tempEdge);
@@ -222,6 +242,126 @@ public class DialogueGraphEditorView : GraphView
         {
             throw new Exception("There is no Node Editor View type you want to load!");
         }
+    }
+    private string Copy(IEnumerable<GraphElement> elements)
+    {
+        string stringData = COMPATIBLE_CLIPBOARD_DATA_INDICATOR + '\n';
+        foreach (var element in elements)
+        {
+            if (element is NodeEditorView)
+            {
+                NodeEditorView nodeView = element as NodeEditorView;
+                var nodeData = nodeView.Data;
+                stringData += nodeData.GetType().AssemblyQualifiedName.ToString() + '\n';
+                stringData += JsonUtility.ToJson(nodeData) + '\n';
+            }
+            else if (element is Edge)
+            {
+                Edge edge = element as Edge;
+
+                var outputPort = edge.output;
+                var inputPort = edge.input;
+                var outputNode = (outputPort.node as NodeEditorView);
+                var inputNode = (edge.input.node as NodeEditorView);
+
+                var nodeLinkData = new NodeLinkData
+                {
+                    sourceNodeGUID = outputNode.GUID,
+                    sourcePortName = outputPort.portName,
+                    destinationNodeGUID = inputNode.GUID,
+                };
+
+                stringData += nodeLinkData.GetType().AssemblyQualifiedName.ToString() + '\n';
+                stringData += JsonUtility.ToJson(nodeLinkData) + '\n';
+            }
+        }
+
+        // return data as string (to clipboard)
+        return stringData;
+    }
+    private void PasteOrCut(string operationName, string data)
+    {
+        data = data.Substring(COMPATIBLE_CLIPBOARD_DATA_INDICATOR.Length);
+
+        List<NodeData> nodeDatas = new List<NodeData>();
+        List<NodeLinkData> nodeLinkDatas = new List<NodeLinkData>();
+
+        string[] dataArray = data.Split(new char[] { '\n' }, StringSplitOptions.RemoveEmptyEntries);
+        if (operationName == "Paste" || operationName == "Cut")
+        {
+            for (int i = 0; i < dataArray.Length - 1; i += 2)
+            {
+                Type type = Type.GetType(dataArray[i]);
+                object element = JsonUtility.FromJson(dataArray[i + 1], type);
+                if (typeof(NodeData).IsAssignableFrom(type))
+                {
+                    NodeData nodeData = element as NodeData;
+                    nodeDatas.Add(nodeData);
+                }
+                else if (typeof(NodeLinkData).IsAssignableFrom(type))
+                {
+                    var nodeLinkData = element as NodeLinkData;
+                    nodeLinkDatas.Add(nodeLinkData);
+                }
+            }
+        }
+        switch (operationName)
+        {
+            case "Paste":
+                {
+                    Paste(nodeDatas, nodeLinkDatas);
+
+                    break;
+                }
+            case "Cut":
+                {
+                    Cut(nodeDatas, nodeLinkDatas);
+
+                    break;
+                }
+        }
+    }
+    private void Paste(List<NodeData> nodeDatas, List<NodeLinkData> nodeLinkDatas)
+    {
+        for (int i = 0; i < nodeDatas.Count; i++)
+        {
+            NodeData nodeData = nodeDatas[i];
+            string oldGuid = nodeData.GUID;
+            string newGuid = Guid.NewGuid().ToString();
+            nodeLinkDatas.Where(x => x.destinationNodeGUID == oldGuid).ToList().ForEach(x => x.destinationNodeGUID = newGuid);
+            nodeLinkDatas.Where(x => x.sourceNodeGUID == oldGuid).ToList().ForEach(x => x.sourceNodeGUID = newGuid);
+            nodeData.GUID = newGuid;
+            nodeData.position += new Vector2(0, PASTE_OFFSET_Y);
+            AddNode(nodeData);
+        }
+        for (int i = 0; i < nodeLinkDatas.Count; i++)
+        {
+            var nodeLinkData = nodeLinkDatas[i];
+
+            var destNode = nodeDatas.FirstOrDefault(x => x.GUID == nodeLinkData.destinationNodeGUID);
+            var sourceNode = nodeDatas.FirstOrDefault(x => x.GUID == nodeLinkData.sourceNodeGUID);
+            if (destNode == null || sourceNode == null)
+            {
+                nodeLinkDatas.RemoveAt(i);
+                i--;
+            }
+        }
+        ConnectNodes(nodeLinkDatas);
+    }
+    private void Cut(List<NodeData> nodeDatas, List<NodeLinkData> nodeLinkDatas)
+    {
+        // Remove prev nodes (not necessary)
+        foreach (var nodeData in nodeDatas)
+        {
+            var node = Nodes.FirstOrDefault(x => x.GUID == nodeData.GUID);
+            if (node != null)
+                Remove(node);
+        }
+        Paste(nodeDatas, nodeLinkDatas);
+    }
+    private bool CanCopyPaste(string data)
+    {
+        return data.StartsWith(COMPATIBLE_CLIPBOARD_DATA_INDICATOR);
     }
 
 

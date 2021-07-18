@@ -11,7 +11,7 @@ public static class GraphSaveUtility
     public static void Save(DialogueGraphEditorView graphView, string path)
     {
         var entryNode = graphView.NodeDatas.Find(x => x is EntryNode);
-        if(entryNode == null)
+        if (entryNode == null)
         {
             entryNode = graphView.EntryNode.Data;
         }
@@ -21,6 +21,7 @@ public static class GraphSaveUtility
 
         AssetDatabaseExt.CreateOrReplaceAsset(dialogueData, path);
         AssetDatabase.SaveAssets();
+        Debug.Log(graphView.name + " was saved");
     }
     public static DialogueGraphEditorView Load(DialogueGraphWindow graph, string filePath)
     {
