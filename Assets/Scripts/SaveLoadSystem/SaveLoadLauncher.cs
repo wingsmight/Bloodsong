@@ -16,30 +16,28 @@ public class SaveLoadLauncher : MonoBehaviourSingleton<SaveLoadLauncher>
         dataSavings = UnityEngineObjectExt.FindObjectsOfInterface<IDataSaving>();
 
         Storage.LoadGeneralSettings();
-        //Storage.LoadDatas(); // no matter: the CurGameSlotIndex = -1 on Awake();
-
-        // idkidkidkidkidkidkidkidkidkidkidkidk
-        // if (Storage.GeneralSettings.currentGameSlotIndex != -1)
-        // {
-        //     LoadDatas();
-        //     LinkDatas();
-        // }
     }
-    // auto saving on quiting
-    // private void OnDisable()
-    // {
-    //     SaveDatas();
-    // }
     private void OnDisable()
     {
-        Storage.GetData<PlayerPreferences>().lastExitDate = new DateTimeData(DateTime.Now); // KOSTIIILYLyil
+        // auto saving on quiting
+        //SaveDatas();
+
+        Storage.SaveGeneralSettings();
     }
+
 
     public void LoadDatas()
     {
         foreach (var item in dataLoadings)
         {
-            item?.LoadData();
+            try
+            {
+                item?.LoadData();
+            }
+            catch (Exception exception)
+            {
+                Debug.LogWarning($"LoadDatas() in {item} has produced {exception} at the 2nd try-catch block");
+            }
         }
     }
     public void LinkDatas()
@@ -51,6 +49,7 @@ public class SaveLoadLauncher : MonoBehaviourSingleton<SaveLoadLauncher>
     }
     public void SaveDatas()
     {
+        // TODO move this to somewhere
         try
         {
             Storage.GetData<PlayerPreferences>().lastExitDate = new DateTimeData(DateTime.Now);
@@ -73,6 +72,5 @@ public class SaveLoadLauncher : MonoBehaviourSingleton<SaveLoadLauncher>
         }
 
         Storage.SaveDatas();
-        Storage.SaveGeneralSettings();
     }
 }

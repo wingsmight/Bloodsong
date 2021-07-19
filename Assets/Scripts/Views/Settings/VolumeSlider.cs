@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class VolumeSlider : MonoBehaviour, IDataSaving
+public class VolumeSlider : MonoBehaviour, IDataLoading, IDataSaving
 {
     [SerializeField] private Slider slider;
     [SerializeField] private AudioSource audioSource;
@@ -11,15 +11,22 @@ public class VolumeSlider : MonoBehaviour, IDataSaving
 
     private void Awake()
     {
-        slider.value = Storage.GeneralSettings.volume;
         slider.onValueChanged.AddListener(SetVolume);
+
+        LoadData();
     }
-    private void OnDestroy()
+    private void OnDisable()
     {
         slider.onValueChanged.RemoveListener(SetVolume);
+
+        SaveData();
     }
 
 
+    public void LoadData()
+    {
+        slider.value = Storage.GeneralSettings.volume;
+    }
     public void SaveData()
     {
         Storage.GeneralSettings.volume = audioSource.volume;

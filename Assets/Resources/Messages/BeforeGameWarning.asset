@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: BeforeGameWarning
   m_EditorClassIdentifier: 
   phrasesDict:
-    m_keys: 0000000001000000
+    m_keys: 0100000000000000
     m_values:
     - phrases:
       - text: "\xAB\u0412\u043D\u0438\u043C\u0430\u043D\u0438\u0435. \u041F\u0440\u043E\u0447\u0442\u0438\u0442\u0435

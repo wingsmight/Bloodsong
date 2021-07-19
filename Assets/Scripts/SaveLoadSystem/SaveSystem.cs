@@ -5,6 +5,12 @@ using UnityEngine;
 
 public static class SaveSystem
 {
+    public static string saveFolder = Application.persistentDataPath
+#if UNITY_EDITOR
+        + "_EDITOR"
+#endif
+        ;
+
     private const string EXTENSION = ".wmg";
 
 
@@ -75,7 +81,7 @@ public static class SaveSystem
         List<T> loadedSOs = new List<T>();
 
         string subfolderName = typeof(T).ToString() + "s";
-        string directoryPath = Path.Combine(Application.persistentDataPath, "GameSlot" + slotIndex, subfolderName);
+        string directoryPath = Path.Combine(saveFolder, "GameSlot" + slotIndex, subfolderName);
         if (Directory.Exists(directoryPath))
         {
             string[] filesToLoad = Directory.GetFiles(directoryPath);
@@ -101,7 +107,7 @@ public static class SaveSystem
         List<T> loadedSOs = new List<T>();
 
         string subfolderName = typeof(T).ToString() + "s";
-        string directoryPath = Path.Combine(Application.persistentDataPath, "GameSlot" + slotIndex, subfolderName);
+        string directoryPath = Path.Combine(saveFolder, "GameSlot" + slotIndex, subfolderName);
         if (Directory.Exists(directoryPath))
         {
             string[] filesToLoad = Directory.GetFiles(directoryPath);
@@ -120,7 +126,7 @@ public static class SaveSystem
     }
     public static GeneralSettings LoadGeneralSettings()
     {
-        string filePath = Path.Combine(Application.persistentDataPath, typeof(GeneralSettings).ToString() + EXTENSION);
+        string filePath = Path.Combine(saveFolder, typeof(GeneralSettings).ToString() + EXTENSION);
         if (File.Exists(filePath))
         {
             return (GeneralSettings)LoadDataByPath<GeneralSettings, IStoredData>(filePath, new StoredDataSerializer());
@@ -167,7 +173,7 @@ public static class SaveSystem
     }
     private static void SaveObjectToRoot<T>(T savedObject, string directoryName, string fileName, ISerializer<T> serializer)
     {
-        string objectsDirectory = Path.Combine(Application.persistentDataPath, directoryName);
+        string objectsDirectory = Path.Combine(saveFolder, directoryName);
         if (!Directory.Exists(objectsDirectory))
         {
             Directory.CreateDirectory(objectsDirectory);

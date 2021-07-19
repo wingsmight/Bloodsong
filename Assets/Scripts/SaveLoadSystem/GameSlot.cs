@@ -15,7 +15,7 @@ public class GameSlot : MonoBehaviour
     {
         IsUsed = false;
 
-        StartCoroutine(DeleteDirectoryRoutine(Path.Combine(Application.persistentDataPath, "GameSlot" + index)));
+        StartCoroutine(DeleteDirectoryRoutine(Path.Combine(SaveSystem.saveFolder, "GameSlot" + index)));
     }
 
     private void SetPrevLastGameSlot()

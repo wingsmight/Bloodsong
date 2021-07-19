@@ -12,7 +12,7 @@ public class GeneralSettings : IStoredData
     public bool[] isSlotUseds = new bool[Storage.SAVE_SLOTS_COUNT];
 
     // options
-    public int[] resolution = new int[] { 1920, 1080 };
+    public int[] resolution = null;
     public bool isFullscreen = true;
     public float volume = 1.0f;
     public float testTypingSpeed = 0.01f;

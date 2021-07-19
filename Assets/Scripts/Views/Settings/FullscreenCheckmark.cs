@@ -3,22 +3,29 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class FullscreenCheckmark : MonoBehaviour, IDataSaving
+public class FullscreenCheckmark : MonoBehaviour, IDataLoading, IDataSaving
 {
     [SerializeField] private Toggle toggle;
 
 
     private void Awake()
     {
-        toggle.isOn = Storage.GeneralSettings.isFullscreen;
         toggle.onValueChanged.AddListener(SetFullscreen);
+
+        LoadData();
     }
     private void OnDestroy()
     {
         toggle.onValueChanged.RemoveListener(SetFullscreen);
+
+        SaveData();
     }
 
 
+    public void LoadData()
+    {
+        toggle.isOn = Storage.GeneralSettings.isFullscreen;
+    }
     public void SaveData()
     {
         Storage.GeneralSettings.isFullscreen = Screen.fullScreen;
