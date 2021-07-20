@@ -11,14 +11,10 @@ public class FullscreenCheckmark : MonoBehaviour, IDataLoading, IDataSaving
     private void Awake()
     {
         toggle.onValueChanged.AddListener(SetFullscreen);
-
-        LoadData();
     }
     private void OnDestroy()
     {
         toggle.onValueChanged.RemoveListener(SetFullscreen);
-
-        SaveData();
     }
 
 

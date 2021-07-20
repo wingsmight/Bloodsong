@@ -21,14 +21,10 @@ public class ResolutionDropdown : MonoBehaviour, IDataSaving, IDataLoading
 
         dropdown.onValueChanged.AddListener(SetValueByIndex);
         dropdown.value = GetValueIndex();
-
-        LoadData();
     }
     private void OnDestroy()
     {
         dropdown.onValueChanged.RemoveListener(SetValueByIndex);
-
-        SaveData();
     }
 
 

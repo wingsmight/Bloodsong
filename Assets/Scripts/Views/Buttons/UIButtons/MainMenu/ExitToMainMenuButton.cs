@@ -1,20 +1,20 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace StoryMenu
 {
     public class ExitToMainMenuButton : StoryMenuButton
     {
-        [SerializeField] private MenuView menuView;
+        private const string MAIN_MENU_SCENE_NAME = "MainMenu";
 
 
         protected override void OnClick()
         {
-            Storage.GetData<PlayerPreferences>().lastExitDate = new DateTimeData(DateTime.Now);
+            Storage.GeneralSettings.CurrentSaveSlot.lastExitDate = new DateTimeData(DateTime.Now);
 
-            menuView.Show();
+            SceneManager.LoadScene(MAIN_MENU_SCENE_NAME);
         }
     }
 }

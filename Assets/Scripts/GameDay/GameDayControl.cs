@@ -9,7 +9,6 @@ public class GameDayControl : MonoBehaviour, IDataLoading, IDataSaving
 {
     [SerializeField] private GameDayOrder gameDayOrder;
     [SerializeField] private DialogueGraphParser dialogueGraphParser;
-    [SerializeField] private FadeAnimation inGameMenuAnimation;
     [SerializeField] [RequireInterface(typeof(IResetable))] private List<UnityEngine.Object> resetableViews;
     [SerializeField] private StartMonologueNodeView monologueNodeView;
     [SerializeField] private StopNodeView stopNodeView;
@@ -19,26 +18,20 @@ public class GameDayControl : MonoBehaviour, IDataLoading, IDataSaving
     private string currentNodeGuid;
     private int currentStoryIndex = 0;
     private int currentStoryPhraseIndex = 0;
-    private bool isRunning;
 
 
     private void Awake()
     {
         stopNodeView.OnGraphEnded += () => StartDay(currentStoryIndex + 1);
     }
-
-    public void StartDay()
+    private void Start()
     {
-        ResetableViews.ForEach(x => x.Reset());
-
-        SaveLoadLauncher.Instance.LoadDatas();
-
-        isRunning = true;
+        // Reset isn't necessary
+        //ResetableViews.ForEach(x => x.Reset());
 
         StartDay(currentStoryIndex);
-
-        inGameMenuAnimation.Appear();
     }
+
     public void StartDay(int storyIndex)
     {
         currentStoryIndex = storyIndex;
@@ -76,7 +69,6 @@ public class GameDayControl : MonoBehaviour, IDataLoading, IDataSaving
 
 
     public int CurrentStoryIndex => currentStoryIndex;
-    public bool IsRunning => isRunning;
 
     private List<IResetable> ResetableViews => resetableViews.Cast<IResetable>().ToList();
 }

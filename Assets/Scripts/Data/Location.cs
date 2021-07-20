@@ -17,7 +17,11 @@ public class Location
     public Location(string name)
     {
         this.name = name;
+    }
 
+
+    private void InitSprite()
+    {
         if (string.IsNullOrEmpty(name))
             return;
 
@@ -28,5 +32,15 @@ public class Location
     }
 
 
-    public Sprite Sprite => sprite;
+    public Sprite Sprite
+    {
+        get
+        {
+            if (sprite == null)
+            {
+                InitSprite();
+            }
+            return sprite;
+        }
+    }
 }

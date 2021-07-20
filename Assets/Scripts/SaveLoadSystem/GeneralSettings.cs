@@ -7,13 +7,32 @@ using UnityEngine;
 public class GeneralSettings : IStoredData
 {
     // slots
-    public int lastGameSlot = -1;
-    [NonSerialized] public int currentGameSlotIndex = -1;
-    public bool[] isSlotUseds = new bool[Storage.SAVE_SLOTS_COUNT];
+    public int lastSaveSlotIndex = -1;
+    public int currentSaveSlotIndex = -1;
+    [SerializeField] private SaveSlot[] saveSlots = null;
 
     // options
     public int[] resolution = null;
     public bool isFullscreen = true;
     public float volume = 1.0f;
     public float testTypingSpeed = 0.01f;
+
+
+    public SaveSlot CurrentSaveSlot => SaveSlots[currentSaveSlotIndex];
+    public SaveSlot[] SaveSlots
+    {
+        get
+        {
+            if (saveSlots == null || saveSlots.Length == 0)
+            {
+                saveSlots = new SaveSlot[Storage.SAVE_SLOTS_COUNT];
+                for (int i = 0; i < saveSlots.Length; i++)
+                {
+                    saveSlots[i] = new SaveSlot(i);
+                }
+            }
+
+            return saveSlots;
+        }
+    }
 }

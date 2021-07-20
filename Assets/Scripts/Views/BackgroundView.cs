@@ -43,6 +43,7 @@ public class BackgroundView : MonoBehaviour, IHidable, IResetable, IDataLoading,
         if (image.sprite != null)
         {
             Storage.GetData<GameDayData>().locationName = image.sprite.name; // TODO may produce error if something is wrong with path/name
+            Storage.GeneralSettings.CurrentSaveSlot.lastLocation = new Location(Storage.GetData<GameDayData>().locationName);
         }
     }
 }

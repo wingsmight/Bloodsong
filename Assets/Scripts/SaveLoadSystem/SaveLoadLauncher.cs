@@ -1,32 +1,54 @@
 ﻿using System;
+using System.Linq;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class SaveLoadLauncher : MonoBehaviourSingleton<SaveLoadLauncher>
+public class SaveLoadLauncher : MonoBehaviour
 {
+    [SerializeField] private bool isAutoSave = false;
+
+
     private List<IDataLoading> dataLoadings;
     private List<IDataLinking> dataLinkings;
     private List<IDataSaving> dataSavings;
 
 
-    protected override void Awake()
+    private void Awake()
     {
         dataLoadings = UnityEngineObjectExt.FindObjectsOfInterface<IDataLoading>();
         dataLinkings = UnityEngineObjectExt.FindObjectsOfInterface<IDataLinking>();
         dataSavings = UnityEngineObjectExt.FindObjectsOfInterface<IDataSaving>();
 
-        Storage.LoadGeneralSettings();
+        LoadDatas();
+        LinkDatas();
     }
     private void OnDisable()
     {
-        // auto saving on quiting
-        //SaveDatas();
-
-        Storage.SaveGeneralSettings();
+        if (isAutoSave)
+        {
+            SaveDatas();
+        }
     }
 
 
-    public void LoadDatas()
+    public void SaveDatas()
+    {
+        foreach (var item in dataSavings)
+        {
+            try
+            {
+                item?.SaveData();
+            }
+            catch (Exception exception)
+            {
+                Debug.LogWarning($"SaveDatas() in {item} has produced {exception}");
+            }
+        }
+    }
+
+
+    private void LoadDatas()
     {
         foreach (var item in dataLoadings)
         {
@@ -36,41 +58,25 @@ public class SaveLoadLauncher : MonoBehaviourSingleton<SaveLoadLauncher>
             }
             catch (Exception exception)
             {
-                Debug.LogWarning($"LoadDatas() in {item} has produced {exception} at the 2nd try-catch block");
+                Debug.LogWarning($"LoadDatas() in {item} has produced {exception}");
             }
         }
     }
-    public void LinkDatas()
+    private void LinkDatas()
     {
         foreach (var item in dataLinkings)
         {
-            item?.LinkData();
-        }
-    }
-    public void SaveDatas()
-    {
-        // TODO move this to somewhere
-        try
-        {
-            Storage.GetData<PlayerPreferences>().lastExitDate = new DateTimeData(DateTime.Now);
-        }
-        catch (Exception exception)
-        {
-            Debug.LogWarning($"SaveDatas() has produced {exception}  at the 1st try-catch block");
-        }
-
-        foreach (var item in dataSavings)
-        {
             try
             {
-                item?.SaveData();
+                item?.LinkData();
             }
             catch (Exception exception)
             {
-                Debug.LogWarning($"SaveDatas() in {item} has produced {exception} at the 2nd try-catch block");
+                Debug.LogWarning($"LinkDatas() in {item} has produced {exception}");
             }
         }
-
-        Storage.SaveDatas();
     }
+
+
+    public bool IsAutoSave => isAutoSave;
 }

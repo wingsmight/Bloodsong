@@ -10,17 +10,11 @@ public class SaveSlotsView : MonoBehaviour, IShowable, IHidable
 
     public void Show()
     {
-        List<SaveSlot> slots = new List<SaveSlot>();
-        for (int i = 0; i < slotViews.Count; i++)
-        {
-            slots.Add(new SaveSlot(slotViews[i].GameSlot));
-        }
-
-        Show(slots);
+        Show(Storage.GeneralSettings.SaveSlots);
     }
-    public void Show(List<SaveSlot> slots)
+    public void Show(SaveSlot[] slots)
     {
-        for (int i = 0; i < slotViews.Count && i < slots.Count; i++)
+        for (int i = 0; i < slotViews.Count && i < slots.Length; i++)
         {
             slotViews[i].Show(slots[i]);
         }

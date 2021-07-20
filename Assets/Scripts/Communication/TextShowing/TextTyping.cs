@@ -7,11 +7,11 @@ public class TextTyping : TextShowing
     private const float MIN_ACCEPTABLE_SPEED = 0.0f;
 
 
-    [SerializeField] private float typingSpeed = 0.01f;
     [SerializeField] private AudioSource audioSource;
     [SerializeField] private AudioClip typingSound;
 
 
+    private static float typingSpeed = 0.01f;
     private int lastSeenPageIndex;
 
 
@@ -164,5 +164,5 @@ public class TextTyping : TextShowing
     }
 
 
-    public float Speed { get => typingSpeed; set => typingSpeed = value; }
+    public static float Speed { get => typingSpeed; set => typingSpeed = value; }
 }

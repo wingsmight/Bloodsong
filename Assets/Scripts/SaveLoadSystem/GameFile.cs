@@ -3,20 +3,20 @@ using System.IO;
 using System.Collections.Generic;
 using UnityEngine;
 
-public static class SaveSystem
+public static class GameFile
 {
-    public static string saveFolder = Application.persistentDataPath
+    private static readonly string saveFolder = Application.persistentDataPath
 #if UNITY_EDITOR
         + "_EDITOR"
 #endif
         ;
-
+    private const string saveSubfolder = "SaveSlot";
     private const string EXTENSION = ".wmg";
 
 
     public static void SaveStoredDatas<T>(List<T> storedDatas) where T : IStoredData
     {
-        SaveStoredDatas<T>(storedDatas, CurGameSlot);
+        SaveStoredDatas<T>(storedDatas, CurSaveSlot);
     }
     public static void SaveStoredDatas<T>(List<T> storedDatas, int slotIndex) where T : IStoredData
     {
@@ -30,7 +30,7 @@ public static class SaveSystem
     }
     public static void SaveStoredData<T>(T storedData) where T : IStoredData
     {
-        SaveStoredData<T>(storedData, CurGameSlot);
+        SaveStoredData<T>(storedData, CurSaveSlot);
     }
     public static void SaveStoredData<T>(T storedData, int slotIndex) where T : IStoredData
     {
@@ -41,7 +41,7 @@ public static class SaveSystem
     public static void SaveScriptableObjects<T>(List<T> scriptableObjects)
         where T : ScriptableObject
     {
-        SaveScriptableObjects<T>(scriptableObjects, CurGameSlot);
+        SaveScriptableObjects<T>(scriptableObjects, CurSaveSlot);
     }
     public static void SaveScriptableObjects<T>(List<T> scriptableObjects, int slotIndex)
         where T : ScriptableObject
@@ -56,7 +56,7 @@ public static class SaveSystem
     }
     public static void SaveScriptableObject<T>(T savedSO) where T : ScriptableObject
     {
-        SaveScriptableObject<T>(savedSO, CurGameSlot);
+        SaveScriptableObject<T>(savedSO, CurSaveSlot);
     }
     public static void SaveScriptableObject<T>(T savedSO, int slotIndex) where T : ScriptableObject
     {
@@ -73,7 +73,7 @@ public static class SaveSystem
     public static List<T> LoadScriptableObjects<T>()
         where T : ScriptableObject
     {
-        return LoadScriptableObjects<T>(CurGameSlot);
+        return LoadScriptableObjects<T>(CurSaveSlot);
     }
     public static List<T> LoadScriptableObjects<T>(int slotIndex)
         where T : ScriptableObject
@@ -81,7 +81,7 @@ public static class SaveSystem
         List<T> loadedSOs = new List<T>();
 
         string subfolderName = typeof(T).ToString() + "s";
-        string directoryPath = Path.Combine(saveFolder, "GameSlot" + slotIndex, subfolderName);
+        string directoryPath = Path.Combine(saveFolder, saveSubfolder + slotIndex, subfolderName);
         if (Directory.Exists(directoryPath))
         {
             string[] filesToLoad = Directory.GetFiles(directoryPath);
@@ -100,14 +100,14 @@ public static class SaveSystem
     }
     public static List<T> LoadStoredDatas<T>() where T : IStoredData
     {
-        return LoadStoredDatas<T>(CurGameSlot);
+        return LoadStoredDatas<T>(CurSaveSlot);
     }
     public static List<T> LoadStoredDatas<T>(int slotIndex) where T : IStoredData
     {
         List<T> loadedSOs = new List<T>();
 
         string subfolderName = typeof(T).ToString() + "s";
-        string directoryPath = Path.Combine(saveFolder, "GameSlot" + slotIndex, subfolderName);
+        string directoryPath = Path.Combine(saveFolder, saveSubfolder + slotIndex, subfolderName);
         if (Directory.Exists(directoryPath))
         {
             string[] filesToLoad = Directory.GetFiles(directoryPath);
@@ -134,7 +134,37 @@ public static class SaveSystem
 
         return null;
     }
+    public static void DeleteSaveSlot(int index)
+    {
+        string path = Path.Combine(saveFolder, saveSubfolder + index);
+        if (Directory.Exists(path))
+        {
+            Directory.Delete(path, true);
+        }
 
+        Storage.GeneralSettings.SaveSlots[index] = new SaveSlot(index);
+        Storage.DeleteData(index);
+
+        SetPrevLastSaveSlot();
+    }
+
+    private static void SetPrevLastSaveSlot()
+    {
+        bool isAnySaveSlotAvailable = false;
+        for (int i = 0; i < Storage.SAVE_SLOTS_COUNT; i++)
+        {
+            if (Storage.GeneralSettings.SaveSlots[i].isUsed)
+            {
+                Storage.GeneralSettings.lastSaveSlotIndex = i;
+                isAnySaveSlotAvailable = true;
+                break;
+            }
+        }
+        if (!isAnySaveSlotAvailable)
+        {
+            Storage.GeneralSettings.lastSaveSlotIndex = -1;
+        }
+    }
     private static D LoadDataByPath<T, D>(string filePath, ISerializer<D> formatter) where T : D
     {
         if (File.Exists(filePath))
@@ -162,12 +192,12 @@ public static class SaveSystem
     }
     private static void SaveObject<T>(T savedObject, string fileName, ISerializer<T> serializer)
     {
-        SaveObject<T>(savedObject, fileName, serializer, CurGameSlot);
+        SaveObject<T>(savedObject, fileName, serializer, CurSaveSlot);
     }
     private static void SaveObject<T>(T savedObject, string fileName, ISerializer<T> serializer, int slotIndex)
     {
         string subfolderName = typeof(T).ToString() + "s";
-        string objectsDirectory = Path.Combine("GameSlot" + slotIndex, subfolderName);
+        string objectsDirectory = Path.Combine(saveSubfolder + slotIndex, subfolderName);
 
         SaveObjectToRoot<T>(savedObject, objectsDirectory, fileName, serializer);
     }
@@ -186,5 +216,5 @@ public static class SaveSystem
     }
 
 
-    private static int CurGameSlot => Storage.GeneralSettings.currentGameSlotIndex;
+    private static int CurSaveSlot => Storage.GeneralSettings.currentSaveSlotIndex;
 }

@@ -5,6 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class LoadOrder : MonoBehaviour
 {
+    private const string NEXT_SCENE_NAME = "MainMenu";
+
+
     [SerializeField] private MessageTelling messageTelling;
     [SerializeField] private Message message;
     [SerializeField] private FadeAnimation gameLogoScreenAnimation;
@@ -48,6 +51,6 @@ public class LoadOrder : MonoBehaviour
 
         yield return new WaitWhile(() => gameLogoScreenAnimation.IsShowing);
 
-        SceneManager.LoadScene("Story");
+        SceneManager.LoadScene(NEXT_SCENE_NAME);
     }
 }

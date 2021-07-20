@@ -12,7 +12,7 @@ public class DateTimeData
     [SerializeField] private int minute;
 
 
-    public DateTimeData() : this(DateTime.Now)
+    public DateTimeData() : this(new DateTime())
     {
 
     }

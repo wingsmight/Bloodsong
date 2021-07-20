@@ -17,16 +17,53 @@ public static class Storage
     private static GeneralSettings generalSettings;
 
 
-    public static void LoadDatas()
+    [RuntimeInitializeOnLoadMethod]
+    private static void Awake()
     {
-        if (CurGameSlot >= MIN_SAVE_SLOT_INDEX && CurGameSlot < SAVE_SLOTS_COUNT)
+        LoadDatas();
+        LoadGeneralSettings();
+
+        Application.quitting += OnApplicationQuit;
+    }
+    private static void OnApplicationQuit()
+    {
+        SaveDatas();
+        SaveGeneralSettings();
+    }
+
+
+    public static T GetData<T>() where T : IStoredData
+    {
+        return GetData<T>(CurSaveSlotIndex);
+    }
+    public static T GetData<T>(int slotIndex) where T : IStoredData
+    {
+        if (slotIndex < MIN_SAVE_SLOT_INDEX || slotIndex >= SAVE_SLOTS_COUNT)
+            throw new Exception("Slot index is out of range");
+
+        if (datas[slotIndex] == null)
+            LoadDatas(slotIndex);
+
+        return (T)datas[slotIndex].First(x => x.GetType() == typeof(T));
+    }
+    public static void DeleteData(int slotIndex)
+    {
+        datas[slotIndex] = null;
+    }
+
+    private static void LoadDatas()
+    {
+        if (CurSaveSlotIndex >= MIN_SAVE_SLOT_INDEX && CurSaveSlotIndex < SAVE_SLOTS_COUNT)
         {
-            LoadDatas(CurGameSlot);
+            LoadDatas(CurSaveSlotIndex);
         }
     }
-    public static void LoadDatas(int slotIndex)
+    private static void LoadDatas(int slotIndex)
     {
-        datas[slotIndex] = SaveSystem.LoadStoredDatas<IStoredData>(slotIndex);
+        if (slotIndex < MIN_SAVE_SLOT_INDEX || slotIndex >= SAVE_SLOTS_COUNT)
+            return;
+
+        datas[slotIndex] = GameFile.LoadStoredDatas<IStoredData>(slotIndex);
         if (datas[slotIndex] == null)
         {
             if (dataTypes == null)
@@ -46,56 +83,34 @@ public static class Storage
             }
         }
     }
-
-    public static void LoadGeneralSettings()
+    private static void LoadGeneralSettings()
     {
-        generalSettings = SaveSystem.LoadGeneralSettings();
+        generalSettings = GameFile.LoadGeneralSettings();
         if (generalSettings == null)
         {
             generalSettings = Activator.CreateInstance<GeneralSettings>();
         }
     }
-    public static void SaveDatas()
+    private static void SaveDatas()
     {
-        SaveDatas(CurGameSlot);
+        SaveDatas(CurSaveSlotIndex);
     }
-    public static void SaveDatas(int slotIndex)
+    private static void SaveDatas(int slotIndex)
     {
         if (slotIndex < MIN_SAVE_SLOT_INDEX || slotIndex >= SAVE_SLOTS_COUNT)
             return;
 
         if (datas[slotIndex] != null)
         {
-            SaveSystem.SaveStoredDatas<IStoredData>(datas[slotIndex], slotIndex);
+            GameFile.SaveStoredDatas<IStoredData>(datas[slotIndex], slotIndex);
         }
     }
-    public static void SaveGeneralSettings()
+    private static void SaveGeneralSettings()
     {
         if (generalSettings != null)
         {
-            SaveSystem.SaveGeneralSettings(generalSettings);
+            GameFile.SaveGeneralSettings(generalSettings);
         }
-    }
-
-
-    public static T GetData<T>() where T : IStoredData
-    {
-        return GetData<T>(CurGameSlot);
-    }
-    public static T GetData<T>(int slotIndex) where T : IStoredData
-    {
-        if (slotIndex < MIN_SAVE_SLOT_INDEX || slotIndex >= SAVE_SLOTS_COUNT)
-            throw new Exception("Slot index is out of range");
-
-        if (datas[slotIndex] == null)
-            LoadDatas(slotIndex);
-
-        return (T)datas[slotIndex].First(x => x.GetType() == typeof(T));
-    }
-
-    public static void DeleteData(int slotIndex)
-    {
-        datas[slotIndex] = null;
     }
 
 
@@ -110,5 +125,5 @@ public static class Storage
         }
     }
 
-    private static int CurGameSlot => GeneralSettings.currentGameSlotIndex;
+    private static int CurSaveSlotIndex => GeneralSettings.currentSaveSlotIndex;
 }

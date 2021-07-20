@@ -7,28 +7,31 @@ using UnityEngine;
 [Serializable]
 public class SaveSlot
 {
-    public DateTime lastExitDate = DateTime.MinValue;
-    public Sprite locationSprite = null;
+    public int index = -1;
+    public bool isUsed = false;
+    public Location lastLocation = null;
+    public DateTimeData lastExitDate = null;
 
 
-    public SaveSlot()
+    public SaveSlot(int index)
     {
-
+        this.index = index;
     }
-    public SaveSlot(GameSlot gameSlot)
+    public SaveSlot(int index, DateTimeData lastExitDate, Location lastLocation) : this(index)
     {
-        if (gameSlot.IsUsed)
+        isUsed = (lastExitDate != null && lastLocation != null);
+
+        if (isUsed)
         {
-            lastExitDate = Storage.GetData<PlayerPreferences>(gameSlot.Index).lastExitDate.Date;
-            locationSprite = new Location(Storage.GetData<GameDayData>(gameSlot.Index).locationName).Sprite;
+            this.lastExitDate = lastExitDate;
+            this.lastLocation = lastLocation;
         }
     }
-    public SaveSlot(DateTime lastOpenDate, Sprite locationSprite) : this()
+    public SaveSlot(int index, DateTime lastExitDate, Sprite locationSprite) :
+        this(index,
+            new DateTimeData(lastExitDate),
+            new Location(Storage.GetData<GameDayData>(index).locationName))
     {
-        this.lastExitDate = lastOpenDate;
-        this.locationSprite = locationSprite;
+
     }
-
-
-    public bool IsEmpty => lastExitDate == DateTime.MinValue;
 }

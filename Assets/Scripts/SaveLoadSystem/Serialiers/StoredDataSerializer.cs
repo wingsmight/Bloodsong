@@ -13,7 +13,7 @@ public class StoredDataSerializer : ISerializer<IStoredData>
     {
         string wholeDataAsString = "";
         wholeDataAsString += storedData.GetType().ToString() + "\n";
-        wholeDataAsString += JsonUtility.ToJson(storedData);
+        wholeDataAsString += JsonUtility.ToJson(storedData, true);
 
         string encryptedDataToSave = EncryptUtility.Encrypt(wholeDataAsString);
 

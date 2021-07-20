@@ -5,5 +5,5 @@ using UnityEngine;
 [Serializable]
 public class PlayerPreferences : IStoredData
 {
-    public DateTimeData lastExitDate = new DateTimeData(DateTime.MinValue);
+
 }
