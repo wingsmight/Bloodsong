@@ -56,8 +56,8 @@ MonoBehaviour:
   - id: 39
   - id: 40
   - id: 41
-  nodeLinks:
   - id: 42
+  nodeLinks:
   - id: 43
   - id: 44
   - id: 45
@@ -98,6 +98,8 @@ MonoBehaviour:
   - id: 80
   - id: 81
   - id: 82
+  - id: 83
+  - id: 84
   exposedVariables: []
   commentBlockDatas: []
   references:
@@ -767,11 +769,11 @@ MonoBehaviour:
         guid: e8eb9eca-5cf6-4dd5-ba51-fd9bcf29c9cb
         position: {x: 15980, y: 386}
     0000002A:
-      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
+      type: {class: LocationNode, ns: , asm: Assembly-CSharp}
       data:
-        sourceNodeGUID: 9db5a9a1-ff6f-4d55-b5b2-2595d7b21e5b
-        sourcePortName: Output
-        destinationNodeGUID: e9d77b30-a69b-4707-a454-e45e7a376518
+        guid: 8c57525b-de4b-472d-a5e8-cbf12d664710
+        position: {x: 221, y: 31.5}
+        name: BlackScreen
     0000002B:
       type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
       data:
@@ -991,24 +993,36 @@ MonoBehaviour:
     0000004F:
       type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
       data:
+        sourceNodeGUID: ce569d50-13e2-4ea6-ab3d-6d957bb78cd4
+        sourcePortName: Output
+        destinationNodeGUID: e8eb9eca-5cf6-4dd5-ba51-fd9bcf29c9cb
+    00000050:
+      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
+      data:
         sourceNodeGUID: 7cfcad82-7bea-4d50-a27f-628f2f7856af
         sourcePortName: Output
         destinationNodeGUID: 7201308c-32e0-457b-840a-6c5b1a83ed7a
-    00000050:
+    00000051:
       type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
       data:
         sourceNodeGUID: 070d3c76-e81b-484b-af8f-0a7ee79887e4
         sourcePortName: Output
         destinationNodeGUID: b95fb1d8-16ee-4526-b6a9-a3fe107cddc3
-    00000051:
+    00000052:
       type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
       data:
         sourceNodeGUID: b95fb1d8-16ee-4526-b6a9-a3fe107cddc3
         sourcePortName: Output
         destinationNodeGUID: 6952bc42-281a-4841-8e96-dfff2c45eba4
-    00000052:
+    00000053:
       type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
       data:
-        sourceNodeGUID: ce569d50-13e2-4ea6-ab3d-6d957bb78cd4
+        sourceNodeGUID: 9db5a9a1-ff6f-4d55-b5b2-2595d7b21e5b
         sourcePortName: Output
-        destinationNodeGUID: e8eb9eca-5cf6-4dd5-ba51-fd9bcf29c9cb
+        destinationNodeGUID: 8c57525b-de4b-472d-a5e8-cbf12d664710
+    00000054:
+      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
+      data:
+        sourceNodeGUID: 8c57525b-de4b-472d-a5e8-cbf12d664710
+        sourcePortName: Output
+        destinationNodeGUID: e9d77b30-a69b-4707-a454-e45e7a376518

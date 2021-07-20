@@ -56,8 +56,8 @@ MonoBehaviour:
   - id: 39
   - id: 40
   - id: 41
-  nodeLinks:
   - id: 42
+  nodeLinks:
   - id: 43
   - id: 44
   - id: 45
@@ -98,6 +98,8 @@ MonoBehaviour:
   - id: 80
   - id: 81
   - id: 82
+  - id: 83
+  - id: 84
   exposedVariables: []
   commentBlockDatas: []
   references:
@@ -129,7 +131,9 @@ MonoBehaviour:
         position: {x: 1393, y: 391}
         texts:
         - 'James''s good-natured face, which in most cases denotes a slight indifference.
-          This is what his companions are used to and what he '
+
+          This
+          is what his companions are used to and what he '
         - pleased" them with all the way."
         speakerName: 
     00000004:
@@ -201,11 +205,15 @@ MonoBehaviour:
           farm, only these two got into the most tricky situations.
         - Always together, always for each other. Arten is a big fan of pranks. And
           James-who was always there to help out and also to scold.
-        - Since their teens, the boys have been paired up working in the fertile
-          fields. It was the most productive group. But still, Arten never denied
-          himself the pleasure of loafing around.
-        - The older and bigger he became, the more he liked to take a nap, eat, lie
-          down. And at the same time, play, fight.
+        - 'Since their teens, the boys have been paired up working in the fertile
+          fields.
+
+          It was the most productive group. But still, Arten never
+          denied himself the pleasure of loafing around.'
+        - 'The older and bigger he became, the more he liked to take a nap, eat,
+          lie down.
+
+          And at the same time, play, fight.'
         - James is different. He is more reserved, calmer, and more focused. And
           more responsible. He performs any work scrupulously. And all this despite
           the fact that there was no one who hated being a farmer so much.
@@ -258,9 +266,11 @@ MonoBehaviour:
         - After meeting Martin at one of the harvest festivals, they had looked at
           each other for quite a long time. Which is not surprising, given the difference
           between them both physically and mentally.
-        - Moreover, the quiet and insecure Zari became friends with James much faster.
-          And although they were more suited to each other, there was no fire between
-          them.
+        - 'Moreover, the quiet and insecure Zari became friends with James much faster.
+
+          And
+          although they were more suited to each other, there was no fire between
+          them.'
         - 'All this was refuted and proved two truths at once: friendship between
           a man and a woman is impossible and opposites attract.'
         - Arten and Zari had been attracted to each other since their first meeting.
@@ -340,8 +350,8 @@ MonoBehaviour:
         - "I'm not complaining, James. Although no, I complain\u2026 You have pure
           thoughts as long as our understanding of justice is not corrupted by force,
           maybe by power. Or, at least, fame."
-        - "We could really help a lot of people and become good Heroes. Not the Golden
-          King, of course\u2026 Not even close, perhaps\u2026"
+        - "We could really help a lot of people and become good Heroes. Not the Golden\nKing,
+          of course\u2026 Not even close, perhaps\u2026"
         - But still! I'm just afraid. That's all. Who could be more inept than three
           ordinary farmers?
         speakerName: Zari
@@ -393,9 +403,11 @@ MonoBehaviour:
         guid: c6e116aa-099d-4d0a-84b6-ce0d99d5d3ac
         position: {x: 13633.5, y: 200}
         texts:
-        - Anyway, we're going to the village now! And in addition to provisions,
+        - 'Anyway, we''re going to the village now! And in addition to provisions,
           ammunition, there is another important mission. How to have a good time
-          at the harvest festival! Have fun!
+          at the harvest festival!
+
+          Have fun!'
         speakerName: Arten
     0000001F:
       type: {class: MonologueNode, ns: , asm: Assembly-CSharp}
@@ -512,11 +524,11 @@ MonoBehaviour:
         guid: e8eb9eca-5cf6-4dd5-ba51-fd9bcf29c9cb
         position: {x: 15980, y: 386}
     0000002A:
-      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
+      type: {class: LocationNode, ns: , asm: Assembly-CSharp}
       data:
-        sourceNodeGUID: 9db5a9a1-ff6f-4d55-b5b2-2595d7b21e5b
-        sourcePortName: Output
-        destinationNodeGUID: e9d77b30-a69b-4707-a454-e45e7a376518
+        guid: 729cd0a9-d1b2-4edf-9b19-e7a1ce287b8c
+        position: {x: 221, y: 54}
+        name: BlackScreen
     0000002B:
       type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
       data:
@@ -736,24 +748,36 @@ MonoBehaviour:
     0000004F:
       type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
       data:
+        sourceNodeGUID: ce569d50-13e2-4ea6-ab3d-6d957bb78cd4
+        sourcePortName: Output
+        destinationNodeGUID: e8eb9eca-5cf6-4dd5-ba51-fd9bcf29c9cb
+    00000050:
+      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
+      data:
         sourceNodeGUID: 7cfcad82-7bea-4d50-a27f-628f2f7856af
         sourcePortName: Output
         destinationNodeGUID: 7201308c-32e0-457b-840a-6c5b1a83ed7a
-    00000050:
+    00000051:
       type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
       data:
         sourceNodeGUID: 070d3c76-e81b-484b-af8f-0a7ee79887e4
         sourcePortName: Output
         destinationNodeGUID: b95fb1d8-16ee-4526-b6a9-a3fe107cddc3
-    00000051:
+    00000052:
       type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
       data:
         sourceNodeGUID: b95fb1d8-16ee-4526-b6a9-a3fe107cddc3
         sourcePortName: Output
         destinationNodeGUID: 6952bc42-281a-4841-8e96-dfff2c45eba4
-    00000052:
+    00000053:
       type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
       data:
-        sourceNodeGUID: ce569d50-13e2-4ea6-ab3d-6d957bb78cd4
+        sourceNodeGUID: 9db5a9a1-ff6f-4d55-b5b2-2595d7b21e5b
         sourcePortName: Output
-        destinationNodeGUID: e8eb9eca-5cf6-4dd5-ba51-fd9bcf29c9cb
+        destinationNodeGUID: 729cd0a9-d1b2-4edf-9b19-e7a1ce287b8c
+    00000054:
+      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
+      data:
+        sourceNodeGUID: 729cd0a9-d1b2-4edf-9b19-e7a1ce287b8c
+        sourcePortName: Output
+        destinationNodeGUID: e9d77b30-a69b-4707-a454-e45e7a376518
