@@ -19,7 +19,7 @@ public class CharactersView : MonoBehaviour, IHidable, IResetable, IDataLoading,
             return;
         }
 
-        if (character.Name == "Sira" && position == CharacterView.Position.Middle)
+        if ((character.Name == "Sira" || character.Name == "Sira") && position == CharacterView.Position.Middle)
         {
             siraCenterView.Show(character, direction);
 
@@ -30,7 +30,7 @@ public class CharactersView : MonoBehaviour, IHidable, IResetable, IDataLoading,
     }
     public void Show(Character character, CharacterView.Position position)
     {
-        if (character.Name == "Sira" && position == CharacterView.Position.Middle)
+        if ((character.Name == "Sira" || character.Name == "Sira") && position == CharacterView.Position.Middle)
         {
             siraCenterView.Show(character);
 
