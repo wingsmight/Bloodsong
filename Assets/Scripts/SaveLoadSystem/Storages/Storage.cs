@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-public static class Storage
+public class Storage : MonoBehaviourSingleton<Storage>
 {
     public const int SAVE_SLOTS_COUNT = 3;
 
@@ -17,16 +17,17 @@ public static class Storage
     private static GeneralSettings generalSettings;
 
 
-    [RuntimeInitializeOnLoadMethod]
-    private static void Awake()
+    protected override void Awake()
     {
+        base.Awake();
+
         LoadDatas();
         LoadGeneralSettings();
-
-        Application.quitting += OnApplicationQuit;
     }
-    private static void OnApplicationQuit()
+    protected override void OnDestroy()
     {
+        base.OnDestroy();
+
         SaveDatas();
         SaveGeneralSettings();
     }

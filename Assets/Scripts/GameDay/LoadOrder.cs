@@ -8,6 +8,8 @@ public class LoadOrder : MonoBehaviour
     private const string NEXT_SCENE_NAME = "MainMenu";
 
 
+    [SerializeField] private bool isSkipIntro;
+    [Space(12)]
     [SerializeField] private MessageTelling messageTelling;
     [SerializeField] private Message message;
     [SerializeField] private FadeAnimation gameLogoScreenAnimation;
@@ -27,7 +29,14 @@ public class LoadOrder : MonoBehaviour
 
     public void Load()
     {
-        StartCoroutine(LoadRoutine());
+        if (isSkipIntro)
+        {
+            SceneManager.LoadScene(NEXT_SCENE_NAME);
+        }
+        else
+        {
+            StartCoroutine(LoadRoutine());
+        }
     }
 
     private IEnumerator LoadRoutine()

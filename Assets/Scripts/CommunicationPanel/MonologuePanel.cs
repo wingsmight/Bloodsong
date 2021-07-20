@@ -2,14 +2,18 @@
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MonologuePanel : CommunicationPanel
 {
-    private const string EMPTY_SPEAKER_NAME = "Author";
+    private const string EMPTY_SPEAKER_NAME_EN = "Author";
+    private const string EMPTY_SPEAKER_NAME_RU = "Автор";
 
 
     [SerializeField] private TextShowing textShowing;
-    [SerializeField] private GameObject speakerNameGameobject;
+    [SerializeField] private Image background;
+    [SerializeField] private Sprite panelWithoutSpeaker;
+    [SerializeField] private Sprite panelWithSpeaker;
     [SerializeField] private TextMeshProUGUI speakerName;
 
 
@@ -31,22 +35,22 @@ public class MonologuePanel : CommunicationPanel
     {
         StartCoroutine(ShowWithDelayRoutine(text, speakerName));
     }
-    public void SetSpeaker(string name)
-    {
-        if (speakerNameGameobject == null && speakerName == null)
-            return;
 
-        if (string.IsNullOrEmpty(name) || name == EMPTY_SPEAKER_NAME)
+    private void SetSpeaker(string name)
+    {
+        if (string.IsNullOrEmpty(name) || name == EMPTY_SPEAKER_NAME_EN || name == EMPTY_SPEAKER_NAME_RU)
         {
-            speakerNameGameobject.SetActive(false);
+            background.sprite = panelWithoutSpeaker;
+
+            speakerName.text = "";
         }
         else
         {
-            speakerNameGameobject.SetActive(!string.IsNullOrEmpty(name));
+            background.sprite = panelWithSpeaker;
+
             speakerName.text = name;
         }
     }
-
     private IEnumerator ShowWithDelayRoutine(string text, string speakerName)
     {
         yield return new WaitForSeconds(appearingDelay);

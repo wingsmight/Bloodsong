@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class TextTypingSpeedSlider : MonoBehaviour, IDataLoading, IDataSaving
+public class TextTypingSpeedSlider : MonoBehaviour
 {
     [SerializeField] private Slider slider;
 
@@ -16,6 +16,8 @@ public class TextTypingSpeedSlider : MonoBehaviour, IDataLoading, IDataSaving
         maxValue = slider.maxValue;
 
         slider.onValueChanged.AddListener(SetValue);
+
+        LoadData();
     }
     private void OnDestroy()
     {
@@ -23,11 +25,11 @@ public class TextTypingSpeedSlider : MonoBehaviour, IDataLoading, IDataSaving
     }
 
 
-    public void LoadData()
+    private void LoadData()
     {
         slider.value = maxValue - Storage.GeneralSettings.testTypingSpeed;
     }
-    public void SaveData()
+    private void SaveData()
     {
         Storage.GeneralSettings.testTypingSpeed = TextTyping.Speed;
     }
@@ -35,5 +37,7 @@ public class TextTypingSpeedSlider : MonoBehaviour, IDataLoading, IDataSaving
     private void SetValue(float value)
     {
         TextTyping.Speed = maxValue - value;
+
+        SaveData();
     }
 }

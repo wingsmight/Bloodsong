@@ -7,11 +7,14 @@ using UnityEngine.UI;
 
 public class DialoguePanel : CommunicationPanel
 {
-    private const string EMPTY_SPEAKER_NAME = "Author";
+    private const string EMPTY_SPEAKER_NAME_EN = "Author";
+    private const string EMPTY_SPEAKER_NAME_RU = "Автор";
 
 
-    [SerializeField] private GameObject speakerNameGameobject;
     [SerializeField] private TextMeshProUGUI speakerName;
+    [SerializeField] private Image background;
+    [SerializeField] private Sprite panelWithoutSpeaker;
+    [SerializeField] private Sprite panelWithSpeaker;
     [SerializeField] private TextTyping textTyping;
     [SerializeField] private ChoiceView choiceView;
 
@@ -24,15 +27,19 @@ public class DialoguePanel : CommunicationPanel
         choiceView.Show(choiceData, actions);
         SetSpeaker(speakerName);
     }
-    public void SetSpeaker(string name)
+
+    private void SetSpeaker(string name)
     {
-        if (string.IsNullOrEmpty(name) || name == EMPTY_SPEAKER_NAME)
+        if (string.IsNullOrEmpty(name) || name == EMPTY_SPEAKER_NAME_EN || name == EMPTY_SPEAKER_NAME_RU)
         {
-            speakerNameGameobject.SetActive(false);
+            background.sprite = panelWithoutSpeaker;
+
+            speakerName.text = "";
         }
         else
         {
-            speakerNameGameobject.SetActive(!string.IsNullOrEmpty(name));
+            background.sprite = panelWithSpeaker;
+
             speakerName.text = name;
         }
     }
