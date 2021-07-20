@@ -7,8 +7,6 @@ using UnityEngine.EventSystems;
 
 public class ChoiceButton : UIButton, IPointerEnterHandler, IPointerExitHandler
 {
-    // [SerializeField] private ChoiceView choiceView;
-    [Space(12)]
     [SerializeField] private TextMeshProUGUI textView;
     [SerializeField] private GameObject hoverBackground;
     [SerializeField] private GameObject pointer;
@@ -32,13 +30,19 @@ public class ChoiceButton : UIButton, IPointerEnterHandler, IPointerExitHandler
     public void OnPointerExit(PointerEventData eventData)
     {
         pointer.SetActive(true);
+        PlacePointer();
         hoverBackground.SetActive(false);
     }
-
 
     protected override void OnClick()
     {
         action?.Invoke();
         action = null;
+    }
+
+    private void PlacePointer()
+    {
+        textView.ForceMeshUpdate();
+        pointer.transform.localPosition = new Vector2(-textView.textBounds.size.x / 2.0f, pointer.transform.localPosition.y);
     }
 }
