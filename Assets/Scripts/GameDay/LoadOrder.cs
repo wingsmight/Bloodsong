@@ -14,7 +14,7 @@ public class LoadOrder : MonoBehaviour
     [SerializeField] private Message message;
     [SerializeField] private FadeAnimation gameLogoScreenAnimation;
     [SerializeField] private CompanySplashScreen companySplashScreen;
-    [SerializeField] private FadeAnimation textGameLogoAnimation;
+    [SerializeField] private FadeAnimation warningScreen;
 
 
     private bool isMessageTold;
@@ -45,13 +45,13 @@ public class LoadOrder : MonoBehaviour
 
         yield return new WaitWhile(() => companySplashScreen.IsShowing);
 
-        textGameLogoAnimation.Appear();
+        warningScreen.Appear();
         messageTelling.Tell(message);
         messageTelling.OnStop += () => isMessageTold = true;
 
         yield return new WaitWhile(() => !isMessageTold);
 
-        textGameLogoAnimation.Disappear();
+        warningScreen.Disappear();
         gameLogoScreenAnimation.Appear();
 
         yield return new WaitForSeconds(gameLogoShowDuration);
