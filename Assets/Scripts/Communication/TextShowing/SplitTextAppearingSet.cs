@@ -5,17 +5,17 @@ using UnityEngine.Events;
 
 public class SplitTextAppearingSet : MonoBehaviour, IShowPaging, IResetable
 {
-    [SerializeField] private List<TextAppearing> textAppearings;
-    [SerializeField] private List<NextPageButton> nextPageControls;
-    [SerializeField] private List<StopPageButton> stopPageControls;
+    [SerializeField] protected List<TextAppearing> textAppearings;
+    [SerializeField] protected List<NextPageButton> nextPageControls;
+    [SerializeField] protected List<StopPageButton> stopPageControls;
 
 
     public event UnityAction OnStopPageTyping;
     public event UnityAction OnStopTyping;
     public event UnityAction OnStartTyping;
 
-    private int textIndex;
-    private List<string> fullTexts;
+    protected int textIndex;
+    protected List<string> fullTexts;
 
 
     private void Awake()
@@ -49,20 +49,20 @@ public class SplitTextAppearingSet : MonoBehaviour, IShowPaging, IResetable
 
         SetupPageControls();
     }
-    public void ShowPreviousPage()
+    public virtual void ShowPreviousPage()
     {
         textIndex--;
         textAppearings[textIndex].Stop();
         textIndex++;
     }
-    public void ShowNextPage()
+    public virtual void ShowNextPage()
     {
         textAppearings[textIndex].Type(fullTexts[textIndex]);
         textIndex++;
 
         SetupPageControls();
     }
-    public void Stop()
+    public virtual void Stop()
     {
         textAppearings.ForEach(x => x.Stop());
     }
