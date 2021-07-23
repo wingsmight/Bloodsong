@@ -11,7 +11,7 @@ public abstract class LocalizedUiElement : MonoBehaviour
         Init();
 
         onLanguageChangedHandler = (newLanguage) => Refresh();
-        Localization.OnLanguageChanged += (_) => onLanguageChangedHandler?.Invoke(_);
+        Localization.OnLanguageChanged += onLanguageChangedHandler;
     }
     private void Start()
     {
