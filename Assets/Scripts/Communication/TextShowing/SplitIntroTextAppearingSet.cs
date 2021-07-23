@@ -5,25 +5,28 @@ using UnityEngine;
 public class SplitIntroTextAppearingSet : SplitTextAppearingSet
 {
     [SerializeField] private List<FadeAnimation> betweenTextsObjects;
+    [SerializeField] private Smoke smoke;
 
 
     private int betweenIndex;
 
 
+    public override void Type(List<string> fullTexts)
+    {
+        base.Type(fullTexts);
+
+        smoke.Appear(textAppearings[0].GetComponent<RectTransform>().position);
+    }
     public override void ShowNextPage()
     {
-        if (betweenIndex == textIndex - 1)
-        {
-            betweenTextsObjects[betweenIndex].Appear();
-            betweenIndex++;
-        }
-        else
-        {
-            textAppearings[textIndex].Type(fullTexts[textIndex]);
-            textIndex++;
+        betweenTextsObjects[betweenIndex].Appear();
+        betweenIndex++;
 
-            SetupPageControls();
-        }
+        smoke.Appear(textAppearings[textIndex].GetComponent<RectTransform>().position);
+        textAppearings[textIndex].Type(fullTexts[textIndex]);
+        textIndex++;
+
+        SetupPageControls();
     }
     public override void Stop()
     {

@@ -11,8 +11,7 @@ public static class RectTransformExt
     /// </summary>
     public static void MatchOther(this RectTransform rt, RectTransform other, bool isIgnoreScale = false)
     {
-        Vector2 myPrevPivot = rt.pivot;
-        myPrevPivot = other.pivot;
+        Vector2 myPrevPivot = other.pivot;
         rt.position = other.position;
 
         if (!isIgnoreScale)

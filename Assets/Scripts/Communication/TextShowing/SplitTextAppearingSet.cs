@@ -39,7 +39,7 @@ public class SplitTextAppearingSet : MonoBehaviour, IShowPaging, IResetable
     }
 
 
-    public void Type(List<string> fullTexts)
+    public virtual void Type(List<string> fullTexts)
     {
         this.fullTexts = fullTexts;
 
