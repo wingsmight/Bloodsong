@@ -17,4 +17,11 @@ public class CharacterNode : NodeData
         this.characterPosition = characterPosition;
         this.characterDirection = characterDirection;
     }
+    public CharacterNode(string guid, Vector2 position, string characterName, CharacterView.Position characterPosition, CharacterView.Direction characterDirection)
+        : base(guid, position)
+    {
+        this.character = ScriptableObjectFinder.Get<Character>(characterName);
+        this.characterPosition = characterPosition;
+        this.characterDirection = characterDirection;
+    }
 }

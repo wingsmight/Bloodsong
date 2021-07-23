@@ -77,7 +77,7 @@ public class ShowCharacterNodeEditorView : NodeEditorView
 
     public override NodeData Data =>
         new CharacterNode(guid, Position,
-            characterProperty.GetValue<Character>(),
+            characterProperty.GetObjectReferenceValueName(),
             (CharacterView.Position)positionEnumField.value,
             (CharacterView.Direction)directionEnumField.value);
 }

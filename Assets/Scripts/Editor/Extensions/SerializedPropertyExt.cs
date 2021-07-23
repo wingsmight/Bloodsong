@@ -44,6 +44,17 @@ public static class SerializedPropertyExt
         return info.GetCustomAttribute<T>();
     }
 
+    public static string GetObjectReferenceValueName(this SerializedProperty property)
+    {
+        if (property.objectReferenceValue == null)
+        {
+            return "";
+        }
+        else
+        {
+            return property.objectReferenceValue.name;
+        }
+    }
     public static T GetValue<T>(this SerializedProperty property) where T : class
     {
         object obj = property.serializedObject.targetObject;

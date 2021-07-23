@@ -47,7 +47,7 @@ public class LocationNodeEditorView : NodeEditorView
 
     public override NodeData Data =>
         new LocationNode(guid, Position,
-        spriteProperty.GetValue<Sprite>().name);
+        spriteProperty.GetObjectReferenceValueName());
 }
 
 

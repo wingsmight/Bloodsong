@@ -16,13 +16,8 @@ MonoBehaviour:
   nodeDatas:
   - id: 0
   - id: 1
-  - id: 2
-  - id: 3
-  - id: 4
   nodeLinks:
-  - id: 5
-  - id: 6
-  - id: 7
+  - id: 2
   exposedVariables: []
   commentBlockDatas: []
   references:
@@ -35,52 +30,25 @@ MonoBehaviour:
     00000001:
       type: {class: MonologueNode, ns: , asm: Assembly-CSharp}
       data:
-        guid: aa11cabe-4047-45bd-b854-3310fa70dc82
-        position: {x: 237, y: 133}
+        guid: 42783cfc-69b3-4c12-8a1f-b4416866b518
+        position: {x: 254, y: 165}
         texts:
-        - I'm Arten
-        - 
-        speakerName: Arten
+        - '<#ff0b1f><size=60><font="SpeakerName SDF">T</font></size></color>he <#ff0b1f><size=60><font="SpeakerName
+          SDF">A</font></size></color>ge of the <#ff0b1f><size=60><font="SpeakerName
+          SDF">G</font></size></color>olden
+
+          <#ff0b1f><size=60><font="SpeakerName
+          SDF">K</font></size></color>ings<alpha=#00>.
+
+          <alpha=#FF>is a
+          time when all over the world,<alpha=#00>.
+
+          <alpha=#FF>mortals
+          rise up against evil, bloodthirsty Gods.'
+        speakerName: 
     00000002:
-      type: {class: MonologueNode, ns: , asm: Assembly-CSharp}
-      data:
-        guid: ac914935-383e-49e9-8d56-c265f655d232
-        position: {x: 597.5, y: 145}
-        texts:
-        - aaaa
-        speakerName: 
-    00000003:
-      type: {class: MonologueNode, ns: , asm: Assembly-CSharp}
-      data:
-        guid: 88a364c4-ca4b-40c6-968e-7d211a946b8f
-        position: {x: 246, y: -18}
-        texts:
-        - I'm Arten
-        - 
-        speakerName: Arten
-    00000004:
-      type: {class: MonologueNode, ns: , asm: Assembly-CSharp}
-      data:
-        guid: 60fde877-ad6e-4781-b8d2-431810a0c3e3
-        position: {x: 630.5, y: -49}
-        texts:
-        - aaaa
-        speakerName: 
-    00000005:
       type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
       data:
         sourceNodeGUID: b3adbc08-7cd4-4688-9413-f1cb44c930cd
         sourcePortName: Output
-        destinationNodeGUID: aa11cabe-4047-45bd-b854-3310fa70dc82
-    00000006:
-      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
-      data:
-        sourceNodeGUID: aa11cabe-4047-45bd-b854-3310fa70dc82
-        sourcePortName: Output
-        destinationNodeGUID: ac914935-383e-49e9-8d56-c265f655d232
-    00000007:
-      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
-      data:
-        sourceNodeGUID: 88a364c4-ca4b-40c6-968e-7d211a946b8f
-        sourcePortName: Output
-        destinationNodeGUID: 60fde877-ad6e-4781-b8d2-431810a0c3e3
+        destinationNodeGUID: 42783cfc-69b3-4c12-8a1f-b4416866b518

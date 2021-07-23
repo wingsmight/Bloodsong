@@ -144,7 +144,7 @@ public class DialogueNodeEditorView : NodeEditorView
             }
 
             return new DialogueNode(guid, Position, TextFieldWrapper.Unwrap(dialogueTextField.value), responses,
-            characterProperty.GetValue<Character>());
+            characterProperty.GetObjectReferenceValueName());
         }
     }
 

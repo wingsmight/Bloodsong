@@ -21,4 +21,11 @@ public class DialogueNode : NodeData
             this.speakerName = character.name;
         }
     }
+    public DialogueNode(string guid, Vector2 position, string dialogueText, List<DialogueResponseData> responses, string speakerName)
+        : base(guid, position)
+    {
+        this.dialogueText = dialogueText;
+        this.responses = responses;
+        this.speakerName = speakerName;
+    }
 }

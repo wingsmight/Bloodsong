@@ -113,7 +113,7 @@ public class StartMonologueEditorNodeView : NodeEditorView
     public override NodeData Data =>
         new MonologueNode(guid, Position,
             phraseTextFields.Select(x => TextFieldWrapper.Unwrap(x.value)).ToList(),
-            characterProperty.GetValue<Character>());
+            characterProperty.GetObjectReferenceValueName());
 }
 
 public class CharacterSO : ScriptableObject
