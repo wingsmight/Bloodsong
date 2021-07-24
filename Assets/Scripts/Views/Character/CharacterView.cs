@@ -24,6 +24,7 @@ public class CharacterView : MonoBehaviour
     {
         characterName = character.name;
         image.sprite = character.GetSprite(position);
+        image.AdjustWidth();
 
         fadeAnimation.Appear();
     }

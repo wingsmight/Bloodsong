@@ -7,7 +7,6 @@ using UnityEngine.UI;
 public class CharactersView : MonoBehaviour, IHidable, IResetable, IDataLoading, IDataSaving
 {
     [SerializeField] private PositionCharacterViewDictionary characterViews;
-    [SerializeField] private CharacterView siraCenterView;
 
 
     public void Show(Character character, CharacterView.Position position, CharacterView.Direction direction)
@@ -19,31 +18,14 @@ public class CharactersView : MonoBehaviour, IHidable, IResetable, IDataLoading,
             return;
         }
 
-        if ((character.Name == "Sira" || character.Name == "Sira") && position == CharacterView.Position.Middle)
-        {
-            siraCenterView.Show(character, direction);
-
-            return;
-        }
-
         characterViews[position].Show(character, direction);
     }
     public void Show(Character character, CharacterView.Position position)
     {
-        if ((character.Name == "Sira" || character.Name == "Sira") && position == CharacterView.Position.Middle)
-        {
-            siraCenterView.Show(character);
-
-            return;
-        }
         characterViews[position].Show(character);
     }
     public void Hide(CharacterView.Position position)
     {
-        if (position == CharacterView.Position.Middle)
-        {
-            siraCenterView.Hide();
-        }
         characterViews[position].Hide();
     }
     public void Hide()
@@ -52,12 +34,10 @@ public class CharactersView : MonoBehaviour, IHidable, IResetable, IDataLoading,
         {
             characterView.Hide();
         }
-        siraCenterView.Hide();
     }
     public void HideImmediately(CharacterView.Position position)
     {
         characterViews[position].HideImmediately();
-        siraCenterView.HideImmediately();
     }
     public void HideImmediately()
     {
@@ -65,7 +45,6 @@ public class CharactersView : MonoBehaviour, IHidable, IResetable, IDataLoading,
         {
             characterView.HideImmediately();
         }
-        siraCenterView.HideImmediately();
     }
     public void Reset()
     {
@@ -89,11 +68,6 @@ public class CharactersView : MonoBehaviour, IHidable, IResetable, IDataLoading,
             {
                 Storage.GetData<GameDayData>().characters.Add(characterView.Key, characterView.Value.CharacterName);
             }
-        }
-
-        if (siraCenterView.IsShowing)
-        {
-            Storage.GetData<GameDayData>().characters.Add(CharacterView.Position.Middle, "Sira");
         }
     }
 }
