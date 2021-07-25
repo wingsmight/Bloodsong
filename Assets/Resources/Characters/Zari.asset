@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Zari
   sprites:
-    m_keys: 0000000001000000
+    m_keys: 000000000100000005000000
     m_values:
     - {fileID: 21300000, guid: a5ee038a3ac6a4fae9b8985c7cec85ce, type: 3}
-    - {fileID: 21300000, guid: a5ee038a3ac6a4fae9b8985c7cec85ce, type: 3}
+    - {fileID: 21300000, guid: 28efa997107a948f8bfaaad1cbfe4234, type: 3}
+    - {fileID: 21300000, guid: 3eb093a7dd4da420e8f519cfce5a7f99, type: 3}

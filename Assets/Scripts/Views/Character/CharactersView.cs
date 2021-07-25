@@ -3,13 +3,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using static CharacterView;
+using static Character;
 
 public class CharactersView : MonoBehaviour, IHidable, IResetable, IDataLoading, IDataSaving
 {
     [SerializeField] private PositionCharacterViewDictionary characterViews;
 
 
-    public void Show(Character character, CharacterView.Position position, CharacterView.Direction direction)
+    public void Show(Character character, Position position, Emotion emotion, Direction direction)
     {
         if (character == null || string.IsNullOrEmpty(character.name) || string.IsNullOrEmpty(character.Name))
         {
@@ -18,13 +20,13 @@ public class CharactersView : MonoBehaviour, IHidable, IResetable, IDataLoading,
             return;
         }
 
-        characterViews[position].Show(character, direction);
+        characterViews[position].Show(character, emotion, direction);
     }
-    public void Show(Character character, CharacterView.Position position)
+    public void ShowImmediately(Character character, Position position, Emotion emotion)
     {
-        characterViews[position].Show(character);
+        characterViews[position].ShowImmediately(character, emotion);
     }
-    public void Hide(CharacterView.Position position)
+    public void Hide(Position position)
     {
         characterViews[position].Hide();
     }
@@ -35,7 +37,7 @@ public class CharactersView : MonoBehaviour, IHidable, IResetable, IDataLoading,
             characterView.Hide();
         }
     }
-    public void HideImmediately(CharacterView.Position position)
+    public void HideImmediately(Position position)
     {
         characterViews[position].HideImmediately();
     }
@@ -53,20 +55,21 @@ public class CharactersView : MonoBehaviour, IHidable, IResetable, IDataLoading,
 
     public void LoadData()
     {
-        foreach (var postionCharacter in Storage.GetData<GameDayData>().characters)
+        foreach (var characterProperty in Storage.GetData<GameDayData>().characters)
         {
-            Character character = ScriptableObjectFinder.Get(postionCharacter.Value, typeof(Character)) as Character;
-            Show(character, postionCharacter.Key);
+            Character character = ScriptableObjectFinder.Get<Character>(characterProperty.name);
+            ShowImmediately(character, characterProperty.position, characterProperty.emotion);
         }
     }
     public void SaveData()
     {
-        Storage.GetData<GameDayData>().characters = new PositionCharacterNameDictionary();
+        Storage.GetData<GameDayData>().characters = new List<CharacterProperty>();
         foreach (var characterView in characterViews)
         {
             if (characterView.Value.IsShowing)
             {
-                Storage.GetData<GameDayData>().characters.Add(characterView.Key, characterView.Value.CharacterName);
+                var characterProperty = characterView.Value.CharacterProperty;
+                Storage.GetData<GameDayData>().characters.Add(new CharacterProperty(characterProperty.name, characterView.Key, characterProperty.emotion));
             }
         }
     }

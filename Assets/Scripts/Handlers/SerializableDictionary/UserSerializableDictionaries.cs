@@ -50,10 +50,7 @@ public class LanguageGraphDictionary : SerializableDictionary<Language, Dialogue
 
 
 [Serializable]
-public class PositionSpriteDictionary : SerializableDictionary<CharacterView.Position, Sprite> { }
+public class CharacterSpriteDictionary : SerializableDictionary<Character.Emotion, Sprite> { }
 
 [Serializable]
 public class PositionCharacterViewDictionary : SerializableDictionary<CharacterView.Position, CharacterView> { }
-
-[Serializable]
-public class PositionCharacterNameDictionary : SerializableDictionary<CharacterView.Position, string> { }

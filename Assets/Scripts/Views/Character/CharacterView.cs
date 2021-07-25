@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using static Character;
 
 public class CharacterView : MonoBehaviour
 {
@@ -11,19 +12,22 @@ public class CharacterView : MonoBehaviour
     [SerializeField] private float appearDuration;
 
 
-    private string characterName;
+    private CharacterProperty characterProperty;
 
 
-    public void Show(Character character, Direction direction)
+    public void Show(Character character, Emotion emotion, Direction direction)
     {
-        Show(character);
+        if (characterProperty == null || character.name != characterProperty.name)
+        {
+            StartCoroutine(AppearRoutine(direction));
+        }
 
-        StartCoroutine(AppearRoutine(direction));
+        ShowImmediately(character, emotion);
     }
-    public void Show(Character character)
+    public void ShowImmediately(Character character, Emotion emotion)
     {
-        characterName = character.name;
-        image.sprite = character.GetSprite(position);
+        characterProperty = new CharacterProperty(character.name, position, emotion);
+        image.sprite = character.GetSprite(emotion);
         image.AdjustWidth();
 
         fadeAnimation.Appear();
@@ -94,21 +98,21 @@ public class CharacterView : MonoBehaviour
         image.rectTransform.anchoredPosition = finishPosition;
     }
     public Sprite Sprite => image.sprite;
-    public string CharacterName => characterName;
+    public CharacterProperty CharacterProperty => characterProperty;
     public bool IsShowing => fadeAnimation.IsShowing;
 
 
-    public enum Position
-    {
-        Left,
-        Middle,
-        Right,
-    }
     public enum Direction
     {
         FromLeft,
         FromRight,
         FromButtom,
         FromTop,
+    }
+    public enum Position
+    {
+        Left,
+        Middle,
+        Right,
     }
 }

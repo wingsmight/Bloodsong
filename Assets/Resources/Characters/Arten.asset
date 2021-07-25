@@ -14,7 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Arten
   sprites:
-    m_keys: 0000000002000000
+    m_keys: 00000000010000000200000004000000
     m_values:
     - {fileID: 21300000, guid: 1d80a1ede31b74df8ba26bd21868690e, type: 3}
-    - {fileID: 21300000, guid: c851c6ad2b71148d8b952e8d28cdd2bb, type: 3}
+    - {fileID: 21300000, guid: 4849d28df1c4043d1a88a891410b8e8f, type: 3}
+    - {fileID: 21300000, guid: e12b9ee0c461d46a5addf682d4e7aa84, type: 3}
+    - {fileID: 21300000, guid: 4b593f711d49042fa881ad97b32e75a4, type: 3}

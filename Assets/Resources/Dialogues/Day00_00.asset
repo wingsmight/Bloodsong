@@ -57,8 +57,8 @@ MonoBehaviour:
   - id: 40
   - id: 41
   - id: 42
-  nodeLinks:
   - id: 43
+  nodeLinks:
   - id: 44
   - id: 45
   - id: 46
@@ -100,6 +100,8 @@ MonoBehaviour:
   - id: 82
   - id: 83
   - id: 84
+  - id: 85
+  - id: 86
   exposedVariables: []
   commentBlockDatas: []
   references:
@@ -159,14 +161,6 @@ MonoBehaviour:
         position: {x: 1178.5, y: 84}
         name: VillageFarView
     00000006:
-      type: {class: CharacterNode, ns: , asm: Assembly-CSharp}
-      data:
-        guid: 8ea2e1c5-d378-41be-b234-537ef67030ec
-        position: {x: 1552, y: 200}
-        character: {fileID: 11400000, guid: e24055326140e4dca8f2441157546242, type: 2}
-        characterPosition: 2
-        characterDirection: 1
-    00000007:
       type: {class: MonologueNode, ns: , asm: Assembly-CSharp}
       data:
         guid: 0462a7af-c297-4bcb-a16d-3348dd156e43
@@ -179,7 +173,7 @@ MonoBehaviour:
           \u0441\u0430\u043C\u043E\u0433\u043E \u0435\u0433\u043E \u0441\u043E\u0431\u0441\u0442\u0432\u0435\u043D\u043D\u043E\u0435
           \u043D\u0430\u043B\u0438\u0447\u0438\u0435 \u043F\u0440\u0438 \u0441\u0435\u0431\u0435."
         speakerName: 
-    00000008:
+    00000007:
       type: {class: MonologueNode, ns: , asm: Assembly-CSharp}
       data:
         guid: f1f4a8d2-45bb-4585-8dab-b0158bbea282
@@ -188,23 +182,7 @@ MonoBehaviour:
         - "\u0422\u0435\u043C \u0431\u043E\u043B\u0435\u0435 \u0443\u0447\u0438\u0442\u044B\u0432\u0430\u044F,
           \u0447\u0442\u043E \u0442\u044B \u0432\u0441\u0451 \u0438 \u0437\u0430\u0442\u0435\u044F\u043B\u2026"
         speakerName: Zari
-    00000009:
-      type: {class: CharacterNode, ns: , asm: Assembly-CSharp}
-      data:
-        guid: f6264c20-02bc-497a-b047-162ca9339321
-        position: {x: 2466, y: 200}
-        character: {fileID: 11400000, guid: ae41388aabade426987117c27c416b76, type: 2}
-        characterPosition: 0
-        characterDirection: 0
-    0000000A:
-      type: {class: CharacterNode, ns: , asm: Assembly-CSharp}
-      data:
-        guid: fb5209bb-db0d-45fd-a96a-ce9a7ce31775
-        position: {x: 3213, y: 200}
-        character: {fileID: 11400000, guid: 99f64510c948f44b98a2e0d2da104a14, type: 2}
-        characterPosition: 1
-        characterDirection: 0
-    0000000B:
+    00000008:
       type: {class: MonologueNode, ns: , asm: Assembly-CSharp}
       data:
         guid: 180f3435-7c1a-4613-8459-acf10759b7eb
@@ -277,11 +255,11 @@ MonoBehaviour:
           \u0438\u043C\u0435\u043D\u043D\u043E \u0437\u0430\u0441\u0442\u0430\u0432\u0438\u043B\u043E
           \u0435\u0433\u043E \u0442\u0430\u043A \u0434\u0443\u043C\u0430\u0442\u044C,
           \u043D\u043E \u0414\u0436\u0435\u0439\u043C\u0441 \u0432\u0441\u0435\u043C
-          \u0441\u0432\u043E\u0438\u043C \u043D\u0443\u0442\u0440\u043E\u043C \u0447\u0443\u0432\u0441\u0442\u0432\u0443\u0435\u0442
-          \u2013 \u0441\u0442\u0435\u0437\u044F \u0413\u0435\u0440\u043E\u044F \u0435\u0433\u043E
-          \u043F\u0443\u0442\u044C."
+          \u0441\u0432\u043E\u0438\u043C \u043D\u0443\u0442\u0440\u043E\u043C \u0447\u0443\u0432\u0441\u0442\u0432\u0443\u0435\u0442,
+          \u0447\u0442\u043E \u0441\u0442\u0435\u0437\u044F \u0413\u0435\u0440\u043E\u044F
+          - \u0435\u0433\u043E \u043F\u0443\u0442\u044C."
         speakerName: 
-    0000000C:
+    00000009:
       type: {class: MonologueNode, ns: , asm: Assembly-CSharp}
       data:
         guid: 82698782-9721-4a7f-b6a3-071091979e64
@@ -291,7 +269,7 @@ MonoBehaviour:
           \u0440\u0435\u0448\u0438\u043C\u043E\u0441\u0442\u0438, \u0435\u0441\u043B\u0438
           \u0432\u044B \u043E\u0431 \u044D\u0442\u043E\u043C."
         speakerName: James
-    0000000D:
+    0000000A:
       type: {class: MonologueNode, ns: , asm: Assembly-CSharp}
       data:
         guid: 26650738-ca55-4c7c-b37c-d8164af1a984
@@ -301,7 +279,7 @@ MonoBehaviour:
           \u0441 \u0442\u043E\u0431\u043E\u0439. \u0417\u0434\u0435\u0441\u044C \u0438
           \u0441\u0435\u0439\u0447\u0430\u0441."
         speakerName: Arten
-    0000000E:
+    0000000B:
       type: {class: MonologueNode, ns: , asm: Assembly-CSharp}
       data:
         guid: b817bb99-364a-498e-a65b-004d78607b11
@@ -313,7 +291,7 @@ MonoBehaviour:
           \u0445\u043E\u0442\u0438\u0442\u0435 \u0437\u043D\u0430\u0442\u044C, \u0447\u0442\u043E
           \u044F \u0434\u0443\u043C\u0430\u044E."
         speakerName: Zari
-    0000000F:
+    0000000C:
       type: {class: MonologueNode, ns: , asm: Assembly-CSharp}
       data:
         guid: 5ddf14b3-1625-4a36-b54b-10ce9d237c7d
@@ -323,7 +301,7 @@ MonoBehaviour:
           \u0422\u0430\u043A \u0447\u0442\u043E, \u0414\u0436\u0435\u0439\u043C\u0441,
           \u043A\u0430\u043A\u043E\u0432 \u043F\u043B\u0430\u043D?"
         speakerName: Arten
-    00000010:
+    0000000D:
       type: {class: MonologueNode, ns: , asm: Assembly-CSharp}
       data:
         guid: e675b6a4-b0b4-4858-ac63-0b5440b21605
@@ -370,7 +348,7 @@ MonoBehaviour:
           \u043F\u043E\u0439\u0442\u0438 \u043D\u0430 \u043F\u0435\u0440\u0432\u044B\u0435
           \u0448\u0430\u0433\u0438."
         speakerName: 
-    00000011:
+    0000000E:
       type: {class: MonologueNode, ns: , asm: Assembly-CSharp}
       data:
         guid: cef65908-81a3-4805-a58e-ff0543112100
@@ -380,7 +358,7 @@ MonoBehaviour:
           \u0432 \u0434\u0435\u0440\u0435\u0432\u043D\u044E, \u0437\u0430\u043A\u0443\u043F\u0430\u0435\u043C
           \u043F\u0440\u0438\u043F\u0430\u0441\u044B \u0438 \u0430\u043C\u0443\u043D\u0438\u0446\u0438\u044E."
         speakerName: James
-    00000012:
+    0000000F:
       type: {class: MonologueNode, ns: , asm: Assembly-CSharp}
       data:
         guid: 15f054f5-9191-4227-8efb-80bed8f80bee
@@ -388,7 +366,7 @@ MonoBehaviour:
         texts:
         - "\u0418 \u0447\u0442\u043E \u0434\u0430\u043B\u044C\u0448\u0435?"
         speakerName: Zari
-    00000013:
+    00000010:
       type: {class: MonologueNode, ns: , asm: Assembly-CSharp}
       data:
         guid: bfb3e29d-4b68-4296-8b50-a0af8f314e2f
@@ -397,46 +375,16 @@ MonoBehaviour:
         - "\u041D\u0443\u2026 \u0414\u0430\u043B\u044C\u0448\u0435\u2026 \u0414\u0430\u043B\u044C\u0448\u0435
           \u0443\u0436\u0435 \u043F\u043E \u043D\u0430\u0438\u0442\u0438\u044E\u2026"
         speakerName: James
-    00000014:
+    00000011:
       type: {class: MonologueNode, ns: , asm: Assembly-CSharp}
       data:
         guid: 457e0374-8df6-4d77-9951-ac42a4c840a9
         position: {x: 7324.5, y: 200}
         texts:
-        - "\u0422\u043E \u0435\u0441\u0442\u044C, \u0442\u0430\u043A \u0434\u0430\u043B\u0435\u043A\u043E
+        - "\u0422\u043E \u0435\u0441\u0442\u044C \u0442\u0430\u043A \u0434\u0430\u043B\u0435\u043A\u043E
           \u0442\u044B \u0435\u0449\u0451 \u043D\u0435 \u0437\u0430\u0433\u043B\u044F\u0434\u044B\u0432\u0430\u043B?"
         speakerName: Zari
-    00000015:
-      type: {class: MonologueNode, ns: , asm: Assembly-CSharp}
-      data:
-        guid: 7201308c-32e0-457b-840a-6c5b1a83ed7a
-        position: {x: 8254.5, y: 200}
-        texts:
-        - "\u0410 \u043C\u044B \u043C\u043E\u0436\u0435\u043C?"
-        speakerName: Zari
-    00000016:
-      type: {class: MonologueNode, ns: , asm: Assembly-CSharp}
-      data:
-        guid: 7ce0c484-8426-4035-96e4-4f42e6ed87bd
-        position: {x: 8575.5, y: 200}
-        texts:
-        - "\u041D\u0430\u0447\u043D\u0451\u043C \u0441 \u043C\u0430\u043B\u043E\u0433\u043E.
-          \u041F\u043E\u043D\u044F\u0442\u043D\u043E\u0435 \u0434\u0435\u043B\u043E,
-          \u0447\u0442\u043E \u0433\u043E\u0440\u044B \u0441\u0432\u043E\u0440\u0430\u0447\u0438\u0432\u0430\u0442\u044C
-          \u043D\u0430\u043C \u043D\u0435 \u043F\u043E \u0441\u0438\u043B\u0430\u043C.
-          \u041D\u043E \u043E\u0434\u043D\u0430\u0436\u0434\u044B, \u043C\u043E\u0436\u0435\u0442
-          \u0441\u0442\u0430\u0442\u044C\u0441\u044F, \u043C\u044B \u0438\u0441\u043A\u043E\u0440\u0435\u043D\u0438\u043C
-          \u0438\u0437 \u0424\u0435\u043B\u0435\u0441\u0442\u0438\u043D\u044B \u0432\u0441\u0435\u0445
-          \u0440\u0430\u0437\u0431\u043E\u0439\u043D\u0438\u043A\u043E\u0432! \u0427\u0435\u043C
-          \u043D\u0435 \u043F\u043B\u0430\u043D? "
-        - "\u041D\u0430\u0434\u043E \u043F\u0440\u043E\u0441\u0442\u043E \u043D\u0430\u0447\u0438\u043D\u0430\u0442\u044C
-          \u043F\u043E\u0441\u0442\u0435\u043F\u0435\u043D\u043D\u043E. \u041D\u0430\u0431\u0438\u0440\u0430\u0442\u044C\u0441\u044F
-          \u043E\u043F\u044B\u0442\u0430. \u0412\u043E\u043E\u0440\u0443\u0436\u0438\u043C\u0441\u044F
-          \u0438 \u0441\u043F\u0440\u043E\u0441\u0438\u043C, \u043A\u043E\u043C\u0443
-          \u043D\u0443\u0436\u043D\u0430 \u043F\u043E\u043C\u043E\u0449\u044C. \u0414\u0443\u043C\u0430\u044E,
-          \u0442\u0430\u043A \u0438 \u043D\u0430\u0447\u043D\u0451\u043C."
-        speakerName: James
-    00000017:
+    00000012:
       type: {class: MonologueNode, ns: , asm: Assembly-CSharp}
       data:
         guid: 366f7e7e-5c88-47a2-9ce4-71babd8ecbd6
@@ -465,7 +413,7 @@ MonoBehaviour:
           \u0447\u0435\u043C \u0442\u0440\u043E\u0435 \u043E\u0431\u044B\u0447\u043D\u044B\u0445
           \u0444\u0435\u0440\u043C\u0435\u0440\u043E\u0432?"
         speakerName: Zari
-    00000018:
+    00000013:
       type: {class: MonologueNode, ns: , asm: Assembly-CSharp}
       data:
         guid: 836f0210-bc15-4b4d-aad1-f32770dc4852
@@ -476,7 +424,7 @@ MonoBehaviour:
           \u0433\u043E\u0440\u0430\u0437\u0434\u043E \u0431\u043E\u043B\u044C\u0448\u0435.
           \u042F \u044D\u0442\u043E \u0437\u043D\u0430\u044E!"
         speakerName: James
-    00000019:
+    00000014:
       type: {class: MonologueNode, ns: , asm: Assembly-CSharp}
       data:
         guid: b3bb9dd5-cbda-4222-a4e4-dde53dbcffe2
@@ -485,7 +433,7 @@ MonoBehaviour:
         - "\u042F \u0442\u043E\u0436\u0435 \u0442\u0430\u043A\u043E\u0439 \u0441\u0435\u0431\u0435
           \u0444\u0435\u0440\u043C\u0435\u0440."
         speakerName: Arten
-    0000001A:
+    00000015:
       type: {class: MonologueNode, ns: , asm: Assembly-CSharp}
       data:
         guid: 904cbf02-e5e1-4bec-88a7-0e0c61b28824
@@ -495,7 +443,7 @@ MonoBehaviour:
           \u0431\u044B\u0442\u044C \u0413\u0435\u0440\u043E\u0435\u043C. \u041F\u043E\u0441\u043C\u043E\u0442\u0440\u0438
           \u043D\u0430 \u0441\u0435\u0431\u044F!"
         speakerName: James
-    0000001B:
+    00000016:
       type: {class: MonologueNode, ns: , asm: Assembly-CSharp}
       data:
         guid: a237cb7a-bbd3-4b35-a60b-ff80d64a3a4f
@@ -508,7 +456,7 @@ MonoBehaviour:
           \u041C\u044B \u0432\u0441\u0435 \u043F\u043E \u043E\u0442\u0434\u0435\u043B\u044C\u043D\u043E\u0441\u0442\u0438
           \u0441\u043B\u0430\u0431\u044B. \u041D\u043E \u0432\u043C\u0435\u0441\u0442\u0435\u2026"
         speakerName: James
-    0000001C:
+    00000017:
       type: {class: MonologueNode, ns: , asm: Assembly-CSharp}
       data:
         guid: c51e05db-8a72-40f4-a212-548e207b3017
@@ -520,7 +468,7 @@ MonoBehaviour:
           \u0442\u0430\u043A, \u0433\u043E\u043B\u043E\u0441 \u0440\u0430\u0437\u0443\u043C\u0430
           \u043F\u0440\u0435\u0434\u0443\u043F\u0440\u0435\u0436\u0434\u0430\u0435\u0442\u2026"
         speakerName: Zari
-    0000001D:
+    00000018:
       type: {class: MonologueNode, ns: , asm: Assembly-CSharp}
       data:
         guid: c6e116aa-099d-4d0a-84b6-ce0d99d5d3ac
@@ -529,7 +477,7 @@ MonoBehaviour:
         - "\u0412 \u043B\u044E\u0431\u043E\u043C \u0441\u043B\u0443\u0447\u0430\u0435,
           \u0441\u0435\u0439\u0447\u0430\u0441 \u043C\u044B \u0438\u0434\u0451\u043C
           \u0432 \u0434\u0435\u0440\u0435\u0432\u043D\u044E! \u0418 \u043F\u043E\u043C\u0438\u043C\u043E
-          \u043F\u0440\u043E\u0432\u0438\u0437\u0438\u0438, \u043A\u0430\u043A\u043E\u0439
+          \u043F\u0440\u043E\u0432\u0438\u0437\u0438\u0438 \u0438 \u043A\u0430\u043A\u043E\u0439
           \u043D\u0438\u043A\u0430\u043A\u043E\u0439 \u0430\u043C\u0443\u043D\u0438\u0446\u0438\u0438,
           \u0435\u0441\u0442\u044C \u0435\u0449\u0451 \u043E\u0434\u043D\u0430 \u0432\u0430\u0436\u043D\u0430\u044F
           \u0437\u0430\u0434\u0430\u0447\u0430. \u041A\u0430\u043A \u0441\u043B\u0435\u0434\u0443\u0435\u0442
@@ -537,7 +485,7 @@ MonoBehaviour:
           \u043F\u0440\u0430\u0437\u0434\u043D\u0438\u043A\u0435 \u0443\u0440\u043E\u0436\u0430\u044F!
           \u0412\u0435\u0441\u0435\u043B\u0438\u0442\u044C\u0441\u044F!"
         speakerName: Arten
-    0000001E:
+    00000019:
       type: {class: MonologueNode, ns: , asm: Assembly-CSharp}
       data:
         guid: 96fa4181-895b-429d-aa8e-9ab0ee1bc75b
@@ -561,21 +509,23 @@ MonoBehaviour:
           \u0441\u043A\u043E\u043B\u044C\u043A\u043E-\u0442\u043E \u0440\u0430\u0434\u0443\u044F\u0441\u044C
           \u0436\u0438\u0437\u043D\u0438."
         speakerName: 
-    0000001F:
+    0000001A:
       type: {class: LocationNode, ns: , asm: Assembly-CSharp}
       data:
         guid: 6952bc42-281a-4841-8e96-dfff2c45eba4
         position: {x: 14908.5, y: 290}
         name: VillageCloseViewDay
-    00000020:
+    0000001B:
       type: {class: CharacterNode, ns: , asm: Assembly-CSharp}
       data:
         guid: d96408d4-f26e-4bb7-bb2e-a23652f84258
         position: {x: 14749.5, y: 146.5}
-        character: {fileID: 11400000, guid: 82fac4050860b4009ac9a3f12551430a, type: 2}
-        characterPosition: 0
-        characterDirection: 0
-    00000021:
+        character:
+          name: 
+          position: 0
+          emotion: 0
+        direction: 0
+    0000001C:
       type: {class: MonologueNode, ns: , asm: Assembly-CSharp}
       data:
         guid: ed4f4e3b-1342-4e54-8ad1-8a54408dfc97
@@ -597,7 +547,7 @@ MonoBehaviour:
           \u043C\u044B \u0441\u043E\u0432\u0435\u0440\u0448\u0438\u043C \u043D\u0435\u043E\u0431\u0434\u0443\u043C\u0430\u043D\u043D\u044B\u0439
           \u0448\u0430\u0433!"
         speakerName: Arten
-    00000022:
+    0000001D:
       type: {class: MonologueNode, ns: , asm: Assembly-CSharp}
       data:
         guid: a2f8911a-051f-4d1f-99cf-dad24f5cb3a3
@@ -611,7 +561,7 @@ MonoBehaviour:
           \u043C\u0435\u043D\u044F? \u042F \u043F\u043E-\u0432\u0430\u0448\u0435\u043C\u0443
           \u043A\u0442\u043E? \u0413\u0435\u0440\u043E\u0439?"
         speakerName: Zari
-    00000023:
+    0000001E:
       type: {class: MonologueNode, ns: , asm: Assembly-CSharp}
       data:
         guid: 669fb5a1-d2db-4dcc-bb8e-ed278713b7a8
@@ -635,7 +585,7 @@ MonoBehaviour:
           \u0434\u0435\u0432\u0443\u0448\u043A\u0435 \u0438\u043B\u043B\u044E\u0437\u0438\u044E
           \u0432\u044B\u0431\u043E\u0440\u0430."
         speakerName: 
-    00000024:
+    0000001F:
       type: {class: MonologueNode, ns: , asm: Assembly-CSharp}
       data:
         guid: ce569d50-13e2-4ea6-ab3d-6d957bb78cd4
@@ -653,7 +603,7 @@ MonoBehaviour:
           \u0431\u0443\u0434\u0443\u0449\u0435\u0435 \u043E\u0442\u043F\u0440\u044B\u0441\u043A\u043E\u0432
           \u0432 \u0442\u0435\u0441\u043D\u043E\u043C \u043A\u0440\u0443\u0433\u0443
           \u0445\u043E\u0437\u044F\u0439\u0441\u0442\u0432\u0430."
-        - "\u0413\u043E\u0440\u0430\u0437\u0434\u043E \u0440\u0435\u0436\u0435, \u0444\u0435\u0440\u043C\u0430
+        - "\u0413\u043E\u0440\u0430\u0437\u0434\u043E \u0440\u0435\u0436\u0435 \u0444\u0435\u0440\u043C\u0430
           \u0441\u043E \u0432\u0440\u0435\u043C\u0435\u043D\u0435\u043C \u043F\u0440\u0435\u0432\u0440\u0430\u0449\u0430\u0435\u0442\u0441\u044F
           \u0432 \u043D\u0435\u0431\u043E\u043B\u044C\u0448\u043E\u0435 \u043F\u043E\u0441\u0435\u043B\u0435\u043D\u0438\u0435
           \u0441 \u0447\u0430\u0441\u0442\u043D\u044B\u043C\u0438 \u0445\u0438\u0436\u0438\u043D\u0430\u043C\u0438,
@@ -695,7 +645,7 @@ MonoBehaviour:
           \u043A\u0430\u0436\u0434\u044B\u0439 \u0438\u0437 \u043D\u0438\u0445 \u043F\u043E\u043C\u043D\u0438\u0442
           \u043F\u043E-\u0441\u0432\u043E\u0435\u043C\u0443."
         speakerName: 
-    00000025:
+    00000020:
       type: {class: MonologueNode, ns: , asm: Assembly-CSharp}
       data:
         guid: 7cfcad82-7bea-4d50-a27f-628f2f7856af
@@ -708,7 +658,7 @@ MonoBehaviour:
           \u0431\u043E\u0433\u0430\u0442\u044B\u043C \u043E\u043F\u044B\u0442\u043E\u043C?
           \u042F \u0442\u0430\u043A \u0438 \u0434\u0443\u043C\u0430\u043B. \u042F
           \u0442\u0430\u043A\u043E\u0439 \u0436\u0435 \u043D\u0435\u0443\u043C\u0435\u043B\u044B\u0439
-          \u0432 \u044D\u0442\u043E\u043C, \u043A\u0430\u043A \u0438 \u0432\u044B. "
+          \u0432 \u044D\u0442\u043E\u043C \u043A\u0430\u043A \u0438 \u0432\u044B. "
         - "\u041D\u043E \u0432 \u043A\u043E\u043D\u0446\u0435 \u043A\u043E\u043D\u0446\u043E\u0432!
           \u041C\u044B \u0432\u0435\u0434\u044C \u0445\u043E\u0442\u0438\u043C \u043F\u043E\u043C\u043E\u0433\u0430\u0442\u044C
           \u0441\u043B\u0430\u0431\u044B\u043C. \u0422\u0435\u043C, \u043A\u0442\u043E
@@ -718,34 +668,38 @@ MonoBehaviour:
           \u043E\u0431\u043B\u0438\u0447\u0438\u0438 \u043E\u043D\u0430 \u043D\u0438
           \u0431\u044B\u043B\u0430."
         speakerName: James
-    00000026:
+    00000021:
       type: {class: CharacterNode, ns: , asm: Assembly-CSharp}
       data:
         guid: 070d3c76-e81b-484b-af8f-0a7ee79887e4
         position: {x: 14813, y: -16.5}
-        character: {fileID: 11400000, guid: 82fac4050860b4009ac9a3f12551430a, type: 2}
-        characterPosition: 1
-        characterDirection: 0
-    00000027:
+        character:
+          name: 
+          position: 1
+          emotion: 0
+        direction: 0
+    00000022:
       type: {class: CharacterNode, ns: , asm: Assembly-CSharp}
       data:
         guid: b95fb1d8-16ee-4526-b6a9-a3fe107cddc3
         position: {x: 14885.5, y: -166}
-        character: {fileID: 11400000, guid: 82fac4050860b4009ac9a3f12551430a, type: 2}
-        characterPosition: 2
-        characterDirection: 0
-    00000028:
+        character:
+          name: 
+          position: 2
+          emotion: 0
+        direction: 0
+    00000023:
       type: {class: StopNode, ns: , asm: Assembly-CSharp}
       data:
         guid: e8eb9eca-5cf6-4dd5-ba51-fd9bcf29c9cb
         position: {x: 15980, y: 386}
-    00000029:
+    00000024:
       type: {class: LocationNode, ns: , asm: Assembly-CSharp}
       data:
         guid: 8c57525b-de4b-472d-a5e8-cbf12d664710
         position: {x: 221, y: 31.5}
         name: BlackScreen
-    0000002A:
+    00000025:
       type: {class: SplitMessageNode, ns: , asm: Assembly-CSharp}
       data:
         guid: e9d77b30-a69b-4707-a454-e45e7a376518
@@ -777,48 +731,112 @@ MonoBehaviour:
           \u043A\u043B\u0430\u043D\u043E\u0432.\n\u0418 \u0434\u043E \u0441\u0435\u0433\u043E
           \u0434\u043D\u044F \u043D\u0435\u043A\u043E\u043C\u0443 \u0431\u044B\u043B\u043E
           \u043F\u0440\u0438\u0441\u0442\u0440\u0443\u043D\u0438\u0442\u044C \u0433\u043E\u043B\u043E\u0432\u043E\u0440\u0435\u0437\u043E\u0432\u2026"
+    00000026:
+      type: {class: CharacterNode, ns: , asm: Assembly-CSharp}
+      data:
+        guid: 8ea2e1c5-d378-41be-b234-537ef67030ec
+        position: {x: 1552, y: 200}
+        character:
+          name: James
+          position: 2
+          emotion: 0
+        direction: 1
+    00000027:
+      type: {class: CharacterNode, ns: , asm: Assembly-CSharp}
+      data:
+        guid: f6264c20-02bc-497a-b047-162ca9339321
+        position: {x: 2466, y: 200}
+        character:
+          name: Arten
+          position: 0
+          emotion: 0
+        direction: 0
+    00000028:
+      type: {class: CharacterNode, ns: , asm: Assembly-CSharp}
+      data:
+        guid: fb5209bb-db0d-45fd-a96a-ce9a7ce31775
+        position: {x: 3213, y: 200}
+        character:
+          name: Zari
+          position: 1
+          emotion: 0
+        direction: 0
+    00000029:
+      type: {class: CharacterNode, ns: , asm: Assembly-CSharp}
+      data:
+        guid: fc7d32a1-6b61-478f-af5d-8414043789a9
+        position: {x: 13542.5, y: 34}
+        character:
+          name: Arten
+          position: 0
+          emotion: 1
+        direction: 0
+    0000002A:
+      type: {class: MonologueNode, ns: , asm: Assembly-CSharp}
+      data:
+        guid: 7201308c-32e0-457b-840a-6c5b1a83ed7a
+        position: {x: 8254.5, y: 200}
+        texts:
+        - "\u0410 \u043C\u044B \u043C\u043E\u0436\u0435\u043C?"
+        speakerName: Zari
     0000002B:
+      type: {class: MonologueNode, ns: , asm: Assembly-CSharp}
+      data:
+        guid: 7ce0c484-8426-4035-96e4-4f42e6ed87bd
+        position: {x: 8575.5, y: 200}
+        texts:
+        - "\u041D\u0430\u0447\u043D\u0451\u043C \u0441 \u043C\u0430\u043B\u043E\u0433\u043E.
+          \u041F\u043E\u043D\u044F\u0442\u043D\u043E\u0435 \u0434\u0435\u043B\u043E,
+          \u0447\u0442\u043E \u0433\u043E\u0440\u044B \u0441\u0432\u043E\u0440\u0430\u0447\u0438\u0432\u0430\u0442\u044C
+          \u043D\u0430\u043C \u043D\u0435 \u043F\u043E \u0441\u0438\u043B\u0430\u043C.
+          \u041D\u043E \u043E\u0434\u043D\u0430\u0436\u0434\u044B, \u043C\u043E\u0436\u0435\u0442
+          \u0441\u0442\u0430\u0442\u044C\u0441\u044F, \u043C\u044B \u0438\u0441\u043A\u043E\u0440\u0435\u043D\u0438\u043C
+          \u0438\u0437 \u0424\u0435\u043B\u0435\u0441\u0442\u0438\u043D\u044B \u0432\u0441\u0435\u0445
+          \u0440\u0430\u0437\u0431\u043E\u0439\u043D\u0438\u043A\u043E\u0432! \u0427\u0435\u043C
+          \u043D\u0435 \u043F\u043B\u0430\u043D? "
+        - "\u041D\u0430\u0434\u043E \u043F\u0440\u043E\u0441\u0442\u043E \u043D\u0430\u0447\u0438\u043D\u0430\u0442\u044C
+          \u043F\u043E\u0441\u0442\u0435\u043F\u0435\u043D\u043D\u043E. \u041D\u0430\u0431\u0438\u0440\u0430\u0442\u044C\u0441\u044F
+          \u043E\u043F\u044B\u0442\u0430. \u0412\u043E\u043E\u0440\u0443\u0436\u0438\u043C\u0441\u044F
+          \u0438 \u0441\u043F\u0440\u043E\u0441\u0438\u043C, \u043A\u043E\u043C\u0443
+          \u043D\u0443\u0436\u043D\u0430 \u043F\u043E\u043C\u043E\u0449\u044C. \u0414\u0443\u043C\u0430\u044E,
+          \u0447\u0442\u043E \u0442\u0430\u043A \u0438 \u043D\u0430\u0447\u043D\u0451\u043C."
+        speakerName: James
+    0000002C:
       type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
       data:
         sourceNodeGUID: 9db5a9a1-ff6f-4d55-b5b2-2595d7b21e5b
         sourcePortName: Output
         destinationNodeGUID: 8c57525b-de4b-472d-a5e8-cbf12d664710
-    0000002C:
+    0000002D:
       type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
       data:
         sourceNodeGUID: 1b4b375a-e982-4645-8274-70940803fe55
         sourcePortName: Output
         destinationNodeGUID: 8c209a34-c7da-43ba-856c-930b213bca9d
-    0000002D:
+    0000002E:
       type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
       data:
         sourceNodeGUID: d8cd92df-9b61-4928-8e94-89a609c96da6
         sourcePortName: Output
         destinationNodeGUID: 8ea2e1c5-d378-41be-b234-537ef67030ec
-    0000002E:
+    0000002F:
       type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
       data:
         sourceNodeGUID: 83d06dd4-6ea2-4a24-a098-a9bec8359729
         sourcePortName: Output
         destinationNodeGUID: b8b8f1ae-e11d-4478-bb1f-fb9e4eed8783
-    0000002F:
+    00000030:
       type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
       data:
         sourceNodeGUID: b8b8f1ae-e11d-4478-bb1f-fb9e4eed8783
         sourcePortName: Output
         destinationNodeGUID: f6264c20-02bc-497a-b047-162ca9339321
-    00000030:
+    00000031:
       type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
       data:
         sourceNodeGUID: 8c209a34-c7da-43ba-856c-930b213bca9d
         sourcePortName: Output
         destinationNodeGUID: d8cd92df-9b61-4928-8e94-89a609c96da6
-    00000031:
-      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
-      data:
-        sourceNodeGUID: 8ea2e1c5-d378-41be-b234-537ef67030ec
-        sourcePortName: Output
-        destinationNodeGUID: 83d06dd4-6ea2-4a24-a098-a9bec8359729
     00000032:
       type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
       data:
@@ -834,198 +852,210 @@ MonoBehaviour:
     00000034:
       type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
       data:
-        sourceNodeGUID: f6264c20-02bc-497a-b047-162ca9339321
-        sourcePortName: Output
-        destinationNodeGUID: 0462a7af-c297-4bcb-a16d-3348dd156e43
-    00000035:
-      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
-      data:
-        sourceNodeGUID: fb5209bb-db0d-45fd-a96a-ce9a7ce31775
-        sourcePortName: Output
-        destinationNodeGUID: 180f3435-7c1a-4613-8459-acf10759b7eb
-    00000036:
-      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
-      data:
         sourceNodeGUID: 180f3435-7c1a-4613-8459-acf10759b7eb
         sourcePortName: Output
         destinationNodeGUID: 82698782-9721-4a7f-b6a3-071091979e64
-    00000037:
+    00000035:
       type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
       data:
         sourceNodeGUID: 82698782-9721-4a7f-b6a3-071091979e64
         sourcePortName: Output
         destinationNodeGUID: 26650738-ca55-4c7c-b37c-d8164af1a984
-    00000038:
+    00000036:
       type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
       data:
         sourceNodeGUID: 26650738-ca55-4c7c-b37c-d8164af1a984
         sourcePortName: Output
         destinationNodeGUID: b817bb99-364a-498e-a65b-004d78607b11
-    00000039:
+    00000037:
       type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
       data:
         sourceNodeGUID: b817bb99-364a-498e-a65b-004d78607b11
         sourcePortName: Output
         destinationNodeGUID: 5ddf14b3-1625-4a36-b54b-10ce9d237c7d
-    0000003A:
+    00000038:
       type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
       data:
         sourceNodeGUID: 5ddf14b3-1625-4a36-b54b-10ce9d237c7d
         sourcePortName: Output
         destinationNodeGUID: e675b6a4-b0b4-4858-ac63-0b5440b21605
-    0000003B:
+    00000039:
       type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
       data:
         sourceNodeGUID: e675b6a4-b0b4-4858-ac63-0b5440b21605
         sourcePortName: Output
         destinationNodeGUID: cef65908-81a3-4805-a58e-ff0543112100
-    0000003C:
+    0000003A:
       type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
       data:
         sourceNodeGUID: cef65908-81a3-4805-a58e-ff0543112100
         sourcePortName: Output
         destinationNodeGUID: 15f054f5-9191-4227-8efb-80bed8f80bee
-    0000003D:
+    0000003B:
       type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
       data:
         sourceNodeGUID: 15f054f5-9191-4227-8efb-80bed8f80bee
         sourcePortName: Output
         destinationNodeGUID: bfb3e29d-4b68-4296-8b50-a0af8f314e2f
-    0000003E:
+    0000003C:
       type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
       data:
         sourceNodeGUID: bfb3e29d-4b68-4296-8b50-a0af8f314e2f
         sourcePortName: Output
         destinationNodeGUID: 457e0374-8df6-4d77-9951-ac42a4c840a9
-    0000003F:
+    0000003D:
       type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
       data:
         sourceNodeGUID: 457e0374-8df6-4d77-9951-ac42a4c840a9
         sourcePortName: Output
         destinationNodeGUID: 7cfcad82-7bea-4d50-a27f-628f2f7856af
-    00000040:
-      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
-      data:
-        sourceNodeGUID: 7201308c-32e0-457b-840a-6c5b1a83ed7a
-        sourcePortName: Output
-        destinationNodeGUID: 7ce0c484-8426-4035-96e4-4f42e6ed87bd
-    00000041:
+    0000003E:
       type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
       data:
         sourceNodeGUID: 7ce0c484-8426-4035-96e4-4f42e6ed87bd
         sourcePortName: Output
         destinationNodeGUID: 366f7e7e-5c88-47a2-9ce4-71babd8ecbd6
-    00000042:
+    0000003F:
       type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
       data:
         sourceNodeGUID: 366f7e7e-5c88-47a2-9ce4-71babd8ecbd6
         sourcePortName: Output
         destinationNodeGUID: 836f0210-bc15-4b4d-aad1-f32770dc4852
-    00000043:
+    00000040:
       type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
       data:
         sourceNodeGUID: 836f0210-bc15-4b4d-aad1-f32770dc4852
         sourcePortName: Output
         destinationNodeGUID: b3bb9dd5-cbda-4222-a4e4-dde53dbcffe2
-    00000044:
+    00000041:
       type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
       data:
         sourceNodeGUID: b3bb9dd5-cbda-4222-a4e4-dde53dbcffe2
         sourcePortName: Output
         destinationNodeGUID: 904cbf02-e5e1-4bec-88a7-0e0c61b28824
-    00000045:
+    00000042:
       type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
       data:
         sourceNodeGUID: 904cbf02-e5e1-4bec-88a7-0e0c61b28824
         sourcePortName: Output
         destinationNodeGUID: a2f8911a-051f-4d1f-99cf-dad24f5cb3a3
-    00000046:
+    00000043:
       type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
       data:
         sourceNodeGUID: a237cb7a-bbd3-4b35-a60b-ff80d64a3a4f
         sourcePortName: Output
         destinationNodeGUID: ed4f4e3b-1342-4e54-8ad1-8a54408dfc97
-    00000047:
+    00000044:
       type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
       data:
         sourceNodeGUID: c51e05db-8a72-40f4-a212-548e207b3017
         sourcePortName: Output
-        destinationNodeGUID: c6e116aa-099d-4d0a-84b6-ce0d99d5d3ac
-    00000048:
+        destinationNodeGUID: fc7d32a1-6b61-478f-af5d-8414043789a9
+    00000045:
       type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
       data:
         sourceNodeGUID: c6e116aa-099d-4d0a-84b6-ce0d99d5d3ac
         sourcePortName: Output
         destinationNodeGUID: 96fa4181-895b-429d-aa8e-9ab0ee1bc75b
-    00000049:
+    00000046:
       type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
       data:
         sourceNodeGUID: 96fa4181-895b-429d-aa8e-9ab0ee1bc75b
         sourcePortName: Output
         destinationNodeGUID: d96408d4-f26e-4bb7-bb2e-a23652f84258
-    0000004A:
+    00000047:
       type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
       data:
         sourceNodeGUID: 6952bc42-281a-4841-8e96-dfff2c45eba4
         sourcePortName: Output
         destinationNodeGUID: ce569d50-13e2-4ea6-ab3d-6d957bb78cd4
-    0000004B:
+    00000048:
       type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
       data:
         sourceNodeGUID: d96408d4-f26e-4bb7-bb2e-a23652f84258
         sourcePortName: Output
         destinationNodeGUID: 070d3c76-e81b-484b-af8f-0a7ee79887e4
-    0000004C:
+    00000049:
       type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
       data:
         sourceNodeGUID: ed4f4e3b-1342-4e54-8ad1-8a54408dfc97
         sourcePortName: Output
         destinationNodeGUID: 669fb5a1-d2db-4dcc-bb8e-ed278713b7a8
-    0000004D:
+    0000004A:
       type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
       data:
         sourceNodeGUID: a2f8911a-051f-4d1f-99cf-dad24f5cb3a3
         sourcePortName: Output
         destinationNodeGUID: a237cb7a-bbd3-4b35-a60b-ff80d64a3a4f
-    0000004E:
+    0000004B:
       type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
       data:
         sourceNodeGUID: 669fb5a1-d2db-4dcc-bb8e-ed278713b7a8
         sourcePortName: Output
         destinationNodeGUID: c51e05db-8a72-40f4-a212-548e207b3017
-    0000004F:
+    0000004C:
       type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
       data:
         sourceNodeGUID: ce569d50-13e2-4ea6-ab3d-6d957bb78cd4
         sourcePortName: Output
         destinationNodeGUID: e8eb9eca-5cf6-4dd5-ba51-fd9bcf29c9cb
-    00000050:
+    0000004D:
       type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
       data:
         sourceNodeGUID: 7cfcad82-7bea-4d50-a27f-628f2f7856af
         sourcePortName: Output
         destinationNodeGUID: 7201308c-32e0-457b-840a-6c5b1a83ed7a
-    00000051:
+    0000004E:
       type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
       data:
         sourceNodeGUID: 070d3c76-e81b-484b-af8f-0a7ee79887e4
         sourcePortName: Output
         destinationNodeGUID: b95fb1d8-16ee-4526-b6a9-a3fe107cddc3
-    00000052:
+    0000004F:
       type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
       data:
         sourceNodeGUID: b95fb1d8-16ee-4526-b6a9-a3fe107cddc3
         sourcePortName: Output
         destinationNodeGUID: 6952bc42-281a-4841-8e96-dfff2c45eba4
-    00000053:
+    00000050:
       type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
       data:
         sourceNodeGUID: 8c57525b-de4b-472d-a5e8-cbf12d664710
         sourcePortName: Output
         destinationNodeGUID: e9d77b30-a69b-4707-a454-e45e7a376518
-    00000054:
+    00000051:
       type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
       data:
         sourceNodeGUID: e9d77b30-a69b-4707-a454-e45e7a376518
         sourcePortName: Output
         destinationNodeGUID: 1b4b375a-e982-4645-8274-70940803fe55
+    00000052:
+      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
+      data:
+        sourceNodeGUID: 8ea2e1c5-d378-41be-b234-537ef67030ec
+        sourcePortName: Output
+        destinationNodeGUID: 83d06dd4-6ea2-4a24-a098-a9bec8359729
+    00000053:
+      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
+      data:
+        sourceNodeGUID: f6264c20-02bc-497a-b047-162ca9339321
+        sourcePortName: Output
+        destinationNodeGUID: 0462a7af-c297-4bcb-a16d-3348dd156e43
+    00000054:
+      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
+      data:
+        sourceNodeGUID: fb5209bb-db0d-45fd-a96a-ce9a7ce31775
+        sourcePortName: Output
+        destinationNodeGUID: 180f3435-7c1a-4613-8459-acf10759b7eb
+    00000055:
+      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
+      data:
+        sourceNodeGUID: fc7d32a1-6b61-478f-af5d-8414043789a9
+        sourcePortName: Output
+        destinationNodeGUID: c6e116aa-099d-4d0a-84b6-ce0d99d5d3ac
+    00000056:
+      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
+      data:
+        sourceNodeGUID: 7201308c-32e0-457b-840a-6c5b1a83ed7a
+        sourcePortName: Output
+        destinationNodeGUID: 7ce0c484-8426-4035-96e4-4f42e6ed87bd

@@ -9,6 +9,7 @@ public class ShowCharacterNodeEditorView : NodeEditorView
 {
     private SerializedProperty characterProperty;
     private EnumField positionEnumField;
+    private EnumField emotionEnumField;
     private EnumField directionEnumField;
 
 
@@ -39,6 +40,15 @@ public class ShowCharacterNodeEditorView : NodeEditorView
         mainContainer.Add(positionEnumField);
         #endregion
 
+        #region emotionEnum
+        Character.Emotion initEmotion = (Character.Emotion)0;
+        emotionEnumField = new EnumField(initEmotion);
+        emotionEnumField.value = initEmotion;
+        emotionEnumField.label = "Emotion:";
+
+        mainContainer.Add(emotionEnumField);
+        #endregion
+
         #region directionEnum
         CharacterView.Direction initDirection = (CharacterView.Direction)0;
         directionEnumField = new EnumField(initDirection);
@@ -54,8 +64,9 @@ public class ShowCharacterNodeEditorView : NodeEditorView
         Position = data.Position;
 
         SetCharacter(data.character == null ? "" : data.character.name);
-        SetCharacterPosition(data.characterPosition);
-        SetDirection(data.characterDirection);
+        SetCharacterPosition(data.character.position);
+        SetCharacterEmotion(data.character.emotion);
+        SetDirection(data.direction);
     }
 
     private void SetCharacter(string name)
@@ -69,6 +80,10 @@ public class ShowCharacterNodeEditorView : NodeEditorView
     {
         positionEnumField.value = position;
     }
+    private void SetCharacterEmotion(Character.Emotion emotion)
+    {
+        emotionEnumField.value = emotion;
+    }
     private void SetDirection(CharacterView.Direction direction)
     {
         directionEnumField.value = direction;
@@ -77,7 +92,9 @@ public class ShowCharacterNodeEditorView : NodeEditorView
 
     public override NodeData Data =>
         new CharacterNode(guid, Position,
-            characterProperty.GetObjectReferenceValueName(),
-            (CharacterView.Position)positionEnumField.value,
+            new CharacterProperty(
+                characterProperty.GetObjectReferenceValueName(),
+                (CharacterView.Position)positionEnumField.value,
+                (Character.Emotion)emotionEnumField.value),
             (CharacterView.Direction)directionEnumField.value);
 }

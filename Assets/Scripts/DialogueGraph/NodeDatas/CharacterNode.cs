@@ -5,23 +5,14 @@ using UnityEngine;
 [Serializable]
 public class CharacterNode : NodeData
 {
-    public Character character;
-    public CharacterView.Position characterPosition;
-    public CharacterView.Direction characterDirection;
+    public CharacterProperty character;
+    public CharacterView.Direction direction;
 
 
-    public CharacterNode(string guid, Vector2 position, Character character, CharacterView.Position characterPosition, CharacterView.Direction characterDirection)
+    public CharacterNode(string guid, Vector2 position, CharacterProperty character, CharacterView.Direction direction)
         : base(guid, position)
     {
         this.character = character;
-        this.characterPosition = characterPosition;
-        this.characterDirection = characterDirection;
-    }
-    public CharacterNode(string guid, Vector2 position, string characterName, CharacterView.Position characterPosition, CharacterView.Direction characterDirection)
-        : base(guid, position)
-    {
-        this.character = ScriptableObjectFinder.Get<Character>(characterName);
-        this.characterPosition = characterPosition;
-        this.characterDirection = characterDirection;
+        this.direction = direction;
     }
 }
