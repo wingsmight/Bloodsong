@@ -8,7 +8,8 @@ using UnityEngine.EventSystems;
 public class ChoiceButton : UIButton, IPointerEnterHandler, IPointerExitHandler
 {
     [SerializeField] private TextMeshProUGUI textView;
-    [SerializeField] private GameObject hoverBackground;
+    [SerializeField] private RectTransform hoverShortBackground;
+    [SerializeField] private RectTransform hoverLongBackground;
     [SerializeField] private GameObject pointer;
 
 
@@ -25,13 +26,12 @@ public class ChoiceButton : UIButton, IPointerEnterHandler, IPointerExitHandler
     public void OnPointerEnter(PointerEventData eventData)
     {
         pointer.SetActive(false);
-        hoverBackground.SetActive(true);
+        ShowHover();
     }
     public void OnPointerExit(PointerEventData eventData)
     {
         pointer.SetActive(true);
-        PlacePointer();
-        hoverBackground.SetActive(false);
+        HideHover();
     }
 
     protected override void OnClick()
@@ -40,9 +40,25 @@ public class ChoiceButton : UIButton, IPointerEnterHandler, IPointerExitHandler
         action = null;
     }
 
-    private void PlacePointer()
+    private void ShowHover()
     {
         textView.ForceMeshUpdate();
-        pointer.transform.localPosition = new Vector2(-textView.textBounds.size.x / 2.0f, pointer.transform.localPosition.y);
+        float textWidth = textView.textBounds.size.x;
+
+        if (textWidth < hoverLongBackground.rect.width / 2.0f)
+        {
+            hoverLongBackground.gameObject.SetActive(false);
+            hoverShortBackground.gameObject.SetActive(true);
+        }
+        else
+        {
+            hoverShortBackground.gameObject.SetActive(false);
+            hoverLongBackground.gameObject.SetActive(true);
+        }
+    }
+    private void HideHover()
+    {
+        hoverShortBackground.gameObject.SetActive(false);
+        hoverLongBackground.gameObject.SetActive(false);
     }
 }
