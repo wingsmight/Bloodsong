@@ -1,10 +1,11 @@
-using System.Collections;
+using System.Linq;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
 public class ResolutionDropdown : MonoBehaviour
 {
+    private const char X_SYMBOL = '×';
     private const int DEFAULT_INDEX = 0;
 
 
@@ -13,8 +14,8 @@ public class ResolutionDropdown : MonoBehaviour
 
     private void Awake()
     {
-        var userResolutionOption = new TMP_Dropdown.OptionData(Screen.currentResolution.width + "×" + Screen.currentResolution.height);
-        if (dropdown.options.Contains(userResolutionOption))
+        var userResolutionOption = new TMP_Dropdown.OptionData(Display.main.systemWidth.ToString() + X_SYMBOL + Display.main.systemHeight);
+        if (!dropdown.options.Any(x => x.text == userResolutionOption.text))
         {
             dropdown.options.Insert(DEFAULT_INDEX, userResolutionOption);
         }
@@ -40,6 +41,10 @@ public class ResolutionDropdown : MonoBehaviour
         {
             Screen.SetResolution(Storage.GeneralSettings.resolution[0], Storage.GeneralSettings.resolution[1],
                 Storage.GeneralSettings.isFullscreen);
+        }
+        else
+        {
+            Storage.GeneralSettings.resolution = new int[] { Display.main.systemWidth, Display.main.systemHeight };
         }
         dropdown.value = GetValueIndex();
     }
