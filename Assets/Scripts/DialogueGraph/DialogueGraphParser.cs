@@ -14,6 +14,7 @@ public class DialogueGraphParser : MonoBehaviour
     [SerializeField] private RandomOutputNodeView randomOutputNodeView;
     [SerializeField] private StartSplitMessageNodeView startSplitMessageNodeView;
     [SerializeField] private LocationNodeView locationNodeView;
+    [SerializeField] private HideCharacterNodeView hideCharacterNodeView;
 
 
     private DialogueGraphData currentDialogue;
@@ -84,6 +85,10 @@ public class DialogueGraphParser : MonoBehaviour
         else if (nodeData is LocationNode)
         {
             locationNodeView.Act(currentDialogue, nodeData as LocationNode);
+        }
+        else if (nodeData is CharacterPositionNode)
+        {
+            hideCharacterNodeView.Act(currentDialogue, nodeData as CharacterPositionNode);
         }
         else
         {

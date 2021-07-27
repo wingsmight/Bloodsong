@@ -1214,6 +1214,7 @@ GameObject:
   - component: {fileID: 364289735}
   - component: {fileID: 364289739}
   - component: {fileID: 364289741}
+  - component: {fileID: 364289742}
   m_Layer: 0
   m_Name: NodeViews
   m_TagString: Untagged
@@ -1317,6 +1318,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueParser: {fileID: 17934409}
   backgroundView: {fileID: 547023181}
+--- !u!114 &364289742
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 364289734}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3dc8f7558562e4d3b9ee83fc71bef353, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueParser: {fileID: 17934409}
+  dialoguePanel: {fileID: 1165345573}
+  characterView: {fileID: 973528088}
 --- !u!1 &385940333
 GameObject:
   m_ObjectHideFlags: 0
