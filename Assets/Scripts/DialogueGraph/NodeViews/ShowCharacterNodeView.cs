@@ -15,8 +15,6 @@ public class ShowCharacterNodeView : NodeView<CharacterNode>
         if (character == null || string.IsNullOrEmpty(character.name) || string.IsNullOrEmpty(character.Name))
         {
             characterView.Hide(nodeData.character.position);
-
-            return;
         }
         else
         {
