@@ -64,6 +64,11 @@ public class NodeCreationWindow : ScriptableObject, ISearchWindowProvider
                     level = 3,
                     userData = new ShowCharacterNodeEditorView()
                 },
+                new SearchTreeEntry(new GUIContent("Hide character", indentationIcon))
+                {
+                    level = 3,
+                    userData = new HideCharacterNodeEditorView()
+                },
 
 
                 new SearchTreeEntry(new GUIContent("Comment Block", indentationIcon))

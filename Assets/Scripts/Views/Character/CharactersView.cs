@@ -13,13 +13,6 @@ public class CharactersView : MonoBehaviour, IHidable, IResetable, IDataLoading,
 
     public void Show(Character character, Position position, Emotion emotion, Direction direction)
     {
-        if (character == null || string.IsNullOrEmpty(character.name) || string.IsNullOrEmpty(character.Name))
-        {
-            Hide(position);
-
-            return;
-        }
-
         characterViews[position].Show(character, emotion, direction);
     }
     public void ShowImmediately(Character character, Position position, Emotion emotion)

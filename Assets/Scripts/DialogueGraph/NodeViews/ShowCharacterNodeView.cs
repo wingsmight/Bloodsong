@@ -11,7 +11,17 @@ public class ShowCharacterNodeView : NodeView<CharacterNode>
     public override void Act(DialogueGraphData dialogue, CharacterNode nodeData)
     {
         Character character = ScriptableObjectFinder.Get<Character>(nodeData.character.name);
-        characterView.Show(character, nodeData.character.position, nodeData.character.emotion, nodeData.direction);
+
+        if (character == null || string.IsNullOrEmpty(character.name) || string.IsNullOrEmpty(character.Name))
+        {
+            characterView.Hide(nodeData.character.position);
+
+            return;
+        }
+        else
+        {
+            characterView.Show(character, nodeData.character.position, nodeData.character.emotion, nodeData.direction);
+        }
 
         ProcessNext(dialogue, nodeData);
     }
