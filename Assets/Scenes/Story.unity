@@ -238,7 +238,7 @@ MonoBehaviour:
   randomOutputNodeView: {fileID: 364289735}
   startSplitMessageNodeView: {fileID: 364289739}
   locationNodeView: {fileID: 364289741}
-  hideCharacterNodeView: {fileID: 0}
+  hideCharacterNodeView: {fileID: 364289742}
 --- !u!224 &17934410
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1182,7 +1182,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 06a43d48e76c2408b80d72fee1396690, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 81d2bec3859da440097961b7ffe3d422, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
