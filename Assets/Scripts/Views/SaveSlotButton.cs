@@ -18,8 +18,8 @@ public class SaveSlotButton : UIButton
     [SerializeField] private Image locationImage;
     [SerializeField] private TextMeshProUGUI lastOpenDateTextView;
     [SerializeField] private TextMeshProUGUI slotNumberTextView;
-    [SerializeField] private GameObject emptyOverlay;
-    [SerializeField] private Button deleteButton;
+    [SerializeField] private FadeAnimation emptyOverlay;
+    [SerializeField] private FadeAnimation deleteButton;
     [Space(12)]
     [SerializeField] private int index;
 
@@ -38,8 +38,8 @@ public class SaveSlotButton : UIButton
             locationImage.color = locationImage.sprite == null ? emptyBackgroundImageColor : backgroundImageColor;
             lastOpenDateTextView.text = saveSlot.lastExitDate.Date.ToShortDateString();
             slotNumberTextView.text = "";
-            emptyOverlay.SetActive(false);
-            deleteButton.gameObject.SetActive(true);
+            emptyOverlay.SetVisible(false);
+            deleteButton.Appear();
         }
         else
         {
@@ -52,8 +52,12 @@ public class SaveSlotButton : UIButton
         locationImage.color = emptyBackgroundImageColor;
         lastOpenDateTextView.text = "";
         slotNumberTextView.text = Localization.GetValue(SLOT_NAME) + " " + (index + 1).ToString();
-        emptyOverlay.SetActive(true);
-        deleteButton.gameObject.SetActive(false);
+        emptyOverlay.Appear();
+        deleteButton.SetVisible(false);
+    }
+    public void HideDeleteButton()
+    {
+        deleteButton.Disappear();
     }
 
     protected override void OnClick()
@@ -73,4 +77,5 @@ public class SaveSlotButton : UIButton
 
 
     public int Index => index;
+    public bool Interactable { get => button.interactable; set => button.interactable = value; }
 }

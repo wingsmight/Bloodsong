@@ -113,6 +113,19 @@
     {
       "key": "AttentionReadMe",
       "value": "Внимание! Прочтите перед началом игры."
+    },
+
+    {
+      "key": "yes",
+      "value": "да"
+    },
+    {
+      "key": "no",
+      "value": "нет"
+    },
+    {
+      "key": "DeleteSlotPermissionQuestion",
+      "value": "Вы точно хотите удалить данные?"
     }
 
   ]

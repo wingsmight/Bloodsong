@@ -113,6 +113,19 @@
     {
       "key": "AttentionReadMe",
       "value": "Attention! Read it before you start the game."
+    },
+
+    {
+      "key": "yes",
+      "value": "yes"
+    },
+    {
+      "key": "no",
+      "value": "no"
+    },
+    {
+      "key": "DeleteSlotPermissionQuestion",
+      "value": "Delete this save slot?"
     }
 
   ]

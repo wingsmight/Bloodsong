@@ -11,10 +11,10 @@ public class LoadingCircleBar : MonoBehaviour
     [SerializeField] private Image image;
     [SerializeField] private FadeAnimation fadeAnimation;
     [Space(12)]
-    [SerializeField] private float fillSpeed = 1.0f;
-    [SerializeField] private float rotateSpeed = 2.0f;
+    [SerializeField] private float fillSpeed = 2.0f;
+    [SerializeField] private float rotateSpeed = 50.0f;
     [SerializeField] private float fillSpeedRange = 0.2f;
-    [SerializeField] private Direction direction;
+    [SerializeField] private bool isClockwise = true;
 
 
     private Coroutine fillCoroutine;
@@ -64,7 +64,7 @@ public class LoadingCircleBar : MonoBehaviour
     }
     private IEnumerator RotateRoutine()
     {
-        int directionScalar = direction == Direction.Clockwise ? -1 : 1;
+        int directionScalar = isClockwise ? -1 : 1;
         float startRotationAngle = Random.Range(0.0f, 360.0f);
         transform.localRotation = Quaternion.Euler(0, 0, startRotationAngle);
 
@@ -78,11 +78,4 @@ public class LoadingCircleBar : MonoBehaviour
 
 
     public bool IsShowing => fadeAnimation.IsShowing;
-
-
-    public enum Direction
-    {
-        Clockwise,
-        Anticlockwise,
-    }
 }

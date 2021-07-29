@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class EndlessLoadingCircleBar : MonoBehaviour
+public class EndlessLoadingCircleBar : FadeView
 {
     [SerializeField] private Image image;
     [Space(12)]
-    [SerializeField] private float fillSpeed = 1.0f;
+    [SerializeField] private float fillSpeed = 2.0f;
     [SerializeField] private float minFillAmount = 0.15f;
     [SerializeField] private float maxFillAmount = 0.75f;
-    [SerializeField] private float rotateSpeed = 2.0f;
+    [SerializeField] private float rotateSpeed = 50.0f;
 
 
     private bool isShowing;
@@ -22,20 +22,20 @@ public class EndlessLoadingCircleBar : MonoBehaviour
     }
 
 
-    public void Show()
+    public override void Show()
     {
-        gameObject.SetActive(true);
+        base.Show();
 
         isShowing = true;
 
         StartCoroutine(ChangeFillRoutine());
         StartCoroutine(RotateRoutine());
     }
-    public void Hide()
+    public override void Hide()
     {
-        isShowing = false;
+        base.Hide();
 
-        gameObject.SetActive(false);
+        isShowing = false;
     }
 
 

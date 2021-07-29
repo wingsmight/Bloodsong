@@ -1514,6 +1514,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SettingsView
       objectReference: {fileID: 0}
+    - target: {fileID: 5109570601497102629, guid: 42dfd96bd58014ce9b6175a710fa8cb5, type: 3}
+      propertyPath: m_Alpha
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5109570601573645098, guid: 42dfd96bd58014ce9b6175a710fa8cb5, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -5527,7 +5531,7 @@ MonoBehaviour:
   fillSpeed: 5
   rotateSpeed: 50
   fillSpeedRange: 0.2
-  direction: 0
+  isClockwise: 1
 --- !u!114 &1100209700
 MonoBehaviour:
   m_ObjectHideFlags: 0
