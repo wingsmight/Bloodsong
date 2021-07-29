@@ -7,11 +7,11 @@ public class FadeView : MonoBehaviour, IShowable, IHidable
     [SerializeField] private FadeAnimation fadeAnimation;
 
 
-    public void Show()
+    public virtual void Show()
     {
         fadeAnimation.Appear();
     }
-    public void Hide()
+    public virtual void Hide()
     {
         fadeAnimation.Disappear();
     }

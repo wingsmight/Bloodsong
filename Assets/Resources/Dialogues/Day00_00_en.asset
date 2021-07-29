@@ -544,13 +544,12 @@ MonoBehaviour:
         guid: e9d77b30-a69b-4707-a454-e45e7a376518
         position: {x: 221, y: 200}
         text:
-        - '<#ff0b1f><size=60><font="SpeakerName SDF">T</font></size></color>he <#ff0b1f><size=60><font="SpeakerName
-          SDF">A</font></size></color>ge of the <#ff0b1f><size=60><font="SpeakerName
-          SDF">G</font></size></color>olden <#ff0b1f><size=60><font="SpeakerName
-          SDF">K</font></size></color>ings<alpha=#00>.
+        - 'The <#ff0b1f><size=60><font="SpeakerName SDF">A</font></size></color>ge
+          of the <#ff0b1f><size=60><font="SpeakerName SDF">G</font></size></color>olden
+          <#ff0b1f><size=60><font="SpeakerName SDF">K</font></size></color>ings<alpha=#00>.
 
-          <alpha=#FF>is a
-          time when all over the world,<alpha=#00>.
+          <alpha=#FF>is
+          a time when all over the world,<alpha=#00>.
 
           <alpha=#FF>mortals
           rise up against evil, bloodthirsty Gods.'
@@ -783,42 +782,42 @@ MonoBehaviour:
     00000050:
       type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
       data:
-        sourceNodeGUID: e9d77b30-a69b-4707-a454-e45e7a376518
-        sourcePortName: Output
-        destinationNodeGUID: 1b4b375a-e982-4645-8274-70940803fe55
-    00000051:
-      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
-      data:
         sourceNodeGUID: 8ea2e1c5-d378-41be-b234-537ef67030ec
         sourcePortName: Output
         destinationNodeGUID: 83d06dd4-6ea2-4a24-a098-a9bec8359729
-    00000052:
+    00000051:
       type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
       data:
         sourceNodeGUID: f6264c20-02bc-497a-b047-162ca9339321
         sourcePortName: Output
         destinationNodeGUID: 0462a7af-c297-4bcb-a16d-3348dd156e43
-    00000053:
+    00000052:
       type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
       data:
         sourceNodeGUID: fb5209bb-db0d-45fd-a96a-ce9a7ce31775
         sourcePortName: Output
         destinationNodeGUID: 180f3435-7c1a-4613-8459-acf10759b7eb
-    00000054:
+    00000053:
       type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
       data:
         sourceNodeGUID: fc7d32a1-6b61-478f-af5d-8414043789a9
         sourcePortName: Output
         destinationNodeGUID: c6e116aa-099d-4d0a-84b6-ce0d99d5d3ac
-    00000055:
+    00000054:
       type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
       data:
         sourceNodeGUID: 7201308c-32e0-457b-840a-6c5b1a83ed7a
         sourcePortName: Output
         destinationNodeGUID: 7ce0c484-8426-4035-96e4-4f42e6ed87bd
-    00000056:
+    00000055:
       type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
       data:
         sourceNodeGUID: 7ce0c484-8426-4035-96e4-4f42e6ed87bd
         sourcePortName: Output
         destinationNodeGUID: 366f7e7e-5c88-47a2-9ce4-71babd8ecbd6
+    00000056:
+      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
+      data:
+        sourceNodeGUID: e9d77b30-a69b-4707-a454-e45e7a376518
+        sourcePortName: Output
+        destinationNodeGUID: 1b4b375a-e982-4645-8274-70940803fe55
