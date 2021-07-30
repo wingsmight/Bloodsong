@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,41 +7,75 @@ using static Character;
 
 public class CharacterView : MonoBehaviour
 {
+    [SerializeField] private FadeView fadeView;
     [SerializeField] private Position position;
-    [SerializeField] private FadeAnimation fadeAnimation;
     [SerializeField] private Image image;
     [SerializeField] private float appearDuration;
 
 
+    public event Action OnShown;
+    public event Action OnHidden;
+
+    private Action hiddenAction;
     private CharacterProperty characterProperty;
+
+
+    private void Awake()
+    {
+        hiddenAction = () => OnHidden?.Invoke();
+
+        fadeView.OnHidden += hiddenAction;
+    }
+    private void OnDestroy()
+    {
+        fadeView.OnHidden -= hiddenAction;
+    }
 
 
     public void Show(Character character, Emotion emotion, Direction direction)
     {
-        if (characterProperty == null || character.name != characterProperty.name)
+        if (!IsShowing)
         {
             StartCoroutine(AppearRoutine(direction));
+            ShowImmediately(character, emotion);
         }
-
-        ShowImmediately(character, emotion);
+        else
+        {
+            ShowImmediately(character, emotion);
+            OnShown?.Invoke();
+        }
     }
-    public void ShowImmediately(Character character, Emotion emotion)
+    public void ShowWithFade(Character character, Emotion emotion)
     {
         characterProperty = new CharacterProperty(character.name, position, emotion);
         image.sprite = character.GetSprite(emotion);
         image.AdjustWidth();
 
-        fadeAnimation.Appear();
+        fadeView.Show();
+
+        OnShown?.Invoke();
     }
     public void Hide()
     {
-        fadeAnimation.Disappear();
+        characterProperty = null;
+
+        fadeView.Hide();
     }
     public void HideImmediately()
     {
-        fadeAnimation.SetVisible(false);
+        characterProperty = null;
+
+        fadeView.HideImmediately();
     }
 
+    private void ShowImmediately(Character character, Emotion emotion)
+    {
+        characterProperty = new CharacterProperty(character.name, position, emotion);
+        image.sprite = character.GetSprite(emotion);
+        image.AdjustWidth();
+
+        fadeView.ShowImmediately();
+    }
     private IEnumerator AppearRoutine(Direction direction)
     {
         Vector2 startPosition;
@@ -96,10 +131,14 @@ public class CharacterView : MonoBehaviour
         }
 
         image.rectTransform.anchoredPosition = finishPosition;
+
+        OnShown?.Invoke();
     }
+
+
     public Sprite Sprite => image.sprite;
     public CharacterProperty CharacterProperty => characterProperty;
-    public bool IsShowing => fadeAnimation.IsShowing;
+    public bool IsShowing => fadeView.IsShowing;
 
 
     public enum Direction

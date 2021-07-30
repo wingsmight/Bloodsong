@@ -1262,8 +1262,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueParser: {fileID: 17934409}
-  dialoguePanel: {fileID: 1165345573}
-  characterView: {fileID: 973528088}
+  charactersView: {fileID: 973528088}
 --- !u!4 &364289738
 Transform:
   m_ObjectHideFlags: 0
@@ -1332,8 +1331,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueParser: {fileID: 17934409}
-  dialoguePanel: {fileID: 1165345573}
-  characterView: {fileID: 973528088}
+  charactersView: {fileID: 973528088}
 --- !u!1 &385940333
 GameObject:
   m_ObjectHideFlags: 0
@@ -3864,6 +3862,7 @@ GameObject:
   - component: {fileID: 796841919}
   - component: {fileID: 796841918}
   - component: {fileID: 796841917}
+  - component: {fileID: 796841922}
   m_Layer: 5
   m_Name: CharacterRight
   m_TagString: Untagged
@@ -3883,8 +3882,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75ac9ab0a91b24a04af8d6d8d80f6e04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fadeView: {fileID: 796841922}
   position: 2
-  fadeAnimation: {fileID: 796841917}
   image: {fileID: 796841919}
   appearDuration: 0.8
 --- !u!114 &796841917
@@ -3899,7 +3898,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62a1a4ff9f1ed4db5a2b9097b1d4df2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
+  speed: 1.75
   isShowOnAwake: 0
 --- !u!225 &796841918
 CanvasGroup:
@@ -3970,6 +3969,19 @@ RectTransform:
   m_AnchoredPosition: {x: -480, y: -490}
   m_SizeDelta: {x: 471.88, y: 1510}
   m_Pivot: {x: 1, y: 0}
+--- !u!114 &796841922
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 796841915}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1b06e35c05854d7a80fa17e8fa4bbd9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeAnimation: {fileID: 796841917}
 --- !u!1 &797808899
 GameObject:
   m_ObjectHideFlags: 0
@@ -4412,6 +4424,7 @@ GameObject:
   - component: {fileID: 905872473}
   - component: {fileID: 905872472}
   - component: {fileID: 905872471}
+  - component: {fileID: 905872476}
   m_Layer: 5
   m_Name: CharacterLeft
   m_TagString: Untagged
@@ -4450,7 +4463,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62a1a4ff9f1ed4db5a2b9097b1d4df2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
+  speed: 1.75
   isShowOnAwake: 0
 --- !u!225 &905872472
 CanvasGroup:
@@ -4514,10 +4527,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75ac9ab0a91b24a04af8d6d8d80f6e04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fadeView: {fileID: 905872476}
   position: 0
-  fadeAnimation: {fileID: 905872471}
   image: {fileID: 905872473}
   appearDuration: 0.8
+--- !u!114 &905872476
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 905872469}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1b06e35c05854d7a80fa17e8fa4bbd9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeAnimation: {fileID: 905872471}
 --- !u!1 &924295785
 GameObject:
   m_ObjectHideFlags: 0
@@ -6498,6 +6524,7 @@ GameObject:
   - component: {fileID: 1372161498}
   - component: {fileID: 1372161497}
   - component: {fileID: 1372161496}
+  - component: {fileID: 1372161501}
   m_Layer: 5
   m_Name: CharacterCenter
   m_TagString: Untagged
@@ -6536,7 +6563,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62a1a4ff9f1ed4db5a2b9097b1d4df2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
+  speed: 1.75
   isShowOnAwake: 0
 --- !u!225 &1372161497
 CanvasGroup:
@@ -6600,10 +6627,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75ac9ab0a91b24a04af8d6d8d80f6e04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fadeView: {fileID: 1372161501}
   position: 1
-  fadeAnimation: {fileID: 1372161496}
   image: {fileID: 1372161498}
   appearDuration: 0.8
+--- !u!114 &1372161501
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1372161494}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1b06e35c05854d7a80fa17e8fa4bbd9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeAnimation: {fileID: 1372161496}
 --- !u!1 &1385355531
 GameObject:
   m_ObjectHideFlags: 0

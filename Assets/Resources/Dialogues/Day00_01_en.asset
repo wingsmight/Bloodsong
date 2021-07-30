@@ -1533,7 +1533,7 @@ MonoBehaviour:
         position: {x: 21786.5, y: 1318.5}
         character:
           name: 
-          position: 0
+          position: 2
           emotion: 0
         direction: 0
     00000079:

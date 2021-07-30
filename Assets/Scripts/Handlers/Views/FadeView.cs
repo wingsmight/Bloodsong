@@ -26,9 +26,17 @@ public class FadeView : MonoBehaviour, IShowable, IHidable
     {
         fadeAnimation.Appear();
     }
+    public virtual void ShowImmediately()
+    {
+        fadeAnimation.SetVisible(true);
+    }
     public virtual void Hide()
     {
         fadeAnimation.Disappear();
+    }
+    public virtual void HideImmediately()
+    {
+        fadeAnimation.SetVisible(false);
     }
 
 
@@ -43,4 +51,7 @@ public class FadeView : MonoBehaviour, IShowable, IHidable
             OnHidden?.Invoke();
         }
     }
+
+
+    public virtual bool IsShowing => fadeAnimation.IsShowing;
 }

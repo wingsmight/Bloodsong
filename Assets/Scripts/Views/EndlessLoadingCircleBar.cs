@@ -61,5 +61,5 @@ public class EndlessLoadingCircleBar : FadeView
     }
 
 
-    public bool IsShowing => isShowing;
+    public override bool IsShowing => isShowing;
 }

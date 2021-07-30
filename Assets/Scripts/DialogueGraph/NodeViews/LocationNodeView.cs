@@ -7,15 +7,8 @@ public class LocationNodeView : NodeView<LocationNode>
     [SerializeField] private BackgroundView backgroundView;
 
 
-    private DialogueGraphData dialogue;
-    private LocationNode nodeData;
-
-
     public override void Act(DialogueGraphData dialogue, LocationNode nodeData)
     {
-        this.dialogue = dialogue;
-        this.nodeData = nodeData;
-
         Action processNextOnShown = null;
         processNextOnShown = () =>
         {

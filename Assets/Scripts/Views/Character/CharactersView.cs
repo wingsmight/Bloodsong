@@ -5,34 +5,19 @@ using UnityEngine;
 using UnityEngine.UI;
 using static CharacterView;
 using static Character;
+using System;
 
 public class CharactersView : MonoBehaviour, IHidable, IResetable, IDataLoading, IDataSaving
 {
     [SerializeField] private PositionCharacterViewDictionary characterViews;
 
 
-    public void Show(Character character, Position position, Emotion emotion, Direction direction)
-    {
-        characterViews[position].Show(character, emotion, direction);
-    }
-    public void ShowImmediately(Character character, Position position, Emotion emotion)
-    {
-        characterViews[position].ShowImmediately(character, emotion);
-    }
-    public void Hide(Position position)
-    {
-        characterViews[position].Hide();
-    }
     public void Hide()
     {
         foreach (var characterView in characterViews.Values)
         {
             characterView.Hide();
         }
-    }
-    public void HideImmediately(Position position)
-    {
-        characterViews[position].HideImmediately();
     }
     public void HideImmediately()
     {
@@ -51,7 +36,7 @@ public class CharactersView : MonoBehaviour, IHidable, IResetable, IDataLoading,
         foreach (var characterProperty in Storage.GetData<GameDayData>().characters)
         {
             Character character = ScriptableObjectFinder.Get<Character>(characterProperty.name);
-            ShowImmediately(character, characterProperty.position, characterProperty.emotion);
+            this[characterProperty.position].ShowWithFade(character, characterProperty.emotion);
         }
     }
     public void SaveData()
@@ -64,6 +49,15 @@ public class CharactersView : MonoBehaviour, IHidable, IResetable, IDataLoading,
                 var characterProperty = characterView.Value.CharacterProperty;
                 Storage.GetData<GameDayData>().characters.Add(new CharacterProperty(characterProperty.name, characterView.Key, characterProperty.emotion));
             }
+        }
+    }
+
+
+    public CharacterView this[Position position]
+    {
+        get
+        {
+            return characterViews[position];
         }
     }
 }
