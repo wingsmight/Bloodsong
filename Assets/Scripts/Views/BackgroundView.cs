@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,16 +11,12 @@ public class BackgroundView : MonoBehaviour, IHidable, IResetable, IDataLoading,
     [SerializeField] private Color emptryColor;
 
 
-    public void Show()
-    {
-        fadeAnimation.Appear();
-    }
+    public event Action OnShown;
+
+
     public void Show(Location location)
     {
-        Show();
-
-        image.sprite = location.Sprite;
-        image.color = image.sprite == null ? emptryColor : Color.white;
+        StartCoroutine(ShowRoutine(location));
     }
     public void Hide()
     {
@@ -45,5 +42,24 @@ public class BackgroundView : MonoBehaviour, IHidable, IResetable, IDataLoading,
             Storage.GetData<GameDayData>().locationName = image.sprite.name; // TODO may produce error if something is wrong with path/name
             Storage.GeneralSettings.CurrentSaveSlot.lastLocation = new Location(Storage.GetData<GameDayData>().locationName);
         }
+    }
+
+    private void SetLocation(Location location)
+    {
+        image.sprite = location.Sprite;
+        image.color = image.sprite == null ? emptryColor : Color.white;
+    }
+    private IEnumerator ShowRoutine(Location location)
+    {
+        Hide();
+
+        yield return new WaitWhile(() => fadeAnimation.IsShowing);
+
+        fadeAnimation.Appear();
+        SetLocation(location);
+
+        yield return new WaitWhile(() => !fadeAnimation.IsShowing);
+
+        OnShown?.Invoke();
     }
 }

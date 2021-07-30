@@ -2437,7 +2437,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a88e4e131a92b45729449be9901cbcf4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isSkipIntro: 0
+  isSkipIntro: 1
   messageTelling: {fileID: 667008679}
   message: {fileID: 11400000, guid: 34ea655d640db40a48cd21bbaf916a96, type: 2}
   gameLogoScreenAnimation: {fileID: 210709126}

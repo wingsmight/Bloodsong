@@ -16,8 +16,10 @@ public class EndlessLoadingCircleBar : FadeView
     private bool isShowing;
 
 
-    private void Awake()
+    protected override void Awake()
     {
+        base.Awake();
+
         image.type = Image.Type.Filled;
     }
 

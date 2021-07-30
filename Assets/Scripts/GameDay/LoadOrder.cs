@@ -29,14 +29,15 @@ public class LoadOrder : MonoBehaviour
 
     public void Load()
     {
+#if UNITY_EDITOR
         if (isSkipIntro)
         {
             SceneManager.LoadScene(NEXT_SCENE_NAME);
         }
-        else
-        {
-            StartCoroutine(LoadRoutine());
-        }
+        return;
+#else
+        StartCoroutine(LoadRoutine());
+#endif
     }
 
     private IEnumerator LoadRoutine()

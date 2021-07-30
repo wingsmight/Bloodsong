@@ -22,7 +22,11 @@ public class GameDayControl : MonoBehaviour, IDataLoading, IDataSaving
 
     private void Awake()
     {
-        stopNodeView.OnGraphEnded += () => StartDay(currentStoryIndex + 1);
+        stopNodeView.OnGraphEnded += StartNextDay;
+    }
+    private void OnDestroy()
+    {
+        stopNodeView.OnGraphEnded -= StartNextDay;
     }
     private void Start()
     {
@@ -65,6 +69,12 @@ public class GameDayControl : MonoBehaviour, IDataLoading, IDataSaving
         Storage.GetData<GameDayData>().currentNodeGuid = dialogueGraphParser.CurrentNode?.guid;
         Storage.GetData<GameDayData>().currentStoryIndex = currentStoryIndex;
         Storage.GetData<GameDayData>().currentStoryPhraseIndex = monologueNodeView.PhraseIndex;
+    }
+
+    private void StartNextDay()
+    {
+        currentStoryIndex++;
+        StartDay(currentStoryIndex);
     }
 
 
