@@ -13,6 +13,9 @@ public class SplitIntroTextAppearingSet : SplitTextAppearingSet
 
     public override void Type(List<string> fullTexts)
     {
+        betweenIndex = 0;
+        betweenTextsObjects.ForEach(x => x.Disappear());
+
         base.Type(fullTexts);
 
         smoke.Appear(textAppearings[0].GetComponent<RectTransform>().position);

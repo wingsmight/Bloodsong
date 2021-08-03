@@ -17,4 +17,9 @@ public class StartSplitMessageNodeView : NodeView<SplitMessageNode>
             ProcessNextWithDelay(dialogue, nodeData, DELAY_AFTER_STOP);
         });
     }
+    public override void Stop()
+    {
+        splitTextAppearing.Reset();
+        splitTextAppearing.Hide();
+    }
 }

@@ -51,6 +51,10 @@ public class TextTyping : TextShowing
         {
             textDisplay.pageToDisplay--;
         }
+        else
+        {
+            Stop();
+        }
 
         isTyping = false;
 

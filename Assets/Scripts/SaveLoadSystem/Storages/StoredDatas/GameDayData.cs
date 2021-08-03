@@ -7,24 +7,8 @@ public class GameDayData : IStoredData
 {
     public string locationName;
     public List<CharacterProperty> characters = new List<CharacterProperty>();
+    [SerializeReference] public BranchNodesStack branchNodes = new BranchNodesStack();
     public string currentNodeGuid;
     public int currentStoryIndex;
     public int currentStoryPhraseIndex;
-}
-
-
-[Serializable]
-public class CharacterProperty
-{
-    public string name;
-    public CharacterView.Position position;
-    public Character.Emotion emotion;
-
-
-    public CharacterProperty(string name, CharacterView.Position position, Character.Emotion emotion)
-    {
-        this.name = name;
-        this.position = position;
-        this.emotion = emotion;
-    }
 }

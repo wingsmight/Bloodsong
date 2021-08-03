@@ -47,8 +47,9 @@ public class GameDayControl : MonoBehaviour, IDataLoading, IDataSaving
 
         currectStory = gameDayOrder.Stories[currentStoryIndex];
         var graph = currectStory.Graph;
-        dialogueGraphParser.CurrentDialogue = graph;
         var currentNode = graph.GetNodeByGUID(currentNodeGuid);
+        dialogueGraphParser.CurrentDialogue = graph;
+        dialogueGraphParser.CurrentNode = currentNode;
         if (currentNode is MonologueNode)
         {
             monologueNodeView.Act(graph, currentNode as MonologueNode, currentStoryPhraseIndex);
@@ -78,6 +79,7 @@ public class GameDayControl : MonoBehaviour, IDataLoading, IDataSaving
     }
 
 
+    public int CurrentStoryPhraseIndex { get => currentStoryPhraseIndex; set => currentStoryPhraseIndex = value; }
     public int CurrentStoryIndex => currentStoryIndex;
 
     private List<IResetable> ResetableViews => resetableViews.Cast<IResetable>().ToList();

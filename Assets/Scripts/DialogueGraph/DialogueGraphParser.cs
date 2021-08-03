@@ -94,6 +94,52 @@ public class DialogueGraphParser : MonoBehaviour
         {
             throw new Exception();
         }
+
+        Storage.GetData<GameDayData>().branchNodes.Push(nodeData);
+    }
+    public void StopNode(NodeData nodeData)
+    {
+
+        if (nodeData is DialogueNode)
+        {
+            dialogueView.Stop();
+        }
+        else if (nodeData is EntryNode)
+        {
+            entryNodeView.Stop();
+        }
+        else if (nodeData is CharacterNode)
+        {
+            showCharacterView.Stop();
+        }
+        else if (nodeData is MonologueNode)
+        {
+            startMonologueView.Stop();
+        }
+        else if (nodeData is StopNode)
+        {
+            stopNodeView.Stop();
+        }
+        else if (nodeData is RandomOutputNode)
+        {
+            randomOutputNodeView.Stop();
+        }
+        else if (nodeData is SplitMessageNode)
+        {
+            startSplitMessageNodeView.Stop();
+        }
+        else if (nodeData is LocationNode)
+        {
+            locationNodeView.Stop();
+        }
+        else if (nodeData is CharacterPositionNode)
+        {
+            hideCharacterNodeView.Stop();
+        }
+        else
+        {
+            throw new Exception();
+        }
     }
     public void Stop(DialogueGraphData dialogue)
     {
@@ -118,5 +164,5 @@ public class DialogueGraphParser : MonoBehaviour
 
 
     public DialogueGraphData CurrentDialogue { get => currentDialogue; set => currentDialogue = value; }
-    public NodeData CurrentNode => currentNode;
+    public NodeData CurrentNode { get => currentNode; set => currentNode = value; }
 }

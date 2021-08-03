@@ -45,8 +45,9 @@ public class DialogueNodeView : NodeView<DialogueNode>
 
         communicationPanel.Show(nodeData.dialogueText, nodeData.speakerName, new ChoiceData(choices), actions);
     }
-    public void Stop()
+    public override void Stop()
     {
+        communicationPanel.Reset();
         communicationPanel.Hide();
     }
 }

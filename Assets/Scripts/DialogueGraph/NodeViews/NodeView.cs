@@ -9,6 +9,7 @@ public abstract class NodeView<T> : MonoBehaviour
 
 
     public abstract void Act(DialogueGraphData dialogue, T nodeData);
+    public virtual void Stop() { }
 
     protected void ProcessNext(DialogueGraphData dialogue, NodeData nodeData)
     {

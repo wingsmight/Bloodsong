@@ -37,6 +37,21 @@ public class DialogueGraphData : ScriptableObject
 
         return outputNodeDatas;
     }
+    public List<NodeData> GetPrevNodes(NodeData nodeData)
+    {
+        List<NodeData> prevNodeDatas = new List<NodeData>();
+        var inputNodeLinks = nodeLinks.Where(x => x.destinationNodeGUID == nodeData.GUID).ToList();
+        foreach (var outputNodeLink in inputNodeLinks)
+        {
+            NodeData inputNodeData = nodeDatas.Find(x => x.GUID == outputNodeLink.sourceNodeGUID);
+            if (inputNodeData != null)
+            {
+                prevNodeDatas.Add(inputNodeData);
+            }
+        }
+
+        return prevNodeDatas;
+    }
     public List<NodeData> GetNextPortNodes(NodeData nodeData, string portName)
     {
         List<NodeData> outputNodeDatas = new List<NodeData>();
