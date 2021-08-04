@@ -15,6 +15,9 @@ public class BranchNodesStack
         if (nodes.Count > 0 && node == nodes.Last())
             return;
 
+        if (node is EntryNode || node is StopNode)
+            return;
+
         nodes.Add(node);
     }
     public NodeData Pop()
