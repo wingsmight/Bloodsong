@@ -11,14 +11,14 @@ public class SaveSlotButton : UIButton
     private const string GAME_SCENE_NAME = "Story";
     private const string SLOT_NAME = "Slot";
 
-    private readonly Color emptyBackgroundImageColor = new Color(0.45f, 0.45f, 0.45f);
+    private readonly Color emptyBackgroundImageColor = Color.black;
     private readonly Color backgroundImageColor = Color.white;
 
 
     [SerializeField] private Image locationImage;
     [SerializeField] private TextMeshProUGUI lastOpenDateTextView;
-    [SerializeField] private TextMeshProUGUI slotNumberTextView;
     [SerializeField] private FadeAnimation emptyOverlay;
+    [SerializeField] private FadeAnimation filledOverlay;
     [SerializeField] private FadeAnimation deleteButton;
     [Space(12)]
     [SerializeField] private int index;
@@ -37,9 +37,9 @@ public class SaveSlotButton : UIButton
             locationImage.sprite = saveSlot.lastLocation?.Sprite;
             locationImage.color = locationImage.sprite == null ? emptyBackgroundImageColor : backgroundImageColor;
             lastOpenDateTextView.text = saveSlot.lastExitDate.Date.ToShortDateString();
-            slotNumberTextView.text = "";
             emptyOverlay.SetVisible(false);
-            deleteButton.Appear();
+            filledOverlay.SetVisible(true);
+            deleteButton.SetVisible(true);
         }
         else
         {
@@ -51,8 +51,8 @@ public class SaveSlotButton : UIButton
         locationImage.sprite = null;
         locationImage.color = emptyBackgroundImageColor;
         lastOpenDateTextView.text = "";
-        slotNumberTextView.text = Localization.GetValue(SLOT_NAME) + " " + (index + 1).ToString();
-        emptyOverlay.Appear();
+        emptyOverlay.SetVisible(true);
+        filledOverlay.SetVisible(false);
         deleteButton.SetVisible(false);
     }
     public void HideDeleteButton()

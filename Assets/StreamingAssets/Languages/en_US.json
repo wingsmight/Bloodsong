@@ -126,6 +126,15 @@
     {
       "key": "DeleteSlotPermissionQuestion",
       "value": "Delete this save slot?"
+    },
+
+    {
+      "key": "NEW GAME",
+      "value": "NEW GAME"
+    },
+    {
+      "key": "delete?",
+      "value": "delete?"
     }
 
   ]

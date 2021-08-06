@@ -6,18 +6,19 @@ using System;
 
 public class DeleteSaveSlotButton : UIButton
 {
-    private const float DUMMY_MIN_WAITING_SECONDS = 0.55f;
-    private const float DUMMY_MAX_WAITING_SECONDS = 1.75f;
-
-
+    [SerializeField] FadeAnimation fadeAnimation;
     [SerializeField] SaveSlotButton saveSlotButton;
-    [SerializeField] YesNoPermissionWindow permissionWindow;
-    [SerializeField] EndlessLoadingCircleBar loadingBar;
+    [SerializeField] DeleteSlotPermission permissionOverlay;
+    [Space(12)]
+    [SerializeField] float frameFadeSpeed;
+    [SerializeField] Image loadingFrame;
+    [SerializeField] FadeAnimation emptySlot;
+    [SerializeField] FadeAnimation filledSlot;
 
 
     protected override void OnClick()
     {
-        permissionWindow.Show(Act, null);
+        permissionOverlay.Show(Act, null);
     }
 
     private void Act()
@@ -30,17 +31,22 @@ public class DeleteSaveSlotButton : UIButton
     }
     private void SetEnvironmentAfterDelete()
     {
-        loadingBar.Show();
-
         StartCoroutine(WaitForDeleteRoutine());
     }
     private IEnumerator WaitForDeleteRoutine()
     {
-        // dummy waiting
-        float waitingSeconds = UnityEngine.Random.Range(DUMMY_MIN_WAITING_SECONDS, DUMMY_MAX_WAITING_SECONDS);
-        yield return new WaitForSeconds(waitingSeconds);
+        loadingFrame.fillAmount = 1.0f;
+        emptySlot.Appear();
+        filledSlot.Disappear();
+        fadeAnimation.Disappear();
 
-        loadingBar.Hide();
+        while (loadingFrame.fillAmount > 0.0f)
+        {
+            loadingFrame.fillAmount -= frameFadeSpeed * Time.deltaTime;
+
+            yield return new WaitForEndOfFrame();
+        }
+
         saveSlotButton.Interactable = true;
         saveSlotButton.ShowEmpty();
     }

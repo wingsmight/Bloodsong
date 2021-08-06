@@ -126,6 +126,15 @@
     {
       "key": "DeleteSlotPermissionQuestion",
       "value": "Вы точно хотите удалить данные?"
+    },
+    
+    {
+      "key": "NEW GAME",
+      "value": "НОВАЯ ИГРА"
+    },
+    {
+      "key": "delete?",
+      "value": "удалить?"
     }
 
   ]

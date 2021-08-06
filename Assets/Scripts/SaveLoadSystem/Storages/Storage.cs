@@ -7,7 +7,7 @@ using UnityEngine;
 
 public class Storage : MonoBehaviourSingleton<Storage>
 {
-    public const int SAVE_SLOTS_COUNT = 3;
+    public const int SAVE_SLOTS_COUNT = 4;
 
     private const int MIN_SAVE_SLOT_INDEX = 0;
 
