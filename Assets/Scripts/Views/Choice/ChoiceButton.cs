@@ -40,11 +40,6 @@ public class ChoiceButton : UIButton, IPointerEnterHandler, IPointerExitHandler
         action = null;
     }
 
-    //TEST
-    private void Update()
-    {
-        ShowHover();
-    }
     private void ShowHover()
     {
         textView.ForceMeshUpdate();
