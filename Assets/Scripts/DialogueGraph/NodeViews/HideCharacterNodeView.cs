@@ -11,8 +11,13 @@ public class HideCharacterNodeView : NodeView<CharacterPositionNode>
     public override void Act(DialogueGraphData dialogue, CharacterPositionNode nodeData)
     {
         var characterView = charactersView[nodeData.characterPosition];
+        var nextNode = dialogue.GetNextNodes(nodeData)[0];
 
-        if (dialogue.GetNextNodes(nodeData)[0] is CharacterNode)
+        if (nextNode is CharacterNode)
+        {
+            ProcessNext(dialogue, nodeData);
+        }
+        else if (dialogue.GetNextNodes(nodeData)[0] is CharacterPositionNode)
         {
             ProcessNext(dialogue, nodeData);
         }
