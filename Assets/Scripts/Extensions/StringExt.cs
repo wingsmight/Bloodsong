@@ -5,6 +5,20 @@ using UnityEngine;
 
 public static class StringExt
 {
+    public static string RemoveAllOccurrences(this string text, char occurrence)
+    {
+        int occurrenceIndex;
+        do
+        {
+            occurrenceIndex = text.IndexOf(occurrence);
+            if (occurrenceIndex >= 0)
+            {
+                text = text.Remove(occurrenceIndex, 1);
+            }
+        } while (occurrenceIndex >= 0);
+
+        return text;
+    }
     public static string ReplaceAt(this string input, int index, char newChar)
     {
         if (input == null)

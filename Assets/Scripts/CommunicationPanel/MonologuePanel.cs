@@ -21,6 +21,8 @@ public class MonologuePanel : CommunicationPanel
     public void Show(string text, string speakerName)
     {
         fadeAnimation.Appear();
+
+        text = text.RemoveAllOccurrences('\n');
         textShowing.Type(text);
         speaker.Show(speakerName);
     }

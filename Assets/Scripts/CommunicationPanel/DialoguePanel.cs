@@ -16,6 +16,7 @@ public class DialoguePanel : CommunicationPanel
     {
         fadeAnimation.Appear();
 
+        text = text.RemoveAllOccurrences('\n');
         textTyping.Type(text);
         choiceView.Show(choiceData, actions);
         speaker.Show(speakerName);
