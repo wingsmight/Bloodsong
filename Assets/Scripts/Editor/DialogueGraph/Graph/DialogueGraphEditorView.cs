@@ -238,6 +238,10 @@ public class DialogueGraphEditorView : GraphView
         {
             return new LocationNodeEditorView(nodeData as LocationNode);
         }
+        else if (nodeData is CharacterPositionNode)
+        {
+            return new HideCharacterNodeEditorView(nodeData as CharacterPositionNode);
+        }
         else
         {
             throw new Exception("There is no Node Editor View type you want to load!");

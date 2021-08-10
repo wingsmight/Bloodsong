@@ -482,46 +482,6 @@ MonoBehaviour:
     00000013:
       type: {class: CharacterNode, ns: , asm: Assembly-CSharp}
       data:
-        guid: 183a9337-9c5e-4c5e-bde5-3c7a12b11ff2
-        position: {x: 3616.5, y: -523.5}
-        character:
-          name: 
-          position: 1
-          emotion: 0
-        direction: 0
-    00000014:
-      type: {class: CharacterNode, ns: , asm: Assembly-CSharp}
-      data:
-        guid: b68aa95e-8ee7-4a61-bb2c-d335d6b81be4
-        position: {x: 4033, y: -320.5}
-        character:
-          name: 
-          position: 2
-          emotion: 0
-        direction: 0
-    00000015:
-      type: {class: CharacterNode, ns: , asm: Assembly-CSharp}
-      data:
-        guid: e8b6b64e-d0c6-45fa-92e2-4e9cf92cc172
-        position: {x: 3492, y: 527.5}
-        character:
-          name: 
-          position: 0
-          emotion: 0
-        direction: 0
-    00000016:
-      type: {class: CharacterNode, ns: , asm: Assembly-CSharp}
-      data:
-        guid: 939e515d-44d0-48f5-bfb9-41f122224d42
-        position: {x: 3884.5, y: 597.5}
-        character:
-          name: 
-          position: 2
-          emotion: 0
-        direction: 0
-    00000017:
-      type: {class: CharacterNode, ns: , asm: Assembly-CSharp}
-      data:
         guid: 07d304b5-1aef-4e1d-b2ba-39c90b14e51f
         position: {x: 2651, y: -227}
         character:
@@ -529,16 +489,36 @@ MonoBehaviour:
           position: 1
           emotion: 0
         direction: 0
-    00000018:
-      type: {class: CharacterNode, ns: , asm: Assembly-CSharp}
+    00000014:
+      type: {class: CharacterPositionNode, ns: , asm: Assembly-CSharp}
       data:
-        guid: 498bb28f-bdf4-4ceb-ae56-7aaad20d7872
-        position: {x: 2326, y: -227}
-        character:
-          name: 
-          position: 0
-          emotion: 0
-        direction: 0
+        guid: f49c0341-aa17-48ee-8e62-3f5f145d4417
+        position: {x: 2362, y: -227}
+        characterPosition: 0
+    00000015:
+      type: {class: CharacterPositionNode, ns: , asm: Assembly-CSharp}
+      data:
+        guid: f4c07eea-ff9d-4c3f-8029-9b7e7ab3610d
+        position: {x: 4007, y: -286}
+        characterPosition: 2
+    00000016:
+      type: {class: CharacterPositionNode, ns: , asm: Assembly-CSharp}
+      data:
+        guid: 124ad978-5c57-4fb8-9eca-a3994430683a
+        position: {x: 3697, y: -370}
+        characterPosition: 1
+    00000017:
+      type: {class: CharacterPositionNode, ns: , asm: Assembly-CSharp}
+      data:
+        guid: d60f1fc9-7ee5-4784-80ae-f101d9f065da
+        position: {x: 3511.5, y: 432}
+        characterPosition: 0
+    00000018:
+      type: {class: CharacterPositionNode, ns: , asm: Assembly-CSharp}
+      data:
+        guid: 2752e749-d5e7-412f-9de6-fe5862306a0c
+        position: {x: 3871.5, y: 480}
+        characterPosition: 2
     00000019:
       type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
       data:
@@ -556,13 +536,13 @@ MonoBehaviour:
       data:
         sourceNodeGUID: 1d9c217e-ca9a-4337-b00a-83acd7987731
         sourcePortName: Output
-        destinationNodeGUID: 498bb28f-bdf4-4ceb-ae56-7aaad20d7872
+        destinationNodeGUID: f49c0341-aa17-48ee-8e62-3f5f145d4417
     0000001C:
       type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
       data:
         sourceNodeGUID: bd57cdb9-3259-4b19-b8be-956d980aab20
         sourcePortName: Output
-        destinationNodeGUID: 183a9337-9c5e-4c5e-bde5-3c7a12b11ff2
+        destinationNodeGUID: 124ad978-5c57-4fb8-9eca-a3994430683a
     0000001D:
       type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
       data:
@@ -591,17 +571,17 @@ MonoBehaviour:
       type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
       data:
         sourceNodeGUID: a1c502bc-682c-4466-967b-5056cae20d9a
-        sourcePortName: "\"\u041D\u0430\u0441\u0442\u0440\u0430\u0434\u0430\u0442\u044C\u0441\u044F
+        sourcePortName: "\u041D\u0430\u0441\u0442\u0440\u0430\u0434\u0430\u0442\u044C\u0441\u044F
           \u0435\u0449\u0451 \u0443\u0441\u043F\u0435\u0435\u043C! \u0411\u0443\u0434\u0435\u043C
-          \u043B\u043E\u0432\u0438\u0442\u044C \u043C\u043E\u043C\u0435\u043D\u0442\"!"
+          \u043B\u043E\u0432\u0438\u0442\u044C \u043C\u043E\u043C\u0435\u043D\u0442!"
         destinationNodeGUID: 532dc540-bff3-425f-b70f-51c327ecc241
     00000022:
       type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
       data:
         sourceNodeGUID: a1c502bc-682c-4466-967b-5056cae20d9a
-        sourcePortName: "\"\u041D\u0435\u0442 \u0443\u0436. \u041D\u0435 \u043C\u043E\u0433\u0443
+        sourcePortName: "\u041D\u0435\u0442 \u0443\u0436. \u041D\u0435 \u043C\u043E\u0433\u0443
           \u0440\u0430\u0441\u0441\u043B\u0430\u0431\u0438\u0442\u044C\u0441\u044F
-          \u0441 \u043F\u043E\u0434\u043E\u0431\u043D\u044B\u043C\u0438 \u043C\u044B\u0441\u043B\u044F\u043C\u0438\"."
+          \u0441 \u043F\u043E\u0434\u043E\u0431\u043D\u044B\u043C\u0438 \u043C\u044B\u0441\u043B\u044F\u043C\u0438."
         destinationNodeGUID: 3d06258f-1a07-4bac-9f82-7c03d25afa9a
     00000023:
       type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
@@ -656,52 +636,52 @@ MonoBehaviour:
       data:
         sourceNodeGUID: bd7482e7-38b0-416e-964c-cdb90dfca1e8
         sourcePortName: Output
-        destinationNodeGUID: e8b6b64e-d0c6-45fa-92e2-4e9cf92cc172
+        destinationNodeGUID: d60f1fc9-7ee5-4784-80ae-f101d9f065da
     0000002C:
-      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
-      data:
-        sourceNodeGUID: 183a9337-9c5e-4c5e-bde5-3c7a12b11ff2
-        sourcePortName: Output
-        destinationNodeGUID: b68aa95e-8ee7-4a61-bb2c-d335d6b81be4
-    0000002D:
-      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
-      data:
-        sourceNodeGUID: b68aa95e-8ee7-4a61-bb2c-d335d6b81be4
-        sourcePortName: Output
-        destinationNodeGUID: df28285b-1e7c-40f7-a0b7-cf840141a205
-    0000002E:
-      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
-      data:
-        sourceNodeGUID: e8b6b64e-d0c6-45fa-92e2-4e9cf92cc172
-        sourcePortName: Output
-        destinationNodeGUID: 939e515d-44d0-48f5-bfb9-41f122224d42
-    0000002F:
-      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
-      data:
-        sourceNodeGUID: 939e515d-44d0-48f5-bfb9-41f122224d42
-        sourcePortName: Output
-        destinationNodeGUID: 295803f8-8ef4-4c97-9ea6-dfbd41d2775a
-    00000030:
       type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
       data:
         sourceNodeGUID: 07d304b5-1aef-4e1d-b2ba-39c90b14e51f
         sourcePortName: Output
         destinationNodeGUID: bd57cdb9-3259-4b19-b8be-956d980aab20
+    0000002D:
+      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
+      data:
+        sourceNodeGUID: f49c0341-aa17-48ee-8e62-3f5f145d4417
+        sourcePortName: Output
+        destinationNodeGUID: 07d304b5-1aef-4e1d-b2ba-39c90b14e51f
+    0000002E:
+      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
+      data:
+        sourceNodeGUID: f4c07eea-ff9d-4c3f-8029-9b7e7ab3610d
+        sourcePortName: Output
+        destinationNodeGUID: df28285b-1e7c-40f7-a0b7-cf840141a205
+    0000002F:
+      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
+      data:
+        sourceNodeGUID: 124ad978-5c57-4fb8-9eca-a3994430683a
+        sourcePortName: Output
+        destinationNodeGUID: f4c07eea-ff9d-4c3f-8029-9b7e7ab3610d
+    00000030:
+      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
+      data:
+        sourceNodeGUID: d60f1fc9-7ee5-4784-80ae-f101d9f065da
+        sourcePortName: Output
+        destinationNodeGUID: 2752e749-d5e7-412f-9de6-fe5862306a0c
     00000031:
       type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
       data:
-        sourceNodeGUID: 498bb28f-bdf4-4ceb-ae56-7aaad20d7872
+        sourceNodeGUID: 2752e749-d5e7-412f-9de6-fe5862306a0c
         sourcePortName: Output
-        destinationNodeGUID: 07d304b5-1aef-4e1d-b2ba-39c90b14e51f
+        destinationNodeGUID: 295803f8-8ef4-4c97-9ea6-dfbd41d2775a
     00000032:
       type: {class: DialogueResponseData, ns: , asm: Assembly-CSharp}
       data:
-        text: "\"\u041D\u0430\u0441\u0442\u0440\u0430\u0434\u0430\u0442\u044C\u0441\u044F
+        text: "\u041D\u0430\u0441\u0442\u0440\u0430\u0434\u0430\u0442\u044C\u0441\u044F
           \u0435\u0449\u0451 \u0443\u0441\u043F\u0435\u0435\u043C! \u0411\u0443\u0434\u0435\u043C
-          \u043B\u043E\u0432\u0438\u0442\u044C \u043C\u043E\u043C\u0435\u043D\u0442\"!"
+          \u043B\u043E\u0432\u0438\u0442\u044C \u043C\u043E\u043C\u0435\u043D\u0442!"
     00000033:
       type: {class: DialogueResponseData, ns: , asm: Assembly-CSharp}
       data:
-        text: "\"\u041D\u0435\u0442 \u0443\u0436. \u041D\u0435 \u043C\u043E\u0433\u0443
+        text: "\u041D\u0435\u0442 \u0443\u0436. \u041D\u0435 \u043C\u043E\u0433\u0443
           \u0440\u0430\u0441\u0441\u043B\u0430\u0431\u0438\u0442\u044C\u0441\u044F
-          \u0441 \u043F\u043E\u0434\u043E\u0431\u043D\u044B\u043C\u0438 \u043C\u044B\u0441\u043B\u044F\u043C\u0438\"."
+          \u0441 \u043F\u043E\u0434\u043E\u0431\u043D\u044B\u043C\u0438 \u043C\u044B\u0441\u043B\u044F\u043C\u0438."

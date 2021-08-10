@@ -145,30 +145,13 @@ MonoBehaviour:
     00000002:
       type: {class: MonologueNode, ns: , asm: Assembly-CSharp}
       data:
-        guid: f75ca047-2c38-455a-96f1-6801f16c93f9
-        position: {x: 1289.5, y: 200}
-        texts:
-        - James!
-        speakerName: Zari
-    00000003:
-      type: {class: MonologueNode, ns: , asm: Assembly-CSharp}
-      data:
         guid: a3cc3582-d2d2-45d9-9d60-2efa2c9b668a
         position: {x: 2073.5, y: 323.5}
         texts:
         - Looking back, the guy saw Zari hurrying to meet him. She was waving at
           him and looked more than enthusiastic.
         speakerName: 
-    00000004:
-      type: {class: MonologueNode, ns: , asm: Assembly-CSharp}
-      data:
-        guid: 421a366e-d597-4c4b-8f9f-3af771fd7c50
-        position: {x: 2686.5, y: 200}
-        texts:
-        - Hello. One more time. I'm sorry, I was in such a hurry and I was tired.
-          Has Arten come yet?
-        speakerName: Zari
-    00000005:
+    00000003:
       type: {class: MonologueNode, ns: , asm: Assembly-CSharp}
       data:
         guid: d25bc17c-4860-49fb-85a4-6d9b4ca72296
@@ -176,7 +159,7 @@ MonoBehaviour:
         texts:
         - Something must have delayed him. Something urgent.
         speakerName: Zari
-    00000006:
+    00000004:
       type: {class: MonologueNode, ns: , asm: Assembly-CSharp}
       data:
         guid: 01a1ff5b-c82f-495a-8630-edc9661c305a
@@ -184,7 +167,7 @@ MonoBehaviour:
         texts:
         - And you know even better than I do that this is extremely unlikely.
         speakerName: James
-    00000007:
+    00000005:
       type: {class: MonologueNode, ns: , asm: Assembly-CSharp}
       data:
         guid: 22907981-ea89-45e0-8386-4b6023d80d6c
@@ -197,7 +180,7 @@ MonoBehaviour:
           fact that Arten was terrible in the manifestations of himself as a man
           who was in a couple.
         speakerName: 
-    00000008:
+    00000006:
       type: {class: MonologueNode, ns: , asm: Assembly-CSharp}
       data:
         guid: 5bfb3951-96b1-4a38-864f-3bc85d7224ef
@@ -210,7 +193,7 @@ MonoBehaviour:
           brief look so far, but there is a lot of useful information there.
         - I can not only treat you effectively, but even ... make you stronger. Seriously!
         speakerName: Zari
-    00000009:
+    00000007:
       type: {class: MonologueNode, ns: , asm: Assembly-CSharp}
       data:
         guid: 98d88433-5cfe-419d-aa04-8e206a1eea49
@@ -218,7 +201,7 @@ MonoBehaviour:
         texts:
         - Is it because you're so horny?
         speakerName: James
-    0000000A:
+    00000008:
       type: {class: MonologueNode, ns: , asm: Assembly-CSharp}
       data:
         guid: 636ea586-8f11-4a73-95cd-ea16b57c707c
@@ -226,7 +209,7 @@ MonoBehaviour:
         texts:
         - Me? What? Of course not. I'm not horny.
         speakerName: Zari
-    0000000B:
+    00000009:
       type: {class: MonologueNode, ns: , asm: Assembly-CSharp}
       data:
         guid: b10b8374-d19c-4c41-b30f-a1a52b84ab39
@@ -234,7 +217,7 @@ MonoBehaviour:
         texts:
         - Inspired?
         speakerName: James
-    0000000C:
+    0000000A:
       type: {class: MonologueNode, ns: , asm: Assembly-CSharp}
       data:
         guid: 789d7024-3d28-4fcc-b9fa-66e6ccdca554
@@ -243,7 +226,7 @@ MonoBehaviour:
         - Okay, okay, I get it. Yes, I think so. After all, with such knowledge,
           I no longer feel completely useless.
         speakerName: Zari
-    0000000D:
+    0000000B:
       type: {class: MonologueNode, ns: , asm: Assembly-CSharp}
       data:
         guid: ae690d55-ab74-4d0f-a3a0-e30d9247d7eb
@@ -252,7 +235,7 @@ MonoBehaviour:
         - Relax, Zari. I know exactly what you're talking about. And believe me,
           I'm happy for you.
         speakerName: James
-    0000000E:
+    0000000C:
       type: {class: MonologueNode, ns: , asm: Assembly-CSharp}
       data:
         guid: ffbd6d1e-f4ca-48c2-b577-6f9fc8790a21
@@ -260,7 +243,7 @@ MonoBehaviour:
         texts:
         - Well. What about you? How did it go?
         speakerName: Zari
-    0000000F:
+    0000000D:
       type: {class: MonologueNode, ns: , asm: Assembly-CSharp}
       data:
         guid: 46a63ac6-8529-417e-8ce4-716d10f040f8
@@ -272,7 +255,7 @@ MonoBehaviour:
           for our arrival. It is a great success for him to get rid of unnecessary
           junk for anyone.
         speakerName: James
-    00000010:
+    0000000E:
       type: {class: MonologueNode, ns: , asm: Assembly-CSharp}
       data:
         guid: fa0735b4-b40a-4940-932f-0b5ef55f12ba
@@ -280,7 +263,7 @@ MonoBehaviour:
         texts:
         - Hey! Well, you just want everything at once, my friend.
         speakerName: Arten
-    00000011:
+    0000000F:
       type: {class: MonologueNode, ns: , asm: Assembly-CSharp}
       data:
         guid: 08545c31-81a6-4a0c-b15b-b5a51511c302
@@ -288,7 +271,7 @@ MonoBehaviour:
         texts:
         - Arten appeared behind James and Zari as if by magic.
         speakerName: 
-    00000012:
+    00000010:
       type: {class: MonologueNode, ns: , asm: Assembly-CSharp}
       data:
         guid: 9b365651-50bb-4e59-a9e3-313f8d0abf78
@@ -299,7 +282,7 @@ MonoBehaviour:
           just needs to start.
         - Stand up and fight back against the scoundrels. And it will be us!
         speakerName: Arten
-    00000013:
+    00000011:
       type: {class: MonologueNode, ns: , asm: Assembly-CSharp}
       data:
         guid: 58f3388f-2e34-4690-b213-38b2dc2d586c
@@ -307,7 +290,7 @@ MonoBehaviour:
         texts:
         - What curious reincarnations. Are you also more enthusiastic than you were?
         speakerName: James
-    00000014:
+    00000012:
       type: {class: MonologueNode, ns: , asm: Assembly-CSharp}
       data:
         guid: 7b30d211-b539-44d4-b27c-93780f215d7d
@@ -318,7 +301,7 @@ MonoBehaviour:
         - When we're done with them, we'll head north. There is a lot of work there!
           You can trust me.
         speakerName: Arten
-    00000015:
+    00000013:
       type: {class: MonologueNode, ns: , asm: Assembly-CSharp}
       data:
         guid: 3fe16c2f-1d61-4771-92cd-09448acc3f27
@@ -326,7 +309,7 @@ MonoBehaviour:
         texts:
         - Honey. What about the room?
         speakerName: Zari
-    00000016:
+    00000014:
       type: {class: MonologueNode, ns: , asm: Assembly-CSharp}
       data:
         guid: f53a47cc-23ff-4c80-81bc-744d92cdf0b1
@@ -337,7 +320,7 @@ MonoBehaviour:
         - Zari waited in hope. And James anticipated the answer long before the question
           was asked.
         speakerName: 
-    00000017:
+    00000015:
       type: {class: MonologueNode, ns: , asm: Assembly-CSharp}
       data:
         guid: e8d9ca9d-460b-4a8a-8b89-539941b50796
@@ -345,7 +328,7 @@ MonoBehaviour:
         texts:
         - You didn't get us a room? Arten!
         speakerName: Zari
-    00000018:
+    00000016:
       type: {class: MonologueNode, ns: , asm: Assembly-CSharp}
       data:
         guid: 0ad99e98-b110-4807-8ba5-48149c62422f
@@ -354,7 +337,7 @@ MonoBehaviour:
         - Hey, hey! When I arrived, all the rooms were already occupied. Honestly.
           I would not say that this is exactly my fault. What should I have done?
         speakerName: Arten
-    00000019:
+    00000017:
       type: {class: MonologueNode, ns: , asm: Assembly-CSharp}
       data:
         guid: 9fb47345-22aa-4c66-b5f2-b7cd710516ea
@@ -362,7 +345,7 @@ MonoBehaviour:
         texts:
         - What should we do now? Sleep on the ground?
         speakerName: Zari
-    0000001A:
+    00000018:
       type: {class: MonologueNode, ns: , asm: Assembly-CSharp}
       data:
         guid: ab04cc4a-b317-4b50-a30c-fd36242c23d9
@@ -371,7 +354,7 @@ MonoBehaviour:
         - Zari, don't panic. We'll figure something out. In the end, we will take
           you to your aunt's house, where you will spend the night in peace.
         speakerName: James
-    0000001B:
+    00000019:
       type: {class: MonologueNode, ns: , asm: Assembly-CSharp}
       data:
         guid: 7504791c-75a5-4419-a616-956503635344
@@ -380,7 +363,7 @@ MonoBehaviour:
         - We'll all spend the night there. Of course. But Arten should know very
           well that I don't like to embarrass Miam.
         speakerName: Zari
-    0000001C:
+    0000001A:
       type: {class: MonologueNode, ns: , asm: Assembly-CSharp}
       data:
         guid: 21aab1d7-af5b-44ac-a9bd-362b1b052047
@@ -389,17 +372,7 @@ MonoBehaviour:
         - That's enough. I can see how this conversation is going nowhere. Nothing
           depended on me. Here. And now, with your permission, I'm having fun.
         speakerName: Arten
-    0000001D:
-      type: {class: CharacterNode, ns: , asm: Assembly-CSharp}
-      data:
-        guid: d29a1549-181c-4f77-b273-17529b6a9841
-        position: {x: 16174, y: -52}
-        character:
-          name: 
-          position: 0
-          emotion: 0
-        direction: 0
-    0000001E:
+    0000001B:
       type: {class: MonologueNode, ns: , asm: Assembly-CSharp}
       data:
         guid: 3f69c57c-4811-4c99-9d7b-a84a553a99c7
@@ -408,17 +381,7 @@ MonoBehaviour:
         - And Arten went straight into the thick of the harvest festival with a brave
           step. Soon lost in the crowd of farmers of all ages. James just shrugged.
         speakerName: 
-    0000001F:
-      type: {class: CharacterNode, ns: , asm: Assembly-CSharp}
-      data:
-        guid: 9184ccfd-71b7-4c65-9dd9-6351195c9966
-        position: {x: 17136, y: 118.5}
-        character:
-          name: 
-          position: 1
-          emotion: 0
-        direction: 0
-    00000020:
+    0000001C:
       type: {class: MonologueNode, ns: , asm: Assembly-CSharp}
       data:
         guid: 36708419-465d-4c2a-90db-e6667ab3da4a
@@ -436,12 +399,12 @@ MonoBehaviour:
           houses.
         - They can end life itself.
         speakerName: 
-    00000021:
+    0000001D:
       type: {class: StopNode, ns: , asm: Assembly-CSharp}
       data:
         guid: 09bcc229-00b6-4134-a17c-f312e97e8137
         position: {x: 18201, y: 471}
-    00000022:
+    0000001E:
       type: {class: CharacterNode, ns: , asm: Assembly-CSharp}
       data:
         guid: 8868cdcd-c5af-4765-8280-553bde7507f4
@@ -451,13 +414,13 @@ MonoBehaviour:
           position: 2
           emotion: 2
         direction: 1
-    00000023:
+    0000001F:
       type: {class: LocationNode, ns: , asm: Assembly-CSharp}
       data:
         guid: 9954cac3-f072-43f5-8e20-715c7b99cd88
         position: {x: 219, y: 276}
         name: VillageCloseViewNight
-    00000024:
+    00000020:
       type: {class: CharacterNode, ns: , asm: Assembly-CSharp}
       data:
         guid: 523bfec6-6b59-4bc2-8932-51b7ce11511d
@@ -467,7 +430,7 @@ MonoBehaviour:
           position: 1
           emotion: 1
         direction: 0
-    00000025:
+    00000021:
       type: {class: CharacterNode, ns: , asm: Assembly-CSharp}
       data:
         guid: dd5c6570-c9cc-44ab-af39-e8d31fa227cd
@@ -477,7 +440,7 @@ MonoBehaviour:
           position: 2
           emotion: 0
         direction: 1
-    00000026:
+    00000022:
       type: {class: MonologueNode, ns: , asm: Assembly-CSharp}
       data:
         guid: db62bc1b-064c-4722-a8a2-f1d332e0c650
@@ -486,7 +449,7 @@ MonoBehaviour:
         - Knowing the peculiarities of our characters, it does not surprise me that
           Arten always comes last.
         speakerName: James
-    00000027:
+    00000023:
       type: {class: CharacterNode, ns: , asm: Assembly-CSharp}
       data:
         guid: 7204a522-7689-4728-a86e-b457c593659b
@@ -496,7 +459,7 @@ MonoBehaviour:
           position: 1
           emotion: 0
         direction: 0
-    00000028:
+    00000024:
       type: {class: CharacterNode, ns: , asm: Assembly-CSharp}
       data:
         guid: ce200d17-c822-4535-aa8b-fb9ae1fd0ef5
@@ -506,7 +469,7 @@ MonoBehaviour:
           position: 0
           emotion: 1
         direction: 0
-    00000029:
+    00000025:
       type: {class: MonologueNode, ns: , asm: Assembly-CSharp}
       data:
         guid: 38920aa3-00cd-4381-bc1c-2979fe1895c8
@@ -514,7 +477,7 @@ MonoBehaviour:
         texts:
         - "Khm... It's not that things are going right quite well\u2026"
         speakerName: Arten
-    0000002A:
+    00000026:
       type: {class: CharacterNode, ns: , asm: Assembly-CSharp}
       data:
         guid: 9d2de349-54d3-45fc-891b-d6b9142fa943
@@ -524,7 +487,7 @@ MonoBehaviour:
           position: 0
           emotion: 2
         direction: 0
-    0000002B:
+    00000027:
       type: {class: CharacterNode, ns: , asm: Assembly-CSharp}
       data:
         guid: f9528f3c-1903-4e2f-9222-37ba8a9f4550
@@ -534,12 +497,41 @@ MonoBehaviour:
           position: 1
           emotion: 5
         direction: 0
+    00000028:
+      type: {class: MonologueNode, ns: , asm: Assembly-CSharp}
+      data:
+        guid: f75ca047-2c38-455a-96f1-6801f16c93f9
+        position: {x: 1289.5, y: 200}
+        texts:
+        - James!
+        speakerName: Zari
+    00000029:
+      type: {class: MonologueNode, ns: , asm: Assembly-CSharp}
+      data:
+        guid: 421a366e-d597-4c4b-8f9f-3af771fd7c50
+        position: {x: 2686.5, y: 200}
+        texts:
+        - Hello. One more time. I'm sorry, I was in such a hurry and I was tired.
+          Has Arten come yet?
+        speakerName: Zari
+    0000002A:
+      type: {class: CharacterPositionNode, ns: , asm: Assembly-CSharp}
+      data:
+        guid: 9c1130de-7ba3-4057-9100-906a343743ad
+        position: {x: 16231, y: 115}
+        characterPosition: 0
+    0000002B:
+      type: {class: CharacterPositionNode, ns: , asm: Assembly-CSharp}
+      data:
+        guid: 9df9a276-4819-4677-868c-d78473e6335a
+        position: {x: 17198, y: 247}
+        characterPosition: 1
     0000002C:
       type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
       data:
-        sourceNodeGUID: 8868cdcd-c5af-4765-8280-553bde7507f4
+        sourceNodeGUID: e46ed28e-cc3a-494b-8052-0b526691fab2
         sourcePortName: Output
-        destinationNodeGUID: 6479486f-44a0-4dfc-b471-6dc203f92340
+        destinationNodeGUID: 9954cac3-f072-43f5-8e20-715c7b99cd88
     0000002D:
       type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
       data:
@@ -549,246 +541,246 @@ MonoBehaviour:
     0000002E:
       type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
       data:
-        sourceNodeGUID: f75ca047-2c38-455a-96f1-6801f16c93f9
-        sourcePortName: Output
-        destinationNodeGUID: 523bfec6-6b59-4bc2-8932-51b7ce11511d
-    0000002F:
-      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
-      data:
-        sourceNodeGUID: 523bfec6-6b59-4bc2-8932-51b7ce11511d
-        sourcePortName: Output
-        destinationNodeGUID: a3cc3582-d2d2-45d9-9d60-2efa2c9b668a
-    00000030:
-      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
-      data:
         sourceNodeGUID: a3cc3582-d2d2-45d9-9d60-2efa2c9b668a
         sourcePortName: Output
         destinationNodeGUID: 421a366e-d597-4c4b-8f9f-3af771fd7c50
-    00000031:
-      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
-      data:
-        sourceNodeGUID: db62bc1b-064c-4722-a8a2-f1d332e0c650
-        sourcePortName: Output
-        destinationNodeGUID: d25bc17c-4860-49fb-85a4-6d9b4ca72296
-    00000032:
+    0000002F:
       type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
       data:
         sourceNodeGUID: d25bc17c-4860-49fb-85a4-6d9b4ca72296
         sourcePortName: Output
         destinationNodeGUID: 01a1ff5b-c82f-495a-8630-edc9661c305a
-    00000033:
+    00000030:
       type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
       data:
         sourceNodeGUID: 01a1ff5b-c82f-495a-8630-edc9661c305a
         sourcePortName: Output
         destinationNodeGUID: 22907981-ea89-45e0-8386-4b6023d80d6c
-    00000034:
+    00000031:
       type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
       data:
         sourceNodeGUID: 22907981-ea89-45e0-8386-4b6023d80d6c
         sourcePortName: Output
         destinationNodeGUID: 5bfb3951-96b1-4a38-864f-3bc85d7224ef
-    00000035:
+    00000032:
       type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
       data:
         sourceNodeGUID: 5bfb3951-96b1-4a38-864f-3bc85d7224ef
         sourcePortName: Output
         destinationNodeGUID: 98d88433-5cfe-419d-aa04-8e206a1eea49
-    00000036:
-      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
-      data:
-        sourceNodeGUID: 636ea586-8f11-4a73-95cd-ea16b57c707c
-        sourcePortName: Output
-        destinationNodeGUID: b10b8374-d19c-4c41-b30f-a1a52b84ab39
-    00000037:
-      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
-      data:
-        sourceNodeGUID: b10b8374-d19c-4c41-b30f-a1a52b84ab39
-        sourcePortName: Output
-        destinationNodeGUID: 789d7024-3d28-4fcc-b9fa-66e6ccdca554
-    00000038:
-      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
-      data:
-        sourceNodeGUID: 789d7024-3d28-4fcc-b9fa-66e6ccdca554
-        sourcePortName: Output
-        destinationNodeGUID: ae690d55-ab74-4d0f-a3a0-e30d9247d7eb
-    00000039:
-      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
-      data:
-        sourceNodeGUID: ae690d55-ab74-4d0f-a3a0-e30d9247d7eb
-        sourcePortName: Output
-        destinationNodeGUID: ffbd6d1e-f4ca-48c2-b577-6f9fc8790a21
-    0000003A:
-      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
-      data:
-        sourceNodeGUID: ffbd6d1e-f4ca-48c2-b577-6f9fc8790a21
-        sourcePortName: Output
-        destinationNodeGUID: 46a63ac6-8529-417e-8ce4-716d10f040f8
-    0000003B:
-      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
-      data:
-        sourceNodeGUID: 46a63ac6-8529-417e-8ce4-716d10f040f8
-        sourcePortName: Output
-        destinationNodeGUID: fa0735b4-b40a-4940-932f-0b5ef55f12ba
-    0000003C:
-      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
-      data:
-        sourceNodeGUID: fa0735b4-b40a-4940-932f-0b5ef55f12ba
-        sourcePortName: Output
-        destinationNodeGUID: ce200d17-c822-4535-aa8b-fb9ae1fd0ef5
-    0000003D:
-      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
-      data:
-        sourceNodeGUID: ce200d17-c822-4535-aa8b-fb9ae1fd0ef5
-        sourcePortName: Output
-        destinationNodeGUID: 08545c31-81a6-4a0c-b15b-b5a51511c302
-    0000003E:
-      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
-      data:
-        sourceNodeGUID: 08545c31-81a6-4a0c-b15b-b5a51511c302
-        sourcePortName: Output
-        destinationNodeGUID: 9b365651-50bb-4e59-a9e3-313f8d0abf78
-    0000003F:
-      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
-      data:
-        sourceNodeGUID: 9b365651-50bb-4e59-a9e3-313f8d0abf78
-        sourcePortName: Output
-        destinationNodeGUID: 58f3388f-2e34-4690-b213-38b2dc2d586c
-    00000040:
-      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
-      data:
-        sourceNodeGUID: 58f3388f-2e34-4690-b213-38b2dc2d586c
-        sourcePortName: Output
-        destinationNodeGUID: 7b30d211-b539-44d4-b27c-93780f215d7d
-    00000041:
-      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
-      data:
-        sourceNodeGUID: 7b30d211-b539-44d4-b27c-93780f215d7d
-        sourcePortName: Output
-        destinationNodeGUID: 3fe16c2f-1d61-4771-92cd-09448acc3f27
-    00000042:
-      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
-      data:
-        sourceNodeGUID: 3fe16c2f-1d61-4771-92cd-09448acc3f27
-        sourcePortName: Output
-        destinationNodeGUID: f53a47cc-23ff-4c80-81bc-744d92cdf0b1
-    00000043:
-      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
-      data:
-        sourceNodeGUID: e8d9ca9d-460b-4a8a-8b89-539941b50796
-        sourcePortName: Output
-        destinationNodeGUID: 0ad99e98-b110-4807-8ba5-48149c62422f
-    00000044:
-      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
-      data:
-        sourceNodeGUID: 0ad99e98-b110-4807-8ba5-48149c62422f
-        sourcePortName: Output
-        destinationNodeGUID: 9fb47345-22aa-4c66-b5f2-b7cd710516ea
-    00000045:
-      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
-      data:
-        sourceNodeGUID: 9fb47345-22aa-4c66-b5f2-b7cd710516ea
-        sourcePortName: Output
-        destinationNodeGUID: ab04cc4a-b317-4b50-a30c-fd36242c23d9
-    00000046:
-      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
-      data:
-        sourceNodeGUID: ab04cc4a-b317-4b50-a30c-fd36242c23d9
-        sourcePortName: Output
-        destinationNodeGUID: 7504791c-75a5-4419-a616-956503635344
-    00000047:
-      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
-      data:
-        sourceNodeGUID: 7504791c-75a5-4419-a616-956503635344
-        sourcePortName: Output
-        destinationNodeGUID: 21aab1d7-af5b-44ac-a9bd-362b1b052047
-    00000048:
-      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
-      data:
-        sourceNodeGUID: 21aab1d7-af5b-44ac-a9bd-362b1b052047
-        sourcePortName: Output
-        destinationNodeGUID: d29a1549-181c-4f77-b273-17529b6a9841
-    00000049:
-      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
-      data:
-        sourceNodeGUID: d29a1549-181c-4f77-b273-17529b6a9841
-        sourcePortName: Output
-        destinationNodeGUID: 3f69c57c-4811-4c99-9d7b-a84a553a99c7
-    0000004A:
-      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
-      data:
-        sourceNodeGUID: 3f69c57c-4811-4c99-9d7b-a84a553a99c7
-        sourcePortName: Output
-        destinationNodeGUID: 9184ccfd-71b7-4c65-9dd9-6351195c9966
-    0000004B:
-      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
-      data:
-        sourceNodeGUID: 9184ccfd-71b7-4c65-9dd9-6351195c9966
-        sourcePortName: Output
-        destinationNodeGUID: 36708419-465d-4c2a-90db-e6667ab3da4a
-    0000004C:
-      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
-      data:
-        sourceNodeGUID: 36708419-465d-4c2a-90db-e6667ab3da4a
-        sourcePortName: Output
-        destinationNodeGUID: 09bcc229-00b6-4134-a17c-f312e97e8137
-    0000004D:
-      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
-      data:
-        sourceNodeGUID: e46ed28e-cc3a-494b-8052-0b526691fab2
-        sourcePortName: Output
-        destinationNodeGUID: 9954cac3-f072-43f5-8e20-715c7b99cd88
-    0000004E:
-      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
-      data:
-        sourceNodeGUID: 9954cac3-f072-43f5-8e20-715c7b99cd88
-        sourcePortName: Output
-        destinationNodeGUID: 8868cdcd-c5af-4765-8280-553bde7507f4
-    0000004F:
-      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
-      data:
-        sourceNodeGUID: 421a366e-d597-4c4b-8f9f-3af771fd7c50
-        sourcePortName: Output
-        destinationNodeGUID: dd5c6570-c9cc-44ab-af39-e8d31fa227cd
-    00000050:
-      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
-      data:
-        sourceNodeGUID: dd5c6570-c9cc-44ab-af39-e8d31fa227cd
-        sourcePortName: Output
-        destinationNodeGUID: db62bc1b-064c-4722-a8a2-f1d332e0c650
-    00000051:
+    00000033:
       type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
       data:
         sourceNodeGUID: 98d88433-5cfe-419d-aa04-8e206a1eea49
         sourcePortName: Output
         destinationNodeGUID: 7204a522-7689-4728-a86e-b457c593659b
-    00000052:
+    00000034:
       type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
       data:
-        sourceNodeGUID: 7204a522-7689-4728-a86e-b457c593659b
+        sourceNodeGUID: 636ea586-8f11-4a73-95cd-ea16b57c707c
         sourcePortName: Output
-        destinationNodeGUID: 636ea586-8f11-4a73-95cd-ea16b57c707c
-    00000053:
+        destinationNodeGUID: b10b8374-d19c-4c41-b30f-a1a52b84ab39
+    00000035:
       type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
       data:
-        sourceNodeGUID: 9d2de349-54d3-45fc-891b-d6b9142fa943
+        sourceNodeGUID: b10b8374-d19c-4c41-b30f-a1a52b84ab39
         sourcePortName: Output
-        destinationNodeGUID: 38920aa3-00cd-4381-bc1c-2979fe1895c8
-    00000054:
+        destinationNodeGUID: 789d7024-3d28-4fcc-b9fa-66e6ccdca554
+    00000036:
+      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
+      data:
+        sourceNodeGUID: 789d7024-3d28-4fcc-b9fa-66e6ccdca554
+        sourcePortName: Output
+        destinationNodeGUID: ae690d55-ab74-4d0f-a3a0-e30d9247d7eb
+    00000037:
+      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
+      data:
+        sourceNodeGUID: ae690d55-ab74-4d0f-a3a0-e30d9247d7eb
+        sourcePortName: Output
+        destinationNodeGUID: ffbd6d1e-f4ca-48c2-b577-6f9fc8790a21
+    00000038:
+      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
+      data:
+        sourceNodeGUID: ffbd6d1e-f4ca-48c2-b577-6f9fc8790a21
+        sourcePortName: Output
+        destinationNodeGUID: 46a63ac6-8529-417e-8ce4-716d10f040f8
+    00000039:
+      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
+      data:
+        sourceNodeGUID: 46a63ac6-8529-417e-8ce4-716d10f040f8
+        sourcePortName: Output
+        destinationNodeGUID: fa0735b4-b40a-4940-932f-0b5ef55f12ba
+    0000003A:
+      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
+      data:
+        sourceNodeGUID: fa0735b4-b40a-4940-932f-0b5ef55f12ba
+        sourcePortName: Output
+        destinationNodeGUID: ce200d17-c822-4535-aa8b-fb9ae1fd0ef5
+    0000003B:
+      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
+      data:
+        sourceNodeGUID: 08545c31-81a6-4a0c-b15b-b5a51511c302
+        sourcePortName: Output
+        destinationNodeGUID: 9b365651-50bb-4e59-a9e3-313f8d0abf78
+    0000003C:
+      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
+      data:
+        sourceNodeGUID: 9b365651-50bb-4e59-a9e3-313f8d0abf78
+        sourcePortName: Output
+        destinationNodeGUID: 58f3388f-2e34-4690-b213-38b2dc2d586c
+    0000003D:
+      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
+      data:
+        sourceNodeGUID: 58f3388f-2e34-4690-b213-38b2dc2d586c
+        sourcePortName: Output
+        destinationNodeGUID: 7b30d211-b539-44d4-b27c-93780f215d7d
+    0000003E:
+      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
+      data:
+        sourceNodeGUID: 7b30d211-b539-44d4-b27c-93780f215d7d
+        sourcePortName: Output
+        destinationNodeGUID: 3fe16c2f-1d61-4771-92cd-09448acc3f27
+    0000003F:
+      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
+      data:
+        sourceNodeGUID: 3fe16c2f-1d61-4771-92cd-09448acc3f27
+        sourcePortName: Output
+        destinationNodeGUID: f53a47cc-23ff-4c80-81bc-744d92cdf0b1
+    00000040:
       type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
       data:
         sourceNodeGUID: f53a47cc-23ff-4c80-81bc-744d92cdf0b1
         sourcePortName: Output
         destinationNodeGUID: 9d2de349-54d3-45fc-891b-d6b9142fa943
-    00000055:
+    00000041:
+      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
+      data:
+        sourceNodeGUID: e8d9ca9d-460b-4a8a-8b89-539941b50796
+        sourcePortName: Output
+        destinationNodeGUID: 0ad99e98-b110-4807-8ba5-48149c62422f
+    00000042:
+      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
+      data:
+        sourceNodeGUID: 0ad99e98-b110-4807-8ba5-48149c62422f
+        sourcePortName: Output
+        destinationNodeGUID: 9fb47345-22aa-4c66-b5f2-b7cd710516ea
+    00000043:
+      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
+      data:
+        sourceNodeGUID: 9fb47345-22aa-4c66-b5f2-b7cd710516ea
+        sourcePortName: Output
+        destinationNodeGUID: ab04cc4a-b317-4b50-a30c-fd36242c23d9
+    00000044:
+      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
+      data:
+        sourceNodeGUID: ab04cc4a-b317-4b50-a30c-fd36242c23d9
+        sourcePortName: Output
+        destinationNodeGUID: 7504791c-75a5-4419-a616-956503635344
+    00000045:
+      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
+      data:
+        sourceNodeGUID: 7504791c-75a5-4419-a616-956503635344
+        sourcePortName: Output
+        destinationNodeGUID: 21aab1d7-af5b-44ac-a9bd-362b1b052047
+    00000046:
+      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
+      data:
+        sourceNodeGUID: 21aab1d7-af5b-44ac-a9bd-362b1b052047
+        sourcePortName: Output
+        destinationNodeGUID: 9c1130de-7ba3-4057-9100-906a343743ad
+    00000047:
+      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
+      data:
+        sourceNodeGUID: 3f69c57c-4811-4c99-9d7b-a84a553a99c7
+        sourcePortName: Output
+        destinationNodeGUID: 9df9a276-4819-4677-868c-d78473e6335a
+    00000048:
+      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
+      data:
+        sourceNodeGUID: 36708419-465d-4c2a-90db-e6667ab3da4a
+        sourcePortName: Output
+        destinationNodeGUID: 09bcc229-00b6-4134-a17c-f312e97e8137
+    00000049:
+      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
+      data:
+        sourceNodeGUID: 8868cdcd-c5af-4765-8280-553bde7507f4
+        sourcePortName: Output
+        destinationNodeGUID: 6479486f-44a0-4dfc-b471-6dc203f92340
+    0000004A:
+      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
+      data:
+        sourceNodeGUID: 9954cac3-f072-43f5-8e20-715c7b99cd88
+        sourcePortName: Output
+        destinationNodeGUID: 8868cdcd-c5af-4765-8280-553bde7507f4
+    0000004B:
+      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
+      data:
+        sourceNodeGUID: 523bfec6-6b59-4bc2-8932-51b7ce11511d
+        sourcePortName: Output
+        destinationNodeGUID: a3cc3582-d2d2-45d9-9d60-2efa2c9b668a
+    0000004C:
+      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
+      data:
+        sourceNodeGUID: dd5c6570-c9cc-44ab-af39-e8d31fa227cd
+        sourcePortName: Output
+        destinationNodeGUID: db62bc1b-064c-4722-a8a2-f1d332e0c650
+    0000004D:
+      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
+      data:
+        sourceNodeGUID: db62bc1b-064c-4722-a8a2-f1d332e0c650
+        sourcePortName: Output
+        destinationNodeGUID: d25bc17c-4860-49fb-85a4-6d9b4ca72296
+    0000004E:
+      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
+      data:
+        sourceNodeGUID: 7204a522-7689-4728-a86e-b457c593659b
+        sourcePortName: Output
+        destinationNodeGUID: 636ea586-8f11-4a73-95cd-ea16b57c707c
+    0000004F:
+      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
+      data:
+        sourceNodeGUID: ce200d17-c822-4535-aa8b-fb9ae1fd0ef5
+        sourcePortName: Output
+        destinationNodeGUID: 08545c31-81a6-4a0c-b15b-b5a51511c302
+    00000050:
       type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
       data:
         sourceNodeGUID: 38920aa3-00cd-4381-bc1c-2979fe1895c8
         sourcePortName: Output
         destinationNodeGUID: f9528f3c-1903-4e2f-9222-37ba8a9f4550
-    00000056:
+    00000051:
+      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
+      data:
+        sourceNodeGUID: 9d2de349-54d3-45fc-891b-d6b9142fa943
+        sourcePortName: Output
+        destinationNodeGUID: 38920aa3-00cd-4381-bc1c-2979fe1895c8
+    00000052:
       type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
       data:
         sourceNodeGUID: f9528f3c-1903-4e2f-9222-37ba8a9f4550
         sourcePortName: Output
         destinationNodeGUID: e8d9ca9d-460b-4a8a-8b89-539941b50796
+    00000053:
+      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
+      data:
+        sourceNodeGUID: f75ca047-2c38-455a-96f1-6801f16c93f9
+        sourcePortName: Output
+        destinationNodeGUID: 523bfec6-6b59-4bc2-8932-51b7ce11511d
+    00000054:
+      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
+      data:
+        sourceNodeGUID: 421a366e-d597-4c4b-8f9f-3af771fd7c50
+        sourcePortName: Output
+        destinationNodeGUID: dd5c6570-c9cc-44ab-af39-e8d31fa227cd
+    00000055:
+      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
+      data:
+        sourceNodeGUID: 9c1130de-7ba3-4057-9100-906a343743ad
+        sourcePortName: Output
+        destinationNodeGUID: 3f69c57c-4811-4c99-9d7b-a84a553a99c7
+    00000056:
+      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
+      data:
+        sourceNodeGUID: 9df9a276-4819-4677-868c-d78473e6335a
+        sourcePortName: Output
+        destinationNodeGUID: 36708419-465d-4c2a-90db-e6667ab3da4a
