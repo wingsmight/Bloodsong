@@ -349,117 +349,117 @@ MonoBehaviour:
     0000001B:
       type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
       data:
-        sourceNodeGUID: df28285b-1e7c-40f7-a0b7-cf840141a205
-        sourcePortName: Output
-        destinationNodeGUID: 295803f8-8ef4-4c97-9ea6-dfbd41d2775a
-    0000001C:
-      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
-      data:
-        sourceNodeGUID: 3d06258f-1a07-4bac-9f82-7c03d25afa9a
-        sourcePortName: Output
-        destinationNodeGUID: d0c428a7-2ddb-455f-8d5b-18301fce3556
-    0000001D:
-      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
-      data:
-        sourceNodeGUID: d0c428a7-2ddb-455f-8d5b-18301fce3556
-        sourcePortName: Output
-        destinationNodeGUID: 4ac88edb-0c49-4401-a741-de04dee4026a
-    0000001E:
-      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
-      data:
-        sourceNodeGUID: b9668ba2-35ff-40ae-a17f-c26ad0b78fdc
-        sourcePortName: Output
-        destinationNodeGUID: f75029ae-d4c1-425e-bfce-f316aa9e065e
-    0000001F:
-      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
-      data:
-        sourceNodeGUID: a1c502bc-682c-4466-967b-5056cae20d9a
-        sourcePortName: We will still have time to suffer! We are catching the moment!
-        destinationNodeGUID: 532dc540-bff3-425f-b70f-51c327ecc241
-    00000020:
-      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
-      data:
-        sourceNodeGUID: a1c502bc-682c-4466-967b-5056cae20d9a
-        sourcePortName: No, I can't relax with such thoughts.
-        destinationNodeGUID: 3d06258f-1a07-4bac-9f82-7c03d25afa9a
-    00000021:
-      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
-      data:
-        sourceNodeGUID: 48bbfbd0-d3be-481c-be94-98e188a2d07d
-        sourcePortName: Output
-        destinationNodeGUID: c33305d7-0af4-4c3e-8136-43f2a457ebc7
-    00000022:
-      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
-      data:
-        sourceNodeGUID: c33305d7-0af4-4c3e-8136-43f2a457ebc7
-        sourcePortName: Output
-        destinationNodeGUID: 1d9c217e-ca9a-4337-b00a-83acd7987731
-    00000023:
-      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
-      data:
-        sourceNodeGUID: b6ac2ede-ca17-48a1-ab9c-230c26e7e171
-        sourcePortName: Output
-        destinationNodeGUID: 1fb5ab40-ff3b-42c3-b1e5-57a200e753ac
-    00000024:
-      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
-      data:
-        sourceNodeGUID: 888046af-1cc7-41e0-a144-fc212104a891
-        sourcePortName: Output
-        destinationNodeGUID: b6ac2ede-ca17-48a1-ab9c-230c26e7e171
-    00000025:
-      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
-      data:
-        sourceNodeGUID: 295803f8-8ef4-4c97-9ea6-dfbd41d2775a
-        sourcePortName: Output
-        destinationNodeGUID: 888046af-1cc7-41e0-a144-fc212104a891
-    00000026:
-      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
-      data:
-        sourceNodeGUID: 4ac88edb-0c49-4401-a741-de04dee4026a
-        sourcePortName: Output
-        destinationNodeGUID: 1e46238a-9bff-4534-af3d-0c998c875315
-    00000027:
-      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
-      data:
-        sourceNodeGUID: 1e46238a-9bff-4534-af3d-0c998c875315
-        sourcePortName: Output
-        destinationNodeGUID: b9668ba2-35ff-40ae-a17f-c26ad0b78fdc
-    00000028:
-      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
-      data:
-        sourceNodeGUID: f75029ae-d4c1-425e-bfce-f316aa9e065e
-        sourcePortName: Output
-        destinationNodeGUID: bd7482e7-38b0-416e-964c-cdb90dfca1e8
-    00000029:
-      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
-      data:
-        sourceNodeGUID: 07d304b5-1aef-4e1d-b2ba-39c90b14e51f
-        sourcePortName: Output
-        destinationNodeGUID: bd57cdb9-3259-4b19-b8be-956d980aab20
-    0000002A:
-      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
-      data:
         sourceNodeGUID: 1d9c217e-ca9a-4337-b00a-83acd7987731
         sourcePortName: Output
         destinationNodeGUID: f49c0341-aa17-48ee-8e62-3f5f145d4417
-    0000002B:
-      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
-      data:
-        sourceNodeGUID: f49c0341-aa17-48ee-8e62-3f5f145d4417
-        sourcePortName: Output
-        destinationNodeGUID: 07d304b5-1aef-4e1d-b2ba-39c90b14e51f
-    0000002C:
+    0000001C:
       type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
       data:
         sourceNodeGUID: bd57cdb9-3259-4b19-b8be-956d980aab20
         sourcePortName: Output
         destinationNodeGUID: 124ad978-5c57-4fb8-9eca-a3994430683a
+    0000001D:
+      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
+      data:
+        sourceNodeGUID: df28285b-1e7c-40f7-a0b7-cf840141a205
+        sourcePortName: Output
+        destinationNodeGUID: 295803f8-8ef4-4c97-9ea6-dfbd41d2775a
+    0000001E:
+      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
+      data:
+        sourceNodeGUID: 3d06258f-1a07-4bac-9f82-7c03d25afa9a
+        sourcePortName: Output
+        destinationNodeGUID: d0c428a7-2ddb-455f-8d5b-18301fce3556
+    0000001F:
+      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
+      data:
+        sourceNodeGUID: d0c428a7-2ddb-455f-8d5b-18301fce3556
+        sourcePortName: Output
+        destinationNodeGUID: 4ac88edb-0c49-4401-a741-de04dee4026a
+    00000020:
+      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
+      data:
+        sourceNodeGUID: b9668ba2-35ff-40ae-a17f-c26ad0b78fdc
+        sourcePortName: Output
+        destinationNodeGUID: f75029ae-d4c1-425e-bfce-f316aa9e065e
+    00000021:
+      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
+      data:
+        sourceNodeGUID: a1c502bc-682c-4466-967b-5056cae20d9a
+        sourcePortName: We will still have time to suffer! We are catching the moment!
+        destinationNodeGUID: 532dc540-bff3-425f-b70f-51c327ecc241
+    00000022:
+      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
+      data:
+        sourceNodeGUID: a1c502bc-682c-4466-967b-5056cae20d9a
+        sourcePortName: ' No, I can''t relax with such thoughts.'
+        destinationNodeGUID: 3d06258f-1a07-4bac-9f82-7c03d25afa9a
+    00000023:
+      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
+      data:
+        sourceNodeGUID: 48bbfbd0-d3be-481c-be94-98e188a2d07d
+        sourcePortName: Output
+        destinationNodeGUID: c33305d7-0af4-4c3e-8136-43f2a457ebc7
+    00000024:
+      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
+      data:
+        sourceNodeGUID: c33305d7-0af4-4c3e-8136-43f2a457ebc7
+        sourcePortName: Output
+        destinationNodeGUID: 1d9c217e-ca9a-4337-b00a-83acd7987731
+    00000025:
+      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
+      data:
+        sourceNodeGUID: b6ac2ede-ca17-48a1-ab9c-230c26e7e171
+        sourcePortName: Output
+        destinationNodeGUID: 1fb5ab40-ff3b-42c3-b1e5-57a200e753ac
+    00000026:
+      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
+      data:
+        sourceNodeGUID: 888046af-1cc7-41e0-a144-fc212104a891
+        sourcePortName: Output
+        destinationNodeGUID: b6ac2ede-ca17-48a1-ab9c-230c26e7e171
+    00000027:
+      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
+      data:
+        sourceNodeGUID: 295803f8-8ef4-4c97-9ea6-dfbd41d2775a
+        sourcePortName: Output
+        destinationNodeGUID: 888046af-1cc7-41e0-a144-fc212104a891
+    00000028:
+      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
+      data:
+        sourceNodeGUID: 4ac88edb-0c49-4401-a741-de04dee4026a
+        sourcePortName: Output
+        destinationNodeGUID: 1e46238a-9bff-4534-af3d-0c998c875315
+    00000029:
+      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
+      data:
+        sourceNodeGUID: 1e46238a-9bff-4534-af3d-0c998c875315
+        sourcePortName: Output
+        destinationNodeGUID: b9668ba2-35ff-40ae-a17f-c26ad0b78fdc
+    0000002A:
+      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
+      data:
+        sourceNodeGUID: f75029ae-d4c1-425e-bfce-f316aa9e065e
+        sourcePortName: Output
+        destinationNodeGUID: bd7482e7-38b0-416e-964c-cdb90dfca1e8
+    0000002B:
+      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
+      data:
+        sourceNodeGUID: bd7482e7-38b0-416e-964c-cdb90dfca1e8
+        sourcePortName: Output
+        destinationNodeGUID: d60f1fc9-7ee5-4784-80ae-f101d9f065da
+    0000002C:
+      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
+      data:
+        sourceNodeGUID: 07d304b5-1aef-4e1d-b2ba-39c90b14e51f
+        sourcePortName: Output
+        destinationNodeGUID: bd57cdb9-3259-4b19-b8be-956d980aab20
     0000002D:
       type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
       data:
-        sourceNodeGUID: 124ad978-5c57-4fb8-9eca-a3994430683a
+        sourceNodeGUID: f49c0341-aa17-48ee-8e62-3f5f145d4417
         sourcePortName: Output
-        destinationNodeGUID: f4c07eea-ff9d-4c3f-8029-9b7e7ab3610d
+        destinationNodeGUID: 07d304b5-1aef-4e1d-b2ba-39c90b14e51f
     0000002E:
       type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
       data:
@@ -469,9 +469,9 @@ MonoBehaviour:
     0000002F:
       type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
       data:
-        sourceNodeGUID: bd7482e7-38b0-416e-964c-cdb90dfca1e8
+        sourceNodeGUID: 124ad978-5c57-4fb8-9eca-a3994430683a
         sourcePortName: Output
-        destinationNodeGUID: d60f1fc9-7ee5-4784-80ae-f101d9f065da
+        destinationNodeGUID: f4c07eea-ff9d-4c3f-8029-9b7e7ab3610d
     00000030:
       type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
       data:
@@ -491,4 +491,4 @@ MonoBehaviour:
     00000033:
       type: {class: DialogueResponseData, ns: , asm: Assembly-CSharp}
       data:
-        text: No, I can't relax with such thoughts.
+        text: ' No, I can''t relax with such thoughts.'
