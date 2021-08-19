@@ -39,8 +39,6 @@ public class StartMonologueNodeView : NodeView<MonologueNode>
     }
     public override void Stop()
     {
-        base.Stop();
-
         monologuePanel.Reset();
         monologuePanel.Hide();
     }

@@ -33,4 +33,18 @@ public class ShowCharacterNodeView : NodeView<CharacterNode>
 
         characterView.Show(character, nodeData.character.emotion, nodeData.direction);
     }
+    public void ActWithoutProcessNext(DialogueGraphData dialogue, CharacterNode nodeData)
+    {
+        var nextNode = dialogue.GetNextNodes(nodeData)[0];
+
+        var characterView = charactersView[nodeData.character.position];
+        Character character = ScriptableObjectFinder.Get<Character>(nodeData.character.name);
+
+        if (nextNode is CharacterNode)
+        {
+            ProcessNext(dialogue, nodeData);
+        }
+
+        characterView.Show(character, nodeData.character.emotion, nodeData.direction);
+    }
 }

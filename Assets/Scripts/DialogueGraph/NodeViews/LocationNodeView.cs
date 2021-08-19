@@ -20,4 +20,8 @@ public class LocationNodeView : NodeView<LocationNode>
 
         backgroundView.Show(new Location(nodeData.name));
     }
+    public void ActWithoutProcessNext(DialogueGraphData dialogue, LocationNode nodeData)
+    {
+        backgroundView.Show(new Location(nodeData.name));
+    }
 }

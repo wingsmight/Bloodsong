@@ -7,21 +7,34 @@ using UnityEngine;
 [Serializable]
 public class BranchNodesStack
 {
+    private static readonly Type[] specificTypes =
+    {
+        typeof(CharacterNode),
+        typeof(CharacterPositionNode),
+        typeof(LocationNode)
+    };
+    private static readonly Type[] exceptionTypes =
+    {
+        typeof(EntryNode),
+        typeof(StopNode)
+    };
+
+
     private List<NodeData> nodes = new List<NodeData>();
 
 
     public void Push(NodeData node)
     {
-        if (nodes.Count > 0 && node == nodes.Last())
-            return;
-
-        if (node is EntryNode || node is StopNode)
+        if (IsEqualsLast(node) || IsExceptionType(node.GetType()))
             return;
 
         nodes.Add(node);
     }
     public NodeData Pop()
     {
+        if (nodes.Count <= 0)
+            return null;
+
         int lastNodeIndex = nodes.Count - 1;
         var peekNode = nodes[lastNodeIndex];
         nodes.RemoveAt(lastNodeIndex);
@@ -50,16 +63,12 @@ public class BranchNodesStack
         else if (peekNode is LocationNode)
         {
             LocationNode locationPeekNode = peekNode as LocationNode;
-            for (int i = lastNodeIndex - 1; i > 0; i--)
+            for (int i = lastNodeIndex - 1; i >= 0; i--)
             {
                 var node = nodes[i];
                 if (node is LocationNode)
                 {
-                    LocationNode locationNode = node as LocationNode;
-                    if (locationNode.name == locationPeekNode.name)
-                    {
-                        return locationNode;
-                    }
+                    return node;
                 }
             }
 
@@ -98,8 +107,38 @@ public class BranchNodesStack
     }
     public static bool IsSpecificNode(NodeData node)
     {
-        return node is CharacterNode
-            || node is LocationNode;
+        var nodeType = node.GetType();
+
+        foreach (var specificType in specificTypes)
+        {
+            if (nodeType == specificType)
+            {
+                return true;
+            }
+        }
+
+        return false;
     }
+
+    private bool IsExceptionType(Type type)
+    {
+        foreach (var exceptionType in exceptionTypes)
+        {
+            if (type == exceptionType)
+            {
+                return true;
+            }
+        }
+
+        return false;
+    }
+    private bool IsEqualsLast(NodeData node)
+    {
+        return nodes.Count > 0 && node == nodes.Last();
+    }
+
+
+    public NodeData First => Count > 0 ? nodes[0] : null;
+    public NodeData Last => Count > 0 ? nodes[nodes.Count - 1] : null;
     public int Count => nodes.Count;
 }

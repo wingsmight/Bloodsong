@@ -35,4 +35,20 @@ public class HideCharacterNodeView : NodeView<CharacterPositionNode>
 
         characterView.Hide();
     }
+    public void ActWithoutProcessNext(DialogueGraphData dialogue, CharacterPositionNode nodeData)
+    {
+        var characterView = charactersView[nodeData.characterPosition];
+        var nextNode = dialogue.GetNextNodes(nodeData)[0];
+
+        if (nextNode is CharacterNode)
+        {
+            ProcessNext(dialogue, nodeData);
+        }
+        else if (dialogue.GetNextNodes(nodeData)[0] is CharacterPositionNode)
+        {
+            ProcessNext(dialogue, nodeData);
+        }
+
+        characterView.Hide();
+    }
 }

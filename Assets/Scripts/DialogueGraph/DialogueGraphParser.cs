@@ -99,7 +99,6 @@ public class DialogueGraphParser : MonoBehaviour
     }
     public void StopNode(NodeData nodeData)
     {
-
         if (nodeData is DialogueNode)
         {
             dialogueView.Stop();

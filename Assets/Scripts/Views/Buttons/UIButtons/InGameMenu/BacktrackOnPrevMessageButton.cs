@@ -7,9 +7,29 @@ namespace StoryMenu
 {
     public class BacktrackOnPrevMessageButton : StoryMenuButton
     {
+        private static readonly Type[] messageNodeTypes =
+        {
+            typeof(MonologueNode),
+            typeof(SplitMessageNode),
+        };
+
+
+        [SerializeField] private float specificNodeExecutionSeconds;
+        [Space(12)]
+        [SerializeField] private GameObject raycastBlock;
         [SerializeField] private DialogueGraphParser storyGraphParser;
         [SerializeField] private GameDayControl gameDayControl;
         [SerializeField] private StartMonologueNodeView monologueNodeView;
+        [SerializeField] private StartSplitMessageNodeView splitMessageNodeView;
+        [SerializeField] private LocationNodeView locationNodeView;
+        [SerializeField] private ShowCharacterNodeView showCharacterNodeView;
+        [SerializeField] private HideCharacterNodeView hideCharacterNodeView;
+
+
+        private void Start()
+        {
+            EnableAction();
+        }
 
 
         protected override void OnClick()
@@ -19,6 +39,9 @@ namespace StoryMenu
                 return;
 
             var branchNodes = Storage.GetData<GameDayData>().branchNodes;
+            if (branchNodes.Count <= 1 || (branchNodes.Count <= 2 && branchNodes.First is LocationNode))
+                return;
+
             NodeData node = branchNodes.Pop();
             storyGraphParser.StopNode(node);
             do
@@ -34,8 +57,21 @@ namespace StoryMenu
 
                 if (BranchNodesStack.IsSpecificNode(node))
                 {
-                    storyGraphParser.Parse(graph, node);
-                    branchNodes.Pop();
+                    if (node is LocationNode)
+                    {
+                        locationNodeView.ActWithoutProcessNext(graph, node as LocationNode);
+                    }
+                    else if (node is CharacterNode)
+                    {
+                        showCharacterNodeView.ActWithoutProcessNext(graph, node as CharacterNode);
+                    }
+                    else if (node is CharacterPositionNode)
+                    {
+                        hideCharacterNodeView.ActWithoutProcessNext(graph, node as CharacterPositionNode);
+                    }
+
+                    DisableAction();
+                    DelayExecutor.Instance.Execute(specificNodeExecutionSeconds, EnableAction);
                 }
 
                 storyGraphParser.CurrentNode = node;
@@ -49,6 +85,17 @@ namespace StoryMenu
             {
                 storyGraphParser.Parse(graph, node);
             }
+        }
+
+        private void EnableAction()
+        {
+            button.interactable = true;
+            raycastBlock.SetActive(false);
+        }
+        private void DisableAction()
+        {
+            button.interactable = false;
+            raycastBlock.SetActive(true);
         }
     }
 }
