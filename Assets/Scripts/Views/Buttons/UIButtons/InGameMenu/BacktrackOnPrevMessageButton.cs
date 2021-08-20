@@ -20,7 +20,6 @@ namespace StoryMenu
         [SerializeField] private DialogueGraphParser storyGraphParser;
         [SerializeField] private GameDayControl gameDayControl;
         [SerializeField] private StartMonologueNodeView monologueNodeView;
-        [SerializeField] private StartSplitMessageNodeView splitMessageNodeView;
         [SerializeField] private LocationNodeView locationNodeView;
         [SerializeField] private ShowCharacterNodeView showCharacterNodeView;
         [SerializeField] private HideCharacterNodeView hideCharacterNodeView;
@@ -42,8 +41,21 @@ namespace StoryMenu
             if (branchNodes.Count <= 1 || (branchNodes.Count <= 2 && branchNodes.First is LocationNode))
                 return;
 
+            // if (branchNodes.Last is DialogueNode)
+            //     return;
+
             NodeData node = branchNodes.Pop();
             storyGraphParser.StopNode(node);
+            if (node is MonologueNode)
+            {
+                if (gameDayControl.CurrentStoryPhraseIndex > 0)
+                {
+                    branchNodes.Push(node);
+                    monologueNodeView.Act(graph, node as MonologueNode, --gameDayControl.CurrentStoryPhraseIndex);
+
+                    return;
+                }
+            }
             do
             {
                 if (branchNodes.Count > 0)
@@ -77,9 +89,29 @@ namespace StoryMenu
                 storyGraphParser.CurrentNode = node;
             } while (!(node is MonologueNode || node is SplitMessageNode));
 
-            if (node is MonologueNode && gameDayControl.CurrentStoryPhraseIndex > 0)
+            if (node is MonologueNode)
             {
-                monologueNodeView.Act(graph, node as MonologueNode, --gameDayControl.CurrentStoryPhraseIndex);
+                if (gameDayControl.CurrentStoryPhraseIndex == 0)
+                {
+                    branchNodes.Push(node);
+                    gameDayControl.CurrentStoryPhraseIndex = (node as MonologueNode).texts.Count - 1;
+                    monologueNodeView.Act(graph, node as MonologueNode, gameDayControl.CurrentStoryPhraseIndex);
+                }
+                else if (gameDayControl.CurrentStoryPhraseIndex > 0)
+                {
+                    branchNodes.Push(node);
+                    monologueNodeView.Act(graph, node as MonologueNode, --gameDayControl.CurrentStoryPhraseIndex);
+                }
+                else
+                {
+                    var lastNode = branchNodes.Last;
+                    if (lastNode is MonologueNode)
+                    {
+                        gameDayControl.CurrentStoryPhraseIndex = (lastNode as MonologueNode).texts.Count - 1;
+                    }
+                    branchNodes.Push(lastNode);
+                    OnClick();
+                }
             }
             else
             {

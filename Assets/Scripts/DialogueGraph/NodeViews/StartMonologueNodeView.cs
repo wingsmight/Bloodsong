@@ -10,6 +10,7 @@ public class StartMonologueNodeView : NodeView<MonologueNode>
 
 
     [SerializeField] private MonologuePanel monologuePanel;
+    [SerializeField] private GameDayControl gameDayControl;
 
 
     private int phraseIndex = FIRST_PHRASE_INDEX;
@@ -22,6 +23,7 @@ public class StartMonologueNodeView : NodeView<MonologueNode>
     public void Act(DialogueGraphData dialogue, MonologueNode nodeData, int phraseIndex = FIRST_PHRASE_INDEX)
     {
         this.phraseIndex = phraseIndex;
+        gameDayControl.CurrentStoryPhraseIndex = phraseIndex;
 
         Character speaker = ScriptableObjectFinder.Get(nodeData.speakerName, typeof(Character)) as Character;
         monologuePanel.Show(nodeData.texts[phraseIndex], speaker);

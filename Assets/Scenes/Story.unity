@@ -406,6 +406,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueParser: {fileID: 17934409}
   monologuePanel: {fileID: 628814471}
+  gameDayControl: {fileID: 1349510754}
 --- !u!224 &70452148
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3979,7 +3980,7 @@ RectTransform:
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
   m_AnchoredPosition: {x: -8.120117, y: -490}
-  m_SizeDelta: {x: 523.76, y: 1510}
+  m_SizeDelta: {x: 471.88, y: 1510}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &796841922
 MonoBehaviour:
@@ -6215,6 +6216,7 @@ MonoBehaviour:
   locationNodeView: {fileID: 364289741}
   showCharacterNodeView: {fileID: 364289737}
   hideCharacterNodeView: {fileID: 364289742}
+  textTyping: {fileID: 554306584}
 --- !u!114 &1172948051
 MonoBehaviour:
   m_ObjectHideFlags: 0
