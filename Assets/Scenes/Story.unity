@@ -2523,6 +2523,7 @@ MonoBehaviour:
   fadeAnimation: {fileID: 547023179}
   image: {fileID: 547023177}
   emptryColor: {r: 0.1607, g: 0.1607, b: 0.1607, a: 1}
+  backtrackButton: {fileID: 1172948050}
 --- !u!1 &554306580
 GameObject:
   m_ObjectHideFlags: 0
@@ -3899,6 +3900,7 @@ MonoBehaviour:
   position: 2
   image: {fileID: 796841919}
   appearDuration: 0.8
+  backtrackButton: {fileID: 1172948050}
 --- !u!114 &796841917
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4545,6 +4547,7 @@ MonoBehaviour:
   position: 0
   image: {fileID: 905872473}
   appearDuration: 0.8
+  backtrackButton: {fileID: 1172948050}
 --- !u!114 &905872476
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6207,16 +6210,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hasSound: 0
-  specificNodeExecutionSeconds: 0.7
+  specificNodeExecutionSeconds: 1
   raycastBlock: {fileID: 920217892}
   storyGraphParser: {fileID: 17934409}
   gameDayControl: {fileID: 1349510754}
   monologueNodeView: {fileID: 70452147}
-  splitMessageNodeView: {fileID: 364289739}
   locationNodeView: {fileID: 364289741}
   showCharacterNodeView: {fileID: 364289737}
   hideCharacterNodeView: {fileID: 364289742}
-  textTyping: {fileID: 554306584}
 --- !u!114 &1172948051
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6893,6 +6894,7 @@ MonoBehaviour:
   position: 1
   image: {fileID: 1372161498}
   appearDuration: 0.8
+  backtrackButton: {fileID: 1172948050}
 --- !u!114 &1372161501
 MonoBehaviour:
   m_ObjectHideFlags: 0

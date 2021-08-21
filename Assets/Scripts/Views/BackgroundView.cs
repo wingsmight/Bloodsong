@@ -6,9 +6,14 @@ using UnityEngine.UI;
 
 public class BackgroundView : MonoBehaviour, IHidable, IResetable, IDataLoading, IDataSaving
 {
+    private const float HIDE_DURATION = 1.0f;
+
+
     [SerializeField] private FadeAnimation fadeAnimation;
     [SerializeField] private Image image;
     [SerializeField] private Color emptryColor;
+    [Space(12)]
+    [SerializeField] private StoryMenu.BacktrackOnPrevMessageButton backtrackButton;
 
 
     public event Action OnShown;
@@ -21,6 +26,7 @@ public class BackgroundView : MonoBehaviour, IHidable, IResetable, IDataLoading,
     public void Hide()
     {
         fadeAnimation.Disappear();
+        backtrackButton.DisableAction(HIDE_DURATION);
     }
     public void HideImmediately()
     {
@@ -59,6 +65,8 @@ public class BackgroundView : MonoBehaviour, IHidable, IResetable, IDataLoading,
         SetLocation(location);
 
         yield return new WaitWhile(() => !fadeAnimation.IsShowing);
+
+        backtrackButton.EnableAction();
 
         OnShown?.Invoke();
     }

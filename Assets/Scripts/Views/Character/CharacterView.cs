@@ -11,6 +11,8 @@ public class CharacterView : MonoBehaviour
     [SerializeField] private Position position;
     [SerializeField] private Image image;
     [SerializeField] private float appearDuration;
+    [Space(12)]
+    [SerializeField] private StoryMenu.BacktrackOnPrevMessageButton backtrackButton;
 
 
     public event Action OnShown;
@@ -44,6 +46,7 @@ public class CharacterView : MonoBehaviour
             ShowImmediately(character, emotion);
             OnShown?.Invoke();
         }
+        backtrackButton.DisableAction(appearDuration);
     }
     public void ShowWithFade(Character character, Emotion emotion)
     {
@@ -53,6 +56,8 @@ public class CharacterView : MonoBehaviour
 
         fadeView.Show();
 
+        backtrackButton.DisableAction(appearDuration);
+
         OnShown?.Invoke();
     }
     public void Hide()
@@ -60,6 +65,7 @@ public class CharacterView : MonoBehaviour
         characterProperty = null;
 
         fadeView.Hide();
+        backtrackButton.DisableAction(appearDuration);
     }
     public void HideImmediately()
     {

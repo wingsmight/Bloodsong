@@ -25,11 +25,40 @@ namespace StoryMenu
         [SerializeField] private HideCharacterNodeView hideCharacterNodeView;
 
 
+        private Coroutine disableActionCoroutine;
+
+
         private void Start()
         {
             EnableAction();
         }
 
+
+        public void EnableAction()
+        {
+            if (disableActionCoroutine != null)
+            {
+                StopCoroutine(disableActionCoroutine);
+            }
+
+            button.interactable = true;
+            raycastBlock.SetActive(false);
+        }
+        public void DisableAction(float duration)
+        {
+            DisableAction();
+
+            if (disableActionCoroutine != null)
+            {
+                StopCoroutine(disableActionCoroutine);
+            }
+            disableActionCoroutine = StartCoroutine(DisableActionRoutine(duration));
+        }
+        public void DisableAction()
+        {
+            button.interactable = false;
+            raycastBlock.SetActive(true);
+        }
 
         protected override void OnClick()
         {
@@ -82,8 +111,7 @@ namespace StoryMenu
                         hideCharacterNodeView.ActWithoutProcessNext(graph, node as CharacterPositionNode);
                     }
 
-                    DisableAction();
-                    DelayExecutor.Instance.Execute(specificNodeExecutionSeconds, EnableAction);
+                    DisableAction(specificNodeExecutionSeconds);
                 }
 
                 storyGraphParser.CurrentNode = node;
@@ -119,15 +147,11 @@ namespace StoryMenu
             }
         }
 
-        private void EnableAction()
+        private IEnumerator DisableActionRoutine(float duration)
         {
-            button.interactable = true;
-            raycastBlock.SetActive(false);
-        }
-        private void DisableAction()
-        {
-            button.interactable = false;
-            raycastBlock.SetActive(true);
+            yield return new WaitForSeconds(duration);
+
+            EnableAction();
         }
     }
 }
