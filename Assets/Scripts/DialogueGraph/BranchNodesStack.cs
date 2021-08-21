@@ -18,15 +18,25 @@ public class BranchNodesStack
         typeof(EntryNode),
         typeof(StopNode)
     };
+    private static readonly Type[] finishTypes =
+    {
+        typeof(DialogueNode),
+    };
 
 
-    private List<NodeData> nodes = new List<NodeData>();
+    [SerializeReference] [SerializeField] private List<NodeData> nodes = new List<NodeData>();
 
 
     public void Push(NodeData node)
     {
         if (IsEqualsLast(node) || IsExceptionType(node.GetType()))
             return;
+
+        if (IsFinishNode(node))
+        {
+            Clear();
+            return;
+        }
 
         nodes.Add(node);
     }
@@ -78,32 +88,9 @@ public class BranchNodesStack
 
         return peekNode;
     }
-    public void CutToMilestone()
+    public void Clear()
     {
-        // Character
-        var characterNodes = nodes.Where(x => x is CharacterNode).Cast<CharacterNode>().ToList();
-        int positionCount = Enum.GetNames(typeof(CharacterView.Position)).Length;
-        if (characterNodes.Count > 0)
-        {
-            for (int i = 0; i < positionCount; i++)
-            {
-                var positionedCharacters = characterNodes.Where(x => x.character.position == (CharacterView.Position)i).ToList();
-                for (int j = 0; j < positionedCharacters.Count; j++)
-                {
-                    nodes.Remove(positionedCharacters[i]);
-                }
-            }
-        }
-
-        // Location
-        var removedLocationNodes = nodes.Where(x => x is LocationNode).ToList();
-        if (removedLocationNodes.Count > 0)
-        {
-            for (int i = 0; i < removedLocationNodes.Count - 1; i++)
-            {
-                nodes.Remove(removedLocationNodes[i]);
-            }
-        }
+        nodes.Clear();
     }
     public static bool IsSpecificNode(NodeData node)
     {
@@ -120,6 +107,20 @@ public class BranchNodesStack
         return false;
     }
 
+    private bool IsFinishNode(NodeData node)
+    {
+        var nodeType = node.GetType();
+
+        foreach (var specificType in finishTypes)
+        {
+            if (nodeType == specificType)
+            {
+                return true;
+            }
+        }
+
+        return false;
+    }
     private bool IsExceptionType(Type type)
     {
         foreach (var exceptionType in exceptionTypes)
