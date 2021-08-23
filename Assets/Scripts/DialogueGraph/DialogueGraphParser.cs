@@ -165,5 +165,6 @@ public class DialogueGraphParser : MonoBehaviour
 
 
     public DialogueGraphData CurrentDialogue { get => currentDialogue; set => currentDialogue = value; }
+    public DialogueGraphData PrevDialogue => gameDayControl.PrevDialogue;
     public NodeData CurrentNode { get => currentNode; set => currentNode = value; }
 }

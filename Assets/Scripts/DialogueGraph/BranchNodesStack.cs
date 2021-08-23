@@ -187,6 +187,9 @@ public class BranchNodesStack
 
     public static bool IsSpecificNode(NodeData node)
     {
+        if (node is null)
+            return false;
+
         var nodeType = node.GetType();
 
         foreach (var specificType in specificTypes)

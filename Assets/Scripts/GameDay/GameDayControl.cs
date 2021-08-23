@@ -85,6 +85,7 @@ public class GameDayControl : MonoBehaviour, IDataLoading, IDataSaving
     public int CurrentStoryPhraseIndex { get => currentStoryPhraseIndex; set => currentStoryPhraseIndex = value; }
     public int CurrentStoryIndex => currentStoryIndex;
     public BranchNodesStack BranchNodes => branchNodes;
+    public DialogueGraphData PrevDialogue => currentStoryIndex > 0 ? gameDayOrder.Stories[currentStoryIndex - 1].Graph : null;
 
     private List<IResetable> ResetableViews => resetableViews.Cast<IResetable>().ToList();
 }

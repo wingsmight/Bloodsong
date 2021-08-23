@@ -14,14 +14,20 @@ public abstract class NodeView<T> : MonoBehaviour
     protected void ProcessNext(DialogueGraphData dialogue, NodeData nodeData)
     {
         var nodes = dialogue.GetNextNodes(nodeData);
+        if (nodes.Count <= 0)
+        {
+            var prevDialogue = dialogueParser.PrevDialogue;
+            nodes = prevDialogue.GetNextNodes(nodeData);
+
+            if (nodes.Count > 0 && nodes[0] is StopNode)
+            {
+                nodes = dialogue.GetNextNodes(dialogue.FirstNode);
+            }
+        }
+
         foreach (var node in nodes)
         {
             dialogueParser.ActNode(node);
-        }
-
-        if (nodes.Count <= 0)
-        {
-            dialogueParser.Stop(dialogue);
         }
     }
     protected void Process(NodeData nodeData)
