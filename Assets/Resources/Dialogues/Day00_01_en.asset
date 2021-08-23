@@ -344,9 +344,11 @@ MonoBehaviour:
         - In order to keep up with the evening festivities, our company decided to
           split up. The local blacksmith did not actually produce the equipment personally,
           in fact, being only a reseller of rusty junk, for lack of anything else.
-        - James went to him, hoping that Arten could arrange a room for them in the
-          tavern. It is necessary to explain that Felestina is a country of free
-          morals.
+        - 'James went to him, hoping that Arten could arrange a room for them in
+          the tavern.
+
+          It is necessary to explain that Felestina is a country
+          of free morals.'
         - But even so, the Felestines are just as human as they are everywhere else.
           And the sense of ownership is not alien to them. As for Arten, James, and
           Zari - they are friends at first, and then everything else.
@@ -412,8 +414,10 @@ MonoBehaviour:
           the year from year to year.
         - But on the days of the harvest festival, when farmers from the nearest
           land gather in the village of Kondin, the tool dealer is sold out.
-        - And to avoid any particular inconvenience, James chose today, a quieter
-          day. However, the presence of Dandaro himself was not canceled.
+        - 'And to avoid any particular inconvenience, James chose today, a quieter
+          day.
+
+          However, the presence of Dandaro himself was not canceled.'
         speakerName: 
     00000005:
       type: {class: MonologueNode, ns: , asm: Assembly-CSharp}
@@ -431,10 +435,13 @@ MonoBehaviour:
         texts:
         - "Not bad, not bad. You know, James, stability is the key to success. In
           other words, everything is as it always is. Cold winter, rainy autumn,
-          warm summer. And in the end \u2013 a good harvest."
-        - There are not many locusts this year. It has rather ruined the lives of
+          warm summer.\nAnd in the end \u2013 a good harvest."
+        - 'There are not many locusts this year. It has rather ruined the lives of
           young people who retire away from the eyes of their parents, rather than
-          working farmers. Overall, not bad. Yes. How's it going on your farm?
+          working farmers.
+
+          Overall, not bad. Yes. How''s it going on your
+          farm?'
         speakerName: Dandaro
     00000007:
       type: {class: MonologueNode, ns: , asm: Assembly-CSharp}
@@ -523,8 +530,11 @@ MonoBehaviour:
         guid: 33b517da-797f-42bb-bd69-199a5270f74a
         position: {x: 9677, y: -1066}
         texts:
-        - You know that sometimes clan of the Iron Fist is not limited to simple
-          extortion. Sometimes, they go on a rampage... whole villages disappear.
+        - 'You know that sometimes clan of the Iron Fist is not limited to simple
+          extortion.
+
+          Sometimes, they go on a rampage... whole villages
+          disappear.'
         speakerName: Dandaro
     00000011:
       type: {class: MonologueNode, ns: , asm: Assembly-CSharp}
@@ -540,9 +550,11 @@ MonoBehaviour:
         guid: 1213484b-88f5-4b65-9db2-42d4359237c4
         position: {x: 11194, y: -1066}
         texts:
-        - It's all just awful! And there is no happiness in it! Don't protest, Dandaro.
-          I know what our life is like. I know what I've had to put up with all the
-          time here in South Felestina.
+        - 'It''s all just awful! And there is no happiness in it! Don''t protest,
+          Dandaro.
+
+          I know what our life is like. I know what I''ve had
+          to put up with all the time here in South Felestina.'
         - We farmers exist under the yoke of bandits. We're not warriors, but maybe
           it's time to be.
         - No one has come to our rescue yet. And did not subdue the scoundrels! But
@@ -667,8 +679,8 @@ MonoBehaviour:
         guid: 73c7bbb6-aba2-4b86-96e5-316f918048b2
         position: {x: 7801, y: 275}
         texts:
-        - Your Zari's aunt lives in the village, doesn't she?
-        - Lucky you. And we'll probably sleep on the ground."
+        - Your Zari's aunt lives in the village, doesn't she?" Lucky you. And we'll
+          probably sleep on the ground.
         speakerName: Floy
     00000020:
       type: {class: MonologueNode, ns: , asm: Assembly-CSharp}
@@ -704,8 +716,10 @@ MonoBehaviour:
         texts:
         - James was indignant. The question of the robbers has long troubled him.
           Something inside his soul, his mind, screams at such a life.
-        - It shouts and commands us to arm ourselves with steel and administer justice.
-          And in tense moments, this cry breaks out.
+        - 'It shouts and commands us to arm ourselves with steel and administer justice.
+
+          And
+          in tense moments, this cry breaks out.'
         speakerName: 
     00000024:
       type: {class: MonologueNode, ns: , asm: Assembly-CSharp}
@@ -803,9 +817,11 @@ MonoBehaviour:
         - The young men laughed and teased each other. Without malice. The usual
           conversation between the representatives of the male sex, in which everyone
           wants to appear from a more favorable side.
-        - A kind of natural reflex to the desire to show yourself the leader of the
-          pack. And the topic of girls, of course, in such conversations was the
-          most desirable.
+        - 'A kind of natural reflex to the desire to show yourself the leader of
+          the pack.
+
+          And the topic of girls, of course, in such conversations
+          was the most desirable.'
         speakerName: 
     0000002F:
       type: {class: MonologueNode, ns: , asm: Assembly-CSharp}
@@ -861,8 +877,10 @@ MonoBehaviour:
         guid: 4f4b1454-cc2a-404d-b907-e39cacb4f2ab
         position: {x: 16852, y: 275}
         texts:
-        - Right. And in the north, life is completely different. They live there
-          in luxury. They don't dig in the ground.
+        - 'Right. And in the north, life is completely different. They live there
+          in luxury.
+
+          They don''t dig in the ground.'
         speakerName: Rion
     00000036:
       type: {class: MonologueNode, ns: , asm: Assembly-CSharp}
@@ -954,9 +972,11 @@ MonoBehaviour:
         guid: d608fb26-9adb-42c1-a7dc-356e5ea4eb2e
         position: {x: 21766, y: 275}
         texts:
-        - Yeah, although none of us have ever seen a single Northern woman in our
-          lives. In general, what can I say here. These are curiosities that pamper
-          our imagination.
+        - 'Yeah, although none of us have ever seen a single Northern woman in our
+          lives.
+
+          In general, what can I say here. These are curiosities
+          that pamper our imagination.'
         - That's all. But there is something really intriguing about all this.
         speakerName: Greg
     00000041:
@@ -1039,9 +1059,11 @@ MonoBehaviour:
           she was born.
         - But four years later, she opens a new tournament, where the winner fights
           with the strongest warrior in the country.
-        - In which, of course, the man wins the upper hand. That's the idea. Northerners
+        - 'In which, of course, the man wins the upper hand. That''s the idea. Northerners
           are generally crazy. To organize a tournament for women, for the sake of
-          spectacles. To humiliate them in the end.
+          spectacles.
+
+          To humiliate them in the end.'
         speakerName: Floy
     0000004A:
       type: {class: MonologueNode, ns: , asm: Assembly-CSharp}
@@ -1104,8 +1126,10 @@ MonoBehaviour:
         - The old woman would have had a hard time in the farming community, if not
           for one thing. The entire race of the Zari on the female line had the knowledge
           and secrets of medicine.
-        - Despite the years, Mian continued to be an important part of the community.
-          After all, diseases and overworked backs of workers are common.
+        - 'Despite the years, Mian continued to be an important part of the community.
+
+          After
+          all, diseases and overworked backs of workers are common.'
         - This allowed the old woman to survive. But the forces for cleaning the
           house were clearly not enough.
         speakerName: 
@@ -1170,8 +1194,10 @@ MonoBehaviour:
         guid: 1b8024a8-f6c1-41fe-850b-d35ee9215734
         position: {x: 6834.5, y: 1386}
         texts:
-        - Yes, yes, yes. You then after all immediately decided in their preferences.
-          Although there was a choice. But of course I'm just having fun.
+        - 'Yes, yes, yes. You then after all immediately decided in their preferences.
+
+          Although
+          there was a choice. But of course I''m just having fun.'
         - I don't often have guests like my nieces. Which I don't have more than
           one.
         speakerName: Miam
@@ -1286,8 +1312,11 @@ MonoBehaviour:
         guid: 1e1757e2-3889-4842-a988-886fa793cd48
         position: {x: 12879, y: 1386}
         texts:
-        - I mean... to be honest, I don't really know what exactly we're going to
-          do. At the very beginning. Arten and James dream of becoming Heroes.
+        - 'I mean... to be honest, I don''t really know what exactly we''re going
+          to do.
+
+          At the very beginning. Arten and James dream of becoming
+          Heroes.'
         - "And they are going to help the suffering. To ward off a pack of wolves,
           for example. Or protect them from robbers\u2026"
         speakerName: Zari
@@ -1297,9 +1326,11 @@ MonoBehaviour:
         guid: d0f15380-2527-4a5f-84d8-4fac61985875
         position: {x: 13576.5, y: 1570.5}
         texts:
-        - Zari fell silent. She knew perfectly well how absurd and stupid her words
-          sounded. But Aunt Mian's reaction was even more bizarre to the girl than
-          James ' idea itself.
+        - 'Zari fell silent. She knew perfectly well how absurd and stupid her words
+          sounded.
+
+          But Aunt Mian''s reaction was even more bizarre to
+          the girl than James '' idea itself.'
         speakerName: 
     00000064:
       type: {class: MonologueNode, ns: , asm: Assembly-CSharp}
@@ -1482,9 +1513,10 @@ MonoBehaviour:
         guid: 32b36166-54a8-48ea-a499-ed526b9a83b2
         position: {x: 13821.5, y: -1066}
         texts:
-        - The merchant watched in surprise as the young man hurriedly left the building.
-          Today, James only became more convinced that he was destined to become
-          a Hero.
+        - 'The merchant watched in surprise as the young man hurriedly left the building.
+
+          Today,
+          James only became more convinced that he was destined to become a Hero.'
         - After all, there was no one else. With these thoughts, he hurried to the
           square, where they were already preparing for the holiday. Where James
           had arranged to meet his friends.
@@ -1652,13 +1684,20 @@ MonoBehaviour:
         guid: 9987a148-23dd-40eb-ba3a-5276c4e4ed70
         position: {x: 12895.5, y: -1066}
         texts:
-        - Mr. Dandaro. I'm sorry for bringing trouble to this day. But today. And
-          tomorrow. I won't buy any tools from you. I'm interested in another product.
-        - You've had your swords for years. I was paying attention. I want to buy
-          them. I don't have much gold, but I'm sure you'll get more than a few for
-          the weapons anyway.
-        - I really ask you, by tomorrow, to select the best that you have. Good day,
-          Mr. Dandaro.
+        - 'Mr. Dandaro. I''m sorry for bringing trouble to this day. But today. And
+          tomorrow.
+
+          I won''t buy any tools from you. I''m interested in
+          another product.'
+        - 'You''ve had your swords for years. I was paying attention. I want to buy
+          them.
+
+          I don''t have much gold, but I''m sure you''ll get more
+          than a few for the weapons anyway.'
+        - 'I really ask you, by tomorrow, to select the best that you have. Good
+          day, Mr.
+
+          Dandaro.'
         speakerName: James
     00000088:
       type: {class: CharacterPositionNode, ns: , asm: Assembly-CSharp}

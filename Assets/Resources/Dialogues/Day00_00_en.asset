@@ -133,8 +133,10 @@ MonoBehaviour:
         position: {x: 1393, y: 391}
         texts:
         - 'James''s good-natured face, which in most cases denotes a slight indifference.
-          This is what his companions are used to and what he '
-        - pleased" them with all the way."
+
+          This
+          is what his companions are used to and what he "pleased" them with all
+          the way.'
         speakerName: 
     00000004:
       type: {class: MonologueNode, ns: , asm: Assembly-CSharp}
@@ -181,11 +183,15 @@ MonoBehaviour:
           farm, only these two got into the most tricky situations.
         - Always together, always for each other. Arten is a big fan of pranks. And
           James-who was always there to help out and also to scold.
-        - Since their teens, the boys have been paired up working in the fertile
-          fields. It was the most productive group. But still, Arten never denied
-          himself the pleasure of loafing around.
-        - The older and bigger he became, the more he liked to take a nap, eat, lie
-          down. And at the same time, play, fight.
+        - 'Since their teens, the boys have been paired up working in the fertile
+          fields.
+
+          It was the most productive group. But still, Arten never
+          denied himself the pleasure of loafing around.'
+        - 'The older and bigger he became, the more he liked to take a nap, eat,
+          lie down.
+
+          And at the same time, play, fight.'
         - James is different. He is more reserved, calmer, and more focused. And
           more responsible. He performs any work scrupulously. And all this despite
           the fact that there was no one who hated being a farmer so much.
@@ -238,9 +244,11 @@ MonoBehaviour:
         - After meeting Martin at one of the harvest festivals, they had looked at
           each other for quite a long time. Which is not surprising, given the difference
           between them both physically and mentally.
-        - Moreover, the quiet and insecure Zari became friends with James much faster.
-          And although they were more suited to each other, there was no fire between
-          them.
+        - 'Moreover, the quiet and insecure Zari became friends with James much faster.
+
+          And
+          although they were more suited to each other, there was no fire between
+          them.'
         - 'All this was refuted and proved two truths at once: friendship between
           a man and a woman is impossible and opposites attract.'
         - Arten and Zari had been attracted to each other since their first meeting.
