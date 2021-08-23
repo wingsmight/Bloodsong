@@ -15,6 +15,8 @@ public class DialogueGraphParser : MonoBehaviour
     [SerializeField] private StartSplitMessageNodeView startSplitMessageNodeView;
     [SerializeField] private LocationNodeView locationNodeView;
     [SerializeField] private HideCharacterNodeView hideCharacterNodeView;
+    [Space(12)]
+    [SerializeField] private GameDayControl gameDayControl;
 
 
     private DialogueGraphData currentDialogue;
@@ -53,6 +55,8 @@ public class DialogueGraphParser : MonoBehaviour
     public void ActNode(NodeData nodeData)
     {
         currentNode = nodeData;
+
+        gameDayControl.BranchNodes.Push(nodeData);
 
         if (nodeData is DialogueNode)
         {
@@ -94,8 +98,6 @@ public class DialogueGraphParser : MonoBehaviour
         {
             throw new Exception();
         }
-
-        Storage.GetData<GameDayData>().branchNodes.Push(nodeData);
     }
     public void StopNode(NodeData nodeData)
     {

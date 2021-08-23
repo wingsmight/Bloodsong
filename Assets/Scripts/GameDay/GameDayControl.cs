@@ -18,6 +18,7 @@ public class GameDayControl : MonoBehaviour, IDataLoading, IDataSaving
     private string currentNodeGuid;
     private int currentStoryIndex = 0;
     private int currentStoryPhraseIndex = 0;
+    private BranchNodesStack branchNodes;
 
 
     private void Awake()
@@ -64,12 +65,14 @@ public class GameDayControl : MonoBehaviour, IDataLoading, IDataSaving
         currentNodeGuid = Storage.GetData<GameDayData>().currentNodeGuid;
         currentStoryIndex = Storage.GetData<GameDayData>().currentStoryIndex;
         currentStoryPhraseIndex = Storage.GetData<GameDayData>().currentStoryPhraseIndex;
+        branchNodes = new BranchNodesStack(Storage.GetData<GameDayData>().branchNodes);
     }
     public void SaveData()
     {
         Storage.GetData<GameDayData>().currentNodeGuid = dialogueGraphParser.CurrentNode?.guid;
         Storage.GetData<GameDayData>().currentStoryIndex = currentStoryIndex;
         Storage.GetData<GameDayData>().currentStoryPhraseIndex = monologueNodeView.PhraseIndex;
+        Storage.GetData<GameDayData>().branchNodes = new BranchNodesStack(branchNodes);
     }
 
     private void StartNextDay()
@@ -81,6 +84,7 @@ public class GameDayControl : MonoBehaviour, IDataLoading, IDataSaving
 
     public int CurrentStoryPhraseIndex { get => currentStoryPhraseIndex; set => currentStoryPhraseIndex = value; }
     public int CurrentStoryIndex => currentStoryIndex;
+    public BranchNodesStack BranchNodes => branchNodes;
 
     private List<IResetable> ResetableViews => resetableViews.Cast<IResetable>().ToList();
 }

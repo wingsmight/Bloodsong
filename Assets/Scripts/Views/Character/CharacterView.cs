@@ -40,13 +40,14 @@ public class CharacterView : MonoBehaviour
         {
             StartCoroutine(AppearRoutine(direction));
             ShowImmediately(character, emotion);
+
+            backtrackButton.DisableAction(appearDuration);
         }
         else
         {
             ShowImmediately(character, emotion);
             OnShown?.Invoke();
         }
-        backtrackButton.DisableAction(appearDuration);
     }
     public void ShowWithFade(Character character, Emotion emotion)
     {

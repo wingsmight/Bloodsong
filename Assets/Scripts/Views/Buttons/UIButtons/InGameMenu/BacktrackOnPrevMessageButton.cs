@@ -32,6 +32,10 @@ namespace StoryMenu
         {
             EnableAction();
         }
+        private void FixedUpdate()
+        {
+            button.interactable = IsAvailable(gameDayControl.BranchNodes) && !raycastBlock.activeInHierarchy;
+        }
 
 
         public void EnableAction()
@@ -66,12 +70,9 @@ namespace StoryMenu
             if (graph == null || storyGraphParser.CurrentNode == null)
                 return;
 
-            var branchNodes = Storage.GetData<GameDayData>().branchNodes;
-            if (branchNodes.Count <= 1 || (branchNodes.Count <= 2 && branchNodes.First is LocationNode))
+            var branchNodes = gameDayControl.BranchNodes;
+            if (!IsAvailable(branchNodes))
                 return;
-
-            // if (branchNodes.Last is DialogueNode)
-            //     return;
 
             NodeData node = branchNodes.Pop();
             storyGraphParser.StopNode(node);
@@ -132,6 +133,8 @@ namespace StoryMenu
                 }
                 else
                 {
+                    Debug.LogError("ELSE");
+
                     var lastNode = branchNodes.Last;
                     if (lastNode is MonologueNode)
                     {
@@ -152,6 +155,14 @@ namespace StoryMenu
             yield return new WaitForSeconds(duration);
 
             EnableAction();
+        }
+        private bool IsAvailable(BranchNodesStack branchNodes)
+        {
+            var a1 = branchNodes.Count > 1;
+            var a2 = branchNodes.Last is MonologueNode && gameDayControl.CurrentStoryPhraseIndex > 0;
+            var a3 = branchNodes.IsPrevNodesSpecific();
+
+            return a1 && (!a3 || a2);
         }
     }
 }

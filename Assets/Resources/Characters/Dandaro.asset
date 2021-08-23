@@ -16,4 +16,4 @@ MonoBehaviour:
   sprites:
     m_keys: 00000000
     m_values:
-    - {fileID: 21300000, guid: ad9c39b6e5774447f8135a8a1a2c46bd, type: 3}
+    - {fileID: 21300000, guid: 94162c9ed9ddd4365a35fcaeb0b85ce7, type: 3}

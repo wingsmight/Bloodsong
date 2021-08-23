@@ -58,6 +58,7 @@ public class BackgroundView : MonoBehaviour, IHidable, IResetable, IDataLoading,
     private IEnumerator ShowRoutine(Location location)
     {
         Hide();
+        backtrackButton.DisableAction();
 
         yield return new WaitWhile(() => fadeAnimation.IsShowing);
 

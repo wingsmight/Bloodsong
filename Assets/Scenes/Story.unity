@@ -239,6 +239,7 @@ MonoBehaviour:
   startSplitMessageNodeView: {fileID: 364289739}
   locationNodeView: {fileID: 364289741}
   hideCharacterNodeView: {fileID: 364289742}
+  gameDayControl: {fileID: 1349510754}
 --- !u!224 &17934410
 RectTransform:
   m_ObjectHideFlags: 0
