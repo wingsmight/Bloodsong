@@ -11,13 +11,33 @@ public class HideCharacterNodeView : NodeView<CharacterPositionNode>
     public override void Act(DialogueGraphData dialogue, CharacterPositionNode nodeData)
     {
         var characterView = charactersView[nodeData.characterPosition];
-        var nextNode = dialogue.GetNextNodes(nodeData)[0];
+
+        var nextNodes = dialogue.GetNextNodes(nodeData);
+        NodeData nextNode;
+        if (nextNodes.Count > 0)
+        {
+            nextNode = nextNodes[0];
+        }
+        else
+        {
+            var prevDialogue = dialogueParser.PrevDialogue;
+            var nodes = prevDialogue.GetNextNodes(nodeData);
+
+            if (nodes.Count > 0 && nodes[0] is StopNode)
+            {
+                nextNode = dialogue.GetNextNodes(dialogue.FirstNode)[0];
+            }
+            else
+            {
+                nextNode = nodes[0];
+            }
+        }
 
         if (nextNode is CharacterNode)
         {
             ProcessNext(dialogue, nodeData);
         }
-        else if (dialogue.GetNextNodes(nodeData)[0] is CharacterPositionNode)
+        else if (nextNode is CharacterPositionNode)
         {
             ProcessNext(dialogue, nodeData);
         }
@@ -38,16 +58,6 @@ public class HideCharacterNodeView : NodeView<CharacterPositionNode>
     public void ActWithoutProcessNext(DialogueGraphData dialogue, CharacterPositionNode nodeData)
     {
         var characterView = charactersView[nodeData.characterPosition];
-        var nextNode = dialogue.GetNextNodes(nodeData)[0];
-
-        if (nextNode is CharacterNode)
-        {
-            ProcessNext(dialogue, nodeData);
-        }
-        else if (dialogue.GetNextNodes(nodeData)[0] is CharacterPositionNode)
-        {
-            ProcessNext(dialogue, nodeData);
-        }
 
         characterView.Hide();
     }

@@ -48,8 +48,6 @@ public class BranchNodesStack
             return;
         }
 
-        Debug.Log(node + " was pushed");
-
         nodes.Add(node);
     }
     public NodeData Pop()
@@ -79,7 +77,10 @@ public class BranchNodesStack
                 }
                 else if (node is CharacterPositionNode) // Hide character
                 {
-                    return new CharacterPositionNode(characterPeekNode.guid, characterPeekNode.position, characterPeekNode.character.position);
+                    if ((node as CharacterPositionNode).characterPosition == characterPeekNode.character.position)
+                    {
+                        return new CharacterPositionNode(characterPeekNode.guid, characterPeekNode.position, characterPeekNode.character.position);
+                    }
                 }
             }
 
@@ -102,12 +103,12 @@ public class BranchNodesStack
                 }
             }
 
+            Debug.LogError("IDK what to return");
             return null;
         }
         // Location
         else if (peekNode is LocationNode) // Show location
         {
-            LocationNode locationPeekNode = peekNode as LocationNode;
             for (int i = lastNodeIndex; i >= 0; i--)
             {
                 var node = nodes[i];
@@ -154,19 +155,6 @@ public class BranchNodesStack
             }
 
         }
-        // foreach (var characterView in characterViews)
-        // {
-        //     if (characterView.IsShowing)
-        //     {
-        //         CharacterNode lastCharacter = nodes.LastOrDefault(x => x is CharacterNode
-        //             && (x as CharacterNode).character.position == characterView.CharacterProperty.position) as CharacterNode;
-
-        //         if (lastCharacter != null)
-        //         {
-        //             lastCharacters.Add(lastCharacter);
-        //         }
-        //     }
-        // }
 
         nodes.Clear();
 
