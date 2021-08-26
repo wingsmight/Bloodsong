@@ -2583,9 +2583,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\xAB\u0412\u043D\u0438\u043C\u0430\u043D\u0438\u0435. \u041F\u0440\u043E\u0447\u0442\u0438\u0442\u0435
-    \u043F\u0435\u0440\u0435\u0434 \u043D\u0430\u0447\u0430\u043B\u043E\u043C \u0438\u0433\u0440\u044B.
-    \u041D\u0435\u0437\u043D\u0430\u0447\u0438\u0442\u0435\u043B\u044C\u043D\u044B\u0439
+  m_text: "<indent=5%></indent>\xAB\u0412\u043D\u0438\u043C\u0430\u043D\u0438\u0435.
+    \u041F\u0440\u043E\u0447\u0442\u0438\u0442\u0435 \u043F\u0435\u0440\u0435\u0434
+    \u043D\u0430\u0447\u0430\u043B\u043E\u043C \u0438\u0433\u0440\u044B. \u041D\u0435\u0437\u043D\u0430\u0447\u0438\u0442\u0435\u043B\u044C\u043D\u044B\u0439
     \u043F\u0440\u043E\u0446\u0435\u043D\u0442 \u043B\u044E\u0434\u0435\u0439 \u043C\u043E\u0436\u0435\u0442
     \u0438\u0441\u043F\u044B\u0442\u044B\u0432\u0430\u0442\u044C \u043F\u0440\u0438\u0441\u0442\u0443\u043F\u044B
     \u044D\u043F\u0438\u043B\u0435\u043F\u0441\u0438\u0438 \u043F\u043E\u0434 \u0432\u043E\u0437\u0434\u0435\u0439\u0441\u0442\u0432\u0438\u0435\u043C
@@ -3030,7 +3030,7 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 628814467}
   m_Enabled: 1
-  m_Alpha: 0
+  m_Alpha: 1
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
@@ -3050,6 +3050,7 @@ MonoBehaviour:
   appearingDelay: 1
   textShowing: {fileID: 554306584}
   speaker: {fileID: 229148177}
+  indentPercent: 6
 --- !u!1 &629412020
 GameObject:
   m_ObjectHideFlags: 0
@@ -6159,6 +6160,7 @@ MonoBehaviour:
   textTyping: {fileID: 135879105}
   choiceView: {fileID: 882836484}
   speaker: {fileID: 1067912818}
+  indentPercent: 6
 --- !u!1 &1172948048
 GameObject:
   m_ObjectHideFlags: 0

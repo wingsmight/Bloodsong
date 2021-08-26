@@ -7,13 +7,17 @@ public static class StringExt
 {
     public static string RemoveAllOccurrences(this string text, char occurrence)
     {
+        return text.RemoveAllOccurrences(occurrence.ToString());
+    }
+    public static string RemoveAllOccurrences(this string text, string occurrence)
+    {
         int occurrenceIndex;
         do
         {
             occurrenceIndex = text.IndexOf(occurrence);
             if (occurrenceIndex >= 0)
             {
-                text = text.Remove(occurrenceIndex, 1);
+                text = text.Remove(occurrenceIndex, occurrence.Length);
             }
         } while (occurrenceIndex >= 0);
 
@@ -47,6 +51,26 @@ public static class StringExt
         string colorHex = ColorUtility.ToHtmlStringRGB(color);
 
         return "<color=#" + colorHex + ">" + text + "</color>";
+    }
+    public static string AddIndentTag(this string text, int percent)
+    {
+        string indentTagStart = "<indent=";
+        string indentTagFinish = "%></indent>";
+
+        if (text.StartsWith(indentTagStart))
+        {
+            text = text.Remove(0, indentTagStart.Length);
+
+            while (text.Length > 0 && text[0] != indentTagFinish[0])
+            {
+                text = text.Remove(0, 1);
+            }
+
+            text = text.Remove(0, indentTagFinish.Length);
+        }
+
+        text = indentTagStart + percent + indentTagFinish + text;
+        return text;
     }
     public static List<int> ExtractNumbers(this string text)
     {
