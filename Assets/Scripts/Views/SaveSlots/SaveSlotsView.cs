@@ -22,6 +22,14 @@ public class SaveSlotsView : MonoBehaviour, IShowable, IHidable
     }
     public void Hide()
     {
+        Hide(Storage.GeneralSettings.SaveSlots);
+    }
+    public void Hide(SaveSlot[] slots)
+    {
         fadeAnimation.Disappear();
+        for (int i = 0; i < slotViews.Count && i < slots.Length; i++)
+        {
+            slotViews[i].ResetDeletePermission();
+        }
     }
 }

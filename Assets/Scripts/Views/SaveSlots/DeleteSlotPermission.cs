@@ -31,16 +31,19 @@ public class DeleteSlotPermission : MonoBehaviour
         yesButton.onClick.AddListener(OnButtonYesClicked);
         noButtons.ForEach(x => x.onClick.AddListener(OnButtonNoClicked));
     }
+    public void Hide()
+    {
+        yesButton.enabled = false;
+        if (animator.GetCurrentName(0) == "Appear")
+        {
+            animator.Play("Disappear", 0, 0.0f);
+        }
+    }
 
     private void Show()
     {
         animator.Play("Appear", 0, 0.0f);
         yesButton.enabled = true;
-    }
-    private void Hide()
-    {
-        yesButton.enabled = false;
-        animator.Play("Disappear", 0, 0.0f);
     }
 
     private void OnButtonYesClicked()

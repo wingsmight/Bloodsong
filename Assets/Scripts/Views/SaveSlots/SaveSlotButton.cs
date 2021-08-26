@@ -20,6 +20,7 @@ public class SaveSlotButton : UIButton
     [SerializeField] private FadeAnimation emptyOverlay;
     [SerializeField] private FadeAnimation filledOverlay;
     [SerializeField] private FadeAnimation deleteButton;
+    [SerializeField] private DeleteSlotPermission deleteSlotPermission;
     [Space(12)]
     [SerializeField] private int index;
 
@@ -45,6 +46,10 @@ public class SaveSlotButton : UIButton
         {
             ShowEmpty();
         }
+    }
+    public void ResetDeletePermission()
+    {
+        deleteSlotPermission.Hide();
     }
     public void ShowEmpty()
     {

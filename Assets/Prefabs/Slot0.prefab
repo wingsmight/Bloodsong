@@ -569,6 +569,7 @@ MonoBehaviour:
   emptyOverlay: {fileID: 157358802482394865}
   filledOverlay: {fileID: 2104886011789339511}
   deleteButton: {fileID: 8169070364176415360}
+  deleteSlotPermission: {fileID: 1797246581472782752}
   index: 0
 --- !u!114 &2584076700155577831
 MonoBehaviour:
