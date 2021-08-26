@@ -511,7 +511,7 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 36576721}
   m_Enabled: 1
-  m_Alpha: 0.97
+  m_Alpha: 1
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
@@ -8679,17 +8679,13 @@ PrefabInstance:
       propertyPath: m_fontColor32.rgba
       value: 4294967295
       objectReference: {fileID: 0}
-    - target: {fileID: 5109570599637214261, guid: 42dfd96bd58014ce9b6175a710fa8cb5, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -878
-      objectReference: {fileID: 0}
     - target: {fileID: 5109570599660920181, guid: 42dfd96bd58014ce9b6175a710fa8cb5, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 5109570599784459837, guid: 42dfd96bd58014ce9b6175a710fa8cb5, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -617
+    - target: {fileID: 5109570599660920182, guid: 42dfd96bd58014ce9b6175a710fa8cb5, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5109570599852453908, guid: 42dfd96bd58014ce9b6175a710fa8cb5, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -8843,10 +8839,6 @@ PrefabInstance:
       propertyPath: m_fontColor32.rgba
       value: 4294967295
       objectReference: {fileID: 0}
-    - target: {fileID: 5109570601209381300, guid: 42dfd96bd58014ce9b6175a710fa8cb5, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -497
-      objectReference: {fileID: 0}
     - target: {fileID: 5109570601382823930, guid: 42dfd96bd58014ce9b6175a710fa8cb5, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -8999,6 +8991,10 @@ PrefabInstance:
       propertyPath: m_Material
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 5109570601521745134, guid: 42dfd96bd58014ce9b6175a710fa8cb5, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 5109570601573645098, guid: 42dfd96bd58014ce9b6175a710fa8cb5, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -9023,9 +9019,9 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5109570601660305455, guid: 42dfd96bd58014ce9b6175a710fa8cb5, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -737
+    - target: {fileID: 5109570601710557391, guid: 42dfd96bd58014ce9b6175a710fa8cb5, type: 3}
+      propertyPath: m_RootOrder
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5109570601521745133, guid: 42dfd96bd58014ce9b6175a710fa8cb5, type: 3}
