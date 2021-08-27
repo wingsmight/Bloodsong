@@ -14,7 +14,7 @@ public class SpeakerView : FadeView, IShowable<string>, IHidable
 
     public void Show(string name)
     {
-        if (string.IsNullOrEmpty(name) || name == EMPTY_SPEAKER_NAME_EN || name == EMPTY_SPEAKER_NAME_RU)
+        if (IsEmptySpeaker(name))
         {
             Hide();
         }
@@ -24,5 +24,11 @@ public class SpeakerView : FadeView, IShowable<string>, IHidable
 
             nameText.text = name;
         }
+    }
+
+
+    public static bool IsEmptySpeaker(string speakerName)
+    {
+        return string.IsNullOrEmpty(speakerName) || speakerName == EMPTY_SPEAKER_NAME_EN || speakerName == EMPTY_SPEAKER_NAME_RU;
     }
 }

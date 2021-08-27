@@ -35,6 +35,5 @@ public abstract class CommunicationPanel : MonoBehaviour, IHidable, IResetable
         actionAfterHide += unityAction;
     }
 
-
     public bool IsShowing => fadeAnimation.IsShowing;
 }

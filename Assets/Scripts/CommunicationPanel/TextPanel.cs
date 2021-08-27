@@ -14,6 +14,12 @@ public class TextPanel : CommunicationPanel
 
         textView.text = text;
     }
+    public override void Hide()
+    {
+        base.Hide();
+
+        fadeAnimation.Disappear();
+    }
     public void Refresh()
     {
 
