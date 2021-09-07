@@ -14,8 +14,8 @@ PlayerSettings:
   accelerometerFrequency: 60
   companyName: wingsmight
   productName: Bloodsong
-  defaultCursor: {fileID: 2800000, guid: 85e1e8d24368d473e985ce8343e62fa4, type: 3}
-  cursorHotspot: {x: 2, y: 2}
+  defaultCursor: {fileID: 0}
+  cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 1, g: 1, b: 1, a: 1}
   m_ShowUnitySplashScreen: 1
   m_ShowUnitySplashLogo: 1
