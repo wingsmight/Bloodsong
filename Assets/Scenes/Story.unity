@@ -669,7 +669,7 @@ MonoBehaviour:
   - {fileID: 2033070874}
   textDisplay: {fileID: 135879106}
   audioSource: {fileID: 1239399908}
-  typingSound: {fileID: 8300000, guid: ed0ea8604a6e34339b1ee33988ffaa7a, type: 3}
+  typingSound: {fileID: 0}
 --- !u!114 &135879106
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2687,7 +2687,7 @@ MonoBehaviour:
   - {fileID: 1111155812}
   textDisplay: {fileID: 554306582}
   audioSource: {fileID: 1239399908}
-  typingSound: {fileID: 8300000, guid: ed0ea8604a6e34339b1ee33988ffaa7a, type: 3}
+  typingSound: {fileID: 0}
 --- !u!1001 &561472780
 PrefabInstance:
   m_ObjectHideFlags: 0

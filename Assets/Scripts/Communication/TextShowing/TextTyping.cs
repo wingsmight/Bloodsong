@@ -127,7 +127,10 @@ public class TextTyping : TextShowing
         isTyping = true;
 
         audioSource.Stop();
-        audioSource.PlayOneShot(typingSound);
+        if (typingSound != null)
+        {
+            audioSource.PlayOneShot(typingSound);
+        }
 
         textDisplay.overflowMode = TextOverflowModes.Page;
         textDisplay.ForceMeshUpdate();
