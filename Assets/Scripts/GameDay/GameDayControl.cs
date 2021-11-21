@@ -12,6 +12,7 @@ public class GameDayControl : MonoBehaviour, IDataLoading, IDataSaving
     [SerializeField] [RequireInterface(typeof(IResetable))] private List<UnityEngine.Object> resetableViews;
     [SerializeField] private StartMonologueNodeView monologueNodeView;
     [SerializeField] private StopNodeView stopNodeView;
+    [SerializeField] private CreditsView creditsView;
 
 
     private Story currectStory;
@@ -41,8 +42,10 @@ public class GameDayControl : MonoBehaviour, IDataLoading, IDataSaving
     {
         currentStoryIndex = storyIndex;
 
-        if (currentStoryIndex >= gameDayOrder.Stories.Count)
+        if (currentStoryIndex >= gameDayOrder.Stories.Count) // The end of the game
         {
+            creditsView.Show();
+
             return;
         }
 
