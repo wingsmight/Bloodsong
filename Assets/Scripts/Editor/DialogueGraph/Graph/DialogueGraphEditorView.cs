@@ -242,6 +242,14 @@ public class DialogueGraphEditorView : GraphView
         {
             return new HideCharacterNodeEditorView(nodeData as CharacterPositionNode);
         }
+        else if (nodeData is MusicNode)
+        {
+            return new PlayMusicNodeEditorView(nodeData as MusicNode);
+        }
+        else if (nodeData is StopMusicNode)
+        {
+            return new StopMusicNodeEditorView(nodeData as StopMusicNode);
+        }
         else
         {
             throw new Exception("There is no Node Editor View type you want to load!");

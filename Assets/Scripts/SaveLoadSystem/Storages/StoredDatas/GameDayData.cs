@@ -6,6 +6,7 @@ using UnityEngine;
 public class GameDayData : IStoredData
 {
     public string locationName;
+    public string musicName;
     public List<CharacterProperty> characters = new List<CharacterProperty>();
     public BranchNodesStack branchNodes = new BranchNodesStack();
     public string currentNodeGuid;

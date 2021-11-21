@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 78b3fd9154634ebdb8c8a48960b9a16a, type: 3}
-  m_Name: Day00_02_en
+  m_Name: Day00_02
   m_EditorClassIdentifier: 
   entryGUID: e46ed28e-cc3a-494b-8052-0b526691fab2
   nodeDatas:
@@ -58,8 +58,8 @@ MonoBehaviour:
   - id: 41
   - id: 42
   - id: 43
-  nodeLinks:
   - id: 44
+  nodeLinks:
   - id: 45
   - id: 46
   - id: 47
@@ -102,6 +102,8 @@ MonoBehaviour:
   - id: 84
   - id: 85
   - id: 86
+  - id: 87
+  - id: 88
   exposedVariables: []
   commentBlockDatas: []
   references:
@@ -117,30 +119,16 @@ MonoBehaviour:
         guid: 6479486f-44a0-4dfc-b471-6dc203f92340
         position: {x: 636, y: 323.5}
         texts:
-        - James was not at all surprised by the fact that he was the first of his
-          friends to turn around. The young man was watching the growing holiday.
-        - Many farmers from the nearest lands found themselves in the village of
-          Kondin today. Everyone is friendly, cheerful and smiling. They were already
-          dancing, singing songs and drinking.
-        - This mood caused sadness in James ' soul. His thoughts were occupied with
-          the continuous injustice of this world, where the strong necessarily belittle
-          the weak.
-        - James was saddened by the fact that evil was unpunished. That no one went
-          to help the suffering.
-        - And that the farmers themselves willingly put up with their fate, preferring
-          it to resistance. But that's not all. It is difficult to find a person
-          who is able to think exclusively in one direction.
-        - And James, in addition to sadness, experienced joy. Right now. No matter
-          how cruel life may be. Or even if it was smooth and uniform.
-        - "The ability to laugh, to entertain \u2013 was a good sign."
-        - It was gratifying to know and observe how old and young people diligently
-          put things in order on the square for the holiday. How they place flags
-          and racks.
-        - How they carry their treats for everyone. How the farmers converge with
-          each other, winking merrily and bursting into infectious laughter. James
-          knew.
-        - No matter how much reality disturbs and does not burden his mind and soul,
-          there should always be a place for joy. After all, this is really important
+        - "James was not at all surprised by the fact that he was the first of his friends to turn around. The young man was watching the growing holiday."
+        - "Many farmers from the nearest lands found themselves in the village of Kondin today. Everyone is friendly, cheerful and smiling. They were already dancing, singing songs and drinking."
+        - "This mood caused sadness in James ' soul. His thoughts were occupied with the continuous injustice of this world, where the strong necessarily belittle the weak."
+        - "James was saddened by the fact that evil was unpunished. That no one went to help the suffering."
+        - "And that the farmers themselves willingly put up with their fate, preferring it to resistance. But that's not all. It is difficult to find a person who is able to think exclusively in one direction."
+        - "And James, in addition to sadness, experienced joy. Right now. No matter how cruel life may be. Or even if it was smooth and uniform."
+        - "The ability to laugh, to entertain – was a good sign."
+        - "It was gratifying to know and observe how old and young people diligently put things in order on the square for the holiday. How they place flags and racks."
+        - "How they carry their treats for everyone. How the farmers converge with each other, winking merrily and bursting into infectious laughter. James knew."
+        - "No matter how much reality disturbs and does not burden his mind and soul, there should always be a place for joy. After all, this is really important"
         speakerName: 
     00000002:
       type: {class: MonologueNode, ns: , asm: Assembly-CSharp}
@@ -148,8 +136,7 @@ MonoBehaviour:
         guid: a3cc3582-d2d2-45d9-9d60-2efa2c9b668a
         position: {x: 2073.5, y: 323.5}
         texts:
-        - Looking back, the guy saw Zari hurrying to meet him. She was waving at
-          him and looked more than enthusiastic.
+        - "Looking back, the guy saw Zari hurrying to meet him. She was waving at him and looked more than enthusiastic."
         speakerName: 
     00000003:
       type: {class: MonologueNode, ns: , asm: Assembly-CSharp}
@@ -157,7 +144,7 @@ MonoBehaviour:
         guid: d25bc17c-4860-49fb-85a4-6d9b4ca72296
         position: {x: 3773.5, y: 200}
         texts:
-        - Something must have delayed him. Something urgent.
+        - "Something must have delayed him. Something urgent."
         speakerName: Zari
     00000004:
       type: {class: MonologueNode, ns: , asm: Assembly-CSharp}
@@ -165,7 +152,7 @@ MonoBehaviour:
         guid: 01a1ff5b-c82f-495a-8630-edc9661c305a
         position: {x: 4153.5, y: 200}
         texts:
-        - And you know even better than I do that this is extremely unlikely.
+        - "And you know even better than I do that this is extremely unlikely."
         speakerName: James
     00000005:
       type: {class: MonologueNode, ns: , asm: Assembly-CSharp}
@@ -173,12 +160,8 @@ MonoBehaviour:
         guid: 22907981-ea89-45e0-8386-4b6023d80d6c
         position: {x: 4624.5, y: 377.5}
         texts:
-        - Zari gave James a look of resentment, but she quickly cooled down. James
-          wasn't just a good friend of hers. He really knew Arten better than she
-          did. Yes, it was infuriating.
-        - But Zari has long since resigned herself. She had come to terms with the
-          fact that Arten was terrible in the manifestations of himself as a man
-          who was in a couple.
+        - "Zari gave James a look of resentment, but she quickly cooled down. James wasn't just a good friend of hers. He really knew Arten better than she did. Yes, it was infuriating."
+        - "But Zari has long since resigned herself. She had come to terms with the fact that Arten was terrible in the manifestations of himself as a man who was in a couple."
         speakerName: 
     00000006:
       type: {class: MonologueNode, ns: , asm: Assembly-CSharp}
@@ -186,12 +169,9 @@ MonoBehaviour:
         guid: 5bfb3951-96b1-4a38-864f-3bc85d7224ef
         position: {x: 5188, y: 200}
         texts:
-        - Okay, I'll tell you what happened. Arten will either not listen to the
-          rest anyway, or he will forget everything in the morning. In general, my
-          aunt was delighted with our plans. And even more.
-        - She gave me an old family book of healing recipes. I have only taken a
-          brief look so far, but there is a lot of useful information there.
-        - I can not only treat you effectively, but even ... make you stronger. Seriously!
+        - "Okay, I'll tell you what happened. Arten will either not listen to the rest anyway, or he will forget everything in the morning. In general, my aunt was delighted with our plans. And even more."
+        - "She gave me an old family book of healing recipes. I have only taken a brief look so far, but there is a lot of useful information there."
+        - "I can not only treat you effectively, but even ... make you stronger. Seriously!"
         speakerName: Zari
     00000007:
       type: {class: MonologueNode, ns: , asm: Assembly-CSharp}
@@ -199,7 +179,7 @@ MonoBehaviour:
         guid: 98d88433-5cfe-419d-aa04-8e206a1eea49
         position: {x: 5779, y: 200}
         texts:
-        - Is it because you're so horny?
+        - "Is it because you're so horny?"
         speakerName: James
     00000008:
       type: {class: MonologueNode, ns: , asm: Assembly-CSharp}
@@ -207,7 +187,7 @@ MonoBehaviour:
         guid: 636ea586-8f11-4a73-95cd-ea16b57c707c
         position: {x: 6126.5, y: 200}
         texts:
-        - Me? What? Of course not. I'm not horny.
+        - "Me? What? Of course not. I'm not horny."
         speakerName: Zari
     00000009:
       type: {class: MonologueNode, ns: , asm: Assembly-CSharp}
@@ -215,7 +195,7 @@ MonoBehaviour:
         guid: b10b8374-d19c-4c41-b30f-a1a52b84ab39
         position: {x: 6476.5, y: 200}
         texts:
-        - Inspired?
+        - "Inspired?"
         speakerName: James
     0000000A:
       type: {class: MonologueNode, ns: , asm: Assembly-CSharp}
@@ -223,8 +203,7 @@ MonoBehaviour:
         guid: 789d7024-3d28-4fcc-b9fa-66e6ccdca554
         position: {x: 6826, y: 200}
         texts:
-        - Okay, okay, I get it. Yes, I think so. After all, with such knowledge,
-          I no longer feel completely useless.
+        - "Okay, okay, I get it. Yes, I think so. After all, with such knowledge, I no longer feel completely useless."
         speakerName: Zari
     0000000B:
       type: {class: MonologueNode, ns: , asm: Assembly-CSharp}
@@ -232,8 +211,7 @@ MonoBehaviour:
         guid: ae690d55-ab74-4d0f-a3a0-e30d9247d7eb
         position: {x: 7352.5, y: 200}
         texts:
-        - Relax, Zari. I know exactly what you're talking about. And believe me,
-          I'm happy for you.
+        - "Relax, Zari. I know exactly what you're talking about. And believe me, I'm happy for you."
         speakerName: James
     0000000C:
       type: {class: MonologueNode, ns: , asm: Assembly-CSharp}
@@ -241,7 +219,7 @@ MonoBehaviour:
         guid: ffbd6d1e-f4ca-48c2-b577-6f9fc8790a21
         position: {x: 7893.5, y: 200}
         texts:
-        - Well. What about you? How did it go?
+        - "Well. What about you? How did it go?"
         speakerName: Zari
     0000000D:
       type: {class: MonologueNode, ns: , asm: Assembly-CSharp}
@@ -249,11 +227,8 @@ MonoBehaviour:
         guid: 46a63ac6-8529-417e-8ce4-716d10f040f8
         position: {x: 8200.5, y: 200}
         texts:
-        - Both excellent and not very good. There's something I don't like about
-          this whole thug problem, you know. But I ordered a weapon.
-        - By tomorrow, the merchant will choose the best that he has and prepare
-          for our arrival. It is a great success for him to get rid of unnecessary
-          junk for anyone.
+        - "Both excellent and not very good. There's something I don't like about this whole thug problem, you know. But I ordered a weapon."
+        - "By tomorrow, the merchant will choose the best that he has and prepare for our arrival. It is a great success for him to get rid of unnecessary junk for anyone."
         speakerName: James
     0000000E:
       type: {class: MonologueNode, ns: , asm: Assembly-CSharp}
@@ -261,7 +236,7 @@ MonoBehaviour:
         guid: fa0735b4-b40a-4940-932f-0b5ef55f12ba
         position: {x: 8767, y: 200}
         texts:
-        - Hey! Well, you just want everything at once, my friend.
+        - "Hey! Well, you just want everything at once, my friend."
         speakerName: Arten
     0000000F:
       type: {class: MonologueNode, ns: , asm: Assembly-CSharp}
@@ -269,7 +244,7 @@ MonoBehaviour:
         guid: 08545c31-81a6-4a0c-b15b-b5a51511c302
         position: {x: 9509.5, y: 426.5}
         texts:
-        - Arten appeared behind James and Zari as if by magic.
+        - "Arten appeared behind James and Zari as if by magic."
         speakerName: 
     00000010:
       type: {class: MonologueNode, ns: , asm: Assembly-CSharp}
@@ -277,10 +252,8 @@ MonoBehaviour:
         guid: 9b365651-50bb-4e59-a9e3-313f8d0abf78
         position: {x: 10004, y: 200}
         texts:
-        - It doesn't happen that way. We Southerners have been living like this for
-          how many generations? Without resisting. The whole secret is that someone
-          just needs to start.
-        - Stand up and fight back against the scoundrels. And it will be us!
+        - "It doesn't happen that way. We Southerners have been living like this for how many generations? Without resisting. The whole secret is that someone just needs to start."
+        - "Stand up and fight back against the scoundrels. And it will be us!"
         speakerName: Arten
     00000011:
       type: {class: MonologueNode, ns: , asm: Assembly-CSharp}
@@ -288,7 +261,7 @@ MonoBehaviour:
         guid: 58f3388f-2e34-4690-b213-38b2dc2d586c
         position: {x: 10644, y: 200}
         texts:
-        - What curious reincarnations. Are you also more enthusiastic than you were?
+        - "What curious reincarnations. Are you also more enthusiastic than you were?"
         speakerName: James
     00000012:
       type: {class: MonologueNode, ns: , asm: Assembly-CSharp}
@@ -296,10 +269,8 @@ MonoBehaviour:
         guid: 7b30d211-b539-44d4-b27c-93780f215d7d
         position: {x: 11231, y: 200}
         texts:
-        - I've heard a lot of nonsense in the tavern. You know what? James, these
-          damn robbers are not the height of lawlessness.
-        - When we're done with them, we'll head north. There is a lot of work there!
-          You can trust me.
+        - "I've heard a lot of nonsense in the tavern. You know what? James, these damn robbers are not the height of lawlessness."
+        - "When we're done with them, we'll head north. There is a lot of work there! You can trust me."
         speakerName: Arten
     00000013:
       type: {class: MonologueNode, ns: , asm: Assembly-CSharp}
@@ -307,7 +278,7 @@ MonoBehaviour:
         guid: 3fe16c2f-1d61-4771-92cd-09448acc3f27
         position: {x: 11853, y: 200}
         texts:
-        - Honey. What about the room?
+        - "Honey. What about the room?"
         speakerName: Zari
     00000014:
       type: {class: MonologueNode, ns: , asm: Assembly-CSharp}
@@ -315,10 +286,8 @@ MonoBehaviour:
         guid: f53a47cc-23ff-4c80-81bc-744d92cdf0b1
         position: {x: 12223, y: 408}
         texts:
-        - And suddenly, the lively conversation of friends abruptly ended. There
-          was an awkward silence. Arten didn't know what to say.
-        - Zari waited in hope. And James anticipated the answer long before the question
-          was asked.
+        - "And suddenly, the lively conversation of friends abruptly ended. There was an awkward silence. Arten didn't know what to say."
+        - "Zari waited in hope. And James anticipated the answer long before the question was asked."
         speakerName: 
     00000015:
       type: {class: MonologueNode, ns: , asm: Assembly-CSharp}
@@ -326,7 +295,7 @@ MonoBehaviour:
         guid: e8d9ca9d-460b-4a8a-8b89-539941b50796
         position: {x: 13255.5, y: 200}
         texts:
-        - You didn't get us a room? Arten!
+        - "You didn't get us a room? Arten!"
         speakerName: Zari
     00000016:
       type: {class: MonologueNode, ns: , asm: Assembly-CSharp}
@@ -334,8 +303,7 @@ MonoBehaviour:
         guid: 0ad99e98-b110-4807-8ba5-48149c62422f
         position: {x: 13603, y: 200}
         texts:
-        - Hey, hey! When I arrived, all the rooms were already occupied. Honestly.
-          I would not say that this is exactly my fault. What should I have done?
+        - "Hey, hey! When I arrived, all the rooms were already occupied. Honestly. I would not say that this is exactly my fault. What should I have done?"
         speakerName: Arten
     00000017:
       type: {class: MonologueNode, ns: , asm: Assembly-CSharp}
@@ -343,7 +311,7 @@ MonoBehaviour:
         guid: 9fb47345-22aa-4c66-b5f2-b7cd710516ea
         position: {x: 14155.5, y: 200}
         texts:
-        - What should we do now? Sleep on the ground?
+        - "What should we do now? Sleep on the ground?"
         speakerName: Zari
     00000018:
       type: {class: MonologueNode, ns: , asm: Assembly-CSharp}
@@ -351,8 +319,7 @@ MonoBehaviour:
         guid: ab04cc4a-b317-4b50-a30c-fd36242c23d9
         position: {x: 14502.5, y: 200}
         texts:
-        - Zari, don't panic. We'll figure something out. In the end, we will take
-          you to your aunt's house, where you will spend the night in peace.
+        - "Zari, don't panic. We'll figure something out. In the end, we will take you to your aunt's house, where you will spend the night in peace."
         speakerName: James
     00000019:
       type: {class: MonologueNode, ns: , asm: Assembly-CSharp}
@@ -360,8 +327,7 @@ MonoBehaviour:
         guid: 7504791c-75a5-4419-a616-956503635344
         position: {x: 15087.5, y: 200}
         texts:
-        - We'll all spend the night there. Of course. But Arten should know very
-          well that I don't like to embarrass Miam.
+        - "We'll all spend the night there. Of course. But Arten should know very well that I don't like to embarrass Miam."
         speakerName: Zari
     0000001A:
       type: {class: MonologueNode, ns: , asm: Assembly-CSharp}
@@ -369,8 +335,7 @@ MonoBehaviour:
         guid: 21aab1d7-af5b-44ac-a9bd-362b1b052047
         position: {x: 15658, y: 200}
         texts:
-        - That's enough. I can see how this conversation is going nowhere. Nothing
-          depended on me. Here. And now, with your permission, I'm having fun.
+        - "That's enough. I can see how this conversation is going nowhere. Nothing depended on me. Here. And now, with your permission, I'm having fun."
         speakerName: Arten
     0000001B:
       type: {class: MonologueNode, ns: , asm: Assembly-CSharp}
@@ -378,8 +343,7 @@ MonoBehaviour:
         guid: 3f69c57c-4811-4c99-9d7b-a84a553a99c7
         position: {x: 16529, y: 331}
         texts:
-        - And Arten went straight into the thick of the harvest festival with a brave
-          step. Soon lost in the crowd of farmers of all ages. James just shrugged.
+        - "And Arten went straight into the thick of the harvest festival with a brave step. Soon lost in the crowd of farmers of all ages. James just shrugged."
         speakerName: 
     0000001C:
       type: {class: MonologueNode, ns: , asm: Assembly-CSharp}
@@ -387,17 +351,11 @@ MonoBehaviour:
         guid: 36708419-465d-4c2a-90db-e6667ab3da4a
         position: {x: 17566, y: 331}
         texts:
-        - Zari didn't need any comments from her friend and, rolling her eyes, followed
-          her betrothed. Children ran past James.
-        - Laughing loudly and waving sticks, the children involuntarily pushed the
-          young man to choose. The boys were happy about today and the spirit of
-          fun and serenity.
-        - As if urging James to put aside all gloomy thoughts and just relax among
-          friends and acquaintances.
-        - But after all, these children, in case of danger, will suffer on an equal
-          basis with other residents. Robbers can not only take away food and burn
-          houses.
-        - They can end life itself.
+        - "Zari didn't need any comments from her friend and, rolling her eyes, followed her betrothed. Children ran past James."
+        - "Laughing loudly and waving sticks, the children involuntarily pushed the young man to choose. The boys were happy about today and the spirit of fun and serenity."
+        - "As if urging James to put aside all gloomy thoughts and just relax among friends and acquaintances."
+        - "But after all, these children, in case of danger, will suffer on an equal basis with other residents. Robbers can not only take away food and burn houses."
+        - "They can end life itself."
         speakerName: 
     0000001D:
       type: {class: StopNode, ns: , asm: Assembly-CSharp}
@@ -446,8 +404,7 @@ MonoBehaviour:
         guid: db62bc1b-064c-4722-a8a2-f1d332e0c650
         position: {x: 3180, y: 200}
         texts:
-        - Knowing the peculiarities of our characters, it does not surprise me that
-          Arten always comes last.
+        - "Knowing the peculiarities of our characters, it does not surprise me that Arten always comes last."
         speakerName: James
     00000023:
       type: {class: CharacterNode, ns: , asm: Assembly-CSharp}
@@ -475,7 +432,7 @@ MonoBehaviour:
         guid: 38920aa3-00cd-4381-bc1c-2979fe1895c8
         position: {x: 12824.5, y: 200}
         texts:
-        - "Khm... It's not that things are going right quite well\u2026"
+        - "Khm... It's not that things are going right quite well…"
         speakerName: Arten
     00000026:
       type: {class: CharacterNode, ns: , asm: Assembly-CSharp}
@@ -503,7 +460,7 @@ MonoBehaviour:
         guid: f75ca047-2c38-455a-96f1-6801f16c93f9
         position: {x: 1289.5, y: 200}
         texts:
-        - James!
+        - "James!"
         speakerName: Zari
     00000029:
       type: {class: MonologueNode, ns: , asm: Assembly-CSharp}
@@ -511,8 +468,7 @@ MonoBehaviour:
         guid: 421a366e-d597-4c4b-8f9f-3af771fd7c50
         position: {x: 2686.5, y: 200}
         texts:
-        - Hello. One more time. I'm sorry, I was in such a hurry and I was tired.
-          Has Arten come yet?
+        - "Hello. One more time. I'm sorry, I was in such a hurry and I was tired. Has Arten come yet?"
         speakerName: Zari
     0000002A:
       type: {class: CharacterPositionNode, ns: , asm: Assembly-CSharp}
@@ -527,185 +483,185 @@ MonoBehaviour:
         position: {x: 17198, y: 247}
         characterPosition: 1
     0000002C:
+      type: {class: MusicNode, ns: , asm: Assembly-CSharp}
+      data:
+        guid: 39c904af-c316-4279-95ee-9b300d9c5de9
+        position: {x: 602, y: 168}
+        name: BarefootOnTheGrass
+    0000002D:
       type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
       data:
         sourceNodeGUID: e46ed28e-cc3a-494b-8052-0b526691fab2
         sourcePortName: Output
         destinationNodeGUID: 9954cac3-f072-43f5-8e20-715c7b99cd88
-    0000002D:
+    0000002E:
       type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
       data:
         sourceNodeGUID: 6479486f-44a0-4dfc-b471-6dc203f92340
         sourcePortName: Output
         destinationNodeGUID: f75ca047-2c38-455a-96f1-6801f16c93f9
-    0000002E:
+    0000002F:
       type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
       data:
         sourceNodeGUID: a3cc3582-d2d2-45d9-9d60-2efa2c9b668a
         sourcePortName: Output
         destinationNodeGUID: 421a366e-d597-4c4b-8f9f-3af771fd7c50
-    0000002F:
+    00000030:
       type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
       data:
         sourceNodeGUID: d25bc17c-4860-49fb-85a4-6d9b4ca72296
         sourcePortName: Output
         destinationNodeGUID: 01a1ff5b-c82f-495a-8630-edc9661c305a
-    00000030:
+    00000031:
       type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
       data:
         sourceNodeGUID: 01a1ff5b-c82f-495a-8630-edc9661c305a
         sourcePortName: Output
         destinationNodeGUID: 22907981-ea89-45e0-8386-4b6023d80d6c
-    00000031:
+    00000032:
       type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
       data:
         sourceNodeGUID: 22907981-ea89-45e0-8386-4b6023d80d6c
         sourcePortName: Output
         destinationNodeGUID: 5bfb3951-96b1-4a38-864f-3bc85d7224ef
-    00000032:
+    00000033:
       type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
       data:
         sourceNodeGUID: 5bfb3951-96b1-4a38-864f-3bc85d7224ef
         sourcePortName: Output
         destinationNodeGUID: 98d88433-5cfe-419d-aa04-8e206a1eea49
-    00000033:
+    00000034:
       type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
       data:
         sourceNodeGUID: 98d88433-5cfe-419d-aa04-8e206a1eea49
         sourcePortName: Output
         destinationNodeGUID: 7204a522-7689-4728-a86e-b457c593659b
-    00000034:
+    00000035:
       type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
       data:
         sourceNodeGUID: 636ea586-8f11-4a73-95cd-ea16b57c707c
         sourcePortName: Output
         destinationNodeGUID: b10b8374-d19c-4c41-b30f-a1a52b84ab39
-    00000035:
+    00000036:
       type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
       data:
         sourceNodeGUID: b10b8374-d19c-4c41-b30f-a1a52b84ab39
         sourcePortName: Output
         destinationNodeGUID: 789d7024-3d28-4fcc-b9fa-66e6ccdca554
-    00000036:
+    00000037:
       type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
       data:
         sourceNodeGUID: 789d7024-3d28-4fcc-b9fa-66e6ccdca554
         sourcePortName: Output
         destinationNodeGUID: ae690d55-ab74-4d0f-a3a0-e30d9247d7eb
-    00000037:
+    00000038:
       type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
       data:
         sourceNodeGUID: ae690d55-ab74-4d0f-a3a0-e30d9247d7eb
         sourcePortName: Output
         destinationNodeGUID: ffbd6d1e-f4ca-48c2-b577-6f9fc8790a21
-    00000038:
+    00000039:
       type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
       data:
         sourceNodeGUID: ffbd6d1e-f4ca-48c2-b577-6f9fc8790a21
         sourcePortName: Output
         destinationNodeGUID: 46a63ac6-8529-417e-8ce4-716d10f040f8
-    00000039:
+    0000003A:
       type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
       data:
         sourceNodeGUID: 46a63ac6-8529-417e-8ce4-716d10f040f8
         sourcePortName: Output
         destinationNodeGUID: fa0735b4-b40a-4940-932f-0b5ef55f12ba
-    0000003A:
+    0000003B:
       type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
       data:
         sourceNodeGUID: fa0735b4-b40a-4940-932f-0b5ef55f12ba
         sourcePortName: Output
         destinationNodeGUID: ce200d17-c822-4535-aa8b-fb9ae1fd0ef5
-    0000003B:
+    0000003C:
       type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
       data:
         sourceNodeGUID: 08545c31-81a6-4a0c-b15b-b5a51511c302
         sourcePortName: Output
         destinationNodeGUID: 9b365651-50bb-4e59-a9e3-313f8d0abf78
-    0000003C:
+    0000003D:
       type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
       data:
         sourceNodeGUID: 9b365651-50bb-4e59-a9e3-313f8d0abf78
         sourcePortName: Output
         destinationNodeGUID: 58f3388f-2e34-4690-b213-38b2dc2d586c
-    0000003D:
+    0000003E:
       type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
       data:
         sourceNodeGUID: 58f3388f-2e34-4690-b213-38b2dc2d586c
         sourcePortName: Output
         destinationNodeGUID: 7b30d211-b539-44d4-b27c-93780f215d7d
-    0000003E:
+    0000003F:
       type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
       data:
         sourceNodeGUID: 7b30d211-b539-44d4-b27c-93780f215d7d
         sourcePortName: Output
         destinationNodeGUID: 3fe16c2f-1d61-4771-92cd-09448acc3f27
-    0000003F:
+    00000040:
       type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
       data:
         sourceNodeGUID: 3fe16c2f-1d61-4771-92cd-09448acc3f27
         sourcePortName: Output
         destinationNodeGUID: f53a47cc-23ff-4c80-81bc-744d92cdf0b1
-    00000040:
+    00000041:
       type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
       data:
         sourceNodeGUID: f53a47cc-23ff-4c80-81bc-744d92cdf0b1
         sourcePortName: Output
         destinationNodeGUID: 9d2de349-54d3-45fc-891b-d6b9142fa943
-    00000041:
+    00000042:
       type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
       data:
         sourceNodeGUID: e8d9ca9d-460b-4a8a-8b89-539941b50796
         sourcePortName: Output
         destinationNodeGUID: 0ad99e98-b110-4807-8ba5-48149c62422f
-    00000042:
+    00000043:
       type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
       data:
         sourceNodeGUID: 0ad99e98-b110-4807-8ba5-48149c62422f
         sourcePortName: Output
         destinationNodeGUID: 9fb47345-22aa-4c66-b5f2-b7cd710516ea
-    00000043:
+    00000044:
       type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
       data:
         sourceNodeGUID: 9fb47345-22aa-4c66-b5f2-b7cd710516ea
         sourcePortName: Output
         destinationNodeGUID: ab04cc4a-b317-4b50-a30c-fd36242c23d9
-    00000044:
+    00000045:
       type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
       data:
         sourceNodeGUID: ab04cc4a-b317-4b50-a30c-fd36242c23d9
         sourcePortName: Output
         destinationNodeGUID: 7504791c-75a5-4419-a616-956503635344
-    00000045:
+    00000046:
       type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
       data:
         sourceNodeGUID: 7504791c-75a5-4419-a616-956503635344
         sourcePortName: Output
         destinationNodeGUID: 21aab1d7-af5b-44ac-a9bd-362b1b052047
-    00000046:
+    00000047:
       type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
       data:
         sourceNodeGUID: 21aab1d7-af5b-44ac-a9bd-362b1b052047
         sourcePortName: Output
         destinationNodeGUID: 9c1130de-7ba3-4057-9100-906a343743ad
-    00000047:
+    00000048:
       type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
       data:
         sourceNodeGUID: 3f69c57c-4811-4c99-9d7b-a84a553a99c7
         sourcePortName: Output
         destinationNodeGUID: 9df9a276-4819-4677-868c-d78473e6335a
-    00000048:
+    00000049:
       type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
       data:
         sourceNodeGUID: 36708419-465d-4c2a-90db-e6667ab3da4a
         sourcePortName: Output
         destinationNodeGUID: 09bcc229-00b6-4134-a17c-f312e97e8137
-    00000049:
-      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
-      data:
-        sourceNodeGUID: 8868cdcd-c5af-4765-8280-553bde7507f4
-        sourcePortName: Output
-        destinationNodeGUID: 6479486f-44a0-4dfc-b471-6dc203f92340
     0000004A:
       type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
       data:
@@ -784,3 +740,15 @@ MonoBehaviour:
         sourceNodeGUID: 9df9a276-4819-4677-868c-d78473e6335a
         sourcePortName: Output
         destinationNodeGUID: 36708419-465d-4c2a-90db-e6667ab3da4a
+    00000057:
+      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
+      data:
+        sourceNodeGUID: 8868cdcd-c5af-4765-8280-553bde7507f4
+        sourcePortName: Output
+        destinationNodeGUID: 39c904af-c316-4279-95ee-9b300d9c5de9
+    00000058:
+      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
+      data:
+        sourceNodeGUID: 39c904af-c316-4279-95ee-9b300d9c5de9
+        sourcePortName: Output
+        destinationNodeGUID: 6479486f-44a0-4dfc-b471-6dc203f92340

@@ -39,10 +39,10 @@ MonoBehaviour:
   - id: 22
   - id: 23
   - id: 24
-  nodeLinks:
   - id: 25
   - id: 26
   - id: 27
+  nodeLinks:
   - id: 28
   - id: 29
   - id: 30
@@ -65,6 +65,12 @@ MonoBehaviour:
   - id: 47
   - id: 48
   - id: 49
+  - id: 50
+  - id: 51
+  - id: 52
+  - id: 53
+  - id: 54
+  - id: 55
   exposedVariables: []
   commentBlockDatas: []
   references:
@@ -202,8 +208,8 @@ MonoBehaviour:
         dialogueText: ' '
         speakerName: 
         responses:
-        - id: 50
-        - id: 51
+        - id: 56
+        - id: 57
     00000009:
       type: {class: CharacterNode, ns: , asm: Assembly-CSharp}
       data:
@@ -225,34 +231,12 @@ MonoBehaviour:
           emotion: 3
         direction: 1
     0000000B:
-      type: {class: MonologueNode, ns: , asm: Assembly-CSharp}
-      data:
-        guid: b6ac2ede-ca17-48a1-ab9c-230c26e7e171
-        position: {x: 5866.5, y: 142.5}
-        texts:
-        - ...
-        speakerName: 
-    0000000C:
-      type: {class: StopNode, ns: , asm: Assembly-CSharp}
-      data:
-        guid: 1fb5ab40-ff3b-42c3-b1e5-57a200e753ac
-        position: {x: 6185.5, y: 250}
-    0000000D:
-      type: {class: MonologueNode, ns: , asm: Assembly-CSharp}
-      data:
-        guid: 888046af-1cc7-41e0-a144-fc212104a891
-        position: {x: 5314.5, y: 51}
-        texts:
-        - Here and there huts burst into flames. Until the whole village of Kondin
-          was finally drowned in a fire.
-        speakerName: 
-    0000000E:
       type: {class: LocationNode, ns: , asm: Assembly-CSharp}
       data:
         guid: 295803f8-8ef4-4c97-9ea6-dfbd41d2775a
         position: {x: 5019, y: 94.5}
         name: VillageFired
-    0000000F:
+    0000000C:
       type: {class: CharacterNode, ns: , asm: Assembly-CSharp}
       data:
         guid: 4ac88edb-0c49-4401-a741-de04dee4026a
@@ -262,7 +246,7 @@ MonoBehaviour:
           position: 0
           emotion: 0
         direction: 0
-    00000010:
+    0000000D:
       type: {class: MonologueNode, ns: , asm: Assembly-CSharp}
       data:
         guid: 1e46238a-9bff-4534-af3d-0c998c875315
@@ -271,7 +255,7 @@ MonoBehaviour:
         - He saw Syra, a resident of the village of Kondin, known for her love of
           dancing. All her movements were literally mesmerizing with beauty.
         speakerName: 
-    00000011:
+    0000000E:
       type: {class: CharacterNode, ns: , asm: Assembly-CSharp}
       data:
         guid: f75029ae-d4c1-425e-bfce-f316aa9e065e
@@ -281,7 +265,7 @@ MonoBehaviour:
           position: 2
           emotion: 4
         direction: 1
-    00000012:
+    0000000F:
       type: {class: MonologueNode, ns: , asm: Assembly-CSharp}
       data:
         guid: bd7482e7-38b0-416e-964c-cdb90dfca1e8
@@ -294,7 +278,7 @@ MonoBehaviour:
           piercing scream filled with pain and suffering. A request for help that
           escaped too late.
         speakerName: 
-    00000013:
+    00000010:
       type: {class: CharacterNode, ns: , asm: Assembly-CSharp}
       data:
         guid: 07d304b5-1aef-4e1d-b2ba-39c90b14e51f
@@ -304,191 +288,247 @@ MonoBehaviour:
           position: 1
           emotion: 0
         direction: 0
-    00000014:
+    00000011:
       type: {class: CharacterPositionNode, ns: , asm: Assembly-CSharp}
       data:
         guid: f49c0341-aa17-48ee-8e62-3f5f145d4417
         position: {x: 2362, y: -227}
         characterPosition: 0
-    00000015:
+    00000012:
       type: {class: CharacterPositionNode, ns: , asm: Assembly-CSharp}
       data:
         guid: f4c07eea-ff9d-4c3f-8029-9b7e7ab3610d
         position: {x: 4007, y: -286}
         characterPosition: 2
-    00000016:
+    00000013:
       type: {class: CharacterPositionNode, ns: , asm: Assembly-CSharp}
       data:
         guid: 124ad978-5c57-4fb8-9eca-a3994430683a
         position: {x: 3697, y: -370}
         characterPosition: 1
-    00000017:
+    00000014:
       type: {class: CharacterPositionNode, ns: , asm: Assembly-CSharp}
       data:
         guid: d60f1fc9-7ee5-4784-80ae-f101d9f065da
         position: {x: 3511.5, y: 432}
         characterPosition: 0
-    00000018:
+    00000015:
       type: {class: CharacterPositionNode, ns: , asm: Assembly-CSharp}
       data:
         guid: 2752e749-d5e7-412f-9de6-fe5862306a0c
         position: {x: 3871.5, y: 480}
         characterPosition: 2
+    00000016:
+      type: {class: StopMusicNode, ns: , asm: Assembly-CSharp}
+      data:
+        guid: d64e5810-56e3-4af1-88b7-7167e671c7e0
+        position: {x: 4875, y: 114.5}
+    00000017:
+      type: {class: MusicNode, ns: , asm: Assembly-CSharp}
+      data:
+        guid: 951cf9f8-5852-4151-acc9-57aafecca93c
+        position: {x: 5873, y: 142.5}
+        name: Fire
+    00000018:
+      type: {class: MonologueNode, ns: , asm: Assembly-CSharp}
+      data:
+        guid: 888046af-1cc7-41e0-a144-fc212104a891
+        position: {x: 5314.5, y: 51}
+        texts:
+        - Here and there huts burst into flames. Until the whole village of Kondin
+          was finally drowned in a fire.
+        speakerName: 
     00000019:
+      type: {class: StopNode, ns: , asm: Assembly-CSharp}
+      data:
+        guid: 1fb5ab40-ff3b-42c3-b1e5-57a200e753ac
+        position: {x: 6538.5, y: 162.5}
+    0000001A:
+      type: {class: SplitMessageNode, ns: , asm: Assembly-CSharp}
+      data:
+        guid: 17df5c5b-ce5e-4967-bfbc-c6f054988b25
+        position: {x: 6162.5, y: 142.5}
+        text:
+        - The demo is finished. Thanks for playing!
+    0000001B:
+      type: {class: LocationNode, ns: , asm: Assembly-CSharp}
+      data:
+        guid: b282ad67-d3eb-4271-8ec2-dc4d07fa1fb6
+        position: {x: 6005, y: 46.5}
+        name: BlackScreen
+    0000001C:
       type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
       data:
         sourceNodeGUID: 20333333-b837-4a70-9d05-3cbd87fdfb98
         sourcePortName: Output
         destinationNodeGUID: a1c502bc-682c-4466-967b-5056cae20d9a
-    0000001A:
+    0000001D:
       type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
       data:
         sourceNodeGUID: 532dc540-bff3-425f-b70f-51c327ecc241
         sourcePortName: Output
         destinationNodeGUID: 48bbfbd0-d3be-481c-be94-98e188a2d07d
-    0000001B:
+    0000001E:
       type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
       data:
         sourceNodeGUID: 1d9c217e-ca9a-4337-b00a-83acd7987731
         sourcePortName: Output
         destinationNodeGUID: f49c0341-aa17-48ee-8e62-3f5f145d4417
-    0000001C:
+    0000001F:
       type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
       data:
         sourceNodeGUID: bd57cdb9-3259-4b19-b8be-956d980aab20
         sourcePortName: Output
         destinationNodeGUID: 124ad978-5c57-4fb8-9eca-a3994430683a
-    0000001D:
+    00000020:
       type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
       data:
         sourceNodeGUID: df28285b-1e7c-40f7-a0b7-cf840141a205
         sourcePortName: Output
-        destinationNodeGUID: 295803f8-8ef4-4c97-9ea6-dfbd41d2775a
-    0000001E:
+        destinationNodeGUID: d64e5810-56e3-4af1-88b7-7167e671c7e0
+    00000021:
       type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
       data:
         sourceNodeGUID: 3d06258f-1a07-4bac-9f82-7c03d25afa9a
         sourcePortName: Output
         destinationNodeGUID: d0c428a7-2ddb-455f-8d5b-18301fce3556
-    0000001F:
+    00000022:
       type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
       data:
         sourceNodeGUID: d0c428a7-2ddb-455f-8d5b-18301fce3556
         sourcePortName: Output
         destinationNodeGUID: 4ac88edb-0c49-4401-a741-de04dee4026a
-    00000020:
+    00000023:
       type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
       data:
         sourceNodeGUID: b9668ba2-35ff-40ae-a17f-c26ad0b78fdc
         sourcePortName: Output
         destinationNodeGUID: f75029ae-d4c1-425e-bfce-f316aa9e065e
-    00000021:
+    00000024:
       type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
       data:
         sourceNodeGUID: a1c502bc-682c-4466-967b-5056cae20d9a
         sourcePortName: We will still have time to suffer! We are catching the moment!
         destinationNodeGUID: 532dc540-bff3-425f-b70f-51c327ecc241
-    00000022:
+    00000025:
       type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
       data:
         sourceNodeGUID: a1c502bc-682c-4466-967b-5056cae20d9a
         sourcePortName: ' No, I can''t relax with such thoughts.'
         destinationNodeGUID: 3d06258f-1a07-4bac-9f82-7c03d25afa9a
-    00000023:
+    00000026:
       type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
       data:
         sourceNodeGUID: 48bbfbd0-d3be-481c-be94-98e188a2d07d
         sourcePortName: Output
         destinationNodeGUID: c33305d7-0af4-4c3e-8136-43f2a457ebc7
-    00000024:
+    00000027:
       type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
       data:
         sourceNodeGUID: c33305d7-0af4-4c3e-8136-43f2a457ebc7
         sourcePortName: Output
         destinationNodeGUID: 1d9c217e-ca9a-4337-b00a-83acd7987731
-    00000025:
-      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
-      data:
-        sourceNodeGUID: b6ac2ede-ca17-48a1-ab9c-230c26e7e171
-        sourcePortName: Output
-        destinationNodeGUID: 1fb5ab40-ff3b-42c3-b1e5-57a200e753ac
-    00000026:
-      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
-      data:
-        sourceNodeGUID: 888046af-1cc7-41e0-a144-fc212104a891
-        sourcePortName: Output
-        destinationNodeGUID: b6ac2ede-ca17-48a1-ab9c-230c26e7e171
-    00000027:
+    00000028:
       type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
       data:
         sourceNodeGUID: 295803f8-8ef4-4c97-9ea6-dfbd41d2775a
         sourcePortName: Output
         destinationNodeGUID: 888046af-1cc7-41e0-a144-fc212104a891
-    00000028:
+    00000029:
       type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
       data:
         sourceNodeGUID: 4ac88edb-0c49-4401-a741-de04dee4026a
         sourcePortName: Output
         destinationNodeGUID: 1e46238a-9bff-4534-af3d-0c998c875315
-    00000029:
+    0000002A:
       type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
       data:
         sourceNodeGUID: 1e46238a-9bff-4534-af3d-0c998c875315
         sourcePortName: Output
         destinationNodeGUID: b9668ba2-35ff-40ae-a17f-c26ad0b78fdc
-    0000002A:
+    0000002B:
       type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
       data:
         sourceNodeGUID: f75029ae-d4c1-425e-bfce-f316aa9e065e
         sourcePortName: Output
         destinationNodeGUID: bd7482e7-38b0-416e-964c-cdb90dfca1e8
-    0000002B:
+    0000002C:
       type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
       data:
         sourceNodeGUID: bd7482e7-38b0-416e-964c-cdb90dfca1e8
         sourcePortName: Output
         destinationNodeGUID: d60f1fc9-7ee5-4784-80ae-f101d9f065da
-    0000002C:
+    0000002D:
       type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
       data:
         sourceNodeGUID: 07d304b5-1aef-4e1d-b2ba-39c90b14e51f
         sourcePortName: Output
         destinationNodeGUID: bd57cdb9-3259-4b19-b8be-956d980aab20
-    0000002D:
+    0000002E:
       type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
       data:
         sourceNodeGUID: f49c0341-aa17-48ee-8e62-3f5f145d4417
         sourcePortName: Output
         destinationNodeGUID: 07d304b5-1aef-4e1d-b2ba-39c90b14e51f
-    0000002E:
+    0000002F:
       type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
       data:
         sourceNodeGUID: f4c07eea-ff9d-4c3f-8029-9b7e7ab3610d
         sourcePortName: Output
         destinationNodeGUID: df28285b-1e7c-40f7-a0b7-cf840141a205
-    0000002F:
+    00000030:
       type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
       data:
         sourceNodeGUID: 124ad978-5c57-4fb8-9eca-a3994430683a
         sourcePortName: Output
         destinationNodeGUID: f4c07eea-ff9d-4c3f-8029-9b7e7ab3610d
-    00000030:
+    00000031:
       type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
       data:
         sourceNodeGUID: d60f1fc9-7ee5-4784-80ae-f101d9f065da
         sourcePortName: Output
         destinationNodeGUID: 2752e749-d5e7-412f-9de6-fe5862306a0c
-    00000031:
+    00000032:
       type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
       data:
         sourceNodeGUID: 2752e749-d5e7-412f-9de6-fe5862306a0c
         sourcePortName: Output
+        destinationNodeGUID: d64e5810-56e3-4af1-88b7-7167e671c7e0
+    00000033:
+      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
+      data:
+        sourceNodeGUID: d64e5810-56e3-4af1-88b7-7167e671c7e0
+        sourcePortName: Output
         destinationNodeGUID: 295803f8-8ef4-4c97-9ea6-dfbd41d2775a
-    00000032:
+    00000034:
+      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
+      data:
+        sourceNodeGUID: 888046af-1cc7-41e0-a144-fc212104a891
+        sourcePortName: Output
+        destinationNodeGUID: 951cf9f8-5852-4151-acc9-57aafecca93c
+    00000035:
+      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
+      data:
+        sourceNodeGUID: 17df5c5b-ce5e-4967-bfbc-c6f054988b25
+        sourcePortName: Output
+        destinationNodeGUID: 1fb5ab40-ff3b-42c3-b1e5-57a200e753ac
+    00000036:
+      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
+      data:
+        sourceNodeGUID: 951cf9f8-5852-4151-acc9-57aafecca93c
+        sourcePortName: Output
+        destinationNodeGUID: b282ad67-d3eb-4271-8ec2-dc4d07fa1fb6
+    00000037:
+      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
+      data:
+        sourceNodeGUID: b282ad67-d3eb-4271-8ec2-dc4d07fa1fb6
+        sourcePortName: Output
+        destinationNodeGUID: 17df5c5b-ce5e-4967-bfbc-c6f054988b25
+    00000038:
       type: {class: DialogueResponseData, ns: , asm: Assembly-CSharp}
       data:
         text: We will still have time to suffer! We are catching the moment!
-    00000033:
+    00000039:
       type: {class: DialogueResponseData, ns: , asm: Assembly-CSharp}
       data:
         text: ' No, I can''t relax with such thoughts.'

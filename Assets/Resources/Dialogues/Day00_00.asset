@@ -58,10 +58,10 @@ MonoBehaviour:
   - id: 41
   - id: 42
   - id: 43
-  nodeLinks:
   - id: 44
   - id: 45
   - id: 46
+  nodeLinks:
   - id: 47
   - id: 48
   - id: 49
@@ -102,6 +102,12 @@ MonoBehaviour:
   - id: 84
   - id: 85
   - id: 86
+  - id: 87
+  - id: 88
+  - id: 89
+  - id: 90
+  - id: 91
+  - id: 92
   exposedVariables: []
   commentBlockDatas: []
   references:
@@ -185,6 +191,459 @@ MonoBehaviour:
     00000008:
       type: {class: MonologueNode, ns: , asm: Assembly-CSharp}
       data:
+        guid: 82698782-9721-4a7f-b6a3-071091979e64
+        position: {x: 3865, y: 200}
+        texts:
+        - "\u042F \u0432\u0441\u0451 \u0435\u0449\u0451 \u043F\u043E\u043B\u043E\u043D
+          \u0440\u0435\u0448\u0438\u043C\u043E\u0441\u0442\u0438, \u0435\u0441\u043B\u0438
+          \u0432\u044B \u043E\u0431 \u044D\u0442\u043E\u043C."
+        speakerName: James
+    00000009:
+      type: {class: MonologueNode, ns: , asm: Assembly-CSharp}
+      data:
+        guid: 26650738-ca55-4c7c-b37c-d8164af1a984
+        position: {x: 4213, y: 200}
+        texts:
+        - "\u041A\u0430\u043A \u0438 \u043C\u044B. \u041C\u044B \u0432\u0435\u0434\u044C
+          \u0441 \u0442\u043E\u0431\u043E\u0439. \u0417\u0434\u0435\u0441\u044C \u0438
+          \u0441\u0435\u0439\u0447\u0430\u0441."
+        speakerName: Arten
+    0000000A:
+      type: {class: MonologueNode, ns: , asm: Assembly-CSharp}
+      data:
+        guid: b817bb99-364a-498e-a65b-004d78607b11
+        position: {x: 4569, y: 200}
+        texts:
+        - "\u041D\u0443, \u044F \u0432\u0441\u0451 \u0435\u0449\u0451 \u0441\u0447\u0438\u0442\u0430\u044E
+          \u0432\u0441\u0451 \u044D\u0442\u043E \u043E\u043F\u0430\u0441\u043D\u043E\u0439
+          \u0437\u0430\u0442\u0435\u0435\u0439. \u0415\u0441\u043B\u0438 \u0432\u044B
+          \u0445\u043E\u0442\u0438\u0442\u0435 \u0437\u043D\u0430\u0442\u044C, \u0447\u0442\u043E
+          \u044F \u0434\u0443\u043C\u0430\u044E."
+        speakerName: Zari
+    0000000B:
+      type: {class: MonologueNode, ns: , asm: Assembly-CSharp}
+      data:
+        guid: 5ddf14b3-1625-4a36-b54b-10ce9d237c7d
+        position: {x: 5203.5, y: 200}
+        texts:
+        - "\u041A\u043E\u043D\u0435\u0447\u043D\u043E, \u043C\u0438\u043B\u0430\u044F!
+          \u0422\u0430\u043A \u0447\u0442\u043E, \u0414\u0436\u0435\u0439\u043C\u0441,
+          \u043A\u0430\u043A\u043E\u0432 \u043F\u043B\u0430\u043D?"
+        speakerName: Arten
+    0000000C:
+      type: {class: MonologueNode, ns: , asm: Assembly-CSharp}
+      data:
+        guid: e675b6a4-b0b4-4858-ac63-0b5440b21605
+        position: {x: 5508.5, y: 428.5}
+        texts:
+        - "\u0410\u0440\u0442\u044D\u043D \u0438 \u0417\u0430\u0440\u0438 \u0434\u0430\u0432\u043D\u043E
+          \u0432\u043C\u0435\u0441\u0442\u0435. \u041E\u043D\u0430 \u0440\u043E\u0441\u043B\u0430
+          \u043D\u0430 \u0444\u0435\u0440\u043C\u0435 \u043F\u043E \u0441\u043E\u0441\u0435\u0434\u0441\u0442\u0432\u0443.
+          \u0418 \u043A\u043E\u043D\u0435\u0447\u043D\u043E, \u043D\u0435 \u0431\u044B\u043B\u0430
+          \u0442\u0430\u043A\u043E\u0439 \u0436\u0435 \u0434\u0440\u0443\u0436\u043D\u043E\u0439
+          \u0438 \u0442\u0435\u0441\u043D\u043E\u0439 \u0447\u0430\u0441\u0442\u044C\u044E
+          \u0432\u0441\u0435\u0445 \u0442\u0440\u043E\u0438\u0445."
+        - "\u041F\u043E\u0441\u043B\u0435 \u0437\u043D\u0430\u043A\u043E\u043C\u0441\u0442\u0432\u0430
+          \u0441 \u0410\u0440\u0442\u044D\u043D\u043E\u043C \u043D\u0430 \u043E\u0434\u043D\u043E\u043C
+          \u0438\u0437 \u043F\u0440\u0430\u0437\u0434\u043D\u0438\u043A\u043E\u0432
+          \u0432 \u0447\u0435\u0441\u0442\u044C \u0443\u0440\u043E\u0436\u0430\u044F,
+          \u043E\u043D\u0438 \u0434\u043E\u0441\u0442\u0430\u0442\u043E\u0447\u043D\u043E
+          \u0434\u043E\u043B\u0433\u043E \u043F\u0440\u0438\u0442\u0438\u0440\u0430\u043B\u0438\u0441\u044C
+          \u0434\u0440\u0443\u0433 \u043A \u0434\u0440\u0443\u0433\u0443. \u0427\u0442\u043E
+          \u043D\u0435 \u0443\u0434\u0438\u0432\u0438\u0442\u0435\u043B\u044C\u043D\u043E,
+          \u0443\u0447\u0438\u0442\u044B\u0432\u0430\u044F \u0440\u0430\u0437\u043D\u0438\u0446\u0443
+          \u043C\u0435\u0436\u0434\u0443 \u043D\u0438\u043C\u0438 \u043A\u0430\u043A
+          \u0432 \u0444\u0438\u0437\u0438\u0447\u0435\u0441\u043A\u043E\u043C, \u0442\u0430\u043A
+          \u0438 \u0432 \u0434\u0443\u0448\u0435\u0432\u043D\u043E\u043C \u043F\u043B\u0430\u043D\u0435. "
+        - "\u0411\u043E\u043B\u0435\u0435 \u0442\u043E\u0433\u043E, \u0442\u0438\u0445\u0430\u044F
+          \u0438 \u043D\u0435\u0443\u0432\u0435\u0440\u0435\u043D\u043D\u0430\u044F
+          \u0417\u0430\u0440\u0438 \u043A\u0443\u0434\u0430 \u0431\u044B\u0441\u0442\u0440\u0435\u0435
+          \u0441\u0434\u0440\u0443\u0436\u0438\u043B\u0430\u0441\u044C \u0441 \u0414\u0436\u0435\u0439\u043C\u0441\u043E\u043C.
+          \u0418 \u0445\u043E\u0442\u044C \u043E\u043D\u0438 \u0431\u043E\u043B\u044C\u0448\u0435
+          \u043F\u043E\u0434\u0445\u043E\u0434\u0438\u043B\u0438 \u0434\u0440\u0443\u0433
+          \u0434\u0440\u0443\u0433\u0443, \u0438\u0441\u043A\u0440 \u043C\u0435\u0436\u0434\u0443
+          \u043D\u0438\u043C\u0438 \u043D\u0435 \u043F\u0440\u043E\u0431\u0435\u0433\u0430\u043B\u043E."
+        - "\u0427\u0442\u043E \u043E\u043F\u0440\u043E\u0432\u0435\u0440\u0433\u043B\u043E
+          \u0438 \u0434\u043E\u043A\u0430\u0437\u0430\u043B\u043E \u0441\u0440\u0430\u0437\u0443
+          \u0434\u0432\u0435 \u0438\u0441\u0442\u0438\u043D\u044B: \u0434\u0440\u0443\u0436\u0431\u0430
+          \u043C\u0435\u0436\u0434\u0443 \u043C\u0443\u0436\u0447\u0438\u043D\u043E\u0439
+          \u0438 \u0436\u0435\u043D\u0449\u0438\u043D\u043E\u0439 \u043D\u0435 \u0432\u043E\u0437\u043C\u043E\u0436\u043D\u0430
+          \u0438 \u043F\u0440\u043E\u0442\u0438\u0432\u043E\u043F\u043E\u043B\u043E\u0436\u043D\u043E\u0441\u0442\u0438
+          \u043F\u0440\u0438\u0442\u044F\u0433\u0438\u0432\u0430\u044E\u0442\u0441\u044F. "
+        - "\u0410\u0440\u0442\u044D\u043D \u0438 \u0417\u0430\u0440\u0438 \u043F\u0440\u0438\u0432\u043B\u0435\u043A\u0430\u043B\u0438
+          \u0434\u0440\u0443\u0433 \u0434\u0440\u0443\u0433\u0430 \u0441 \u043F\u0435\u0440\u0432\u043E\u0439
+          \u0432\u0441\u0442\u0440\u0435\u0447\u0438. \u041E\u043D\u0438 \u043F\u0440\u043E\u0441\u0442\u043E
+          \u0434\u043E\u043B\u0433\u043E \u0440\u0435\u0448\u0430\u043B\u0438\u0441\u044C
+          \u043F\u043E\u0439\u0442\u0438 \u043D\u0430 \u043F\u0435\u0440\u0432\u044B\u0435
+          \u0448\u0430\u0433\u0438."
+        speakerName: 
+    0000000D:
+      type: {class: MonologueNode, ns: , asm: Assembly-CSharp}
+      data:
+        guid: cef65908-81a3-4805-a58e-ff0543112100
+        position: {x: 6076.5, y: 200}
+        texts:
+        - "\u0412\u0441\u0451 \u043F\u0440\u043E\u0441\u0442\u043E. \u0418\u0434\u0451\u043C
+          \u0432 \u0434\u0435\u0440\u0435\u0432\u043D\u044E, \u0437\u0430\u043A\u0443\u043F\u0430\u0435\u043C
+          \u043F\u0440\u0438\u043F\u0430\u0441\u044B \u0438 \u0430\u043C\u0443\u043D\u0438\u0446\u0438\u044E."
+        speakerName: James
+    0000000E:
+      type: {class: MonologueNode, ns: , asm: Assembly-CSharp}
+      data:
+        guid: 15f054f5-9191-4227-8efb-80bed8f80bee
+        position: {x: 6574.5, y: 200}
+        texts:
+        - "\u0418 \u0447\u0442\u043E \u0434\u0430\u043B\u044C\u0448\u0435?"
+        speakerName: Zari
+    0000000F:
+      type: {class: MonologueNode, ns: , asm: Assembly-CSharp}
+      data:
+        guid: bfb3e29d-4b68-4296-8b50-a0af8f314e2f
+        position: {x: 6943.5, y: 200}
+        texts:
+        - "\u041D\u0443\u2026 \u0414\u0430\u043B\u044C\u0448\u0435\u2026 \u0414\u0430\u043B\u044C\u0448\u0435
+          \u0443\u0436\u0435 \u043F\u043E \u043D\u0430\u0438\u0442\u0438\u044E\u2026"
+        speakerName: James
+    00000010:
+      type: {class: MonologueNode, ns: , asm: Assembly-CSharp}
+      data:
+        guid: 457e0374-8df6-4d77-9951-ac42a4c840a9
+        position: {x: 7324.5, y: 200}
+        texts:
+        - "\u0422\u043E \u0435\u0441\u0442\u044C \u0442\u0430\u043A \u0434\u0430\u043B\u0435\u043A\u043E
+          \u0442\u044B \u0435\u0449\u0451 \u043D\u0435 \u0437\u0430\u0433\u043B\u044F\u0434\u044B\u0432\u0430\u043B?"
+        speakerName: Zari
+    00000011:
+      type: {class: MonologueNode, ns: , asm: Assembly-CSharp}
+      data:
+        guid: 366f7e7e-5c88-47a2-9ce4-71babd8ecbd6
+        position: {x: 9177.5, y: 200}
+        texts:
+        - "\u042F \u043D\u0435 \u0436\u0430\u043B\u0443\u044E\u0441\u044C, \u0414\u0436\u0435\u0439\u043C\u0441.
+          \u0425\u043E\u0442\u044F \u043D\u0435\u0442, \u0436\u0430\u043B\u0443\u044E\u0441\u044C\u2026
+          \u0423 \u0442\u0435\u0431\u044F \u0447\u0438\u0441\u0442\u044B\u0435 \u043F\u043E\u043C\u044B\u0441\u043B\u044B.
+          \u0418 \u043F\u043E\u043A\u0430 \u043D\u0430\u0448\u0435 \u043F\u043E\u043D\u0438\u043C\u0430\u043D\u0438\u0435
+          \u0441\u043F\u0440\u0430\u0432\u0435\u0434\u043B\u0438\u0432\u043E\u0441\u0442\u0438
+          \u043D\u0435 \u0438\u0441\u043F\u043E\u0440\u0447\u0435\u043D\u043E \u0441\u0438\u043B\u043E\u0439
+          \u0438\u043B\u0438 \u043C\u043E\u0436\u0435\u0442 \u0431\u044B\u0442\u044C
+          \u0432\u043B\u0430\u0441\u0442\u044C\u044E. \u0418\u043B\u0438 \u0445\u043E\u0442\u044F
+          \u0431\u044B \u0438\u0437\u0432\u0435\u0441\u0442\u043D\u043E\u0441\u0442\u044C\u044E. "
+        - "\u041C\u044B \u0434\u0435\u0439\u0441\u0442\u0432\u0438\u0442\u0435\u043B\u044C\u043D\u043E
+          \u043C\u043E\u0433\u043B\u0438 \u0431\u044B \u043C\u043D\u043E\u0433\u0438\u043C
+          \u043F\u043E\u043C\u043E\u0447\u044C \u0438 \u0441\u0442\u0430\u0442\u044C
+          \u0445\u043E\u0440\u043E\u0448\u0438\u043C\u0438 \u0413\u0435\u0440\u043E\u044F\u043C\u0438.
+          \u041D\u0435 \u0417\u043E\u043B\u043E\u0442\u044B\u043C \u041A\u043E\u0440\u043E\u043B\u0451\u043C,
+          \u043A\u043E\u043D\u0435\u0447\u043D\u043E\u2026 \u0414\u0430\u0436\u0435,
+          \u0432\u043E\u0437\u043C\u043E\u0436\u043D\u043E, \u043D\u0435 \u0431\u043B\u0438\u0437\u043A\u043E\u2026 "
+        - "\u041D\u043E \u0432\u0441\u0451 \u0436\u0435! \u041F\u0440\u043E\u0441\u0442\u043E,
+          \u044F \u0431\u043E\u044E\u0441\u044C. \u0412\u043E\u0442 \u0438 \u0432\u0441\u0451.
+          \u041D\u0443 \u043A\u0442\u043E \u043C\u043E\u0436\u0435\u0442 \u0431\u044B\u0442\u044C
+          \u0431\u043E\u043B\u0435\u0435 \u043D\u0435\u0443\u043C\u0435\u043B\u044B\u043C,
+          \u0447\u0435\u043C \u0442\u0440\u043E\u0435 \u043E\u0431\u044B\u0447\u043D\u044B\u0445
+          \u0444\u0435\u0440\u043C\u0435\u0440\u043E\u0432?"
+        speakerName: Zari
+    00000012:
+      type: {class: MonologueNode, ns: , asm: Assembly-CSharp}
+      data:
+        guid: 836f0210-bc15-4b4d-aad1-f32770dc4852
+        position: {x: 9764.5, y: 200}
+        texts:
+        - "\u042F \u043D\u0435 \u0447\u0443\u0432\u0441\u0442\u0432\u0443\u044E \u0441\u0435\u0431\u044F
+          \u0444\u0435\u0440\u043C\u0435\u0440\u043E\u043C. \u042F \u043C\u043E\u0433\u0443
+          \u0433\u043E\u0440\u0430\u0437\u0434\u043E \u0431\u043E\u043B\u044C\u0448\u0435.
+          \u042F \u044D\u0442\u043E \u0437\u043D\u0430\u044E!"
+        speakerName: James
+    00000013:
+      type: {class: MonologueNode, ns: , asm: Assembly-CSharp}
+      data:
+        guid: b3bb9dd5-cbda-4222-a4e4-dde53dbcffe2
+        position: {x: 10232.5, y: 200}
+        texts:
+        - "\u042F \u0442\u043E\u0436\u0435 \u0442\u0430\u043A\u043E\u0439 \u0441\u0435\u0431\u0435
+          \u0444\u0435\u0440\u043C\u0435\u0440."
+        speakerName: Arten
+    00000014:
+      type: {class: MonologueNode, ns: , asm: Assembly-CSharp}
+      data:
+        guid: 904cbf02-e5e1-4bec-88a7-0e0c61b28824
+        position: {x: 10557.5, y: 200}
+        texts:
+        - "\u0422\u044B \u0442\u0435\u043C \u0431\u043E\u043B\u0435\u0435 \u043E\u0431\u044F\u0437\u0430\u043D
+          \u0431\u044B\u0442\u044C \u0413\u0435\u0440\u043E\u0435\u043C. \u041F\u043E\u0441\u043C\u043E\u0442\u0440\u0438
+          \u043D\u0430 \u0441\u0435\u0431\u044F!"
+        speakerName: James
+    00000015:
+      type: {class: MonologueNode, ns: , asm: Assembly-CSharp}
+      data:
+        guid: a237cb7a-bbd3-4b35-a60b-ff80d64a3a4f
+        position: {x: 11277.5, y: 200}
+        texts:
+        - "\u0417\u0430\u0440\u0438, \u043C\u0438\u043B\u0430\u044F. \u0422\u044B
+          \u043D\u0435 \u0413\u0435\u0440\u043E\u0439, \u0432\u0435\u0440\u043D\u043E.
+          \u0418 \u0432\u0440\u044F\u0434 \u043B\u0438 \u0438\u043C \u0441\u0442\u0430\u043D\u0435\u0448\u044C.
+          \u041D\u043E \u043A\u0442\u043E \u043C\u044B \u0431\u0435\u0437 \u0442\u0435\u0431\u044F?
+          \u041C\u044B \u0432\u0441\u0435 \u043F\u043E \u043E\u0442\u0434\u0435\u043B\u044C\u043D\u043E\u0441\u0442\u0438
+          \u0441\u043B\u0430\u0431\u044B. \u041D\u043E \u0432\u043C\u0435\u0441\u0442\u0435\u2026"
+        speakerName: James
+    00000016:
+      type: {class: MonologueNode, ns: , asm: Assembly-CSharp}
+      data:
+        guid: c51e05db-8a72-40f4-a212-548e207b3017
+        position: {x: 12979, y: 200}
+        texts:
+        - "\u041E\u0442\u043B\u0438\u0447\u043D\u0430\u044F \u0432\u043E\u0437\u043C\u043E\u0436\u043D\u043E\u0441\u0442\u044C
+          \u043F\u0440\u043E\u044F\u0432\u0438\u0442\u044C \u0441\u0435\u0431\u044F
+          \u043F\u0440\u044F\u043C\u043E \u0441\u0435\u0439\u0447\u0430\u0441! \u0418
+          \u0442\u0430\u043A, \u0433\u043E\u043B\u043E\u0441 \u0440\u0430\u0437\u0443\u043C\u0430
+          \u043F\u0440\u0435\u0434\u0443\u043F\u0440\u0435\u0436\u0434\u0430\u0435\u0442\u2026"
+        speakerName: Zari
+    00000017:
+      type: {class: LocationNode, ns: , asm: Assembly-CSharp}
+      data:
+        guid: 6952bc42-281a-4841-8e96-dfff2c45eba4
+        position: {x: 14908.5, y: 290}
+        name: VillageCloseViewDay
+    00000018:
+      type: {class: MonologueNode, ns: , asm: Assembly-CSharp}
+      data:
+        guid: ed4f4e3b-1342-4e54-8ad1-8a54408dfc97
+        position: {x: 11825.5, y: 200}
+        texts:
+        - "\u0414\u043E\u0440\u043E\u0433\u0430\u044F, \u044F \u043D\u0435 \u0434\u0430\u043C
+          \u0442\u0435\u0431\u044F \u0432 \u043E\u0431\u0438\u0434\u0443! \u0414\u0436\u0435\u0439\u043C\u0441
+          \u0432\u0435\u0440\u043D\u043E \u043F\u043E\u0434\u043C\u0435\u0442\u0438\u043B.
+          \u041C\u044B \u2013 \u044D\u0442\u043E \u044F, \u043E\u043D \u0438 \u0442\u044B.\n\u041A\u0430\u043A
+          \u0431\u044B \u0431\u0430\u043D\u0430\u043B\u044C\u043D\u043E \u044D\u0442\u043E
+          \u043D\u0435 \u0437\u0432\u0443\u0447\u0430\u043B\u043E. \u0414\u0430 \u0438
+          \u0432\u043E\u043E\u0431\u0449\u0435. "
+        - "\u0415\u0441\u043B\u0438 \u044F \u0413\u0435\u0440\u043E\u0439 \u0438
+          \u0414\u0436\u0435\u0439\u043C\u0441 \u0413\u0435\u0440\u043E\u0439. \u0422\u043E\u0433\u0434\u0430
+          \u0442\u044B \u2013 \u043D\u0430\u0448 \u0433\u043E\u043B\u043E\u0441 \u0440\u0430\u0437\u0443\u043C\u0430!
+          \u0412\u043E\u0442. \u0411\u0443\u0434\u0435\u0448\u044C \u0441\u0432\u043E\u0435\u0432\u0440\u0435\u043C\u0435\u043D\u043D\u043E
+          \u043E\u0441\u0442\u0430\u043D\u0430\u0432\u043B\u0438\u0432\u0430\u0442\u044C
+          \u043D\u0430\u0441, \u043F\u0440\u0435\u0436\u0434\u0435 \u0447\u0435\u043C
+          \u043C\u044B \u0441\u043E\u0432\u0435\u0440\u0448\u0438\u043C \u043D\u0435\u043E\u0431\u0434\u0443\u043C\u0430\u043D\u043D\u044B\u0439
+          \u0448\u0430\u0433!"
+        speakerName: Arten
+    00000019:
+      type: {class: MonologueNode, ns: , asm: Assembly-CSharp}
+      data:
+        guid: 669fb5a1-d2db-4dcc-bb8e-ed278713b7a8
+        position: {x: 12416.5, y: 405.5}
+        texts:
+        - "\u0422\u0430\u043A \u043E\u043D\u0438 \u0432\u0441\u0435\u0433\u0434\u0430
+          \u0438 \u0436\u0438\u043B\u0438. \u0412\u043E\u043E\u0434\u0443\u0448\u0435\u0432\u043B\u0451\u043D\u043D\u044B\u0439
+          \u0438\u0434\u0435\u044F\u043C\u0438 \u0414\u0436\u0435\u0439\u043C\u0441,
+          \u043F\u0440\u0435\u0438\u0441\u043F\u043E\u043B\u043D\u0435\u043D\u043D\u044B\u0439
+          \u0431\u043B\u0430\u0433\u043E\u0440\u043E\u0434\u0441\u0442\u0432\u043E\u043C
+          \u0438 \u0447\u0443\u0432\u0441\u0442\u0432\u0443\u044E\u0449\u0438\u0439
+          \u0432 \u0441\u0435\u0431\u0435 \u0432\u043E\u0437\u043C\u043E\u0436\u043D\u043E\u0441\u0442\u0438,
+          \u043B\u0435\u0433\u043A\u043E\u043C\u044B\u0441\u043B\u0435\u043D\u043D\u044B\u0439
+          \u0410\u0440\u0442\u044D\u043D, \u043E\u0449\u0443\u0449\u0430\u044E\u0449\u0438\u0439
+          \u043C\u0438\u0440 \u0432\u043E\u043A\u0440\u0443\u0433 \u043B\u0435\u0433\u043A\u043E
+          \u0438 \u0441 \u0443\u043B\u044B\u0431\u043A\u043E\u0439."
+        - "\u0418 \u043D\u0435\u0433\u043E\u0434\u0443\u044E\u0449\u0430\u044F \u0417\u0430\u0440\u0438,
+          \u0438\u0441\u043F\u043E\u0434\u043B\u043E\u0431\u044C\u044F \u043F\u043E\u0433\u043B\u044F\u0434\u044B\u0432\u0430\u044E\u0449\u0430\u044F
+          \u043D\u0430 \u0441\u043F\u0443\u0442\u043D\u0438\u043A\u043E\u0432, \u0432\u0441\u0435\u0433\u0434\u0430
+          \u043F\u0440\u0435\u0434\u043E\u0441\u0442\u0430\u0432\u043B\u044F\u044E\u0449\u0438\u0445
+          \u0434\u0435\u0432\u0443\u0448\u043A\u0435 \u0438\u043B\u043B\u044E\u0437\u0438\u044E
+          \u0432\u044B\u0431\u043E\u0440\u0430."
+        speakerName: 
+    0000001A:
+      type: {class: MonologueNode, ns: , asm: Assembly-CSharp}
+      data:
+        guid: 7cfcad82-7bea-4d50-a27f-628f2f7856af
+        position: {x: 7677.5, y: 200}
+        texts:
+        - "\u0427\u0442\u043E \u0432\u043E\u043E\u0431\u0449\u0435 \u0437\u043D\u0430\u0447\u0438\u0442
+          \u0431\u044B\u0442\u044C \u0413\u0435\u0440\u043E\u0435\u043C? \u041A\u0442\u043E-\u043D\u0438\u0431\u0443\u0434\u044C
+          \u0438\u0437 \u0432\u0430\u0441 \u0432 \u043A\u0443\u0440\u0441\u0435?
+          \u041C\u043E\u0436\u0435\u0442 \u043F\u043E\u0434\u0435\u043B\u0438\u0442\u044C\u0441\u044F
+          \u0431\u043E\u0433\u0430\u0442\u044B\u043C \u043E\u043F\u044B\u0442\u043E\u043C?
+          \u042F \u0442\u0430\u043A \u0438 \u0434\u0443\u043C\u0430\u043B. \u042F
+          \u0442\u0430\u043A\u043E\u0439 \u0436\u0435 \u043D\u0435\u0443\u043C\u0435\u043B\u044B\u0439
+          \u0432 \u044D\u0442\u043E\u043C \u043A\u0430\u043A \u0438 \u0432\u044B. "
+        - "\u041D\u043E \u0432 \u043A\u043E\u043D\u0446\u0435 \u043A\u043E\u043D\u0446\u043E\u0432!
+          \u041C\u044B \u0432\u0435\u0434\u044C \u0445\u043E\u0442\u0438\u043C \u043F\u043E\u043C\u043E\u0433\u0430\u0442\u044C
+          \u0441\u043B\u0430\u0431\u044B\u043C. \u0422\u0435\u043C, \u043A\u0442\u043E
+          \u043D\u0435 \u043C\u043E\u0436\u0435\u0442 \u0434\u0430\u0442\u044C \u043E\u0442\u043F\u043E\u0440
+          \u0441\u0443\u0440\u043E\u0432\u043E\u0439 \u0440\u0435\u0430\u043B\u044C\u043D\u043E\u0441\u0442\u0438.
+          \u0411\u0435\u0434\u0435, \u0432 \u0447\u044C\u0451\u043C \u0431\u044B
+          \u043E\u0431\u043B\u0438\u0447\u0438\u0438 \u043E\u043D\u0430 \u043D\u0438
+          \u0431\u044B\u043B\u0430."
+        speakerName: James
+    0000001B:
+      type: {class: StopNode, ns: , asm: Assembly-CSharp}
+      data:
+        guid: e8eb9eca-5cf6-4dd5-ba51-fd9bcf29c9cb
+        position: {x: 15980, y: 386}
+    0000001C:
+      type: {class: LocationNode, ns: , asm: Assembly-CSharp}
+      data:
+        guid: 8c57525b-de4b-472d-a5e8-cbf12d664710
+        position: {x: 221, y: 31.5}
+        name: BlackScreen
+    0000001D:
+      type: {class: SplitMessageNode, ns: , asm: Assembly-CSharp}
+      data:
+        guid: e9d77b30-a69b-4707-a454-e45e7a376518
+        position: {x: 221, y: 200}
+        text:
+        - "<#ff0b1f><size=60><font=\"SpeakerName SDF\">\u042D</font></size></color>\u043F\u043E\u0445\u0430
+          <#ff0b1f><size=60><font=\"SpeakerName SDF\">\u0417</font></size></color>\u043E\u043B\u043E\u0442\u044B\u0445
+          <#ff0b1f><size=60><font=\"SpeakerName SDF\">\u041A</font></size></color>\u043E\u0440\u043E\u043B\u0435\u0439
+          \u2013 \u0432\u0440\u0435\u043C\u0435\u043D\u0430,<alpha=#00>.\n<alpha=#FF>\u043A\u043E\u0433\u0434\u0430
+          \u043F\u043E \u0432\u0441\u0435\u043C\u0443 \u043C\u0438\u0440\u0443 \u0441\u043C\u0435\u0440\u0442\u043D\u044B\u0435
+          \u0432\u043E\u0441\u0441\u0442\u0430\u044E\u0442<alpha=#00>.\n<alpha=#FF>\u043F\u0440\u043E\u0442\u0438\u0432
+          \u0437\u043B\u043E\u0431\u043D\u044B\u0445, \u043A\u0440\u043E\u0432\u043E\u0436\u0430\u0434\u043D\u044B\u0445
+          \u0411\u043E\u0433\u043E\u0432."
+        - "<size=60><font=\"SpeakerName SDF\">\u041D</font></size>\u043E \u043A\u0443\u043B\u044C\u0442
+          \u0431\u0435\u0441\u0441\u043C\u0435\u0440\u0442\u043D\u044B\u0445 \u043D\u0438\u043A\u043E\u0433\u0434\u0430
+          \u043D\u0435 \u0441\u0443\u0449\u0435\u0441\u0442\u0432\u043E\u0432\u0430\u043B
+          \u043D\u0430 \u0424\u0435\u043B\u0435\u0441\u0442\u0438\u043D\u0435.\n\u041D\u0430
+          \u043C\u0430\u0442\u0435\u0440\u0438\u043A\u0435, \u0440\u0430\u0441\u0442\u044F\u043D\u0443\u0432\u0448\u0435\u043C\u0441\u044F
+          \u0441 \u0441\u0435\u0432\u0435\u0440\u0430 \u043D\u0430 \u044E\u0433.\n\u0412
+          \u0441\u0442\u0440\u0430\u043D\u0435 \u0441\u0432\u043E\u0431\u043E\u0434\u043D\u044B\u0445
+          \u043D\u0440\u0430\u0432\u043E\u0432."
+        - "<size=60><font=\"SpeakerName SDF\">\u041D</font></size>\u0430\u0448\u0430
+          \u0438\u0441\u0442\u043E\u0440\u0438\u044F \u043D\u0430\u0447\u0438\u043D\u0430\u0435\u0442\u0441\u044F
+          \u043D\u0430 \u044E\u0433\u0435 \u2013 \u043F\u043B\u043E\u0434\u043E\u0440\u043E\u0434\u043D\u044B\u0445
+          \u0437\u0435\u043C\u043B\u044F\u0445, \u043E\u0441\u0432\u043E\u0435\u043D\u043D\u044B\u0445
+          \u0444\u0435\u0440\u043C\u0435\u0440\u0430\u043C\u0438.\n\u0424\u0435\u0440\u043C\u0435\u0440\u0430\u043C\u0438,
+          \u0436\u0438\u0432\u0443\u0449\u0438\u043C\u0438 \u043F\u043E\u0434 \u0433\u043D\u0451\u0442\u043E\u043C
+          \u0440\u0430\u0437\u0431\u043E\u0439\u043D\u0438\u0447\u044C\u0438\u0445
+          \u043A\u043B\u0430\u043D\u043E\u0432.\n\u0418 \u0434\u043E \u0441\u0435\u0433\u043E
+          \u0434\u043D\u044F \u043D\u0435\u043A\u043E\u043C\u0443 \u0431\u044B\u043B\u043E
+          \u043F\u0440\u0438\u0441\u0442\u0440\u0443\u043D\u0438\u0442\u044C \u0433\u043E\u043B\u043E\u0432\u043E\u0440\u0435\u0437\u043E\u0432\u2026"
+    0000001E:
+      type: {class: CharacterNode, ns: , asm: Assembly-CSharp}
+      data:
+        guid: 8ea2e1c5-d378-41be-b234-537ef67030ec
+        position: {x: 1552, y: 200}
+        character:
+          name: James
+          position: 2
+          emotion: 0
+        direction: 1
+    0000001F:
+      type: {class: CharacterNode, ns: , asm: Assembly-CSharp}
+      data:
+        guid: f6264c20-02bc-497a-b047-162ca9339321
+        position: {x: 2466, y: 200}
+        character:
+          name: Arten
+          position: 0
+          emotion: 0
+        direction: 0
+    00000020:
+      type: {class: CharacterNode, ns: , asm: Assembly-CSharp}
+      data:
+        guid: fb5209bb-db0d-45fd-a96a-ce9a7ce31775
+        position: {x: 3213, y: 200}
+        character:
+          name: Zari
+          position: 1
+          emotion: 0
+        direction: 0
+    00000021:
+      type: {class: CharacterNode, ns: , asm: Assembly-CSharp}
+      data:
+        guid: fc7d32a1-6b61-478f-af5d-8414043789a9
+        position: {x: 13542.5, y: 34}
+        character:
+          name: Arten
+          position: 0
+          emotion: 1
+        direction: 0
+    00000022:
+      type: {class: MonologueNode, ns: , asm: Assembly-CSharp}
+      data:
+        guid: 7201308c-32e0-457b-840a-6c5b1a83ed7a
+        position: {x: 8254.5, y: 200}
+        texts:
+        - "\u0410 \u043C\u044B \u043C\u043E\u0436\u0435\u043C?"
+        speakerName: Zari
+    00000023:
+      type: {class: MonologueNode, ns: , asm: Assembly-CSharp}
+      data:
+        guid: 7ce0c484-8426-4035-96e4-4f42e6ed87bd
+        position: {x: 8575.5, y: 200}
+        texts:
+        - "\u041D\u0430\u0447\u043D\u0451\u043C \u0441 \u043C\u0430\u043B\u043E\u0433\u043E.
+          \u041F\u043E\u043D\u044F\u0442\u043D\u043E\u0435 \u0434\u0435\u043B\u043E,
+          \u0447\u0442\u043E \u0433\u043E\u0440\u044B \u0441\u0432\u043E\u0440\u0430\u0447\u0438\u0432\u0430\u0442\u044C
+          \u043D\u0430\u043C \u043D\u0435 \u043F\u043E \u0441\u0438\u043B\u0430\u043C.
+          \u041D\u043E \u043E\u0434\u043D\u0430\u0436\u0434\u044B, \u043C\u043E\u0436\u0435\u0442
+          \u0441\u0442\u0430\u0442\u044C\u0441\u044F, \u043C\u044B \u0438\u0441\u043A\u043E\u0440\u0435\u043D\u0438\u043C
+          \u0438\u0437 \u0424\u0435\u043B\u0435\u0441\u0442\u0438\u043D\u044B \u0432\u0441\u0435\u0445
+          \u0440\u0430\u0437\u0431\u043E\u0439\u043D\u0438\u043A\u043E\u0432! \u0427\u0435\u043C
+          \u043D\u0435 \u043F\u043B\u0430\u043D? "
+        - "\u041D\u0430\u0434\u043E \u043F\u0440\u043E\u0441\u0442\u043E \u043D\u0430\u0447\u0438\u043D\u0430\u0442\u044C
+          \u043F\u043E\u0441\u0442\u0435\u043F\u0435\u043D\u043D\u043E. \u041D\u0430\u0431\u0438\u0440\u0430\u0442\u044C\u0441\u044F
+          \u043E\u043F\u044B\u0442\u0430. \u0412\u043E\u043E\u0440\u0443\u0436\u0438\u043C\u0441\u044F
+          \u0438 \u0441\u043F\u0440\u043E\u0441\u0438\u043C, \u043A\u043E\u043C\u0443
+          \u043D\u0443\u0436\u043D\u0430 \u043F\u043E\u043C\u043E\u0449\u044C. \u0414\u0443\u043C\u0430\u044E,
+          \u0447\u0442\u043E \u0442\u0430\u043A \u0438 \u043D\u0430\u0447\u043D\u0451\u043C."
+        speakerName: James
+    00000024:
+      type: {class: MonologueNode, ns: , asm: Assembly-CSharp}
+      data:
+        guid: a2f8911a-051f-4d1f-99cf-dad24f5cb3a3
+        position: {x: 10909.5, y: 200}
+        texts:
+        - "\u0420\u0435\u0431\u044F\u0442\u0430! \u041C\u043E\u0436\u0435\u0442 \u0445\u0432\u0430\u0442\u0438\u0442
+          \u043D\u0435 \u0437\u0430\u043C\u0435\u0447\u0430\u0442\u044C \u0434\u0430\u043B\u044C\u0448\u0435
+          \u0441\u0432\u043E\u0435\u0433\u043E \u043D\u043E\u0441\u0430? \u041C\u043E\u0436\u0435\u0442
+          \u0432\u044B \u0433\u043B\u044F\u043D\u0435\u0442\u0435 \u043D\u0435 \u0442\u043E\u043B\u044C\u043A\u043E
+          \u043D\u0430 \u0441\u0435\u0431\u044F, \u043D\u043E \u0438 \u043D\u0430
+          \u043C\u0435\u043D\u044F? \u042F \u043F\u043E-\u0432\u0430\u0448\u0435\u043C\u0443
+          \u043A\u0442\u043E? \u0413\u0435\u0440\u043E\u0439?"
+        speakerName: Zari
+    00000025:
+      type: {class: MonologueNode, ns: , asm: Assembly-CSharp}
+      data:
+        guid: 96fa4181-895b-429d-aa8e-9ab0ee1bc75b
+        position: {x: 14237.5, y: 354}
+        texts:
+        - "\u0420\u0430\u0434\u043E\u0441\u0442\u043D\u043E \u043F\u0440\u043E\u0432\u043E\u0437\u0433\u043B\u0430\u0441\u0438\u043B
+          \u0410\u0440\u0442\u044D\u043D, \u043D\u0435 \u0434\u043E\u0436\u0438\u0434\u0430\u044F\u0441\u044C
+          \u043E\u0442\u0432\u0435\u0442\u043D\u043E\u0439 \u0440\u0435\u0430\u043A\u0446\u0438\u0438
+          \u0437\u0430\u0449\u0435\u0433\u043E\u043B\u044F\u0432 \u0432 \u0441\u0442\u043E\u0440\u043E\u043D\u0443
+          \u0432\u0438\u0434\u043D\u0435\u044E\u0449\u0438\u0445\u0441\u044F \u043D\u0430
+          \u0433\u043E\u0440\u0438\u0437\u043E\u043D\u0442\u0435 \u0445\u0438\u0436\u0438\u043D.
+          \u041F\u0440\u0430\u0437\u0434\u043D\u0438\u043A \u0443\u0440\u043E\u0436\u0430\u044F,
+          \u043F\u0440\u043E\u0432\u043E\u0434\u044F\u0449\u0438\u0439\u0441\u044F
+          \u043F\u043E\u0432\u0441\u0435\u043C\u0435\u0441\u0442\u043D\u043E \u043D\u0430
+          \u044E\u0436\u043D\u043E\u0439 \u0447\u0430\u0441\u0442\u0438 \u0424\u0435\u043B\u0435\u0441\u0442\u0438\u043D\u044B. "
+        - "\u0418 \u0434\u0430\u0436\u0435 \u0432 \u0442\u043E\u043C \u0441\u043B\u0443\u0447\u0430\u0435,
+          \u0435\u0441\u043B\u0438 \u0443\u0440\u043E\u0436\u0430\u0439 \u0432\u044B\u0434\u0430\u0432\u0430\u043B\u0441\u044F
+          \u0441\u043A\u0432\u0435\u0440\u043D\u044B\u0439, \u043B\u044E\u0434\u0438
+          \u0435\u0436\u0435\u0433\u043E\u0434\u043D\u043E \u043F\u0440\u043E\u0434\u043E\u043B\u0436\u0430\u043B\u0438
+          \u0441\u043E\u0431\u0438\u0440\u0430\u0442\u044C\u0441\u044F, \u0445\u043E\u0442\u044C
+          \u0441\u043A\u043E\u043B\u044C\u043A\u043E-\u0442\u043E \u0440\u0430\u0434\u0443\u044F\u0441\u044C
+          \u0436\u0438\u0437\u043D\u0438."
+        speakerName: 
+    00000026:
+      type: {class: CharacterPositionNode, ns: , asm: Assembly-CSharp}
+      data:
+        guid: 58dd1cd3-aed4-4ab8-984b-575e389cb77d
+        position: {x: 14743.5, y: 172}
+        characterPosition: 0
+    00000027:
+      type: {class: CharacterPositionNode, ns: , asm: Assembly-CSharp}
+      data:
+        guid: b13410ed-b8ae-4c1a-a85b-b4b20f0037a3
+        position: {x: 14883.5, y: 25}
+        characterPosition: 1
+    00000028:
+      type: {class: CharacterPositionNode, ns: , asm: Assembly-CSharp}
+      data:
+        guid: 0eac39f9-96c7-44d0-8cda-b533bbce1aad
+        position: {x: 15047.5, y: -92}
+        characterPosition: 2
+    00000029:
+      type: {class: MonologueNode, ns: , asm: Assembly-CSharp}
+      data:
         guid: 180f3435-7c1a-4613-8459-acf10759b7eb
         position: {x: 3316, y: 391}
         texts:
@@ -259,216 +718,7 @@ MonoBehaviour:
           \u0447\u0442\u043E \u0441\u0442\u0435\u0437\u044F \u0413\u0435\u0440\u043E\u044F
           - \u0435\u0433\u043E \u043F\u0443\u0442\u044C."
         speakerName: 
-    00000009:
-      type: {class: MonologueNode, ns: , asm: Assembly-CSharp}
-      data:
-        guid: 82698782-9721-4a7f-b6a3-071091979e64
-        position: {x: 3865, y: 200}
-        texts:
-        - "\u042F \u0432\u0441\u0451 \u0435\u0449\u0451 \u043F\u043E\u043B\u043E\u043D
-          \u0440\u0435\u0448\u0438\u043C\u043E\u0441\u0442\u0438, \u0435\u0441\u043B\u0438
-          \u0432\u044B \u043E\u0431 \u044D\u0442\u043E\u043C."
-        speakerName: James
-    0000000A:
-      type: {class: MonologueNode, ns: , asm: Assembly-CSharp}
-      data:
-        guid: 26650738-ca55-4c7c-b37c-d8164af1a984
-        position: {x: 4213, y: 200}
-        texts:
-        - "\u041A\u0430\u043A \u0438 \u043C\u044B. \u041C\u044B \u0432\u0435\u0434\u044C
-          \u0441 \u0442\u043E\u0431\u043E\u0439. \u0417\u0434\u0435\u0441\u044C \u0438
-          \u0441\u0435\u0439\u0447\u0430\u0441."
-        speakerName: Arten
-    0000000B:
-      type: {class: MonologueNode, ns: , asm: Assembly-CSharp}
-      data:
-        guid: b817bb99-364a-498e-a65b-004d78607b11
-        position: {x: 4569, y: 200}
-        texts:
-        - "\u041D\u0443, \u044F \u0432\u0441\u0451 \u0435\u0449\u0451 \u0441\u0447\u0438\u0442\u0430\u044E
-          \u0432\u0441\u0451 \u044D\u0442\u043E \u043E\u043F\u0430\u0441\u043D\u043E\u0439
-          \u0437\u0430\u0442\u0435\u0435\u0439. \u0415\u0441\u043B\u0438 \u0432\u044B
-          \u0445\u043E\u0442\u0438\u0442\u0435 \u0437\u043D\u0430\u0442\u044C, \u0447\u0442\u043E
-          \u044F \u0434\u0443\u043C\u0430\u044E."
-        speakerName: Zari
-    0000000C:
-      type: {class: MonologueNode, ns: , asm: Assembly-CSharp}
-      data:
-        guid: 5ddf14b3-1625-4a36-b54b-10ce9d237c7d
-        position: {x: 5203.5, y: 200}
-        texts:
-        - "\u041A\u043E\u043D\u0435\u0447\u043D\u043E, \u043C\u0438\u043B\u0430\u044F!
-          \u0422\u0430\u043A \u0447\u0442\u043E, \u0414\u0436\u0435\u0439\u043C\u0441,
-          \u043A\u0430\u043A\u043E\u0432 \u043F\u043B\u0430\u043D?"
-        speakerName: Arten
-    0000000D:
-      type: {class: MonologueNode, ns: , asm: Assembly-CSharp}
-      data:
-        guid: e675b6a4-b0b4-4858-ac63-0b5440b21605
-        position: {x: 5508.5, y: 428.5}
-        texts:
-        - "\u0410\u0440\u0442\u044D\u043D \u0438 \u0417\u0430\u0440\u0438 \u0434\u0430\u0432\u043D\u043E
-          \u0432\u043C\u0435\u0441\u0442\u0435. \u041E\u043D\u0430 \u0440\u043E\u0441\u043B\u0430
-          \u043D\u0430 \u0444\u0435\u0440\u043C\u0435 \u043F\u043E \u0441\u043E\u0441\u0435\u0434\u0441\u0442\u0432\u0443.
-          \u0418 \u043A\u043E\u043D\u0435\u0447\u043D\u043E, \u043D\u0435 \u0431\u044B\u043B\u0430
-          \u0442\u0430\u043A\u043E\u0439 \u0436\u0435 \u0434\u0440\u0443\u0436\u043D\u043E\u0439
-          \u0438 \u0442\u0435\u0441\u043D\u043E\u0439 \u0447\u0430\u0441\u0442\u044C\u044E
-          \u0432\u0441\u0435\u0445 \u0442\u0440\u043E\u0438\u0445."
-        - "\u041F\u043E\u0441\u043B\u0435 \u0437\u043D\u0430\u043A\u043E\u043C\u0441\u0442\u0432\u0430
-          \u0441 \u0410\u0440\u0442\u044D\u043D\u043E\u043C \u043D\u0430 \u043E\u0434\u043D\u043E\u043C
-          \u0438\u0437 \u043F\u0440\u0430\u0437\u0434\u043D\u0438\u043A\u043E\u0432
-          \u0432 \u0447\u0435\u0441\u0442\u044C \u0443\u0440\u043E\u0436\u0430\u044F,
-          \u043E\u043D\u0438 \u0434\u043E\u0441\u0442\u0430\u0442\u043E\u0447\u043D\u043E
-          \u0434\u043E\u043B\u0433\u043E \u043F\u0440\u0438\u0442\u0438\u0440\u0430\u043B\u0438\u0441\u044C
-          \u0434\u0440\u0443\u0433 \u043A \u0434\u0440\u0443\u0433\u0443. \u0427\u0442\u043E
-          \u043D\u0435 \u0443\u0434\u0438\u0432\u0438\u0442\u0435\u043B\u044C\u043D\u043E,
-          \u0443\u0447\u0438\u0442\u044B\u0432\u0430\u044F \u0440\u0430\u0437\u043D\u0438\u0446\u0443
-          \u043C\u0435\u0436\u0434\u0443 \u043D\u0438\u043C\u0438 \u043A\u0430\u043A
-          \u0432 \u0444\u0438\u0437\u0438\u0447\u0435\u0441\u043A\u043E\u043C, \u0442\u0430\u043A
-          \u0438 \u0432 \u0434\u0443\u0448\u0435\u0432\u043D\u043E\u043C \u043F\u043B\u0430\u043D\u0435. "
-        - "\u0411\u043E\u043B\u0435\u0435 \u0442\u043E\u0433\u043E, \u0442\u0438\u0445\u0430\u044F
-          \u0438 \u043D\u0435\u0443\u0432\u0435\u0440\u0435\u043D\u043D\u0430\u044F
-          \u0417\u0430\u0440\u0438 \u043A\u0443\u0434\u0430 \u0431\u044B\u0441\u0442\u0440\u0435\u0435
-          \u0441\u0434\u0440\u0443\u0436\u0438\u043B\u0430\u0441\u044C \u0441 \u0414\u0436\u0435\u0439\u043C\u0441\u043E\u043C.
-          \u0418 \u0445\u043E\u0442\u044C \u043E\u043D\u0438 \u0431\u043E\u043B\u044C\u0448\u0435
-          \u043F\u043E\u0434\u0445\u043E\u0434\u0438\u043B\u0438 \u0434\u0440\u0443\u0433
-          \u0434\u0440\u0443\u0433\u0443, \u0438\u0441\u043A\u0440 \u043C\u0435\u0436\u0434\u0443
-          \u043D\u0438\u043C\u0438 \u043D\u0435 \u043F\u0440\u043E\u0431\u0435\u0433\u0430\u043B\u043E."
-        - "\u0427\u0442\u043E \u043E\u043F\u0440\u043E\u0432\u0435\u0440\u0433\u043B\u043E
-          \u0438 \u0434\u043E\u043A\u0430\u0437\u0430\u043B\u043E \u0441\u0440\u0430\u0437\u0443
-          \u0434\u0432\u0435 \u0438\u0441\u0442\u0438\u043D\u044B: \u0434\u0440\u0443\u0436\u0431\u0430
-          \u043C\u0435\u0436\u0434\u0443 \u043C\u0443\u0436\u0447\u0438\u043D\u043E\u0439
-          \u0438 \u0436\u0435\u043D\u0449\u0438\u043D\u043E\u0439 \u043D\u0435 \u0432\u043E\u0437\u043C\u043E\u0436\u043D\u0430
-          \u0438 \u043F\u0440\u043E\u0442\u0438\u0432\u043E\u043F\u043E\u043B\u043E\u0436\u043D\u043E\u0441\u0442\u0438
-          \u043F\u0440\u0438\u0442\u044F\u0433\u0438\u0432\u0430\u044E\u0442\u0441\u044F. "
-        - "\u0410\u0440\u0442\u044D\u043D \u0438 \u0417\u0430\u0440\u0438 \u043F\u0440\u0438\u0432\u043B\u0435\u043A\u0430\u043B\u0438
-          \u0434\u0440\u0443\u0433 \u0434\u0440\u0443\u0433\u0430 \u0441 \u043F\u0435\u0440\u0432\u043E\u0439
-          \u0432\u0441\u0442\u0440\u0435\u0447\u0438. \u041E\u043D\u0438 \u043F\u0440\u043E\u0441\u0442\u043E
-          \u0434\u043E\u043B\u0433\u043E \u0440\u0435\u0448\u0430\u043B\u0438\u0441\u044C
-          \u043F\u043E\u0439\u0442\u0438 \u043D\u0430 \u043F\u0435\u0440\u0432\u044B\u0435
-          \u0448\u0430\u0433\u0438."
-        speakerName: 
-    0000000E:
-      type: {class: MonologueNode, ns: , asm: Assembly-CSharp}
-      data:
-        guid: cef65908-81a3-4805-a58e-ff0543112100
-        position: {x: 6076.5, y: 200}
-        texts:
-        - "\u0412\u0441\u0451 \u043F\u0440\u043E\u0441\u0442\u043E. \u0418\u0434\u0451\u043C
-          \u0432 \u0434\u0435\u0440\u0435\u0432\u043D\u044E, \u0437\u0430\u043A\u0443\u043F\u0430\u0435\u043C
-          \u043F\u0440\u0438\u043F\u0430\u0441\u044B \u0438 \u0430\u043C\u0443\u043D\u0438\u0446\u0438\u044E."
-        speakerName: James
-    0000000F:
-      type: {class: MonologueNode, ns: , asm: Assembly-CSharp}
-      data:
-        guid: 15f054f5-9191-4227-8efb-80bed8f80bee
-        position: {x: 6574.5, y: 200}
-        texts:
-        - "\u0418 \u0447\u0442\u043E \u0434\u0430\u043B\u044C\u0448\u0435?"
-        speakerName: Zari
-    00000010:
-      type: {class: MonologueNode, ns: , asm: Assembly-CSharp}
-      data:
-        guid: bfb3e29d-4b68-4296-8b50-a0af8f314e2f
-        position: {x: 6943.5, y: 200}
-        texts:
-        - "\u041D\u0443\u2026 \u0414\u0430\u043B\u044C\u0448\u0435\u2026 \u0414\u0430\u043B\u044C\u0448\u0435
-          \u0443\u0436\u0435 \u043F\u043E \u043D\u0430\u0438\u0442\u0438\u044E\u2026"
-        speakerName: James
-    00000011:
-      type: {class: MonologueNode, ns: , asm: Assembly-CSharp}
-      data:
-        guid: 457e0374-8df6-4d77-9951-ac42a4c840a9
-        position: {x: 7324.5, y: 200}
-        texts:
-        - "\u0422\u043E \u0435\u0441\u0442\u044C \u0442\u0430\u043A \u0434\u0430\u043B\u0435\u043A\u043E
-          \u0442\u044B \u0435\u0449\u0451 \u043D\u0435 \u0437\u0430\u0433\u043B\u044F\u0434\u044B\u0432\u0430\u043B?"
-        speakerName: Zari
-    00000012:
-      type: {class: MonologueNode, ns: , asm: Assembly-CSharp}
-      data:
-        guid: 366f7e7e-5c88-47a2-9ce4-71babd8ecbd6
-        position: {x: 9177.5, y: 200}
-        texts:
-        - "\u042F \u043D\u0435 \u0436\u0430\u043B\u0443\u044E\u0441\u044C, \u0414\u0436\u0435\u0439\u043C\u0441.
-          \u0425\u043E\u0442\u044F \u043D\u0435\u0442, \u0436\u0430\u043B\u0443\u044E\u0441\u044C\u2026
-          \u0423 \u0442\u0435\u0431\u044F \u0447\u0438\u0441\u0442\u044B\u0435 \u043F\u043E\u043C\u044B\u0441\u043B\u044B.
-          \u0418 \u043F\u043E\u043A\u0430 \u043D\u0430\u0448\u0435 \u043F\u043E\u043D\u0438\u043C\u0430\u043D\u0438\u0435
-          \u0441\u043F\u0440\u0430\u0432\u0435\u0434\u043B\u0438\u0432\u043E\u0441\u0442\u0438
-          \u043D\u0435 \u0438\u0441\u043F\u043E\u0440\u0447\u0435\u043D\u043E \u0441\u0438\u043B\u043E\u0439
-          \u0438\u043B\u0438 \u043C\u043E\u0436\u0435\u0442 \u0431\u044B\u0442\u044C
-          \u0432\u043B\u0430\u0441\u0442\u044C\u044E. \u0418\u043B\u0438 \u0445\u043E\u0442\u044F
-          \u0431\u044B \u0438\u0437\u0432\u0435\u0441\u0442\u043D\u043E\u0441\u0442\u044C\u044E. "
-        - "\u041C\u044B \u0434\u0435\u0439\u0441\u0442\u0432\u0438\u0442\u0435\u043B\u044C\u043D\u043E
-          \u043C\u043E\u0433\u043B\u0438 \u0431\u044B \u043C\u043D\u043E\u0433\u0438\u043C
-          \u043F\u043E\u043C\u043E\u0447\u044C \u0438 \u0441\u0442\u0430\u0442\u044C
-          \u0445\u043E\u0440\u043E\u0448\u0438\u043C\u0438 \u0413\u0435\u0440\u043E\u044F\u043C\u0438.
-          \u041D\u0435 \u0417\u043E\u043B\u043E\u0442\u044B\u043C \u041A\u043E\u0440\u043E\u043B\u0451\u043C,
-          \u043A\u043E\u043D\u0435\u0447\u043D\u043E\u2026 \u0414\u0430\u0436\u0435,
-          \u0432\u043E\u0437\u043C\u043E\u0436\u043D\u043E, \u043D\u0435 \u0431\u043B\u0438\u0437\u043A\u043E\u2026 "
-        - "\u041D\u043E \u0432\u0441\u0451 \u0436\u0435! \u041F\u0440\u043E\u0441\u0442\u043E,
-          \u044F \u0431\u043E\u044E\u0441\u044C. \u0412\u043E\u0442 \u0438 \u0432\u0441\u0451.
-          \u041D\u0443 \u043A\u0442\u043E \u043C\u043E\u0436\u0435\u0442 \u0431\u044B\u0442\u044C
-          \u0431\u043E\u043B\u0435\u0435 \u043D\u0435\u0443\u043C\u0435\u043B\u044B\u043C,
-          \u0447\u0435\u043C \u0442\u0440\u043E\u0435 \u043E\u0431\u044B\u0447\u043D\u044B\u0445
-          \u0444\u0435\u0440\u043C\u0435\u0440\u043E\u0432?"
-        speakerName: Zari
-    00000013:
-      type: {class: MonologueNode, ns: , asm: Assembly-CSharp}
-      data:
-        guid: 836f0210-bc15-4b4d-aad1-f32770dc4852
-        position: {x: 9764.5, y: 200}
-        texts:
-        - "\u042F \u043D\u0435 \u0447\u0443\u0432\u0441\u0442\u0432\u0443\u044E \u0441\u0435\u0431\u044F
-          \u0444\u0435\u0440\u043C\u0435\u0440\u043E\u043C. \u042F \u043C\u043E\u0433\u0443
-          \u0433\u043E\u0440\u0430\u0437\u0434\u043E \u0431\u043E\u043B\u044C\u0448\u0435.
-          \u042F \u044D\u0442\u043E \u0437\u043D\u0430\u044E!"
-        speakerName: James
-    00000014:
-      type: {class: MonologueNode, ns: , asm: Assembly-CSharp}
-      data:
-        guid: b3bb9dd5-cbda-4222-a4e4-dde53dbcffe2
-        position: {x: 10232.5, y: 200}
-        texts:
-        - "\u042F \u0442\u043E\u0436\u0435 \u0442\u0430\u043A\u043E\u0439 \u0441\u0435\u0431\u0435
-          \u0444\u0435\u0440\u043C\u0435\u0440."
-        speakerName: Arten
-    00000015:
-      type: {class: MonologueNode, ns: , asm: Assembly-CSharp}
-      data:
-        guid: 904cbf02-e5e1-4bec-88a7-0e0c61b28824
-        position: {x: 10557.5, y: 200}
-        texts:
-        - "\u0422\u044B \u0442\u0435\u043C \u0431\u043E\u043B\u0435\u0435 \u043E\u0431\u044F\u0437\u0430\u043D
-          \u0431\u044B\u0442\u044C \u0413\u0435\u0440\u043E\u0435\u043C. \u041F\u043E\u0441\u043C\u043E\u0442\u0440\u0438
-          \u043D\u0430 \u0441\u0435\u0431\u044F!"
-        speakerName: James
-    00000016:
-      type: {class: MonologueNode, ns: , asm: Assembly-CSharp}
-      data:
-        guid: a237cb7a-bbd3-4b35-a60b-ff80d64a3a4f
-        position: {x: 11277.5, y: 200}
-        texts:
-        - "\u0417\u0430\u0440\u0438, \u043C\u0438\u043B\u0430\u044F. \u0422\u044B
-          \u043D\u0435 \u0413\u0435\u0440\u043E\u0439, \u0432\u0435\u0440\u043D\u043E.
-          \u0418 \u0432\u0440\u044F\u0434 \u043B\u0438 \u0438\u043C \u0441\u0442\u0430\u043D\u0435\u0448\u044C.
-          \u041D\u043E \u043A\u0442\u043E \u043C\u044B \u0431\u0435\u0437 \u0442\u0435\u0431\u044F?
-          \u041C\u044B \u0432\u0441\u0435 \u043F\u043E \u043E\u0442\u0434\u0435\u043B\u044C\u043D\u043E\u0441\u0442\u0438
-          \u0441\u043B\u0430\u0431\u044B. \u041D\u043E \u0432\u043C\u0435\u0441\u0442\u0435\u2026"
-        speakerName: James
-    00000017:
-      type: {class: MonologueNode, ns: , asm: Assembly-CSharp}
-      data:
-        guid: c51e05db-8a72-40f4-a212-548e207b3017
-        position: {x: 12979, y: 200}
-        texts:
-        - "\u041E\u0442\u043B\u0438\u0447\u043D\u0430\u044F \u0432\u043E\u0437\u043C\u043E\u0436\u043D\u043E\u0441\u0442\u044C
-          \u043F\u0440\u043E\u044F\u0432\u0438\u0442\u044C \u0441\u0435\u0431\u044F
-          \u043F\u0440\u044F\u043C\u043E \u0441\u0435\u0439\u0447\u0430\u0441! \u0418
-          \u0442\u0430\u043A, \u0433\u043E\u043B\u043E\u0441 \u0440\u0430\u0437\u0443\u043C\u0430
-          \u043F\u0440\u0435\u0434\u0443\u043F\u0440\u0435\u0436\u0434\u0430\u0435\u0442\u2026"
-        speakerName: Zari
-    00000018:
+    0000002A:
       type: {class: MonologueNode, ns: , asm: Assembly-CSharp}
       data:
         guid: c6e116aa-099d-4d0a-84b6-ce0d99d5d3ac
@@ -485,59 +735,13 @@ MonoBehaviour:
           \u043F\u0440\u0430\u0437\u0434\u043D\u0438\u043A\u0435 \u0443\u0440\u043E\u0436\u0430\u044F!
           \u0412\u0435\u0441\u0435\u043B\u0438\u0442\u044C\u0441\u044F!"
         speakerName: Arten
-    00000019:
-      type: {class: LocationNode, ns: , asm: Assembly-CSharp}
+    0000002B:
+      type: {class: MusicNode, ns: , asm: Assembly-CSharp}
       data:
-        guid: 6952bc42-281a-4841-8e96-dfff2c45eba4
-        position: {x: 14908.5, y: 290}
-        name: VillageCloseViewDay
-    0000001A:
-      type: {class: MonologueNode, ns: , asm: Assembly-CSharp}
-      data:
-        guid: ed4f4e3b-1342-4e54-8ad1-8a54408dfc97
-        position: {x: 11825.5, y: 200}
-        texts:
-        - "\u0414\u043E\u0440\u043E\u0433\u0430\u044F, \u044F \u043D\u0435 \u0434\u0430\u043C
-          \u0442\u0435\u0431\u044F \u0432 \u043E\u0431\u0438\u0434\u0443! \u0414\u0436\u0435\u0439\u043C\u0441
-          \u0432\u0435\u0440\u043D\u043E \u043F\u043E\u0434\u043C\u0435\u0442\u0438\u043B.
-          \u041C\u044B \u2013 \u044D\u0442\u043E \u044F, \u043E\u043D \u0438 \u0442\u044B.\n\u041A\u0430\u043A
-          \u0431\u044B \u0431\u0430\u043D\u0430\u043B\u044C\u043D\u043E \u044D\u0442\u043E
-          \u043D\u0435 \u0437\u0432\u0443\u0447\u0430\u043B\u043E. \u0414\u0430 \u0438
-          \u0432\u043E\u043E\u0431\u0449\u0435. "
-        - "\u0415\u0441\u043B\u0438 \u044F \u0413\u0435\u0440\u043E\u0439 \u0438
-          \u0414\u0436\u0435\u0439\u043C\u0441 \u0413\u0435\u0440\u043E\u0439. \u0422\u043E\u0433\u0434\u0430
-          \u0442\u044B \u2013 \u043D\u0430\u0448 \u0433\u043E\u043B\u043E\u0441 \u0440\u0430\u0437\u0443\u043C\u0430!
-          \u0412\u043E\u0442. \u0411\u0443\u0434\u0435\u0448\u044C \u0441\u0432\u043E\u0435\u0432\u0440\u0435\u043C\u0435\u043D\u043D\u043E
-          \u043E\u0441\u0442\u0430\u043D\u0430\u0432\u043B\u0438\u0432\u0430\u0442\u044C
-          \u043D\u0430\u0441, \u043F\u0440\u0435\u0436\u0434\u0435 \u0447\u0435\u043C
-          \u043C\u044B \u0441\u043E\u0432\u0435\u0440\u0448\u0438\u043C \u043D\u0435\u043E\u0431\u0434\u0443\u043C\u0430\u043D\u043D\u044B\u0439
-          \u0448\u0430\u0433!"
-        speakerName: Arten
-    0000001B:
-      type: {class: MonologueNode, ns: , asm: Assembly-CSharp}
-      data:
-        guid: 669fb5a1-d2db-4dcc-bb8e-ed278713b7a8
-        position: {x: 12416.5, y: 405.5}
-        texts:
-        - "\u0422\u0430\u043A \u043E\u043D\u0438 \u0432\u0441\u0435\u0433\u0434\u0430
-          \u0438 \u0436\u0438\u043B\u0438. \u0412\u043E\u043E\u0434\u0443\u0448\u0435\u0432\u043B\u0451\u043D\u043D\u044B\u0439
-          \u0438\u0434\u0435\u044F\u043C\u0438 \u0414\u0436\u0435\u0439\u043C\u0441,
-          \u043F\u0440\u0435\u0438\u0441\u043F\u043E\u043B\u043D\u0435\u043D\u043D\u044B\u0439
-          \u0431\u043B\u0430\u0433\u043E\u0440\u043E\u0434\u0441\u0442\u0432\u043E\u043C
-          \u0438 \u0447\u0443\u0432\u0441\u0442\u0432\u0443\u044E\u0449\u0438\u0439
-          \u0432 \u0441\u0435\u0431\u0435 \u0432\u043E\u0437\u043C\u043E\u0436\u043D\u043E\u0441\u0442\u0438,
-          \u043B\u0435\u0433\u043A\u043E\u043C\u044B\u0441\u043B\u0435\u043D\u043D\u044B\u0439
-          \u0410\u0440\u0442\u044D\u043D, \u043E\u0449\u0443\u0449\u0430\u044E\u0449\u0438\u0439
-          \u043C\u0438\u0440 \u0432\u043E\u043A\u0440\u0443\u0433 \u043B\u0435\u0433\u043A\u043E
-          \u0438 \u0441 \u0443\u043B\u044B\u0431\u043A\u043E\u0439."
-        - "\u0418 \u043D\u0435\u0433\u043E\u0434\u0443\u044E\u0449\u0430\u044F \u0417\u0430\u0440\u0438,
-          \u0438\u0441\u043F\u043E\u0434\u043B\u043E\u0431\u044C\u044F \u043F\u043E\u0433\u043B\u044F\u0434\u044B\u0432\u0430\u044E\u0449\u0430\u044F
-          \u043D\u0430 \u0441\u043F\u0443\u0442\u043D\u0438\u043A\u043E\u0432, \u0432\u0441\u0435\u0433\u0434\u0430
-          \u043F\u0440\u0435\u0434\u043E\u0441\u0442\u0430\u0432\u043B\u044F\u044E\u0449\u0438\u0445
-          \u0434\u0435\u0432\u0443\u0448\u043A\u0435 \u0438\u043B\u043B\u044E\u0437\u0438\u044E
-          \u0432\u044B\u0431\u043E\u0440\u0430."
-        speakerName: 
-    0000001C:
+        guid: 66d8f6b7-d2f1-4734-ac57-093be52fba78
+        position: {x: 15261.5, y: 232}
+        name: Evening
+    0000002C:
       type: {class: MonologueNode, ns: , asm: Assembly-CSharp}
       data:
         guid: ce569d50-13e2-4ea6-ab3d-6d957bb78cd4
@@ -597,372 +801,173 @@ MonoBehaviour:
           \u043A\u0430\u0436\u0434\u044B\u0439 \u0438\u0437 \u043D\u0438\u0445 \u043F\u043E\u043C\u043D\u0438\u0442
           \u043F\u043E-\u0441\u0432\u043E\u0435\u043C\u0443."
         speakerName: 
-    0000001D:
-      type: {class: MonologueNode, ns: , asm: Assembly-CSharp}
+    0000002D:
+      type: {class: StopMusicNode, ns: , asm: Assembly-CSharp}
       data:
-        guid: 7cfcad82-7bea-4d50-a27f-628f2f7856af
-        position: {x: 7677.5, y: 200}
-        texts:
-        - "\u0427\u0442\u043E \u0432\u043E\u043E\u0431\u0449\u0435 \u0437\u043D\u0430\u0447\u0438\u0442
-          \u0431\u044B\u0442\u044C \u0413\u0435\u0440\u043E\u0435\u043C? \u041A\u0442\u043E-\u043D\u0438\u0431\u0443\u0434\u044C
-          \u0438\u0437 \u0432\u0430\u0441 \u0432 \u043A\u0443\u0440\u0441\u0435?
-          \u041C\u043E\u0436\u0435\u0442 \u043F\u043E\u0434\u0435\u043B\u0438\u0442\u044C\u0441\u044F
-          \u0431\u043E\u0433\u0430\u0442\u044B\u043C \u043E\u043F\u044B\u0442\u043E\u043C?
-          \u042F \u0442\u0430\u043A \u0438 \u0434\u0443\u043C\u0430\u043B. \u042F
-          \u0442\u0430\u043A\u043E\u0439 \u0436\u0435 \u043D\u0435\u0443\u043C\u0435\u043B\u044B\u0439
-          \u0432 \u044D\u0442\u043E\u043C \u043A\u0430\u043A \u0438 \u0432\u044B. "
-        - "\u041D\u043E \u0432 \u043A\u043E\u043D\u0446\u0435 \u043A\u043E\u043D\u0446\u043E\u0432!
-          \u041C\u044B \u0432\u0435\u0434\u044C \u0445\u043E\u0442\u0438\u043C \u043F\u043E\u043C\u043E\u0433\u0430\u0442\u044C
-          \u0441\u043B\u0430\u0431\u044B\u043C. \u0422\u0435\u043C, \u043A\u0442\u043E
-          \u043D\u0435 \u043C\u043E\u0436\u0435\u0442 \u0434\u0430\u0442\u044C \u043E\u0442\u043F\u043E\u0440
-          \u0441\u0443\u0440\u043E\u0432\u043E\u0439 \u0440\u0435\u0430\u043B\u044C\u043D\u043E\u0441\u0442\u0438.
-          \u0411\u0435\u0434\u0435, \u0432 \u0447\u044C\u0451\u043C \u0431\u044B
-          \u043E\u0431\u043B\u0438\u0447\u0438\u0438 \u043E\u043D\u0430 \u043D\u0438
-          \u0431\u044B\u043B\u0430."
-        speakerName: James
-    0000001E:
-      type: {class: StopNode, ns: , asm: Assembly-CSharp}
+        guid: dd1a4a31-c60a-4e54-a0e5-34235ce37db3
+        position: {x: 15047.5, y: 194}
+    0000002E:
+      type: {class: MusicNode, ns: , asm: Assembly-CSharp}
       data:
-        guid: e8eb9eca-5cf6-4dd5-ba51-fd9bcf29c9cb
-        position: {x: 15980, y: 386}
-    0000001F:
-      type: {class: LocationNode, ns: , asm: Assembly-CSharp}
-      data:
-        guid: 8c57525b-de4b-472d-a5e8-cbf12d664710
-        position: {x: 221, y: 31.5}
-        name: BlackScreen
-    00000020:
-      type: {class: SplitMessageNode, ns: , asm: Assembly-CSharp}
-      data:
-        guid: e9d77b30-a69b-4707-a454-e45e7a376518
-        position: {x: 221, y: 200}
-        text:
-        - "<#ff0b1f><size=60><font=\"SpeakerName SDF\">\u042D</font></size></color>\u043F\u043E\u0445\u0430
-          <#ff0b1f><size=60><font=\"SpeakerName SDF\">\u0417</font></size></color>\u043E\u043B\u043E\u0442\u044B\u0445
-          <#ff0b1f><size=60><font=\"SpeakerName SDF\">\u041A</font></size></color>\u043E\u0440\u043E\u043B\u0435\u0439
-          \u2013 \u0432\u0440\u0435\u043C\u0435\u043D\u0430,<alpha=#00>.\n<alpha=#FF>\u043A\u043E\u0433\u0434\u0430
-          \u043F\u043E \u0432\u0441\u0435\u043C\u0443 \u043C\u0438\u0440\u0443 \u0441\u043C\u0435\u0440\u0442\u043D\u044B\u0435
-          \u0432\u043E\u0441\u0441\u0442\u0430\u044E\u0442<alpha=#00>.\n<alpha=#FF>\u043F\u0440\u043E\u0442\u0438\u0432
-          \u0437\u043B\u043E\u0431\u043D\u044B\u0445, \u043A\u0440\u043E\u0432\u043E\u0436\u0430\u0434\u043D\u044B\u0445
-          \u0411\u043E\u0433\u043E\u0432."
-        - "<size=60><font=\"SpeakerName SDF\">\u041D</font></size>\u043E \u043A\u0443\u043B\u044C\u0442
-          \u0431\u0435\u0441\u0441\u043C\u0435\u0440\u0442\u043D\u044B\u0445 \u043D\u0438\u043A\u043E\u0433\u0434\u0430
-          \u043D\u0435 \u0441\u0443\u0449\u0435\u0441\u0442\u0432\u043E\u0432\u0430\u043B
-          \u043D\u0430 \u0424\u0435\u043B\u0435\u0441\u0442\u0438\u043D\u0435.\n\u041D\u0430
-          \u043C\u0430\u0442\u0435\u0440\u0438\u043A\u0435, \u0440\u0430\u0441\u0442\u044F\u043D\u0443\u0432\u0448\u0435\u043C\u0441\u044F
-          \u0441 \u0441\u0435\u0432\u0435\u0440\u0430 \u043D\u0430 \u044E\u0433.\n\u0412
-          \u0441\u0442\u0440\u0430\u043D\u0435 \u0441\u0432\u043E\u0431\u043E\u0434\u043D\u044B\u0445
-          \u043D\u0440\u0430\u0432\u043E\u0432."
-        - "<size=60><font=\"SpeakerName SDF\">\u041D</font></size>\u0430\u0448\u0430
-          \u0438\u0441\u0442\u043E\u0440\u0438\u044F \u043D\u0430\u0447\u0438\u043D\u0430\u0435\u0442\u0441\u044F
-          \u043D\u0430 \u044E\u0433\u0435 \u2013 \u043F\u043B\u043E\u0434\u043E\u0440\u043E\u0434\u043D\u044B\u0445
-          \u0437\u0435\u043C\u043B\u044F\u0445, \u043E\u0441\u0432\u043E\u0435\u043D\u043D\u044B\u0445
-          \u0444\u0435\u0440\u043C\u0435\u0440\u0430\u043C\u0438.\n\u0424\u0435\u0440\u043C\u0435\u0440\u0430\u043C\u0438,
-          \u0436\u0438\u0432\u0443\u0449\u0438\u043C\u0438 \u043F\u043E\u0434 \u0433\u043D\u0451\u0442\u043E\u043C
-          \u0440\u0430\u0437\u0431\u043E\u0439\u043D\u0438\u0447\u044C\u0438\u0445
-          \u043A\u043B\u0430\u043D\u043E\u0432.\n\u0418 \u0434\u043E \u0441\u0435\u0433\u043E
-          \u0434\u043D\u044F \u043D\u0435\u043A\u043E\u043C\u0443 \u0431\u044B\u043B\u043E
-          \u043F\u0440\u0438\u0441\u0442\u0440\u0443\u043D\u0438\u0442\u044C \u0433\u043E\u043B\u043E\u0432\u043E\u0440\u0435\u0437\u043E\u0432\u2026"
-    00000021:
-      type: {class: CharacterNode, ns: , asm: Assembly-CSharp}
-      data:
-        guid: 8ea2e1c5-d378-41be-b234-537ef67030ec
-        position: {x: 1552, y: 200}
-        character:
-          name: James
-          position: 2
-          emotion: 0
-        direction: 1
-    00000022:
-      type: {class: CharacterNode, ns: , asm: Assembly-CSharp}
-      data:
-        guid: f6264c20-02bc-497a-b047-162ca9339321
-        position: {x: 2466, y: 200}
-        character:
-          name: Arten
-          position: 0
-          emotion: 0
-        direction: 0
-    00000023:
-      type: {class: CharacterNode, ns: , asm: Assembly-CSharp}
-      data:
-        guid: fb5209bb-db0d-45fd-a96a-ce9a7ce31775
-        position: {x: 3213, y: 200}
-        character:
-          name: Zari
-          position: 1
-          emotion: 0
-        direction: 0
-    00000024:
-      type: {class: CharacterNode, ns: , asm: Assembly-CSharp}
-      data:
-        guid: fc7d32a1-6b61-478f-af5d-8414043789a9
-        position: {x: 13542.5, y: 34}
-        character:
-          name: Arten
-          position: 0
-          emotion: 1
-        direction: 0
-    00000025:
-      type: {class: MonologueNode, ns: , asm: Assembly-CSharp}
-      data:
-        guid: 7201308c-32e0-457b-840a-6c5b1a83ed7a
-        position: {x: 8254.5, y: 200}
-        texts:
-        - "\u0410 \u043C\u044B \u043C\u043E\u0436\u0435\u043C?"
-        speakerName: Zari
-    00000026:
-      type: {class: MonologueNode, ns: , asm: Assembly-CSharp}
-      data:
-        guid: 7ce0c484-8426-4035-96e4-4f42e6ed87bd
-        position: {x: 8575.5, y: 200}
-        texts:
-        - "\u041D\u0430\u0447\u043D\u0451\u043C \u0441 \u043C\u0430\u043B\u043E\u0433\u043E.
-          \u041F\u043E\u043D\u044F\u0442\u043D\u043E\u0435 \u0434\u0435\u043B\u043E,
-          \u0447\u0442\u043E \u0433\u043E\u0440\u044B \u0441\u0432\u043E\u0440\u0430\u0447\u0438\u0432\u0430\u0442\u044C
-          \u043D\u0430\u043C \u043D\u0435 \u043F\u043E \u0441\u0438\u043B\u0430\u043C.
-          \u041D\u043E \u043E\u0434\u043D\u0430\u0436\u0434\u044B, \u043C\u043E\u0436\u0435\u0442
-          \u0441\u0442\u0430\u0442\u044C\u0441\u044F, \u043C\u044B \u0438\u0441\u043A\u043E\u0440\u0435\u043D\u0438\u043C
-          \u0438\u0437 \u0424\u0435\u043B\u0435\u0441\u0442\u0438\u043D\u044B \u0432\u0441\u0435\u0445
-          \u0440\u0430\u0437\u0431\u043E\u0439\u043D\u0438\u043A\u043E\u0432! \u0427\u0435\u043C
-          \u043D\u0435 \u043F\u043B\u0430\u043D? "
-        - "\u041D\u0430\u0434\u043E \u043F\u0440\u043E\u0441\u0442\u043E \u043D\u0430\u0447\u0438\u043D\u0430\u0442\u044C
-          \u043F\u043E\u0441\u0442\u0435\u043F\u0435\u043D\u043D\u043E. \u041D\u0430\u0431\u0438\u0440\u0430\u0442\u044C\u0441\u044F
-          \u043E\u043F\u044B\u0442\u0430. \u0412\u043E\u043E\u0440\u0443\u0436\u0438\u043C\u0441\u044F
-          \u0438 \u0441\u043F\u0440\u043E\u0441\u0438\u043C, \u043A\u043E\u043C\u0443
-          \u043D\u0443\u0436\u043D\u0430 \u043F\u043E\u043C\u043E\u0449\u044C. \u0414\u0443\u043C\u0430\u044E,
-          \u0447\u0442\u043E \u0442\u0430\u043A \u0438 \u043D\u0430\u0447\u043D\u0451\u043C."
-        speakerName: James
-    00000027:
-      type: {class: MonologueNode, ns: , asm: Assembly-CSharp}
-      data:
-        guid: a2f8911a-051f-4d1f-99cf-dad24f5cb3a3
-        position: {x: 10909.5, y: 200}
-        texts:
-        - "\u0420\u0435\u0431\u044F\u0442\u0430! \u041C\u043E\u0436\u0435\u0442 \u0445\u0432\u0430\u0442\u0438\u0442
-          \u043D\u0435 \u0437\u0430\u043C\u0435\u0447\u0430\u0442\u044C \u0434\u0430\u043B\u044C\u0448\u0435
-          \u0441\u0432\u043E\u0435\u0433\u043E \u043D\u043E\u0441\u0430? \u041C\u043E\u0436\u0435\u0442
-          \u0432\u044B \u0433\u043B\u044F\u043D\u0435\u0442\u0435 \u043D\u0435 \u0442\u043E\u043B\u044C\u043A\u043E
-          \u043D\u0430 \u0441\u0435\u0431\u044F, \u043D\u043E \u0438 \u043D\u0430
-          \u043C\u0435\u043D\u044F? \u042F \u043F\u043E-\u0432\u0430\u0448\u0435\u043C\u0443
-          \u043A\u0442\u043E? \u0413\u0435\u0440\u043E\u0439?"
-        speakerName: Zari
-    00000028:
-      type: {class: MonologueNode, ns: , asm: Assembly-CSharp}
-      data:
-        guid: 96fa4181-895b-429d-aa8e-9ab0ee1bc75b
-        position: {x: 14237.5, y: 354}
-        texts:
-        - "\u0420\u0430\u0434\u043E\u0441\u0442\u043D\u043E \u043F\u0440\u043E\u0432\u043E\u0437\u0433\u043B\u0430\u0441\u0438\u043B
-          \u0410\u0440\u0442\u044D\u043D, \u043D\u0435 \u0434\u043E\u0436\u0438\u0434\u0430\u044F\u0441\u044C
-          \u043E\u0442\u0432\u0435\u0442\u043D\u043E\u0439 \u0440\u0435\u0430\u043A\u0446\u0438\u0438
-          \u0437\u0430\u0449\u0435\u0433\u043E\u043B\u044F\u0432 \u0432 \u0441\u0442\u043E\u0440\u043E\u043D\u0443
-          \u0432\u0438\u0434\u043D\u0435\u044E\u0449\u0438\u0445\u0441\u044F \u043D\u0430
-          \u0433\u043E\u0440\u0438\u0437\u043E\u043D\u0442\u0435 \u0445\u0438\u0436\u0438\u043D.
-          \u041F\u0440\u0430\u0437\u0434\u043D\u0438\u043A \u0443\u0440\u043E\u0436\u0430\u044F,
-          \u043F\u0440\u043E\u0432\u043E\u0434\u044F\u0449\u0438\u0439\u0441\u044F
-          \u043F\u043E\u0432\u0441\u0435\u043C\u0435\u0441\u0442\u043D\u043E \u043D\u0430
-          \u044E\u0436\u043D\u043E\u0439 \u0447\u0430\u0441\u0442\u0438 \u0424\u0435\u043B\u0435\u0441\u0442\u0438\u043D\u044B. "
-        - "\u0418 \u0434\u0430\u0436\u0435 \u0432 \u0442\u043E\u043C \u0441\u043B\u0443\u0447\u0430\u0435,
-          \u0435\u0441\u043B\u0438 \u0443\u0440\u043E\u0436\u0430\u0439 \u0432\u044B\u0434\u0430\u0432\u0430\u043B\u0441\u044F
-          \u0441\u043A\u0432\u0435\u0440\u043D\u044B\u0439, \u043B\u044E\u0434\u0438
-          \u0435\u0436\u0435\u0433\u043E\u0434\u043D\u043E \u043F\u0440\u043E\u0434\u043E\u043B\u0436\u0430\u043B\u0438
-          \u0441\u043E\u0431\u0438\u0440\u0430\u0442\u044C\u0441\u044F, \u0445\u043E\u0442\u044C
-          \u0441\u043A\u043E\u043B\u044C\u043A\u043E-\u0442\u043E \u0440\u0430\u0434\u0443\u044F\u0441\u044C
-          \u0436\u0438\u0437\u043D\u0438."
-        speakerName: 
-    00000029:
-      type: {class: CharacterPositionNode, ns: , asm: Assembly-CSharp}
-      data:
-        guid: 58dd1cd3-aed4-4ab8-984b-575e389cb77d
-        position: {x: 14743.5, y: 172}
-        characterPosition: 0
-    0000002A:
-      type: {class: CharacterPositionNode, ns: , asm: Assembly-CSharp}
-      data:
-        guid: b13410ed-b8ae-4c1a-a85b-b4b20f0037a3
-        position: {x: 14883.5, y: 25}
-        characterPosition: 1
-    0000002B:
-      type: {class: CharacterPositionNode, ns: , asm: Assembly-CSharp}
-      data:
-        guid: 0eac39f9-96c7-44d0-8cda-b533bbce1aad
-        position: {x: 15047.5, y: -92}
-        characterPosition: 2
-    0000002C:
+        guid: daf4ac11-3533-408b-88e5-c7c6248d1bc4
+        position: {x: 942.5, y: 315}
+        name: Wonderland
+    0000002F:
       type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
       data:
         sourceNodeGUID: 9db5a9a1-ff6f-4d55-b5b2-2595d7b21e5b
         sourcePortName: Output
         destinationNodeGUID: 8c57525b-de4b-472d-a5e8-cbf12d664710
-    0000002D:
+    00000030:
       type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
       data:
         sourceNodeGUID: 1b4b375a-e982-4645-8274-70940803fe55
         sourcePortName: Output
-        destinationNodeGUID: 8c209a34-c7da-43ba-856c-930b213bca9d
-    0000002E:
+        destinationNodeGUID: daf4ac11-3533-408b-88e5-c7c6248d1bc4
+    00000031:
       type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
       data:
         sourceNodeGUID: d8cd92df-9b61-4928-8e94-89a609c96da6
         sourcePortName: Output
         destinationNodeGUID: 8ea2e1c5-d378-41be-b234-537ef67030ec
-    0000002F:
+    00000032:
       type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
       data:
         sourceNodeGUID: 83d06dd4-6ea2-4a24-a098-a9bec8359729
         sourcePortName: Output
         destinationNodeGUID: b8b8f1ae-e11d-4478-bb1f-fb9e4eed8783
-    00000030:
+    00000033:
       type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
       data:
         sourceNodeGUID: b8b8f1ae-e11d-4478-bb1f-fb9e4eed8783
         sourcePortName: Output
         destinationNodeGUID: f6264c20-02bc-497a-b047-162ca9339321
-    00000031:
+    00000034:
       type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
       data:
         sourceNodeGUID: 8c209a34-c7da-43ba-856c-930b213bca9d
         sourcePortName: Output
         destinationNodeGUID: d8cd92df-9b61-4928-8e94-89a609c96da6
-    00000032:
+    00000035:
       type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
       data:
         sourceNodeGUID: 0462a7af-c297-4bcb-a16d-3348dd156e43
         sourcePortName: Output
         destinationNodeGUID: f1f4a8d2-45bb-4585-8dab-b0158bbea282
-    00000033:
+    00000036:
       type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
       data:
         sourceNodeGUID: f1f4a8d2-45bb-4585-8dab-b0158bbea282
         sourcePortName: Output
         destinationNodeGUID: fb5209bb-db0d-45fd-a96a-ce9a7ce31775
-    00000034:
-      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
-      data:
-        sourceNodeGUID: 180f3435-7c1a-4613-8459-acf10759b7eb
-        sourcePortName: Output
-        destinationNodeGUID: 82698782-9721-4a7f-b6a3-071091979e64
-    00000035:
+    00000037:
       type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
       data:
         sourceNodeGUID: 82698782-9721-4a7f-b6a3-071091979e64
         sourcePortName: Output
         destinationNodeGUID: 26650738-ca55-4c7c-b37c-d8164af1a984
-    00000036:
+    00000038:
       type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
       data:
         sourceNodeGUID: 26650738-ca55-4c7c-b37c-d8164af1a984
         sourcePortName: Output
         destinationNodeGUID: b817bb99-364a-498e-a65b-004d78607b11
-    00000037:
+    00000039:
       type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
       data:
         sourceNodeGUID: b817bb99-364a-498e-a65b-004d78607b11
         sourcePortName: Output
         destinationNodeGUID: 5ddf14b3-1625-4a36-b54b-10ce9d237c7d
-    00000038:
+    0000003A:
       type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
       data:
         sourceNodeGUID: 5ddf14b3-1625-4a36-b54b-10ce9d237c7d
         sourcePortName: Output
         destinationNodeGUID: e675b6a4-b0b4-4858-ac63-0b5440b21605
-    00000039:
+    0000003B:
       type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
       data:
         sourceNodeGUID: e675b6a4-b0b4-4858-ac63-0b5440b21605
         sourcePortName: Output
         destinationNodeGUID: cef65908-81a3-4805-a58e-ff0543112100
-    0000003A:
+    0000003C:
       type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
       data:
         sourceNodeGUID: cef65908-81a3-4805-a58e-ff0543112100
         sourcePortName: Output
         destinationNodeGUID: 15f054f5-9191-4227-8efb-80bed8f80bee
-    0000003B:
+    0000003D:
       type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
       data:
         sourceNodeGUID: 15f054f5-9191-4227-8efb-80bed8f80bee
         sourcePortName: Output
         destinationNodeGUID: bfb3e29d-4b68-4296-8b50-a0af8f314e2f
-    0000003C:
+    0000003E:
       type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
       data:
         sourceNodeGUID: bfb3e29d-4b68-4296-8b50-a0af8f314e2f
         sourcePortName: Output
         destinationNodeGUID: 457e0374-8df6-4d77-9951-ac42a4c840a9
-    0000003D:
+    0000003F:
       type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
       data:
         sourceNodeGUID: 457e0374-8df6-4d77-9951-ac42a4c840a9
         sourcePortName: Output
         destinationNodeGUID: 7cfcad82-7bea-4d50-a27f-628f2f7856af
-    0000003E:
+    00000040:
       type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
       data:
         sourceNodeGUID: 366f7e7e-5c88-47a2-9ce4-71babd8ecbd6
         sourcePortName: Output
         destinationNodeGUID: 836f0210-bc15-4b4d-aad1-f32770dc4852
-    0000003F:
+    00000041:
       type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
       data:
         sourceNodeGUID: 836f0210-bc15-4b4d-aad1-f32770dc4852
         sourcePortName: Output
         destinationNodeGUID: b3bb9dd5-cbda-4222-a4e4-dde53dbcffe2
-    00000040:
+    00000042:
       type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
       data:
         sourceNodeGUID: b3bb9dd5-cbda-4222-a4e4-dde53dbcffe2
         sourcePortName: Output
         destinationNodeGUID: 904cbf02-e5e1-4bec-88a7-0e0c61b28824
-    00000041:
+    00000043:
       type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
       data:
         sourceNodeGUID: 904cbf02-e5e1-4bec-88a7-0e0c61b28824
         sourcePortName: Output
         destinationNodeGUID: a2f8911a-051f-4d1f-99cf-dad24f5cb3a3
-    00000042:
+    00000044:
       type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
       data:
         sourceNodeGUID: a237cb7a-bbd3-4b35-a60b-ff80d64a3a4f
         sourcePortName: Output
         destinationNodeGUID: ed4f4e3b-1342-4e54-8ad1-8a54408dfc97
-    00000043:
+    00000045:
       type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
       data:
         sourceNodeGUID: c51e05db-8a72-40f4-a212-548e207b3017
         sourcePortName: Output
         destinationNodeGUID: fc7d32a1-6b61-478f-af5d-8414043789a9
-    00000044:
-      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
-      data:
-        sourceNodeGUID: c6e116aa-099d-4d0a-84b6-ce0d99d5d3ac
-        sourcePortName: Output
-        destinationNodeGUID: 96fa4181-895b-429d-aa8e-9ab0ee1bc75b
-    00000045:
+    00000046:
       type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
       data:
         sourceNodeGUID: 6952bc42-281a-4841-8e96-dfff2c45eba4
         sourcePortName: Output
-        destinationNodeGUID: ce569d50-13e2-4ea6-ab3d-6d957bb78cd4
-    00000046:
+        destinationNodeGUID: 66d8f6b7-d2f1-4734-ac57-093be52fba78
+    00000047:
       type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
       data:
         sourceNodeGUID: ed4f4e3b-1342-4e54-8ad1-8a54408dfc97
         sourcePortName: Output
         destinationNodeGUID: 669fb5a1-d2db-4dcc-bb8e-ed278713b7a8
-    00000047:
+    00000048:
       type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
       data:
         sourceNodeGUID: 669fb5a1-d2db-4dcc-bb8e-ed278713b7a8
         sourcePortName: Output
         destinationNodeGUID: c51e05db-8a72-40f4-a212-548e207b3017
-    00000048:
-      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
-      data:
-        sourceNodeGUID: ce569d50-13e2-4ea6-ab3d-6d957bb78cd4
-        sourcePortName: Output
-        destinationNodeGUID: e8eb9eca-5cf6-4dd5-ba51-fd9bcf29c9cb
     00000049:
       type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
       data:
@@ -1046,4 +1051,40 @@ MonoBehaviour:
       data:
         sourceNodeGUID: 0eac39f9-96c7-44d0-8cda-b533bbce1aad
         sourcePortName: Output
+        destinationNodeGUID: dd1a4a31-c60a-4e54-a0e5-34235ce37db3
+    00000057:
+      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
+      data:
+        sourceNodeGUID: 180f3435-7c1a-4613-8459-acf10759b7eb
+        sourcePortName: Output
+        destinationNodeGUID: 82698782-9721-4a7f-b6a3-071091979e64
+    00000058:
+      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
+      data:
+        sourceNodeGUID: c6e116aa-099d-4d0a-84b6-ce0d99d5d3ac
+        sourcePortName: Output
+        destinationNodeGUID: 96fa4181-895b-429d-aa8e-9ab0ee1bc75b
+    00000059:
+      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
+      data:
+        sourceNodeGUID: 66d8f6b7-d2f1-4734-ac57-093be52fba78
+        sourcePortName: Output
+        destinationNodeGUID: ce569d50-13e2-4ea6-ab3d-6d957bb78cd4
+    0000005A:
+      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
+      data:
+        sourceNodeGUID: ce569d50-13e2-4ea6-ab3d-6d957bb78cd4
+        sourcePortName: Output
+        destinationNodeGUID: e8eb9eca-5cf6-4dd5-ba51-fd9bcf29c9cb
+    0000005B:
+      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
+      data:
+        sourceNodeGUID: dd1a4a31-c60a-4e54-a0e5-34235ce37db3
+        sourcePortName: Output
         destinationNodeGUID: 6952bc42-281a-4841-8e96-dfff2c45eba4
+    0000005C:
+      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
+      data:
+        sourceNodeGUID: daf4ac11-3533-408b-88e5-c7c6248d1bc4
+        sourcePortName: Output
+        destinationNodeGUID: 8c209a34-c7da-43ba-856c-930b213bca9d

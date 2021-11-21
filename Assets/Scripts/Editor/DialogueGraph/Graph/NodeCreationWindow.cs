@@ -58,6 +58,18 @@ public class NodeCreationWindow : ScriptableObject, ISearchWindowProvider
                     userData = new LocationNodeEditorView()
                 },
 
+                new SearchTreeGroupEntry(new GUIContent("Music/Sounds"), 2),
+                new SearchTreeEntry(new GUIContent("Play music", indentationIcon))
+                {
+                    level = 3,
+                    userData = new PlayMusicNodeEditorView()
+                },
+                new SearchTreeEntry(new GUIContent("Stop music", indentationIcon))
+                {
+                    level = 3,
+                    userData = new StopMusicNodeEditorView()
+                },
+
                 new SearchTreeGroupEntry(new GUIContent("Characters"), 2),
                 new SearchTreeEntry(new GUIContent("Show character", indentationIcon))
                 {

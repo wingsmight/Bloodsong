@@ -15,6 +15,8 @@ public class DialogueGraphParser : MonoBehaviour
     [SerializeField] private StartSplitMessageNodeView startSplitMessageNodeView;
     [SerializeField] private LocationNodeView locationNodeView;
     [SerializeField] private HideCharacterNodeView hideCharacterNodeView;
+    [SerializeField] private PlayMusicNodeView playMusicNodeView;
+    [SerializeField] private StopMusicNodeView stopMusicNodeView;
     [Space(12)]
     [SerializeField] private GameDayControl gameDayControl;
 
@@ -94,6 +96,14 @@ public class DialogueGraphParser : MonoBehaviour
         {
             hideCharacterNodeView.Act(currentDialogue, nodeData as CharacterPositionNode);
         }
+        else if (nodeData is MusicNode)
+        {
+            playMusicNodeView.Act(currentDialogue, nodeData as MusicNode);
+        }
+        else if (nodeData is StopMusicNode)
+        {
+            stopMusicNodeView.Act(currentDialogue, nodeData as StopMusicNode);
+        }
         else
         {
             throw new Exception();
@@ -136,6 +146,14 @@ public class DialogueGraphParser : MonoBehaviour
         else if (nodeData is CharacterPositionNode)
         {
             hideCharacterNodeView.Stop();
+        }
+        else if (nodeData is MusicNode)
+        {
+            playMusicNodeView.Stop();
+        }
+        else if (nodeData is StopMusicNode)
+        {
+            stopMusicNodeView.Stop();
         }
         else
         {
