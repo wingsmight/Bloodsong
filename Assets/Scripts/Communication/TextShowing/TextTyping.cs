@@ -7,10 +7,6 @@ public class TextTyping : TextShowing
     private const float MIN_ACCEPTABLE_SPEED = 0.0f;
 
 
-    [SerializeField] private AudioSource audioSource;
-    [SerializeField] private AudioClip typingSound;
-
-
     private static float typingSpeed = 0.01f;
     private int lastSeenPageIndex;
 
@@ -38,8 +34,6 @@ public class TextTyping : TextShowing
         textDisplay.text = "";
 
         isTyping = false;
-
-        audioSource.Stop();
 
         StopAllCoroutines();
 
@@ -110,8 +104,6 @@ public class TextTyping : TextShowing
             lastSeenPageIndex = textDisplay.pageToDisplay;
         }
 
-        audioSource.Stop();
-
         isTyping = false;
 
         InvokeOnStopPageTyping();
@@ -125,12 +117,6 @@ public class TextTyping : TextShowing
         InvokeOnStartTyping();
 
         isTyping = true;
-
-        audioSource.Stop();
-        if (typingSound != null)
-        {
-            audioSource.PlayOneShot(typingSound);
-        }
 
         textDisplay.overflowMode = TextOverflowModes.Page;
         textDisplay.ForceMeshUpdate();
@@ -160,8 +146,6 @@ public class TextTyping : TextShowing
         {
             lastSeenPageIndex = textDisplay.pageToDisplay;
         }
-
-        audioSource.Stop();
 
         isTyping = false;
 

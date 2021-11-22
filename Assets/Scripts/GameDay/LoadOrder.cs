@@ -33,11 +33,10 @@ public class LoadOrder : MonoBehaviour
         if (isSkipIntro)
         {
             SceneManager.LoadScene(NEXT_SCENE_NAME);
+            return;
         }
-        return;
-#else
-        StartCoroutine(LoadRoutine());
 #endif
+        StartCoroutine(LoadRoutine());
     }
 
     private IEnumerator LoadRoutine()

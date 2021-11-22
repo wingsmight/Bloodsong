@@ -28,16 +28,19 @@ public class MonologuePanel : CommunicationPanel
         text = text.RemoveAllOccurrences('\n');
         text = text.AddIndentTag(indentPercent);
         textShowing.Type(text);
-        speaker.Show(speakerName);
+        speaker?.Show(speakerName);
     }
     public override void Hide()
     {
         base.Hide();
 
-        var nextNode = graphParser.CurrentDialogue.GetNextNodes(graphParser.CurrentNode)[0];
-        if (!(nextNode is MonologueNode) || SpeakerView.IsEmptySpeaker((nextNode as MonologueNode).speakerName))
+        if (graphParser != null && graphParser.CurrentDialogue != null)
         {
-            speaker.Hide();
+            var nextNode = graphParser.CurrentDialogue.GetNextNodes(graphParser.CurrentNode)[0];
+            if (!(nextNode is MonologueNode) || SpeakerView.IsEmptySpeaker((nextNode as MonologueNode).speakerName))
+            {
+                speaker.Hide();
+            }
         }
     }
     public void ShowWithDelay(string text, string speakerName)
