@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AudioPlayer : MonoBehaviour, IDataLoading, IDataSaving
+public class AudioPlayer : MonoBehaviourSingleton<AudioPlayer>
 {
     public const string MUSIC_PATH = "Music";
 
@@ -13,12 +13,45 @@ public class AudioPlayer : MonoBehaviour, IDataLoading, IDataSaving
     [SerializeField] private AudioSource audioSource;
 
 
+    protected override void Awake()
+    {
+        base.Awake();
+
+        if (audioSource == null)
+        {
+            audioSource = FindObjectOfType<AudioSource>();
+            if (audioSource == null)
+            {
+                audioSource = gameObject.AddComponent<AudioSource>();
+            }
+        }
+    }
+
+
     public void PlaySmoothy(AudioClip clip, float smoothDurationSeconds = DEFAULT_SMOOTH_DURATION_SECONDS)
     {
-        audioSource.clip = clip;
-        audioSource.Play();
+        if (clip == audioSource.clip)
+            return;
 
-        StartCoroutine(ChangeVolumeSmoothlyRoutine(smoothDurationSeconds, 0.0f, 1.0f));
+        if (audioSource.clip != null && audioSource.isPlaying)
+        {
+            StopSmoothy(smoothDurationSeconds, () =>
+            {
+                StartPlaying();
+            });
+        }
+        else
+        {
+            StartPlaying();
+        }
+
+        void StartPlaying()
+        {
+            audioSource.clip = clip;
+            audioSource.Play();
+
+            StartCoroutine(ChangeVolumeSmoothlyRoutine(smoothDurationSeconds, 0.0f, 1.0f));
+        }
     }
     public void StopSmoothy(float smoothDurationSeconds = DEFAULT_SMOOTH_DURATION_SECONDS, Action OnStoped = null)
     {
@@ -29,25 +62,6 @@ public class AudioPlayer : MonoBehaviour, IDataLoading, IDataSaving
     {
         StopAllCoroutines();
         audioSource.Stop();
-    }
-    public void LoadData()
-    {
-        var savedAudio = GetAudioFromResource(Storage.GetData<GameDayData>().musicName);
-        if (savedAudio != null)
-        {
-            PlaySmoothy(savedAudio);
-        }
-    }
-    public void SaveData()
-    {
-        if (audioSource.isPlaying && audioSource.clip != null)
-        {
-            Storage.GetData<GameDayData>().musicName = audioSource.clip.name;
-        }
-        else
-        {
-            Storage.GetData<GameDayData>().musicName = "";
-        }
     }
     public static AudioClip GetAudioFromResource(string fileName)
     {
@@ -79,4 +93,7 @@ public class AudioPlayer : MonoBehaviour, IDataLoading, IDataSaving
 
         OnFinish?.Invoke();
     }
+
+
+    public AudioSource AudioSource => audioSource;
 }
