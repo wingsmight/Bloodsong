@@ -13,7 +13,6 @@ public class GeneralSettings : IStoredData
 
     // options
     public int[] resolution = null;
-    public bool isFullscreen = true;
     public float volume = 1.0f;
     public float testTypingSpeed = 0.01f;
 

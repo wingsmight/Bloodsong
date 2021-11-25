@@ -40,7 +40,7 @@ public class ResolutionDropdown : MonoBehaviour
         if (Storage.GeneralSettings.resolution != null && Storage.GeneralSettings.resolution.Length == 2)
         {
             Screen.SetResolution(Storage.GeneralSettings.resolution[0], Storage.GeneralSettings.resolution[1],
-                Storage.GeneralSettings.isFullscreen);
+                Screen.fullScreen);
         }
         else
         {
@@ -53,7 +53,7 @@ public class ResolutionDropdown : MonoBehaviour
     {
         var option = dropdown.options[index];
         var sizeRect = option.text.ExtractNumbers();
-        Screen.SetResolution(sizeRect[0], sizeRect[1], Storage.GeneralSettings.isFullscreen);
+        Screen.SetResolution(sizeRect[0], sizeRect[1], Screen.fullScreen);
 
         SaveData();
     }

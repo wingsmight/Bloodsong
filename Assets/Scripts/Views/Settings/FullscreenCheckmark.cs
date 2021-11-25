@@ -22,17 +22,10 @@ public class FullscreenCheckmark : MonoBehaviour
 
     private void LoadData()
     {
-        toggle.isOn = Storage.GeneralSettings.isFullscreen;
+        toggle.isOn = Screen.fullScreen;
     }
-    private void SaveData()
-    {
-        Storage.GeneralSettings.isFullscreen = Screen.fullScreen;
-    }
-
     private void SetFullscreen(bool isEnable)
     {
         Screen.fullScreen = isEnable;
-
-        SaveData();
     }
 }
