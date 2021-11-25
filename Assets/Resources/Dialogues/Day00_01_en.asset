@@ -374,7 +374,7 @@ MonoBehaviour:
         guid: d69b6590-43e7-457c-bb50-d1069a6dea28
         position: {x: 4427, y: -1066}
         texts:
-        - "Mr. Dandaron. How was your year?"
+        - "Mr. Dandaro. How was your year?"
         speakerName: James
     00000005:
       type: {class: MonologueNode, ns: , asm: Assembly-CSharp}
@@ -504,7 +504,7 @@ MonoBehaviour:
         - "The farmers never denounced each other, so that they were afraid to speak openly about what was painful. And who should I inform? Robbers didn't mix with hard workers."
         - "Farmers were just a valuable resource, whose opinions didn't matter. So why would it be dangerous to just talk?"
         - "Because in the south, the Felestinians had long ago accepted the robbers as a given. As with an integral part of being. And dissent can be dangerous for an established society."
-        - "It would be too difficult to fight it. Not here, anyway. Not in the village of Condin, which is located at a relatively safe distance from the Iron Fist clan and other clans."
+        - "It would be too difficult to fight it. Not here, anyway. Not in the village of Kondin, which is located at a relatively safe distance from the Iron Fist clan and other clans."
         speakerName: 
     00000014:
       type: {class: MonologueNode, ns: , asm: Assembly-CSharp}
@@ -998,7 +998,7 @@ MonoBehaviour:
         guid: e99c9f1e-3fb4-448e-889c-886e10579766
         position: {x: 4132, y: 1386}
         texts:
-        - "Yes, Auntie. Just like every year. Just like everyone else. We continue to gather for the holiday at the Condin. Even if the harvest was poor."
+        - "Yes, Auntie. Just like every year. Just like everyone else. We continue to gather for the holiday at the Kondin. Even if the harvest was poor."
         speakerName: Zari
     00000050:
       type: {class: MonologueNode, ns: , asm: Assembly-CSharp}
@@ -1502,7 +1502,7 @@ MonoBehaviour:
         - "Spending the night in one room or even in a small bed is not a problem and is not a reason for obscene thoughts."
         - "As Zari walked along the broken roads of the village to her aunt, she remembered with warmth in her heart the first day of their great friendship."
         - "Zari then lived for a couple of years in the village of Kondin – the first farmer to settle here."
-        - "Condin was so prolific that his farm grew before his eyes, becoming a community of families directly related to Condin's daughters and sons. He's very old now."
+        - "Kondin was so prolific that his farm grew before his eyes, becoming a community of families directly related to Kondin's daughters and sons. He's very old now."
         - "Zari lived with an aunt, a second cousin of the girl's mother, and on the harvest festival, when most of the visitors were walking around in the village square, Zari would shop behind the stalls."
         - "Due to the assortment that was on sale, the girl was often faced with derogatory comments in her address. "
         - "Zari's aunt sold herbs, mushrooms, and berries, the meaning of which was simply unknown to most. Especially for young people."
@@ -1548,7 +1548,7 @@ MonoBehaviour:
         - "Spending the night in one room or even in a small bed is not a problem and is not a reason for obscene thoughts."
         - "As Arten walked through the broken roads of the village to the tavern, he remembered with warmth the first day of their great friendship."
         - "Zari then lived for a couple of years in the village of Kondin – the first farmer to settle here."
-        - "Condin was so prolific that his farm grew before his eyes, becoming a community of families directly related to Condin's daughters and sons. He's very old now."
+        - "Kondin was so prolific that his farm grew before his eyes, becoming a community of families directly related to Kondin's daughters and sons. He's very old now."
         - "Zari lived with an aunt, a second cousin of the girl's mother, and on the harvest festival, when most of the visitors were walking around in the village square, Zari would shop behind the stalls."
         - "Due to the assortment that was on sale, the girl was often faced with derogatory comments in her address. "
         - "Zari's aunt sold herbs, mushrooms, and berries, the meaning of which was simply unknown to most. Especially for young people."
@@ -1671,7 +1671,7 @@ MonoBehaviour:
         - "Spending the night in one room or even in a small bed is not a problem and is not a reason for obscene thoughts."
         - "As James walked through the broken roads of the village to the merchant, he remembered with sincerity the first day of their great friendship."
         - "Zari then lived for a couple of years in the village of Kondin – the first farmer to settle here."
-        - "Condin was so prolific that his farm grew before his eyes, becoming a community of families directly related to Condin's daughters and sons. He's very old now."
+        - "Kondin was so prolific that his farm grew before his eyes, becoming a community of families directly related to Kondin's daughters and sons. He's very old now."
         - "Zari lived with an aunt, a second cousin of the girl's mother, and on the harvest festival, when most of the visitors were walking around in the village square, Zari would shop behind the stalls."
         - "Due to the assortment that was on sale, the girl was often faced with derogatory comments in her address. Zari's aunt sold herbs, mushrooms, and berries, the meaning of which was simply unknown to most."
         - "Especially for young people. And now, when Zari was once again listening to the taunts in her address, they appeared on the stage – Arten and James."
